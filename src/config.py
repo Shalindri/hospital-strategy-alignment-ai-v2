@@ -25,9 +25,9 @@ load_dotenv()
 # Cosine similarity ranges from 0.0 (no relation) to 1.0 (identical meaning).
 # =============================================================================
 THRESHOLD_EXCELLENT = 0.70   # ≥ 0.70 → action directly operationalises strategy
-THRESHOLD_GOOD      = 0.50   # ≥ 0.50 → clear strategic support
-THRESHOLD_FAIR      = 0.53   # ≥ 0.39 → partial / indirect alignment (tuned via threshold sweep, F1: 0.667 → 0.833)
-ORPHAN_THRESHOLD    = 0.53   # action scores < 0.39 against EVERY objective → orphan (kept equal to THRESHOLD_FAIR)
+THRESHOLD_GOOD      = 0.60   # ≥ 0.60 → clear strategic support
+THRESHOLD_FAIR      = 0.51   # ≥ 0.51 → partial / indirect alignment (tuned via threshold sweep, F1: 0.667 → 0.833)
+ORPHAN_THRESHOLD    = 0.51   # action scores < 0.51 against EVERY objective → orphan (kept equal to THRESHOLD_FAIR)
 
 # =============================================================================
 # MODEL NAMES

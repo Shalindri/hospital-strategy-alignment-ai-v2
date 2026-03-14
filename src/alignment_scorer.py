@@ -268,8 +268,12 @@ def run_alignment(objectives: list) -> dict:
     orphan_actions = find_orphan_actions(matrix, actions)
     print(f"✅ Step 3 complete. {len(orphan_actions)} orphan action(s) found.")
 
-    # Step 5 — Overall score (mean of all matrix values)
-    overall_score = float(np.mean(matrix))
+    # Step 5 — Overall score (mean of best score per action)
+    # We take each action's highest score against any objective, then average those.
+    # This is more meaningful than averaging all pairs — cross-pairs are intentionally
+    # low and would unfairly drag the score down.
+    best_per_action = np.max(matrix, axis=0)   # shape: (n_actions,) — best objective per action
+    overall_score   = float(np.mean(best_per_action))
 
     # Print a readable summary to the terminal
     print_matrix_summary(matrix, objectives, actions)

@@ -2,7 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-isps:A1 a isps:ClinicalCare .
+isps:A1 a isps:PatientSafety .
 
 isps:A2 a isps:PatientSafety .
 
@@ -10,9 +10,13 @@ isps:A3 a isps:PatientSafety .
 
 isps:A4 a isps:Technology .
 
-isps:A5 a isps:OperationalEfficiency .
+isps:A5 a isps:Technology .
 
 isps:A6 a isps:Technology .
+
+isps:ClinicalCare a owl:Class ;
+    rdfs:label "ClinicalCare" ;
+    rdfs:subClassOf isps:HospitalConcept .
 
 isps:CommunityEngagement a owl:Class ;
     rdfs:label "CommunityEngagement" ;
@@ -31,10 +35,6 @@ isps:ISPSOntology a owl:Ontology .
 isps:O1 a isps:PatientSafety .
 
 isps:O2 a isps:Technology .
-
-isps:ClinicalCare a owl:Class ;
-    rdfs:label "ClinicalCare" ;
-    rdfs:subClassOf isps:HospitalConcept .
 
 isps:OperationalEfficiency a owl:Class ;
     rdfs:label "OperationalEfficiency" ;

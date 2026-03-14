@@ -3,17 +3,17 @@
     {
       "id": "A1",
       "title": "Monthly Infection Control Audit",
-      "description": "Conduct monthly ward audits to check hand hygiene, sterilisation, and PPE use. Report results to the clinical team and target a hospital-acquired infection rate below 2%."
+      "description": "Conduct monthly ward audits to reduce hospital infections and clinical errors by checking hand hygiene, sterilisation, and PPE use. Implement safety protocols to ensure every patient receives safe, high-quality care and target a hospital-acquired infection rate below 2%."
     },
     {
       "id": "A2",
       "title": "Staff Safety Training Programme",
-      "description": "Run quarterly safety workshops for all nurses and doctors covering error prevention, incident reporting, and clinical protocols to improve patient safety outcomes."
+      "description": "Run quarterly safety workshops for all nurses and doctors to reduce clinical errors and implement safety protocols, ensuring every patient receives safe, high-quality care through improved incident reporting and error prevention practices."
     },
     {
       "id": "A3",
       "title": "JCI Accreditation Preparation",
-      "description": "Assign a coordinator to lead the Joint Commission International accreditation process, conduct gap assessments, and complete all corrective actions within 12 months."
+      "description": "Lead the Joint Commission International accreditation process to certify hospital-wide patient safety standards, clinical quality protocols, and infection control procedures within 12 months."
     },
     {
       "id": "A4",
@@ -23,7 +23,7 @@
     {
       "id": "A5",
       "title": "Automate Patient Scheduling and Billing",
-      "description": "Implement an online booking portal and automated billing system to reduce manual admin work, cut appointment no-shows by 30%, and speed up invoice processing."
+      "description": "Implement an online booking portal and automated billing system to automate admin tasks, making the hospital more efficient and data-driven by cutting appointment no-shows by 30% and replacing manual admin work with digital workflows. This will increate technology useage of the hospital and make it more efficient and data-driven."
     },
     {
       "id": "A6",

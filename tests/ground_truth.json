@@ -2,7 +2,7 @@
   {"objective_id": "O1", "action_id": "A1", "alignment_label": 1.0, "label_text": "Strongly Aligned", "rationale": "Infection audits directly target hospital-acquired infections — the core of patient safety."},
   {"objective_id": "O1", "action_id": "A2", "alignment_label": 1.0, "label_text": "Strongly Aligned", "rationale": "Safety training for clinical staff directly improves patient safety outcomes."},
   {"objective_id": "O1", "action_id": "A3", "alignment_label": 1.0, "label_text": "Strongly Aligned", "rationale": "JCI accreditation enforces clinical quality and safety standards across the hospital."},
-  {"objective_id": "O1", "action_id": "A4", "alignment_label": 0.3, "label_text": "Weakly Aligned",   "rationale": "EHR can help track safety incidents but is primarily a technology initiative."},
+  {"objective_id": "O1", "action_id": "A4", "alignment_label": 0.5, "label_text": "Weakly Aligned",   "rationale": "EHR can help track safety incidents but is primarily a technology initiative."},
   {"objective_id": "O1", "action_id": "A5", "alignment_label": 0.1, "label_text": "Not Aligned",       "rationale": "Scheduling and billing automation has no direct impact on patient safety."},
   {"objective_id": "O1", "action_id": "A6", "alignment_label": 0.1, "label_text": "Not Aligned",       "rationale": "Cybersecurity protects data but does not reduce clinical errors or infections."},
 
@@ -11,5 +11,5 @@
   {"objective_id": "O2", "action_id": "A6", "alignment_label": 1.0, "label_text": "Strongly Aligned", "rationale": "Upgrading cybersecurity is a core part of modernising hospital IT infrastructure."},
   {"objective_id": "O2", "action_id": "A1", "alignment_label": 0.1, "label_text": "Not Aligned",       "rationale": "Infection audits are clinical processes, not technology modernisation."},
   {"objective_id": "O2", "action_id": "A2", "alignment_label": 0.1, "label_text": "Not Aligned",       "rationale": "Staff safety training is a clinical initiative, not a digital technology project."},
-  {"objective_id": "O2", "action_id": "A3", "alignment_label": 0.3, "label_text": "Weakly Aligned",   "rationale": "JCI accreditation requires some digital documentation but is primarily about quality standards."}
+  {"objective_id": "O2", "action_id": "A3", "alignment_label": 0.2, "label_text": "Weakly Aligned",   "rationale": "JCI accreditation requires some digital documentation but is primarily about quality standards."}
 ]
