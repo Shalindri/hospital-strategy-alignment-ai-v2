@@ -90,6 +90,10 @@ def parse_strategic_plan(raw_text: str) -> dict:
     The LLM identifies each strategic objective and returns JSON with fields:
       objectives: list of {id, title, description}
 
+    We give the LLM explicit instructions to SKIP irrelevant content like
+    forewords, table of contents, sign-off pages, addresses, and KPIs —
+    and extract ONLY the core strategic objectives.
+
     Args:
         raw_text (str): Full text from the strategic plan PDF.
 
@@ -105,25 +109,42 @@ def parse_strategic_plan(raw_text: str) -> dict:
     # Most plans fit in this limit; adjust if needed.
     truncated_text = raw_text[:12000]
 
-    prompt = f"""You are a healthcare strategy analyst. Extract all strategic objectives
-from this hospital strategic plan document.
+    prompt = f"""You are a healthcare strategy analyst. Your job is to extract ONLY the
+strategic objectives from this hospital strategic plan document.
 
-Return ONLY valid JSON in this exact format (no extra text):
+IGNORE all of the following — do NOT include them as objectives:
+- Foreword, CEO message, or introductory paragraphs
+- Table of contents entries
+- Vision, Mission, and Values statements
+- Organisation background or context sections
+- Performance targets, KPIs, or metrics tables
+- Risk registers or risk descriptions
+- Delivery timelines or milestone lists
+- Sign-off pages, approvals, and signatures
+- Document reference numbers and version notes
+- Contact details or addresses
+- Any text that is clearly a heading, footer, or page number
+
+Extract ONLY the core strategic objectives — the high-level goals the organisation
+is committing to achieve over the plan period. These are usually found in a section
+titled "Strategic Objectives", "Our Priorities", or similar.
+
+Return ONLY valid JSON in this exact format (no extra text, no markdown):
 {{
   "objectives": [
     {{
       "id": "O1",
-      "title": "Short title of the objective",
-      "description": "Full description of what this objective aims to achieve"
+      "title": "Short clear title of the objective (5-10 words)",
+      "description": "What this objective aims to achieve and why it matters (2-4 sentences)"
     }}
   ]
 }}
 
 Rules:
 - Use sequential IDs: O1, O2, O3, ...
-- Each objective must have a meaningful title (5-10 words) and a description (1-3 sentences)
-- Extract ALL distinct objectives from the document
-- Do not include sub-objectives or KPIs as separate objectives
+- Write descriptions in plain English that explain the strategic intent
+- Do NOT copy-paste KPIs, timelines, or risk text into the description
+- If the same objective appears under multiple headings, include it only once
 
 Document text:
 {truncated_text}"""
@@ -169,6 +190,10 @@ def parse_action_plan(raw_text: str) -> dict:
     The LLM identifies each action item and returns JSON with fields:
       actions: list of {id, title, description}
 
+    We give the LLM explicit instructions to SKIP irrelevant content like
+    cover pages, sign-off tables, "how to read this plan" sections, and
+    extract ONLY the actual operational actions.
+
     Args:
         raw_text (str): Full text from the action plan PDF.
 
@@ -182,25 +207,38 @@ def parse_action_plan(raw_text: str) -> dict:
 
     truncated_text = raw_text[:12000]
 
-    prompt = f"""You are a healthcare operations analyst. Extract all action items
-from this hospital annual action plan document.
+    prompt = f"""You are a healthcare operations analyst. Your job is to extract ONLY the
+operational actions from this hospital action plan document.
 
-Return ONLY valid JSON in this exact format (no extra text):
+IGNORE all of the following — do NOT include them as actions:
+- Cover page content (hospital name, document title, approval dates)
+- "How to read this plan" or legend sections
+- Objective section headers (e.g. "Strategic Objective O1 — Improve Patient Safety")
+- Owner names, timelines, and KPI lines on their own
+- Sign-off tables with signatures
+- Page numbers, footers, and headers
+- Any introductory or closing paragraphs
+
+Extract ONLY the concrete actions — the specific initiatives, projects, or programmes
+that the organisation will carry out. Each action should have a title and a description
+of what will be done.
+
+Return ONLY valid JSON in this exact format (no extra text, no markdown):
 {{
   "actions": [
     {{
       "id": "A1",
-      "title": "Short title of the action",
-      "description": "What this action involves and what it aims to achieve"
+      "title": "Short clear title of the action (5-10 words)",
+      "description": "What this action involves and what it aims to achieve (2-4 sentences)"
     }}
   ]
 }}
 
 Rules:
 - Use sequential IDs: A1, A2, A3, ...
-- Each action must have a clear title (5-10 words) and a description (1-3 sentences)
-- Extract ALL distinct actions from the document
-- Include operational tasks, projects, and initiatives
+- Write descriptions that explain what will be done and the intended outcome
+- Do NOT include the owner name or KPI in the description — just the action itself
+- If an action appears in multiple sections, include it only once
 
 Document text:
 {truncated_text}"""

@@ -3,102 +3,102 @@
     {
       "id": "A1",
       "title": "Monthly Infection Control Audit",
-      "description": "Conduct monthly ward-level infection control audits measuring hand hygiene compliance, sterilisation standards, and PPE adherence. Target a hospital-acquired infection rate below 2% by enforcing clinical safety protocols and rapidly isolating infection sources to prevent patient harm and reduce morbidity from adverse clinical events."
+      "description": "Conduct monthly ward-level infection control audits measuring hand hygiene compliance, sterilisation standards, and PPE adherence. Target a hospital-acquired infection rate below 2% by enforcing clinical safety protocols and rapidly isolating infection sources."
     },
     {
       "id": "A2",
       "title": "Staff Safety Training Programme",
-      "description": "Deliver quarterly clinical error prevention workshops for all nursing and medical staff, focusing on adverse event recognition, near-miss reporting, medication safety, and safe handover procedures. Build a culture of clinical risk awareness to reduce preventable patient harm and lower rates of avoidable morbidity across all wards."
+      "description": "Deliver quarterly clinical error prevention workshops for all nursing and medical staff, focusing on adverse event recognition, near-miss reporting, medication safety, and safe handover procedures. Build a culture of clinical risk awareness to reduce preventable patient harm."
     },
     {
       "id": "A3",
       "title": "JCI Accreditation Preparation",
-      "description": "Lead the hospital through Joint Commission International accreditation, certifying clinical risk management frameworks, infection control protocols, adverse event reporting systems, and patient safety standards. Achieve full JCI certification within 12 months to demonstrate commitment to eliminating preventable clinical harm."
+      "description": "Lead the hospital through Joint Commission International accreditation, certifying clinical risk management frameworks, infection control protocols, and patient safety standards. Achieve full JCI certification within 12 months."
     },
     {
       "id": "A4",
       "title": "Clinical Incident Reporting System",
-      "description": "Implement a real-time clinical incident reporting platform enabling staff to log near-misses, adverse events, medication errors, and safety hazards instantly. Analyse patterns through root-cause investigation to identify systemic clinical risks and prevent recurrence of patient harm events and sterilisation failures across all wards."
+      "description": "Implement a real-time clinical incident reporting platform enabling staff to log near-misses, adverse events, medication errors, and safety hazards instantly. Analyse patterns through root-cause investigation to identify systemic clinical risks."
     },
     {
       "id": "A5",
       "title": "Deploy Electronic Health Record System",
-      "description": "Deploy a cloud-hosted electronic health record system to replace all paper-based clinical documentation. Migrate patient data to a secure digital database, integrate with laboratory and radiology IT systems, and train all staff on the EHR platform before full go-live, creating a unified digital health infrastructure."
+      "description": "Deploy a cloud-hosted electronic health record system to replace all paper-based clinical documentation. Migrate patient data to a secure digital database and train all staff on the EHR platform before full go-live."
     },
     {
       "id": "A6",
       "title": "Automate Patient Scheduling and Billing",
-      "description": "Implement automated digital workflows for appointment scheduling and invoice processing, replacing all manual administrative tasks. The online booking platform and automated billing software eliminate paper-based admin, reduce scheduling errors through algorithmic optimisation, and create a fully data-driven administrative digital infrastructure."
+      "description": "Implement automated digital workflows for appointment scheduling and invoice processing, replacing all manual administrative tasks. The online booking platform and automated billing software will create a fully data-driven administrative digital infrastructure."
     },
     {
       "id": "A7",
       "title": "Upgrade Cybersecurity Infrastructure",
-      "description": "Conduct a full cybersecurity audit of all hospital IT networks, patch software vulnerabilities, deploy multi-factor authentication on all clinical systems, and configure automated encrypted daily data backups. Establish continuous network monitoring to detect and neutralise cyber threats and protect the integrity of all digital health data."
+      "description": "Conduct a full cybersecurity audit of all hospital IT networks, patch software vulnerabilities, and deploy multi-factor authentication on all clinical systems. Establish continuous network monitoring to protect the integrity of all digital health data."
     },
     {
       "id": "A8",
       "title": "Implement AI-Powered Diagnostic Support Tools",
-      "description": "Integrate machine-learning diagnostic algorithms into radiology and pathology IT workflows to assist clinicians with image analysis, anomaly detection, and differential diagnosis. The AI-powered software platform will accelerate diagnostic throughput and flag high-priority cases automatically within the digital health infrastructure."
+      "description": "Integrate machine-learning diagnostic algorithms into radiology and pathology IT workflows to assist clinicians with image analysis and anomaly detection. The AI-powered software platform will accelerate diagnostic throughput."
     },
     {
       "id": "A9",
       "title": "Launch Patient Satisfaction Survey Programme",
-      "description": "Launch a post-discharge satisfaction survey programme collecting patient feedback on communication clarity, waiting comfort, food quality, environmental amenities, and overall care experience. Analyse survey responses monthly to identify service gaps and drive targeted improvements to patient satisfaction scores across the patient journey."
+      "description": "Launch a post-discharge satisfaction survey programme collecting patient feedback on various aspects of care. Analyse survey responses monthly to identify service gaps and drive targeted improvements."
     },
     {
       "id": "A10",
       "title": "Reduce Outpatient Waiting Times Initiative",
-      "description": "Redesign outpatient triage flows to cut average waiting times by 40%, introduce comfortable waiting areas with refreshments and entertainment, and improve communication about expected wait durations. Deliver a smoother, more satisfying patient journey by eliminating frustrating delays and enhancing environmental comfort and hospitality throughout the visit."
+      "description": "Redesign outpatient triage flows to cut average waiting times by 40% and improve communication about expected wait durations. Deliver a smoother, more satisfying patient journey."
     },
     {
       "id": "A11",
       "title": "Introduce Multilingual Patient Communication Services",
-      "description": "Deploy professional interpreter services, translated discharge leaflets in 12 languages, and multilingual digital interfaces across all patient-facing touchpoints. Ensure patients from all language backgrounds receive clear, accessible communication about their care plan, improving their comfort, satisfaction, and experience throughout the patient journey."
+      "description": "Deploy professional interpreter services and translated discharge leaflets in 12 languages. Ensure patients from all language backgrounds receive clear communication about their care plan."
     },
     {
       "id": "A12",
       "title": "Deploy Patient Self-Service Portal",
-      "description": "Launch a self-service patient portal enabling patients to review test results, book appointments, request prescription renewals, and message their clinical team. Empower patients to actively manage their own care journey, reducing communication barriers and improving overall satisfaction through convenient, accessible digital self-service."
+      "description": "Launch a self-service patient portal enabling patients to review test results, book appointments, and message their clinical team. Empower patients to actively manage their own care journey."
     },
     {
       "id": "A13",
       "title": "Launch Clinical Leadership Development Programme",
-      "description": "Deliver a 12-month clinical leadership mentorship programme for senior nurses and junior doctors, building team management, career progression, and talent development competencies. Create an internal pipeline of skilled clinical managers to reduce reliance on costly external recruitment and improve long-term workforce retention and stability."
+      "description": "Deliver a 12-month clinical leadership mentorship programme for senior nurses and junior doctors. Create an internal pipeline of skilled clinical managers to improve long-term workforce retention."
     },
     {
       "id": "A14",
       "title": "Staff Wellbeing and Mental Health Support Initiative",
-      "description": "Establish a comprehensive staff wellbeing programme offering counselling services, burnout prevention workshops, and peer support networks. Monitor employee engagement and job satisfaction quarterly to identify retention risks early, reduce nursing turnover, and sustain a mentally healthy, productive workforce with low burnout rates."
+      "description": "Establish a comprehensive staff wellbeing programme offering counselling services and burnout prevention workshops. Monitor employee engagement to reduce nursing turnover."
     },
     {
       "id": "A15",
       "title": "Nurse Retention and Incentive Scheme",
-      "description": "Introduce a nurse retention incentive package featuring flexible shift scheduling, performance-based pay increments, structured career development pathways, and staff recognition awards. Target a 25% reduction in nursing turnover by addressing the primary drivers of job dissatisfaction and strengthening long-term workforce stability."
+      "description": "Introduce a nurse retention incentive package featuring flexible shift scheduling and performance-based pay increments. Target a 25% reduction in nursing turnover."
     },
     {
       "id": "A16",
       "title": "University Medical Internship Partnership Programme",
-      "description": "Formalise clinical internship and rotation partnerships with three regional universities, creating a structured talent pipeline of trained nursing and medical graduates. Establish the hospital as an employer of choice to improve recruitment outcomes, reduce time-to-hire, and build a sustainable workforce development pathway for frontline clinical roles."
+      "description": "Formalise clinical internship and rotation partnerships with three regional universities. Establish the hospital as an employer of choice to improve recruitment outcomes."
     },
     {
       "id": "A17",
       "title": "Annual Budget Review and Cost Reduction Audit",
-      "description": "Conduct a comprehensive annual departmental expenditure review to identify fiscal inefficiencies, eliminate non-essential operational costs, and reallocate capital to high-priority services. Deliver a 10% reduction in non-clinical overheads within 18 months through rigorous budget auditing and return-on-investment analysis of all spending."
+      "description": "Conduct a comprehensive annual departmental expenditure review to identify fiscal inefficiencies and eliminate non-essential operational costs. Deliver a 10% reduction in non-clinical overheads."
     },
     {
       "id": "A18",
       "title": "Expand Private Patient and Revenue Services",
-      "description": "Develop a dedicated private patient revenue unit offering premium elective procedures, specialist outpatient packages, and enhanced amenities. Grow private income streams to cross-subsidise core public health services, diversify revenue sources, and reduce fiscal dependency on government funding to achieve long-term financial sustainability."
+      "description": "Develop a dedicated private patient revenue unit offering premium elective procedures and specialist outpatient packages. Grow private income streams to achieve long-term financial sustainability."
     },
     {
       "id": "A19",
       "title": "Apply for Healthcare Grants and Government Subsidies",
-      "description": "Identify, prepare, and submit applications for all eligible government healthcare grants, capital improvement subsidies, and national health technology funding schemes. Secure external revenue to finance infrastructure investment, reduce reliance on operational budgets, and strengthen the hospital's long-term fiscal position and financial sustainability."
+      "description": "Identify, prepare, and submit applications for all eligible government healthcare grants and funding schemes. Secure external revenue to finance infrastructure investment."
     },
     {
       "id": "A20",
       "title": "Medical Supply Chain Optimisation Programme",
-      "description": "Centralise medical supply procurement, renegotiate supplier contracts, and implement just-in-time inventory management to cut supply chain expenditure by 15%. Eliminate wasteful overstocking, reduce per-unit procurement costs, and improve cash flow management through disciplined fiscal control of all medical equipment and consumable purchasing."
+      "description": "Centralise medical supply procurement, renegotiate supplier contracts, and implement just-in-time inventory management. Cut supply chain expenditure by 15%."
     }
   ]
 }

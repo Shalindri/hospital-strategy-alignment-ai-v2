@@ -3,27 +3,27 @@
     {
       "id": "O1",
       "title": "Improve Patient Safety",
-      "description": "Eliminate preventable patient harm by targeting hospital-acquired infections, medication errors, and adverse clinical events. Enforce rigorous hand hygiene protocols, sterilisation standards, PPE compliance, and near-miss incident reporting across all wards. Achieve JCI accreditation to certify clinical risk management and reduce morbidity from avoidable clinical errors."
+      "description": "This objective aims to enhance the safety of patients by reducing hospital-acquired infections and serious clinical incidents. A zero-tolerance approach to preventable harm will be adopted, requiring a cultural shift towards proactive risk management."
     },
     {
       "id": "O2",
       "title": "Modernise Hospital Technology",
-      "description": "Deploy a fully integrated digital health infrastructure by replacing legacy paper-based systems with cloud-hosted electronic health records, automated clinical workflows, and AI-powered diagnostic algorithms. Harden all IT networks against cybersecurity threats through multi-factor authentication, encrypted data backups, and continuous vulnerability monitoring."
+      "description": "The goal is to transform the hospital into a digitally mature organization by upgrading IT infrastructure and implementing a cloud-hosted Electronic Health Record system. This modernization will streamline operations, enhance data security, and improve clinical decision-making."
     },
     {
       "id": "O3",
       "title": "Enhance Patient Experience and Satisfaction",
-      "description": "Elevate patient satisfaction scores by redesigning every touchpoint of the patient journey — from outpatient waiting comfort, food quality, and environmental amenities to multilingual interpreter services and post-discharge feedback surveys. Empower patients through self-service communication tools and compassionate, accessible care delivery."
+      "description": "This objective focuses on placing patients at the center of service delivery by improving communication, reducing waiting times, and enhancing overall care experiences. The aim is to significantly increase patient satisfaction and loyalty."
     },
     {
       "id": "O4",
       "title": "Develop and Retain a Skilled Workforce",
-      "description": "Build a high-performing, resilient workforce by investing in staff recruitment, retention incentives, leadership mentorship, and career progression pathways. Reduce burnout and nursing turnover through wellbeing programmes, competitive pay structures, and structured clinical internships in partnership with universities."
+      "description": "The objective is to ensure that the hospital has a skilled and motivated workforce by investing in training and development programs. This will help address workforce shortages and improve the quality of care provided to patients."
     },
     {
       "id": "O5",
       "title": "Achieve Financial Sustainability",
-      "description": "Secure long-term fiscal sustainability by growing private patient revenue streams, securing government grants and healthcare subsidies, reducing departmental expenditure through procurement optimisation, and conducting rigorous annual budget audits to eliminate waste and maximise return on capital investment."
+      "description": "This objective aims to ensure the long-term financial health of the hospital by implementing strategies to reduce deficits and improve resource allocation. Achieving financial sustainability is crucial for maintaining high-quality healthcare services."
     }
   ]
 }

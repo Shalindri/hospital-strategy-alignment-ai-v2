@@ -668,17 +668,112 @@ def tab_evaluation(objectives: list):
 # MAIN — CHECK DATA FILES, THEN RENDER ALL TABS
 # =============================================================================
 
+def sidebar_pdf_upload():
+    """
+    Sidebar section: upload PDFs and extract data using the pdf_processor.
+
+    The user uploads a Strategic Plan PDF and an Action Plan PDF.
+    Clicking 'Process PDFs' runs the LLM extraction pipeline and saves
+    the results to data/strategic_plan.json and data/action_plan.json.
+    The page then reloads automatically to pick up the new data.
+    """
+    # We import pdf_processor here so the dashboard still loads even if
+    # the OpenAI key is missing — the error only appears when the user clicks.
+    from src import pdf_processor
+
+    st.sidebar.title("📄 Upload PDFs")
+    st.sidebar.info(
+        "Upload your hospital documents here. "
+        "The system will read them and extract the objectives and actions automatically."
+    )
+
+    sp_file = st.sidebar.file_uploader(
+        "Strategic Plan PDF",
+        type=["pdf"],
+        key="sp_uploader",
+        help="Upload the hospital strategic plan PDF (e.g. strategic_plan.pdf)",
+    )
+
+    ap_file = st.sidebar.file_uploader(
+        "Action Plan PDF",
+        type=["pdf"],
+        key="ap_uploader",
+        help="Upload the hospital action plan PDF (e.g. action_plan.pdf)",
+    )
+
+    if st.sidebar.button("⚙️ Process PDFs", disabled=(sp_file is None and ap_file is None)):
+
+        # We need to save the uploaded files to disk because pdfplumber
+        # works with file paths, not in-memory bytes objects.
+        import tempfile
+
+        progress = st.sidebar.progress(0, text="Starting...")
+
+        if sp_file is not None:
+            progress.progress(10, text="Saving Strategic Plan PDF...")
+
+            # Write the uploaded bytes to a temporary file
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
+                tmp.write(sp_file.read())
+                tmp_path = tmp.name
+
+            progress.progress(30, text="Extracting text from Strategic Plan...")
+            try:
+                pdf_processor.process_pdf(
+                    pdf_path=tmp_path,
+                    doc_type="strategic_plan",
+                    output_filename="strategic_plan.json",
+                )
+                st.sidebar.success("✅ Strategic Plan extracted successfully.")
+            except Exception as e:
+                st.sidebar.error(f"Strategic Plan error: {e}")
+
+            progress.progress(50, text="Strategic Plan done.")
+
+        if ap_file is not None:
+            progress.progress(60, text="Saving Action Plan PDF...")
+
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
+                tmp.write(ap_file.read())
+                tmp_path = tmp.name
+
+            progress.progress(75, text="Extracting text from Action Plan...")
+            try:
+                pdf_processor.process_pdf(
+                    pdf_path=tmp_path,
+                    doc_type="action_plan",
+                    output_filename="action_plan.json",
+                )
+                st.sidebar.success("✅ Action Plan extracted successfully.")
+            except Exception as e:
+                st.sidebar.error(f"Action Plan error: {e}")
+
+            progress.progress(100, text="Done!")
+
+        # Clear cached data and alignment result so the dashboard reloads
+        # with the freshly extracted JSON files.
+        st.cache_data.clear()
+        if "alignment_result" in st.session_state:
+            del st.session_state["alignment_result"]
+
+        st.rerun()
+
+
 def main():
     """Entry point: check data, load, run alignment, render 5 tabs."""
 
+    # Always show the upload sidebar so users can update their PDFs at any time
+    sidebar_pdf_upload()
+
     # Guard: check that data files exist before proceeding
     if not os.path.exists(STRATEGIC_PLAN_FILE) or not os.path.exists(ACTION_PLAN_FILE):
-        st.error(
-            "**Data files not found.**\n\n"
-            f"Expected:\n"
+        st.warning(
+            "**No data files found yet.**\n\n"
+            "Use the **sidebar on the left** to upload your Strategic Plan PDF "
+            "and Action Plan PDF, then click **Process PDFs**.\n\n"
+            f"Expected files:\n"
             f"- `{STRATEGIC_PLAN_FILE}`\n"
-            f"- `{ACTION_PLAN_FILE}`\n\n"
-            "Please run `src/pdf_processor.py` to extract data from your PDFs first."
+            f"- `{ACTION_PLAN_FILE}`"
         )
         st.stop()
 
