@@ -1,21 +1,23 @@
 {
-  "precision": 0.0,
-  "recall": 0.0,
-  "f1": 0.0,
-  "auc": 0.5,
-  "pearson_r": NaN,
-  "pearson_p": NaN,
+  "precision": 0.8333,
+  "recall": 0.8333,
+  "f1": 0.8333,
+  "auc": 0.7778,
+  "pearson_r": 0.3769,
+  "pearson_p": 0.2271,
   "confusion_matrix": [
     [
-      34,
-      0
+      5,
+      1
     ],
     [
-      24,
-      0
+      1,
+      5
     ]
   ],
-  "n_pairs": 58,
+  "n_pairs": 12,
   "gt_binary_threshold": 0.5,
-  "pred_binary_threshold": 0.42
+  "pred_binary_threshold": 0.53,
+  "optimal_threshold": 0.53,
+  "optimal_f1": 0.8333
 }

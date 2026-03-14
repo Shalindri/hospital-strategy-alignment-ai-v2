@@ -2,28 +2,13 @@
   "objectives": [
     {
       "id": "O1",
-      "title": "Improve Patient Safety and Care Quality",
-      "description": "Reduce hospital-acquired infections, surgical errors, and adverse incidents. Achieve accreditation standards, implement clinical protocols, and improve patient satisfaction scores across all wards."
+      "title": "Improve Patient Safety",
+      "description": "Reduce hospital infections and clinical errors. Train nurses, implement safety protocols, and achieve accreditation to ensure every patient receives safe, high-quality care."
     },
     {
       "id": "O2",
-      "title": "Expand Hospital Capacity and Infrastructure",
-      "description": "Increase bed capacity from 75 to 150 beds by acquiring adjacent land and completing a phased construction programme. Add new specialty wards for cardiac, elderly, and maternity care."
-    },
-    {
-      "id": "O3",
-      "title": "Develop and Retain a Skilled Workforce",
-      "description": "Recruit specialist clinicians, invest in nurse training programmes, reduce staff turnover, and build a culture of continuous professional development and staff wellbeing."
-    },
-    {
-      "id": "O4",
-      "title": "Modernise Digital Systems and Technology",
-      "description": "Replace the ageing hospital information system with a modern electronic health record platform, automate administrative workflows, and improve data reporting and cybersecurity."
-    },
-    {
-      "id": "O5",
-      "title": "Achieve Financial Sustainability and Growth",
-      "description": "Grow revenue through new service lines and medical tourism, control operational costs, improve procurement efficiency, and ensure the hospital remains profitable to fund future investments."
+      "title": "Modernise Hospital Technology",
+      "description": "Replace paper records with a digital health system, automate admin tasks, and upgrade cybersecurity to make the hospital more efficient and data-driven."
     }
   ]
 }

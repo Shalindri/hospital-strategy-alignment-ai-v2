@@ -191,7 +191,7 @@ def tab_synchronization(alignment_result: dict, objectives: list, actions: list)
             },
         ))
         fig_gauge.update_layout(height=300, margin=dict(t=30, b=0))
-        st.plotly_chart(fig_gauge, use_container_width=True)
+        st.plotly_chart(fig_gauge, width='stretch')
 
         # Quick stats
         tier_counts = {"Excellent": 0, "Good": 0, "Fair": 0, "Poor": 0}
@@ -206,13 +206,14 @@ def tab_synchronization(alignment_result: dict, objectives: list, actions: list)
 
     # --- Heatmap ---
     with col2:
-        obj_ids = [obj["id"] for obj in objectives]
-        act_ids = [act["id"] for act in actions]
+        # Use full objective titles as row labels so the heatmap is self-explanatory
+        obj_labels = [f"{obj['id']}: {obj['title']}" for obj in objectives]
+        act_ids    = [act["id"] for act in actions]
 
         # matrix is (n_objectives x n_actions) — build DataFrame
         import numpy as np
         mat_np = np.array(matrix)
-        df_heat = pd.DataFrame(mat_np, index=obj_ids, columns=act_ids)
+        df_heat = pd.DataFrame(mat_np, index=obj_labels, columns=act_ids)
 
         fig_heat = px.imshow(
             df_heat,
@@ -223,7 +224,7 @@ def tab_synchronization(alignment_result: dict, objectives: list, actions: list)
             labels={"color": "Score"},
         )
         fig_heat.update_layout(height=350, margin=dict(t=40, b=0))
-        st.plotly_chart(fig_heat, use_container_width=True)
+        st.plotly_chart(fig_heat, width='stretch')
 
     # --- Per-action summary table ---
     st.subheader("Per-Action Alignment Summary")
@@ -243,17 +244,27 @@ def tab_synchronization(alignment_result: dict, objectives: list, actions: list)
                 "best_obj": c["objective_id"],
             }
 
+    # Find which objective has the highest average score across all actions
+    obj_avg_scores = {}
+    for obj in objectives:
+        oid = obj["id"]
+        scores = [c["score"] for c in classifications if c["objective_id"] == oid]
+        obj_avg_scores[oid] = round(sum(scores) / len(scores), 3) if scores else 0.0
+    best_objective_id = max(obj_avg_scores, key=obj_avg_scores.get)
+
     rows = []
     for act in actions:
         aid   = act["id"]
         info  = best_per_action.get(aid, {"score": 0.0, "tier": "Poor", "best_obj": ""})
+        best_obj_id    = info["best_obj"]
+        best_obj_title = obj_lookup.get(best_obj_id, best_obj_id)
         rows.append({
-            "Action ID":     aid,
-            "Action Title":  act["title"],
-            "Best Score":    round(info["score"], 3),
-            "Tier":          info["tier"],
-            "Best Objective":info["best_obj"],
-            "Orphan":        "⚠️ Yes" if aid in orphan_ids else "",
+            "Action ID":      aid,
+            "Action Title":   act["title"],
+            "Best Score":     round(info["score"], 3),
+            "Tier":           info["tier"],
+            "Best Objective": f"⭐ {best_obj_id}: {best_obj_title}" if best_obj_id == best_objective_id else f"{best_obj_id}: {best_obj_title}",
+            "Orphan":         "⚠️ Yes" if aid in orphan_ids else "",
         })
 
     df_table = pd.DataFrame(rows)
@@ -270,7 +281,7 @@ def tab_synchronization(alignment_result: dict, objectives: list, actions: list)
 
     st.dataframe(
         df_table.style.applymap(colour_tier, subset=["Tier"]),
-        use_container_width=True, height=400
+        width='stretch', height=400
     )
 
     if orphan_ids:
@@ -454,7 +465,7 @@ def tab_ontology(alignment_result: dict, objectives: list, actions: list):
 
     # Show table
     st.subheader("Item-to-Concept Mappings")
-    st.dataframe(df_ont, use_container_width=True, height=350)
+    st.dataframe(df_ont, width='stretch', height=350)
 
     # Coverage comparison chart
     st.subheader("Concept Coverage: Strategy vs Action Plan")
@@ -481,7 +492,7 @@ def tab_ontology(alignment_result: dict, objectives: list, actions: list):
         color_discrete_map={"Strategy": "#4a90d9", "Action Plan": "#5bad72"},
     )
     fig_cov.update_layout(height=350, xaxis_tickangle=-30)
-    st.plotly_chart(fig_cov, use_container_width=True)
+    st.plotly_chart(fig_cov, width='stretch')
 
     # Highlight gaps
     gaps = [c for c in all_concepts
@@ -537,15 +548,18 @@ def tab_evaluation(objectives: list):
                 saved = json.load(f)
             # Build a metrics dict compatible with our display code
             st.session_state["eval_metrics"] = {
-                "precision":        saved.get("precision", 0),
-                "recall":           saved.get("recall", 0),
-                "f1":               saved.get("f1", 0),
-                "auc":              saved.get("auc", 0),
-                "pearson_r":        saved.get("pearson_r", 0),
-                "pearson_p":        saved.get("pearson_p", 0),
-                "confusion_matrix": saved.get("confusion_matrix", [[0,0],[0,0]]),
-                "y_true_binary":    [],
-                "y_pred_binary":    [],
+                "precision":          saved.get("precision", 0),
+                "recall":             saved.get("recall", 0),
+                "f1":                 saved.get("f1", 0),
+                "auc":                saved.get("auc", 0),
+                "pearson_r":          saved.get("pearson_r", 0),
+                "pearson_p":          saved.get("pearson_p", 0),
+                "confusion_matrix":   saved.get("confusion_matrix", [[0,0],[0,0]]),
+                "y_true_binary":      [],
+                "y_pred_binary":      [],
+                "optimal_threshold":  saved.get("optimal_threshold"),
+                "optimal_f1":         saved.get("optimal_f1"),
+                "sweep_table":        None,  # not stored in JSON — re-run to get it
             }
             st.caption("Showing previously saved evaluation results. "
                        "Click 'Run Evaluation' to recompute.")
@@ -578,16 +592,72 @@ def tab_evaluation(objectives: list):
             title="Confusion Matrix",
         )
         fig_cm.update_layout(height=350)
-        st.plotly_chart(fig_cm, use_container_width=True)
+        st.plotly_chart(fig_cm, width='stretch')
 
     # --- Interpretation note ---
-    f1 = metrics["f1"]
-    if f1 >= 0.75:
-        st.success(f"Strong system performance (F1={f1:.3f}). The model reliably identifies aligned pairs.")
-    elif f1 >= 0.60:
-        st.info(f"Moderate performance (F1={f1:.3f}). Consider tuning the THRESHOLD_FAIR constant in config.py.")
+    f1  = metrics["f1"]
+    auc = metrics["auc"]
+
+    # Show optimal threshold hint if the evaluation swept thresholds
+    opt_thresh = metrics.get("optimal_threshold")
+    opt_f1     = metrics.get("optimal_f1")
+
+    if opt_thresh and opt_thresh != THRESHOLD_FAIR and opt_f1 and opt_f1 > f1 + 0.01:
+        st.info(
+            f"**Threshold tuning suggestion:** The sweep found that "
+            f"`THRESHOLD_FAIR = {opt_thresh}` gives a better F1 of **{opt_f1:.3f}** "
+            f"(current threshold {THRESHOLD_FAIR} gives F1={f1:.3f}). "
+            f"Update `THRESHOLD_FAIR` in [src/config.py](src/config.py) to improve results."
+        )
+
+    # AUC is a threshold-independent measure of ranking quality — use it as primary signal
+    if auc >= 0.85:
+        st.success(
+            f"**Strong performance** — AUC={auc:.3f}, F1={f1:.3f}. "
+            f"The model correctly ranks aligned pairs above non-aligned ones."
+        )
+    elif auc >= 0.70:
+        st.info(
+            f"**Good ranking quality** — AUC={auc:.3f}, F1={f1:.3f}. "
+            f"The model separates aligned and non-aligned pairs reasonably well. "
+            f"F1 can be improved by tuning `THRESHOLD_FAIR` in config.py "
+            f"(see the sweep suggestion above)."
+        )
     else:
-        st.warning(f"Low F1 score ({f1:.3f}). The model may need better embeddings or threshold calibration.")
+        st.warning(
+            f"**Low AUC ({auc:.3f})** — the model struggles to rank aligned pairs above "
+            f"non-aligned ones. This suggests the embedding model may not capture enough "
+            f"domain-specific meaning for this dataset."
+        )
+
+    # --- Threshold sweep chart ---
+    sweep_table = metrics.get("sweep_table")
+    if sweep_table:
+        st.subheader("Threshold Sweep")
+        st.caption(
+            "This chart shows how F1, Precision, and Recall change as we vary the "
+            "classification threshold. The peak of the F1 curve is the optimal threshold."
+        )
+        df_sweep = pd.DataFrame(sweep_table)
+        fig_sweep = px.line(
+            df_sweep.melt(id_vars="threshold", var_name="Metric", value_name="Score"),
+            x="threshold", y="Score", color="Metric",
+            title="F1 / Precision / Recall vs Threshold",
+            color_discrete_map={"f1": "#4a90d9", "precision": "#5bad72", "recall": "#f5a623"},
+        )
+        # Mark the current threshold
+        fig_sweep.add_vline(
+            x=THRESHOLD_FAIR, line_dash="dash", line_color="red",
+            annotation_text=f"Current ({THRESHOLD_FAIR})", annotation_position="top right"
+        )
+        if opt_thresh and opt_thresh != THRESHOLD_FAIR:
+            fig_sweep.add_vline(
+                x=opt_thresh, line_dash="dot", line_color="green",
+                annotation_text=f"Optimal ({opt_thresh})", annotation_position="top left"
+            )
+        fig_sweep.update_layout(height=350, xaxis_title="THRESHOLD_FAIR value",
+                                yaxis_range=[0, 1])
+        st.plotly_chart(fig_sweep, width='stretch')
 
     saved_path = os.path.join(OUTPUTS_DIR, "evaluation_results.json")
     if os.path.exists(saved_path):

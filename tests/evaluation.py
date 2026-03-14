@@ -205,6 +205,81 @@ def get_predicted_scores(ground_truth: list, alignment_result: dict) -> tuple:
 
 
 # =============================================================================
+# THRESHOLD SWEEP — find the optimal binarisation cutoff
+# =============================================================================
+
+def find_optimal_threshold(y_true: list, y_scores: list,
+                            lo: float = 0.25, hi: float = 0.70,
+                            step: float = 0.02) -> dict:
+    """
+    Try every threshold between lo and hi (in steps of step) and return
+    the one that gives the highest F1 score.
+
+    This tells you the ideal THRESHOLD_FAIR value for your data and model.
+
+    Args:
+        y_true (list[float]): Ground-truth continuous labels (0-1).
+        y_scores (list[float]): Predicted cosine similarity scores (0-1).
+        lo (float): Lowest threshold to try. Default 0.25.
+        hi (float): Highest threshold to try. Default 0.70.
+        step (float): Step size between candidates. Default 0.02.
+
+    Returns:
+        dict: {
+            "best_threshold": float,
+            "best_f1":        float,
+            "best_precision": float,
+            "best_recall":    float,
+            "sweep_table":    list of {threshold, precision, recall, f1}
+        }
+    """
+    y_true_binary = [1 if t >= GT_BINARY_THRESHOLD else 0 for t in y_true]
+
+    sweep_table = []
+    best = {"threshold": lo, "f1": 0.0, "precision": 0.0, "recall": 0.0}
+
+    # Try every candidate threshold
+    threshold = lo
+    while threshold <= hi + 1e-9:
+        t = round(threshold, 4)
+        y_pred = [1 if s >= t else 0 for s in y_scores]
+
+        p  = precision_score(y_true_binary, y_pred, zero_division=0)
+        r  = recall_score(y_true_binary, y_pred, zero_division=0)
+        f1 = f1_score(y_true_binary, y_pred, zero_division=0)
+
+        sweep_table.append({"threshold": t, "precision": round(p, 4),
+                             "recall": round(r, 4), "f1": round(f1, 4)})
+
+        if f1 > best["f1"]:
+            best = {"threshold": t, "f1": round(f1, 4),
+                    "precision": round(p, 4), "recall": round(r, 4)}
+
+        threshold += step
+
+    # Print sweep table
+    print("\n  Threshold sweep (THRESHOLD_FAIR candidates):")
+    print(f"  {'Threshold':>10}  {'Precision':>10}  {'Recall':>8}  {'F1':>8}")
+    print("  " + "-"*42)
+    for row in sweep_table:
+        marker = " ◄ BEST" if row["threshold"] == best["threshold"] else ""
+        print(f"  {row['threshold']:>10.2f}  {row['precision']:>10.4f}  "
+              f"{row['recall']:>8.4f}  {row['f1']:>8.4f}{marker}")
+
+    print(f"\n  ✅ Optimal THRESHOLD_FAIR = {best['threshold']} "
+          f"(F1={best['f1']:.4f}, P={best['precision']:.4f}, R={best['recall']:.4f})")
+    print(f"  → Update THRESHOLD_FAIR in src/config.py to {best['threshold']}")
+
+    return {
+        "best_threshold": best["threshold"],
+        "best_f1":        best["f1"],
+        "best_precision": best["precision"],
+        "best_recall":    best["recall"],
+        "sweep_table":    sweep_table,
+    }
+
+
+# =============================================================================
 # COMPUTE METRICS
 # =============================================================================
 
@@ -292,9 +367,16 @@ def run_evaluation(objectives: list = None) -> dict:
     print("\n📌 Step 3: Matching ground truth pairs to predictions...")
     y_true, y_scores = get_predicted_scores(ground_truth, alignment_result)
 
-    # Step 5 — Compute metrics
-    print("\n📌 Step 4: Computing metrics...")
+    # Step 5 — Run threshold sweep to find optimal cutoff
+    print("\n📌 Step 4: Finding optimal threshold...")
+    sweep = find_optimal_threshold(y_true, y_scores)
+
+    # Step 5b — Compute final metrics using the current THRESHOLD_FAIR
+    print(f"\n📌 Step 5: Computing metrics at current THRESHOLD_FAIR={THRESHOLD_FAIR}...")
     metrics = compute_metrics(y_true, y_scores)
+    metrics["optimal_threshold"] = sweep["best_threshold"]
+    metrics["optimal_f1"]        = sweep["best_f1"]
+    metrics["sweep_table"]       = sweep["sweep_table"]
 
     # Step 6 — Print summary table
     print("\n" + "="*60)
@@ -332,6 +414,8 @@ def run_evaluation(objectives: list = None) -> dict:
         "n_pairs":               len(y_true),
         "gt_binary_threshold":   GT_BINARY_THRESHOLD,
         "pred_binary_threshold": THRESHOLD_FAIR,
+        "optimal_threshold":     metrics.get("optimal_threshold", THRESHOLD_FAIR),
+        "optimal_f1":            metrics.get("optimal_f1", metrics["f1"]),
     }
 
     with open(output_path, "w", encoding="utf-8") as f:

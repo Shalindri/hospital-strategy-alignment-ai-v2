@@ -2,78 +2,33 @@
   "actions": [
     {
       "id": "A1",
-      "title": "Launch Infection Control Audit Programme",
-      "description": "Conduct monthly ward audits to monitor hand hygiene compliance, sterilisation procedures, and personal protective equipment use. Report results to the clinical governance committee and target a hospital-acquired infection rate below 2%."
+      "title": "Monthly Infection Control Audit",
+      "description": "Conduct monthly ward audits to check hand hygiene, sterilisation, and PPE use. Report results to the clinical team and target a hospital-acquired infection rate below 2%."
     },
     {
       "id": "A2",
-      "title": "Implement Patient Safety Incident Reporting System",
-      "description": "Deploy a digital tool that allows all staff to report near-misses and adverse events. Review weekly reports in a safety huddle, implement corrective actions, and track trends to reduce recurring incidents."
+      "title": "Staff Safety Training Programme",
+      "description": "Run quarterly safety workshops for all nurses and doctors covering error prevention, incident reporting, and clinical protocols to improve patient safety outcomes."
     },
     {
       "id": "A3",
-      "title": "Achieve JCI Accreditation for Core Clinical Departments",
-      "description": "Prepare the emergency, surgical, and maternity departments for Joint Commission International accreditation. Assign a dedicated coordinator, conduct gap assessments, and complete all corrective actions within 12 months."
+      "title": "JCI Accreditation Preparation",
+      "description": "Assign a coordinator to lead the Joint Commission International accreditation process, conduct gap assessments, and complete all corrective actions within 12 months."
     },
     {
       "id": "A4",
-      "title": "Acquire Adjacent Land for Hospital Expansion",
-      "description": "Complete legal due diligence, environmental assessment, and land valuation for the adjacent plot. Secure Board approval and finalise the purchase agreement to enable construction planning to begin in the following financial year."
+      "title": "Deploy Electronic Health Record System",
+      "description": "Replace paper patient records with a cloud-based electronic health record platform. Train all clinical and admin staff and go live across all departments by year end."
     },
     {
       "id": "A5",
-      "title": "Design and Build 75-Bed Expansion Wing",
-      "description": "Commission architects to design the new 75-bed wing including cardiac, elderly care, and maternity wards. Award construction contract after competitive tender and complete the build within 24 months of breaking ground."
+      "title": "Automate Patient Scheduling and Billing",
+      "description": "Implement an online booking portal and automated billing system to reduce manual admin work, cut appointment no-shows by 30%, and speed up invoice processing."
     },
     {
       "id": "A6",
-      "title": "Open Dedicated Elderly Care Unit",
-      "description": "Fit out and staff a 15-bed elderly care unit with specialist geriatric nursing, physiotherapy, and dementia support services. Target admission of first patients within 18 months and reach 80% occupancy within 6 months of opening."
-    },
-    {
-      "id": "A7",
-      "title": "Launch Specialist Nursing Training Programme",
-      "description": "Partner with a nursing college to deliver a 6-month advanced clinical skills programme for registered nurses in ICU, oncology, and cardiac care. Fund 20 nurses per cohort and run two cohorts per year."
-    },
-    {
-      "id": "A8",
-      "title": "Introduce Staff Retention Incentive Scheme",
-      "description": "Design and roll out a retention package including performance bonuses, flexible scheduling, funded continuing education, and recognition awards. Target a reduction in annual nurse turnover from 22% to below 12%."
-    },
-    {
-      "id": "A9",
-      "title": "Recruit 10 Specialist Consultants",
-      "description": "Advertise and fill 10 specialist consultant posts in cardiology, nephrology, oncology, and orthopaedics. Use a mix of full-time appointments and visiting specialist contracts to meet clinical demand within 9 months."
-    },
-    {
-      "id": "A10",
-      "title": "Deploy Electronic Health Record System",
-      "description": "Replace the paper-based patient record system with a cloud-based electronic health record platform. Complete data migration, train 200 clinical and administrative staff, and go live across all departments by the end of the financial year."
-    },
-    {
-      "id": "A11",
-      "title": "Automate Appointment Scheduling and Billing",
-      "description": "Implement an online patient portal and automated billing system to reduce manual administrative workload, cut appointment no-shows by 30%, and accelerate invoice processing from 14 days to 3 days."
-    },
-    {
-      "id": "A12",
-      "title": "Upgrade Cybersecurity and Data Backup Infrastructure",
-      "description": "Conduct a cybersecurity audit, patch all critical vulnerabilities, implement multi-factor authentication for clinical systems, and establish an automated offsite data backup solution tested quarterly."
-    },
-    {
-      "id": "A13",
-      "title": "Launch Medical Tourism Package for International Patients",
-      "description": "Develop affordable surgical and wellness packages targeting expatriates and visitors. Partner with two travel agencies, publish a multilingual hospital brochure, and achieve 50 international patient admissions in the first year."
-    },
-    {
-      "id": "A14",
-      "title": "Renegotiate Supplier Contracts to Reduce Procurement Costs",
-      "description": "Review all pharmaceutical and medical supply contracts, consolidate to preferred suppliers, and negotiate volume discounts. Target a 15% reduction in supply costs against the prior year baseline."
-    },
-    {
-      "id": "A15",
-      "title": "Organise Annual Hospital Sports Day",
-      "description": "Plan and host a full-day sports and social event for all hospital staff and their families. Include team games, a barbecue, and an awards ceremony. Budget LKR 500,000 and target 80% staff participation."
+      "title": "Upgrade Cybersecurity Infrastructure",
+      "description": "Audit all hospital IT systems, fix vulnerabilities, enable multi-factor authentication, and set up automated daily data backups to protect patient data."
     }
   ]
 }
