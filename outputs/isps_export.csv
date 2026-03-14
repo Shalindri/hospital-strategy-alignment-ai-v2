@@ -1,0 +1,81 @@
+# action_alignments
+Action #,Title,Declared Obj,Best Obj,Best Score,Classification,Is Orphan,Owner,Budget (LKR M)
+1,Adjacent Land Acquisition Due Diligence & Negotiation,A,A,0.3153,Poor,True,Facilities & Projects Director (with Legal Counsel),35.0
+2,Architectural Master Plan for 150-Bed Expansion,A,A,0.5391,Fair,False,Facilities & Projects Director,28.0
+3,Cardiac Catheterisation Laboratory Feasibility & Equipment Specification,A,B,0.3877,Poor,True,Medical Director,12.0
+4,Elderly Care Unit Pilot Programme Design,A,A,0.4913,Fair,False,Medical Director (with Director of Nursing),8.0
+5,Aesthetic & Cosmetic Medicine Service Feasibility Study,A,A,0.4811,Fair,False,Medical Director (with Marketing Director),6.0
+6,Fertility Centre Laboratory Upgrade Planning,A,A,0.5638,Fair,False,Medical Director (Fertility Centre Lead),10.0
+7,Nephrology Service Development Roadmap,A,C,0.4275,Poor,True,Medical Director,5.0
+8,Administrative Office Refurbishment Programme,A,A,0.395,Poor,True,Facilities & Projects Director,22.0
+9,EHR Vendor Selection & Contract Negotiation,B,B,0.5901,Fair,False,Chief Information Officer (CIO),15.0
+10,IT Infrastructure Assessment & Network Upgrade,B,B,0.6722,Good,False,CIO (with IT Department),45.0
+11,Telemedicine Platform Requirements & Vendor Engagement,B,B,0.7203,Good,False,CIO (with International Unit Director),8.0
+12,Cybersecurity Baseline Assessment & Policy Development,B,B,0.6431,Good,False,CIO,12.0
+13,Establishment of Ethics Review Committee,C,B,0.4289,Poor,True,Medical Director,3.0
+14,University Research Partnership MOU,C,C,0.6081,Good,False,Medical Director,4.0
+15,Appointment of Research Coordinator,C,C,0.5402,Fair,False,HR Director (with Medical Director),4.0
+16,Specialist Clinician Recruitment Drive,D,D,0.4921,Fair,False,HR Director (with Medical Director),18.0
+17,Nursing Workforce Expansion Planning,D,D,0.5277,Fair,False,Director of Nursing (with HR Director),15.0
+18,Continuing Professional Development (CPD) Programme Launch,D,D,0.7156,Good,False,Director of Nursing (with Medical Director),10.0
+19,Annual Staff Cricket Tournament & Sports Sponsorship,D,E,0.3846,Poor,True,HR Director (with Marketing Director),8.0
+20,Maldives Partnership Scoping & Negotiations,E,E,0.7032,Good,False,International Unit Director,14.0
+21,Medical Tourism Concierge Unit Setup,E,E,0.6205,Good,False,International Unit Director (with Marketing Director),12.0
+22,Community Preventive Health Screening Programme — Negombo Division,E,E,0.458,Fair,False,Marketing Director (with Medical Director),9.0
+23,Corporate Wellness Partnership Expansion,E,E,0.5079,Fair,False,Marketing Director,7.0
+24,Executive Lounge Furniture & Premium Décor Upgrade,E,A,0.3872,Poor,True,Facilities & Projects Director,18.0
+25,Retail Pharmacy Outlet Expansion — Negombo Town Centre,E,A,0.3329,Poor,True,Finance Director (with Marketing Director),25.0
+
+# objective_alignments
+Code,Name,Mean Similarity,Max Similarity,Coverage,Aligned Actions,Declared Actions
+A,Patient Care Excellence,0.404,0.5638,0.32,8,8
+B,Digital Health Transformation,0.3961,0.7203,0.2,5,4
+C,Research & Innovation,0.3707,0.6081,0.12,3,3
+D,Workforce Development,0.3478,0.7156,0.16,4,4
+E,Community & Regional Health Expansion,0.3945,0.7032,0.24,6,6
+
+# improvements
+Action #,Title,Declared Obj,Alignment Score,Confidence,Modified Desc,Strategic Linkage
+1,Adjacent Land Acquisition Due Diligence & Negotiation,A,0.3153,MEDIUM,,
+3,Cardiac Catheterisation Laboratory Feasibility & Equipment Specification,A,0.3877,MEDIUM,,
+4,Elderly Care Unit Pilot Programme Design,A,0.4913,MEDIUM,,
+5,Aesthetic & Cosmetic Medicine Service Feasibility Study,A,0.4811,MEDIUM,,
+7,Nephrology Service Development Roadmap,A,0.4275,HIGH,"** Develop and implement a comprehensive nephrology service line, including a dialysis unit, to enhance patient care and outcomes in the Negombo-Gampaha region. This initiative aligns with Objective A: Patient Care Excellence by expanding hospital capacity and improving clinical services.
+
+_KPIS:...","** This action directly supports Objective A: Patient Care Excellence by expanding hospital capacity, improving clinical services, and enhancing patient outcomes in nephrology care.
+
+** HIGH
+
+These..."
+8,Administrative Office Refurbishment Programme,A,0.395,HIGH,"** Refurbish the administrative wing to enhance patient care coordination and support services, improving staff efficiency and effectiveness in delivering high-quality patient care. This project will also provide a modernized workspace for administrative staff, enabling them to better support cli...","** This project will enhance the administrative wing's capacity to support clinical teams in achieving Patient Care Excellence objectives, particularly A2 (Hospital-Acquired Infection rate below 2%..."
+13,Establishment of Ethics Review Committee,C,0.4289,MEDIUM,,
+16,Specialist Clinician Recruitment Drive,D,0.4921,HIGH,"** 
+""Recruit and retain specialist clinicians required for the 2026 expansion through a targeted campaign, focusing on interventional cardiology, nephrology, geriatric medicine, reproductive medicine, and dermatological aesthetics. This effort will support Objective D: Workforce Development by in...","**
+""This action directly supports Objective D: Workforce Development by increasing clinical staffing and enhancing our capacity to deliver world-class care across expanding service lines, which is..."
+19,Annual Staff Cricket Tournament & Sports Sponsorship,D,0.3846,MEDIUM,,
+22,Community Preventive Health Screening Programme — Negombo Division,E,0.458,MEDIUM,,
+24,Executive Lounge Furniture & Premium Décor Upgrade,E,0.3872,MEDIUM,,
+25,Retail Pharmacy Outlet Expansion — Negombo Town Centre,E,0.3329,HIGH,"** Establish a retail pharmacy outlet in Negombo town centre as part of the hospital's Community & Regional Health Expansion strategy, aiming to increase community touchpoints and brand presence while providing convenient access to healthcare services for local residents.
+
+_KPIS:**
+
+* Number of c...","** This retail pharmacy outlet will directly support the strategic objective of Community & Regional Health Expansion by increasing community touchpoints, providing convenient access to healthcare..."
+
+# agent_recommendations
+Rec ID,Issue Type,Impact Score,Confidence,Budget (LKR M),Timeline,What to Change,Actions,KPIs
+rec_orphan_action_1,orphan_action,0.38,HIGH,0.0,"Implement changes within 6 weeks, with a phased rollout to ensure minimal disruption to ongoing operations.",The misalignment between Action 1 ('Adjacent Land Acquisition Due Diligence & Negotiation') and Objective A (Patient Care Excellence) is due to a lack of clear connection between land acquisition and the hospital's primary objective of delivering outstanding patient care. This disconnect may be a...,"Revise Action 1 to explicitly link land acquisition with Objective A by incorporating metrics that measure how the acquired land will enhance patie...; Introduce a new objective (Objective D) focused on infrastructure development and its direct impact on patient care. This would ensure that all act...; Conduct a thorough review of the hospital's strategic plan to identify other areas where similar misalignments may exist, ensuring that all future...; [Revised] None. The proposal demonstrates a clear understanding of the strategic alignment issue and provides concrete recommendations to address it.",Land Acquisition Impact on Patient Care (measured by increase in bed capacity or operational effi...; Time-to-Clinical-Start for new service lines; Reduction in Capital Expenditure per Bed
+rec_orphan_action_25,orphan_action,0.23,MEDIUM,0.0,"Implement changes within the next 6 weeks, allowing for a revised action plan to be submitted to stakeholders by the end of Q2.","The misalignment between Action 25 and the hospital's strategic plan is due to a mismatch in objectives, where the retail pharmacy outlet expansion does not directly contribute to the community health expansion objective (E), despite being related to it. This discrepancy may be attributed to an i...","Revise Action 25 to explicitly link its outcomes to the community health expansion objective (E) by incorporating metrics such as increased access...; Conduct a thorough review of the retail pharmacy outlet expansion plan to identify opportunities for synergies with other actions, particularly tho...",Alignment score improvement between Action 25 and objective E; Increase in patient satisfaction ratings among Negombo town centre residents; Number of community outreach programs conducted through the retail pharmacy outlet
+rec_under_supported_C,under_supported_strategy,0.605,HIGH,50.0,"** Implement Recommendations 1-3 over the next 6-9 months, with regular progress updates to the hospital's executive leadership.
+
+**BUDGET_ESTIMATE:** Estimated additional budget needed: LKR 50 million (to support Research Coordinator recruitment, Ethics Review Committee establishment, and research-related infrastructure development).
+
+**EXPECTED_OUTCOME:** By implementing these recommendations, we expect to see a significant increase in action coverage for Objective C ('Research & Innovation'), with at least 30% of actions completed within the next 12 months. This will help to position the hospital as a knowledge hub and enhance its reputation for clinical research and innovation.
+
+**CONFIDENCE:** HIGH (based on the clear root cause analysis and actionable recommendations).","** The misalignment between Objective C ('Research & Innovation') and action coverage is due to a lack of prioritization and resource allocation towards research-related initiatives. This is evident from the low score (12%) and limited action coverage for this objective.
+
+_1:** Establish a clear...","** Establish a clear Research & Innovation Roadmap with specific, measurable goals and timelines to guide action planning and resource allocation....; ** Designate a senior leader as the champion for Research & Innovation, responsible for overseeing progress, addressing barriers, and ensuring alig...; ** Develop a comprehensive plan to recruit and retain research talent, including incentives for researchers, clinicians, and students to participat...","Research & Innovation Roadmap completion rate (e.g., 80% of roadmap milestones achieved within th...; Number of new clinical trials initiated per quarter; Percentage increase in research-related publications and presentations; *TIMELINE:** Implement Recommendations 1-3 over the next 6-9 months, with regular progress update...; *BUDGET_ESTIMATE:** Estimated additional budget needed: LKR 50 million (to support Research Coord...; *EXPECTED_OUTCOME:** By implementing these recommendations, we expect to see a significant increa...; *CONFIDENCE:** HIGH (based on the clear root cause analysis and actionable recommendations)."
+rec_under_supported_D,under_supported_strategy,0.68,HIGH,50.0,"Implement changes within the next 6 months, with regular review and updates every quarter.",The misalignment between Objective D (Workforce Development) and action coverage is due to a lack of prioritization and resource allocation towards workforce development initiatives. This is evident from the low score (0.265) assigned to Objective D compared to other strategic objectives.,"Re-evaluate and re-prioritize Objective D by allocating additional resources and increasing its score to match or exceed that of other strategic ob...; Identify and eliminate non-essential actions, such as [action_19] (Annual Staff Cricket Tournament & Sports Sponsorship), which do not directly con...; Develop a comprehensive workforce development plan that aligns with the hospital's strategic objectives, including specific targets for increasing...; [Revised] Consider adding a section on stakeholder engagement and communication to address potential resistance from staff. Additionally, define sp...",Workforce Development Score (0.265 -> 0.500); Clinical Staffing Increase Rate (%); Average Time-to-Fill Vacant Positions
+rec_under_supported_B,under_supported_strategy,0.155,MEDIUM,0.0,,Objective B ('Digital Health Transformation') has only 20% action coverage. Gap actions: [].,"[Revised] ** To revise this recommendation, I suggest providing more specific details on:
+
+1. Proposed actions to improve action coverage of Object...",
+

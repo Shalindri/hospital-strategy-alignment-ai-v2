@@ -1,0 +1,939 @@
+{
+  "overall_score": 0.5173,
+  "overall_classification": "Fair",
+  "mean_similarity": 0.3826,
+  "std_similarity": 0.1085,
+  "median_similarity": 0.3694,
+  "distribution": {
+    "Excellent": 0,
+    "Good": 7,
+    "Fair": 10,
+    "Poor": 8
+  },
+  "objective_alignments": [
+    {
+      "code": "A",
+      "name": "Patient Care Excellence",
+      "top_actions": [
+        [
+          6,
+          0.5638
+        ],
+        [
+          2,
+          0.5391
+        ],
+        [
+          4,
+          0.4913
+        ],
+        [
+          5,
+          0.4811
+        ],
+        [
+          10,
+          0.4731
+        ]
+      ],
+      "mean_similarity": 0.404,
+      "max_similarity": 0.5638,
+      "aligned_action_count": 8,
+      "declared_action_count": 8,
+      "coverage_score": 0.32,
+      "gap_actions": [
+        1,
+        3,
+        7,
+        8
+      ]
+    },
+    {
+      "code": "B",
+      "name": "Digital Health Transformation",
+      "top_actions": [
+        [
+          11,
+          0.7203
+        ],
+        [
+          10,
+          0.6722
+        ],
+        [
+          12,
+          0.6431
+        ],
+        [
+          9,
+          0.5901
+        ],
+        [
+          20,
+          0.5307
+        ]
+      ],
+      "mean_similarity": 0.3961,
+      "max_similarity": 0.7203,
+      "aligned_action_count": 5,
+      "declared_action_count": 4,
+      "coverage_score": 0.2,
+      "gap_actions": []
+    },
+    {
+      "code": "C",
+      "name": "Research & Innovation",
+      "top_actions": [
+        [
+          14,
+          0.6081
+        ],
+        [
+          15,
+          0.5402
+        ],
+        [
+          16,
+          0.4661
+        ],
+        [
+          18,
+          0.4334
+        ],
+        [
+          7,
+          0.4275
+        ]
+      ],
+      "mean_similarity": 0.3707,
+      "max_similarity": 0.6081,
+      "aligned_action_count": 3,
+      "declared_action_count": 3,
+      "coverage_score": 0.12,
+      "gap_actions": [
+        13
+      ]
+    },
+    {
+      "code": "D",
+      "name": "Workforce Development",
+      "top_actions": [
+        [
+          18,
+          0.7156
+        ],
+        [
+          17,
+          0.5277
+        ],
+        [
+          16,
+          0.4921
+        ],
+        [
+          4,
+          0.4738
+        ],
+        [
+          15,
+          0.4282
+        ]
+      ],
+      "mean_similarity": 0.3478,
+      "max_similarity": 0.7156,
+      "aligned_action_count": 4,
+      "declared_action_count": 4,
+      "coverage_score": 0.16,
+      "gap_actions": [
+        19
+      ]
+    },
+    {
+      "code": "E",
+      "name": "Community & Regional Health Expansion",
+      "top_actions": [
+        [
+          20,
+          0.7032
+        ],
+        [
+          21,
+          0.6205
+        ],
+        [
+          11,
+          0.6041
+        ],
+        [
+          23,
+          0.5079
+        ],
+        [
+          16,
+          0.47
+        ]
+      ],
+      "mean_similarity": 0.3945,
+      "max_similarity": 0.7032,
+      "aligned_action_count": 6,
+      "declared_action_count": 6,
+      "coverage_score": 0.24,
+      "gap_actions": [
+        24,
+        25
+      ]
+    }
+  ],
+  "action_alignments": [
+    {
+      "action_id": "action_1",
+      "action_number": 1,
+      "title": "Adjacent Land Acquisition Due Diligence & Negotiation",
+      "declared_objective": "A",
+      "action_owner": "Facilities & Projects Director (with Legal Counsel)",
+      "budget_lkr_millions": 35.0,
+      "similarities": {
+        "A": 0.3153,
+        "B": 0.2588,
+        "C": 0.2318,
+        "D": 0.2175,
+        "E": 0.2262
+      },
+      "best_objective": "A",
+      "best_score": 0.3153,
+      "classification": "Poor",
+      "is_orphan": true,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_2",
+      "action_number": 2,
+      "title": "Architectural Master Plan for 150-Bed Expansion",
+      "declared_objective": "A",
+      "action_owner": "Facilities & Projects Director",
+      "budget_lkr_millions": 28.0,
+      "similarities": {
+        "A": 0.5391,
+        "B": 0.371,
+        "C": 0.3552,
+        "D": 0.3819,
+        "E": 0.3026
+      },
+      "best_objective": "A",
+      "best_score": 0.5391,
+      "classification": "Fair",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_3",
+      "action_number": 3,
+      "title": "Cardiac Catheterisation Laboratory Feasibility & Equipment Specification",
+      "declared_objective": "A",
+      "action_owner": "Medical Director",
+      "budget_lkr_millions": 12.0,
+      "similarities": {
+        "A": 0.3694,
+        "B": 0.3877,
+        "C": 0.3694,
+        "D": 0.3012,
+        "E": 0.2996
+      },
+      "best_objective": "B",
+      "best_score": 0.3877,
+      "classification": "Poor",
+      "is_orphan": true,
+      "declared_match": false
+    },
+    {
+      "action_id": "action_4",
+      "action_number": 4,
+      "title": "Elderly Care Unit Pilot Programme Design",
+      "declared_objective": "A",
+      "action_owner": "Medical Director (with Director of Nursing)",
+      "budget_lkr_millions": 8.0,
+      "similarities": {
+        "A": 0.4913,
+        "B": 0.4245,
+        "C": 0.3599,
+        "D": 0.4738,
+        "E": 0.4353
+      },
+      "best_objective": "A",
+      "best_score": 0.4913,
+      "classification": "Fair",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_5",
+      "action_number": 5,
+      "title": "Aesthetic & Cosmetic Medicine Service Feasibility Study",
+      "declared_objective": "A",
+      "action_owner": "Medical Director (with Marketing Director)",
+      "budget_lkr_millions": 6.0,
+      "similarities": {
+        "A": 0.4811,
+        "B": 0.3405,
+        "C": 0.3866,
+        "D": 0.3288,
+        "E": 0.4176
+      },
+      "best_objective": "A",
+      "best_score": 0.4811,
+      "classification": "Fair",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_6",
+      "action_number": 6,
+      "title": "Fertility Centre Laboratory Upgrade Planning",
+      "declared_objective": "A",
+      "action_owner": "Medical Director (Fertility Centre Lead)",
+      "budget_lkr_millions": 10.0,
+      "similarities": {
+        "A": 0.5638,
+        "B": 0.3256,
+        "C": 0.3127,
+        "D": 0.2103,
+        "E": 0.2243
+      },
+      "best_objective": "A",
+      "best_score": 0.5638,
+      "classification": "Fair",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_7",
+      "action_number": 7,
+      "title": "Nephrology Service Development Roadmap",
+      "declared_objective": "A",
+      "action_owner": "Medical Director",
+      "budget_lkr_millions": 5.0,
+      "similarities": {
+        "A": 0.4253,
+        "B": 0.3723,
+        "C": 0.4275,
+        "D": 0.3167,
+        "E": 0.3534
+      },
+      "best_objective": "C",
+      "best_score": 0.4275,
+      "classification": "Poor",
+      "is_orphan": true,
+      "declared_match": false
+    },
+    {
+      "action_id": "action_8",
+      "action_number": 8,
+      "title": "Administrative Office Refurbishment Programme",
+      "declared_objective": "A",
+      "action_owner": "Facilities & Projects Director",
+      "budget_lkr_millions": 22.0,
+      "similarities": {
+        "A": 0.395,
+        "B": 0.305,
+        "C": 0.2631,
+        "D": 0.3491,
+        "E": 0.3014
+      },
+      "best_objective": "A",
+      "best_score": 0.395,
+      "classification": "Poor",
+      "is_orphan": true,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_9",
+      "action_number": 9,
+      "title": "EHR Vendor Selection & Contract Negotiation",
+      "declared_objective": "B",
+      "action_owner": "Chief Information Officer (CIO)",
+      "budget_lkr_millions": 15.0,
+      "similarities": {
+        "A": 0.3945,
+        "B": 0.5901,
+        "C": 0.3241,
+        "D": 0.2577,
+        "E": 0.3674
+      },
+      "best_objective": "B",
+      "best_score": 0.5901,
+      "classification": "Fair",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_10",
+      "action_number": 10,
+      "title": "IT Infrastructure Assessment & Network Upgrade",
+      "declared_objective": "B",
+      "action_owner": "CIO (with IT Department)",
+      "budget_lkr_millions": 45.0,
+      "similarities": {
+        "A": 0.4731,
+        "B": 0.6722,
+        "C": 0.3235,
+        "D": 0.3219,
+        "E": 0.3887
+      },
+      "best_objective": "B",
+      "best_score": 0.6722,
+      "classification": "Good",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_11",
+      "action_number": 11,
+      "title": "Telemedicine Platform Requirements & Vendor Engagement",
+      "declared_objective": "B",
+      "action_owner": "CIO (with International Unit Director)",
+      "budget_lkr_millions": 8.0,
+      "similarities": {
+        "A": 0.417,
+        "B": 0.7203,
+        "C": 0.3821,
+        "D": 0.3296,
+        "E": 0.6041
+      },
+      "best_objective": "B",
+      "best_score": 0.7203,
+      "classification": "Good",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_12",
+      "action_number": 12,
+      "title": "Cybersecurity Baseline Assessment & Policy Development",
+      "declared_objective": "B",
+      "action_owner": "CIO",
+      "budget_lkr_millions": 12.0,
+      "similarities": {
+        "A": 0.3474,
+        "B": 0.6431,
+        "C": 0.2517,
+        "D": 0.3253,
+        "E": 0.3687
+      },
+      "best_objective": "B",
+      "best_score": 0.6431,
+      "classification": "Good",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_13",
+      "action_number": 13,
+      "title": "Establishment of Ethics Review Committee",
+      "declared_objective": "C",
+      "action_owner": "Medical Director",
+      "budget_lkr_millions": 3.0,
+      "similarities": {
+        "A": 0.3327,
+        "B": 0.4289,
+        "C": 0.3934,
+        "D": 0.3327,
+        "E": 0.3979
+      },
+      "best_objective": "B",
+      "best_score": 0.4289,
+      "classification": "Poor",
+      "is_orphan": true,
+      "declared_match": false
+    },
+    {
+      "action_id": "action_14",
+      "action_number": 14,
+      "title": "University Research Partnership MOU",
+      "declared_objective": "C",
+      "action_owner": "Medical Director",
+      "budget_lkr_millions": 4.0,
+      "similarities": {
+        "A": 0.3584,
+        "B": 0.397,
+        "C": 0.6081,
+        "D": 0.314,
+        "E": 0.426
+      },
+      "best_objective": "C",
+      "best_score": 0.6081,
+      "classification": "Good",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_15",
+      "action_number": 15,
+      "title": "Appointment of Research Coordinator",
+      "declared_objective": "C",
+      "action_owner": "HR Director (with Medical Director)",
+      "budget_lkr_millions": 4.0,
+      "similarities": {
+        "A": 0.3124,
+        "B": 0.3908,
+        "C": 0.5402,
+        "D": 0.4282,
+        "E": 0.3271
+      },
+      "best_objective": "C",
+      "best_score": 0.5402,
+      "classification": "Fair",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_16",
+      "action_number": 16,
+      "title": "Specialist Clinician Recruitment Drive",
+      "declared_objective": "D",
+      "action_owner": "HR Director (with Medical Director)",
+      "budget_lkr_millions": 18.0,
+      "similarities": {
+        "A": 0.4584,
+        "B": 0.3777,
+        "C": 0.4661,
+        "D": 0.4921,
+        "E": 0.47
+      },
+      "best_objective": "D",
+      "best_score": 0.4921,
+      "classification": "Fair",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_17",
+      "action_number": 17,
+      "title": "Nursing Workforce Expansion Planning",
+      "declared_objective": "D",
+      "action_owner": "Director of Nursing (with HR Director)",
+      "budget_lkr_millions": 15.0,
+      "similarities": {
+        "A": 0.4605,
+        "B": 0.3477,
+        "C": 0.4118,
+        "D": 0.5277,
+        "E": 0.3394
+      },
+      "best_objective": "D",
+      "best_score": 0.5277,
+      "classification": "Fair",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_18",
+      "action_number": 18,
+      "title": "Continuing Professional Development (CPD) Programme Launch",
+      "declared_objective": "D",
+      "action_owner": "Director of Nursing (with Medical Director)",
+      "budget_lkr_millions": 10.0,
+      "similarities": {
+        "A": 0.3143,
+        "B": 0.3653,
+        "C": 0.4334,
+        "D": 0.7156,
+        "E": 0.3341
+      },
+      "best_objective": "D",
+      "best_score": 0.7156,
+      "classification": "Good",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_19",
+      "action_number": 19,
+      "title": "Annual Staff Cricket Tournament & Sports Sponsorship",
+      "declared_objective": "D",
+      "action_owner": "HR Director (with Marketing Director)",
+      "budget_lkr_millions": 8.0,
+      "similarities": {
+        "A": 0.2917,
+        "B": 0.1667,
+        "C": 0.3056,
+        "D": 0.2804,
+        "E": 0.3846
+      },
+      "best_objective": "E",
+      "best_score": 0.3846,
+      "classification": "Poor",
+      "is_orphan": true,
+      "declared_match": false
+    },
+    {
+      "action_id": "action_20",
+      "action_number": 20,
+      "title": "Maldives Partnership Scoping & Negotiations",
+      "declared_objective": "E",
+      "action_owner": "International Unit Director",
+      "budget_lkr_millions": 14.0,
+      "similarities": {
+        "A": 0.436,
+        "B": 0.5307,
+        "C": 0.3897,
+        "D": 0.3194,
+        "E": 0.7032
+      },
+      "best_objective": "E",
+      "best_score": 0.7032,
+      "classification": "Good",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_21",
+      "action_number": 21,
+      "title": "Medical Tourism Concierge Unit Setup",
+      "declared_objective": "E",
+      "action_owner": "International Unit Director (with Marketing Director)",
+      "budget_lkr_millions": 12.0,
+      "similarities": {
+        "A": 0.4638,
+        "B": 0.3792,
+        "C": 0.3961,
+        "D": 0.3764,
+        "E": 0.6205
+      },
+      "best_objective": "E",
+      "best_score": 0.6205,
+      "classification": "Good",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_22",
+      "action_number": 22,
+      "title": "Community Preventive Health Screening Programme — Negombo Division",
+      "declared_objective": "E",
+      "action_owner": "Marketing Director (with Medical Director)",
+      "budget_lkr_millions": 9.0,
+      "similarities": {
+        "A": 0.4008,
+        "B": 0.3189,
+        "C": 0.3878,
+        "D": 0.2871,
+        "E": 0.458
+      },
+      "best_objective": "E",
+      "best_score": 0.458,
+      "classification": "Fair",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_23",
+      "action_number": 23,
+      "title": "Corporate Wellness Partnership Expansion",
+      "declared_objective": "E",
+      "action_owner": "Marketing Director",
+      "budget_lkr_millions": 7.0,
+      "similarities": {
+        "A": 0.3396,
+        "B": 0.3389,
+        "C": 0.378,
+        "D": 0.3613,
+        "E": 0.5079
+      },
+      "best_objective": "E",
+      "best_score": 0.5079,
+      "classification": "Fair",
+      "is_orphan": false,
+      "declared_match": true
+    },
+    {
+      "action_id": "action_24",
+      "action_number": 24,
+      "title": "Executive Lounge Furniture & Premium Décor Upgrade",
+      "declared_objective": "E",
+      "action_owner": "Facilities & Projects Director",
+      "budget_lkr_millions": 18.0,
+      "similarities": {
+        "A": 0.3872,
+        "B": 0.2639,
+        "C": 0.2596,
+        "D": 0.2935,
+        "E": 0.289
+      },
+      "best_objective": "A",
+      "best_score": 0.3872,
+      "classification": "Poor",
+      "is_orphan": true,
+      "declared_match": false
+    },
+    {
+      "action_id": "action_25",
+      "action_number": 25,
+      "title": "Retail Pharmacy Outlet Expansion — Negombo Town Centre",
+      "declared_objective": "E",
+      "action_owner": "Finance Director (with Marketing Director)",
+      "budget_lkr_millions": 25.0,
+      "similarities": {
+        "A": 0.3329,
+        "B": 0.1854,
+        "C": 0.3102,
+        "D": 0.1531,
+        "E": 0.3158
+      },
+      "best_objective": "A",
+      "best_score": 0.3329,
+      "classification": "Poor",
+      "is_orphan": true,
+      "declared_match": false
+    }
+  ],
+  "well_aligned_actions": [
+    10,
+    11,
+    12,
+    14,
+    18,
+    20,
+    21
+  ],
+  "poorly_aligned_actions": [
+    1,
+    3,
+    7,
+    8,
+    13,
+    19,
+    24,
+    25
+  ],
+  "orphan_actions": [
+    1,
+    3,
+    7,
+    8,
+    13,
+    19,
+    24,
+    25
+  ],
+  "mismatched_actions": [
+    {
+      "action_number": 3,
+      "title": "Cardiac Catheterisation Laboratory Feasibility & Equipment Specification",
+      "declared_objective": "A",
+      "best_objective": "B",
+      "best_score": 0.3877,
+      "declared_score": 0.3694
+    },
+    {
+      "action_number": 7,
+      "title": "Nephrology Service Development Roadmap",
+      "declared_objective": "A",
+      "best_objective": "C",
+      "best_score": 0.4275,
+      "declared_score": 0.4253
+    },
+    {
+      "action_number": 13,
+      "title": "Establishment of Ethics Review Committee",
+      "declared_objective": "C",
+      "best_objective": "B",
+      "best_score": 0.4289,
+      "declared_score": 0.3934
+    },
+    {
+      "action_number": 19,
+      "title": "Annual Staff Cricket Tournament & Sports Sponsorship",
+      "declared_objective": "D",
+      "best_objective": "E",
+      "best_score": 0.3846,
+      "declared_score": 0.2804
+    },
+    {
+      "action_number": 24,
+      "title": "Executive Lounge Furniture & Premium Décor Upgrade",
+      "declared_objective": "E",
+      "best_objective": "A",
+      "best_score": 0.3872,
+      "declared_score": 0.289
+    },
+    {
+      "action_number": 25,
+      "title": "Retail Pharmacy Outlet Expansion — Negombo Town Centre",
+      "declared_objective": "E",
+      "best_objective": "A",
+      "best_score": 0.3329,
+      "declared_score": 0.3158
+    }
+  ],
+  "alignment_matrix": [
+    [
+      0.3153,
+      0.5391,
+      0.3694,
+      0.4913,
+      0.4811,
+      0.5638,
+      0.4253,
+      0.395,
+      0.3945,
+      0.4731,
+      0.417,
+      0.3474,
+      0.3327,
+      0.3584,
+      0.3124,
+      0.4584,
+      0.4605,
+      0.3143,
+      0.2917,
+      0.436,
+      0.4638,
+      0.4008,
+      0.3396,
+      0.3872,
+      0.3329
+    ],
+    [
+      0.2588,
+      0.371,
+      0.3877,
+      0.4245,
+      0.3405,
+      0.3256,
+      0.3723,
+      0.305,
+      0.5901,
+      0.6722,
+      0.7203,
+      0.6431,
+      0.4289,
+      0.397,
+      0.3908,
+      0.3777,
+      0.3477,
+      0.3653,
+      0.1667,
+      0.5307,
+      0.3792,
+      0.3189,
+      0.3389,
+      0.2639,
+      0.1854
+    ],
+    [
+      0.2318,
+      0.3552,
+      0.3694,
+      0.3599,
+      0.3866,
+      0.3127,
+      0.4275,
+      0.2631,
+      0.3241,
+      0.3235,
+      0.3821,
+      0.2517,
+      0.3934,
+      0.6081,
+      0.5402,
+      0.4661,
+      0.4118,
+      0.4334,
+      0.3056,
+      0.3897,
+      0.3961,
+      0.3878,
+      0.378,
+      0.2596,
+      0.3102
+    ],
+    [
+      0.2175,
+      0.3819,
+      0.3012,
+      0.4738,
+      0.3288,
+      0.2103,
+      0.3167,
+      0.3491,
+      0.2577,
+      0.3219,
+      0.3296,
+      0.3253,
+      0.3327,
+      0.314,
+      0.4282,
+      0.4921,
+      0.5277,
+      0.7156,
+      0.2804,
+      0.3194,
+      0.3764,
+      0.2871,
+      0.3613,
+      0.2935,
+      0.1531
+    ],
+    [
+      0.2262,
+      0.3026,
+      0.2996,
+      0.4353,
+      0.4176,
+      0.2243,
+      0.3534,
+      0.3014,
+      0.3674,
+      0.3887,
+      0.6041,
+      0.3687,
+      0.3979,
+      0.426,
+      0.3271,
+      0.47,
+      0.3394,
+      0.3341,
+      0.3846,
+      0.7032,
+      0.6205,
+      0.458,
+      0.5079,
+      0.289,
+      0.3158
+    ]
+  ],
+  "matrix_row_labels": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "matrix_col_labels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ]
+}

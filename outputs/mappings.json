@@ -1,0 +1,940 @@
+{
+  "metadata": {
+    "embedding_model": "all-MiniLM-L6-v2",
+    "mapping_threshold": 0.55,
+    "embedding_weight": 0.6,
+    "keyword_weight": 0.4,
+    "total_concepts": 52
+  },
+  "action_mappings": [
+    {
+      "item_id": "action_1",
+      "item_type": "action",
+      "top_level_areas": [
+        "InfrastructureExpansion"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "LandAcquisition",
+          "concept_label": "Land Acquisition",
+          "parent_concept": "InfrastructureExpansion",
+          "keyword_score": 1.0,
+          "embedding_score": 0.6942,
+          "final_score": 0.8165,
+          "matched_keywords": [
+            "land acquisition",
+            "adjacent land",
+            "land valuation",
+            "environmental clearance",
+            "town planning"
+          ],
+          "evidence_text": "Action 1: Adjacent Land Acquisition Due Diligence & Negotiation. Conduct comprehensive due diligence on the adjacent land parcel identified for hospital expansion. This includes commissioning an indep..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_2",
+      "item_type": "action",
+      "top_level_areas": [
+        "InfrastructureExpansion"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "BedExpansion",
+          "concept_label": "Bed Expansion",
+          "parent_concept": "InfrastructureExpansion",
+          "keyword_score": 0.5,
+          "embedding_score": 0.6449,
+          "final_score": 0.587,
+          "matched_keywords": [
+            "bed expansion",
+            "150 bed",
+            "75 to 150"
+          ],
+          "evidence_text": "Action 2: Architectural Master Plan for 150-Bed Expansion. Engage a healthcare-specialised architectural firm to develop the master plan for the phased expansion from 75 to 150 beds. The plan must inc..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_3",
+      "item_type": "action",
+      "top_level_areas": [
+        "ClinicalServices"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "Cardiology",
+          "concept_label": "Cardiology",
+          "parent_concept": "ClinicalServices",
+          "keyword_score": 0.6667,
+          "embedding_score": 0.6193,
+          "final_score": 0.6382,
+          "matched_keywords": [
+            "cardiac",
+            "cardiac catheterisation",
+            "interventional cardiologist",
+            "angiography"
+          ],
+          "evidence_text": "Action 3: Cardiac Catheterisation Laboratory Feasibility & Equipment Specification. Commission a clinical and financial feasibility study for the proposed cardiac catheterisation laboratory. Identify..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_4",
+      "item_type": "action",
+      "top_level_areas": [
+        "ClinicalServices"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "ElderlyCare",
+          "concept_label": "Elderly Care",
+          "parent_concept": "ClinicalServices",
+          "keyword_score": 0.8333,
+          "embedding_score": 0.5095,
+          "final_score": 0.639,
+          "matched_keywords": [
+            "elderly care",
+            "geriatric",
+            "geriatric nursing",
+            "long-term residential",
+            "occupational therapy"
+          ],
+          "evidence_text": "Action 4: Elderly Care Unit Pilot Programme Design. Develop the operational model for the 10-bed Elderly Care Unit pilot, including clinical protocols for long-term residential care, staffing requirem..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_5",
+      "item_type": "action",
+      "top_level_areas": [
+        "ClinicalServices"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "AestheticMedicine",
+          "concept_label": "Aesthetic Medicine",
+          "parent_concept": "ClinicalServices",
+          "keyword_score": 1.0,
+          "embedding_score": 0.6158,
+          "final_score": 0.7695,
+          "matched_keywords": [
+            "aesthetic",
+            "cosmetic",
+            "dermatological",
+            "laser treatment",
+            "anti-ageing",
+            "cosmetic medicine"
+          ],
+          "evidence_text": "Action 5: Aesthetic & Cosmetic Medicine Service Feasibility Study. Conduct a market analysis and clinical feasibility study for the proposed Aesthetic & Cosmetic Medical Services line. Assess demand f..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_6",
+      "item_type": "action",
+      "top_level_areas": [
+        "ClinicalServices"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "Fertility",
+          "concept_label": "Fertility Centre",
+          "parent_concept": "ClinicalServices",
+          "keyword_score": 0.7143,
+          "embedding_score": 0.6508,
+          "final_score": 0.6762,
+          "matched_keywords": [
+            "fertility",
+            "ivf",
+            "embryology",
+            "cryopreservation",
+            "fertility centre"
+          ],
+          "evidence_text": "Action 6: Fertility Centre Laboratory Upgrade Planning. Assess current Fertility Centre laboratory infrastructure against international best-practice standards for IVF laboratories. Develop a detailed..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_7",
+      "item_type": "action",
+      "top_level_areas": [
+        "ClinicalServices"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "Nephrology",
+          "concept_label": "Nephrology",
+          "parent_concept": "ClinicalServices",
+          "keyword_score": 0.8333,
+          "embedding_score": 0.6858,
+          "final_score": 0.7448,
+          "matched_keywords": [
+            "nephrology",
+            "dialysis",
+            "haemodialysis",
+            "peritoneal dialysis",
+            "water treatment"
+          ],
+          "evidence_text": "Action 7: Nephrology Service Development Roadmap. Develop a clinical and operational roadmap for introducing a nephrology dialysis unit (targeted at 12 stations by 2029). This includes needs assessmen..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_8",
+      "item_type": "action",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "action_9",
+      "item_type": "action",
+      "top_level_areas": [
+        "DigitalHealth"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "EHR",
+          "concept_label": "Electronic Health Records",
+          "parent_concept": "DigitalHealth",
+          "keyword_score": 0.8333,
+          "embedding_score": 0.7007,
+          "final_score": 0.7538,
+          "matched_keywords": [
+            "ehr",
+            "electronic health record",
+            "health record",
+            "hl7",
+            "fhir"
+          ],
+          "evidence_text": "Action 9: EHR Vendor Selection & Contract Negotiation. Issue a Request for Proposal (RFP) to qualified EHR vendors for a unified cloud-based Electronic Health Record system. Evaluate proposals against..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_10",
+      "item_type": "action",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "action_11",
+      "item_type": "action",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "action_12",
+      "item_type": "action",
+      "top_level_areas": [
+        "DigitalHealth"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "Cybersecurity",
+          "concept_label": "Cybersecurity",
+          "parent_concept": "DigitalHealth",
+          "keyword_score": 0.6667,
+          "embedding_score": 0.6909,
+          "final_score": 0.6812,
+          "matched_keywords": [
+            "cybersecurity",
+            "information security",
+            "iso 27001",
+            "data protection",
+            "pdpa",
+            "vulnerability"
+          ],
+          "evidence_text": "Action 12: Cybersecurity Baseline Assessment & Policy Development. Engage an external cybersecurity firm to conduct a baseline vulnerability assessment of all hospital IT systems. Develop a comprehens..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_13",
+      "item_type": "action",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "action_14",
+      "item_type": "action",
+      "top_level_areas": [
+        "ResearchInnovation"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "AcademicPartnerships",
+          "concept_label": "Academic Partnerships",
+          "parent_concept": "ResearchInnovation",
+          "keyword_score": 0.6667,
+          "embedding_score": 0.5337,
+          "final_score": 0.5869,
+          "matched_keywords": [
+            "university",
+            "mou",
+            "collaborative research",
+            "university of kelaniya"
+          ],
+          "evidence_text": "Action 14: University Research Partnership MOU. Initiate formal discussions with the University of Kelaniya Faculty of Medicine for a collaborative research and clinical training partnership. Negotiat..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_15",
+      "item_type": "action",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "action_16",
+      "item_type": "action",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "action_17",
+      "item_type": "action",
+      "top_level_areas": [
+        "WorkforceHR"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "Recruitment",
+          "concept_label": "Recruitment",
+          "parent_concept": "WorkforceHR",
+          "keyword_score": 0.5,
+          "embedding_score": 0.641,
+          "final_score": 0.5846,
+          "matched_keywords": [
+            "recruitment",
+            "recruit",
+            "workforce expansion"
+          ],
+          "evidence_text": "Action 17: Nursing Workforce Expansion Planning. Develop a comprehensive nursing recruitment and training plan to support the phased expansion from 75 to 150 beds. Identify staffing requirements by sp..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_18",
+      "item_type": "action",
+      "top_level_areas": [
+        "WorkforceHR"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "Training",
+          "concept_label": "Training & CPD",
+          "parent_concept": "WorkforceHR",
+          "keyword_score": 0.8571,
+          "embedding_score": 0.742,
+          "final_score": 0.7881,
+          "matched_keywords": [
+            "training",
+            "cpd",
+            "continuing professional development",
+            "workshop",
+            "simulation",
+            "skills"
+          ],
+          "evidence_text": "Action 18: Continuing Professional Development (CPD) Programme Launch. Design and launch a structured Continuing Professional Development programme for all clinical staff. The programme will include q..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_19",
+      "item_type": "action",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "action_20",
+      "item_type": "action",
+      "top_level_areas": [
+        "InternationalMedicalTourism"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "MaldivesOutreach",
+          "concept_label": "Maldives Outreach",
+          "parent_concept": "InternationalMedicalTourism",
+          "keyword_score": 0.8333,
+          "embedding_score": 0.7173,
+          "final_score": 0.7637,
+          "matched_keywords": [
+            "maldives",
+            "addu city",
+            "aasandha",
+            "maldivian",
+            "visiting specialist"
+          ],
+          "evidence_text": "Action 20: Maldives Partnership Scoping & Negotiations. Initiate formal engagement with healthcare providers in the Maldives to establish the visiting specialist and telemedicine partnership. Identify..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_21",
+      "item_type": "action",
+      "top_level_areas": [
+        "InternationalMedicalTourism"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "AirlineHotelPartnerships",
+          "concept_label": "Airline & Hotel Partnerships",
+          "parent_concept": "InternationalMedicalTourism",
+          "keyword_score": 0.8,
+          "embedding_score": 0.6936,
+          "final_score": 0.7362,
+          "matched_keywords": [
+            "srilankan airlines",
+            "hotel partnership",
+            "hotel recovery",
+            "airline"
+          ],
+          "evidence_text": "Action 21: Medical Tourism Concierge Unit Setup. Establish the Medical Tourism Concierge Unit as a dedicated operational function. Recruit a bilingual (English/Sinhala) medical tourism coordinator, de..."
+        },
+        {
+          "concept_id": "ConciergeServices",
+          "concept_label": "Concierge Services",
+          "parent_concept": "InternationalMedicalTourism",
+          "keyword_score": 0.6,
+          "embedding_score": 0.7247,
+          "final_score": 0.6748,
+          "matched_keywords": [
+            "concierge",
+            "medical tourism concierge",
+            "patient journey"
+          ],
+          "evidence_text": "Action 21: Medical Tourism Concierge Unit Setup. Establish the Medical Tourism Concierge Unit as a dedicated operational function. Recruit a bilingual (English/Sinhala) medical tourism coordinator, de..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_22",
+      "item_type": "action",
+      "top_level_areas": [
+        "CommunityRegionalHealth"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "ScreeningPrograms",
+          "concept_label": "Screening Programmes",
+          "parent_concept": "CommunityRegionalHealth",
+          "keyword_score": 0.5,
+          "embedding_score": 0.6365,
+          "final_score": 0.5819,
+          "matched_keywords": [
+            "screening",
+            "screening camp",
+            "health screening"
+          ],
+          "evidence_text": "Action 22: Community Preventive Health Screening Programme — Negombo Division. Design and launch a community preventive health screening programme targeting diabetes, hypertension, and cardiovascular..."
+        },
+        {
+          "concept_id": "CommunityRegionalHealth",
+          "concept_label": "Community & Regional Health",
+          "parent_concept": "CommunityRegionalHealth",
+          "keyword_score": 0.6667,
+          "embedding_score": 0.522,
+          "final_score": 0.5798,
+          "matched_keywords": [
+            "community",
+            "community health",
+            "outreach",
+            "screening programme"
+          ],
+          "evidence_text": "Action 22: Community Preventive Health Screening Programme — Negombo Division. Design and launch a community preventive health screening programme targeting diabetes, hypertension, and cardiovascular..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_23",
+      "item_type": "action",
+      "top_level_areas": [
+        "CommunityRegionalHealth"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "CorporateWellness",
+          "concept_label": "Corporate Wellness",
+          "parent_concept": "CommunityRegionalHealth",
+          "keyword_score": 1.0,
+          "embedding_score": 0.7146,
+          "final_score": 0.8287,
+          "matched_keywords": [
+            "corporate wellness",
+            "employer",
+            "executive health",
+            "wellness package",
+            "corporate partner"
+          ],
+          "evidence_text": "Action 23: Corporate Wellness Partnership Expansion. Expand the hospital's corporate wellness client base from 12 to 20 employers, targeting the Negombo–Katunayake Free Trade Zone and hotel/tourism se..."
+        }
+      ]
+    },
+    {
+      "item_id": "action_24",
+      "item_type": "action",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "action_25",
+      "item_type": "action",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    }
+  ],
+  "strategy_mappings": [
+    {
+      "item_id": "goal_A1",
+      "item_type": "strategy_goal",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "goal_A2",
+      "item_type": "strategy_goal",
+      "top_level_areas": [
+        "PatientCare"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "InfectionControl",
+          "concept_label": "Infection Control",
+          "parent_concept": "PatientCare",
+          "keyword_score": 0.6,
+          "embedding_score": 0.6894,
+          "final_score": 0.6536,
+          "matched_keywords": [
+            "hai",
+            "hospital-acquired infection",
+            "infection rate"
+          ],
+          "evidence_text": "A2: Achieve a Hospital-Acquired Infection (HAI) rate below 2% and surgical site infection rate below 1%.. Objective: Patient Care Excellence. Deliver consistently outstanding, safe, and patient-centre..."
+        },
+        {
+          "concept_id": "PatientCare",
+          "concept_label": "Patient Care",
+          "parent_concept": "PatientCare",
+          "keyword_score": 0.4286,
+          "embedding_score": 0.684,
+          "final_score": 0.5818,
+          "matched_keywords": [
+            "patient care",
+            "clinical care",
+            "patient satisfaction"
+          ],
+          "evidence_text": "A2: Achieve a Hospital-Acquired Infection (HAI) rate below 2% and surgical site infection rate below 1%.. Objective: Patient Care Excellence. Deliver consistently outstanding, safe, and patient-centre..."
+        }
+      ]
+    },
+    {
+      "item_id": "goal_A3",
+      "item_type": "strategy_goal",
+      "top_level_areas": [
+        "PatientCare"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "PatientCare",
+          "concept_label": "Patient Care",
+          "parent_concept": "PatientCare",
+          "keyword_score": 0.4286,
+          "embedding_score": 0.6381,
+          "final_score": 0.5543,
+          "matched_keywords": [
+            "patient care",
+            "clinical care",
+            "patient satisfaction"
+          ],
+          "evidence_text": "A3: Attain patient satisfaction scores of ≥90% across all departments.. Objective: Patient Care Excellence. Deliver consistently outstanding, safe, and patient-centred clinical care across all existin..."
+        }
+      ]
+    },
+    {
+      "item_id": "goal_A4",
+      "item_type": "strategy_goal",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "goal_A5",
+      "item_type": "strategy_goal",
+      "top_level_areas": [
+        "ClinicalServices"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "Fertility",
+          "concept_label": "Fertility Centre",
+          "parent_concept": "ClinicalServices",
+          "keyword_score": 0.5714,
+          "embedding_score": 0.7045,
+          "final_score": 0.6513,
+          "matched_keywords": [
+            "fertility",
+            "ivf",
+            "reproductive",
+            "fertility centre"
+          ],
+          "evidence_text": "A5: Upgrade the Fertility Centre to a full-spectrum regional reproductive health hub with an annual case volume exceeding 800 IVF cycles.. Objective: Patient Care Excellence. Deliver consistently outs..."
+        }
+      ]
+    },
+    {
+      "item_id": "goal_B1",
+      "item_type": "strategy_goal",
+      "top_level_areas": [
+        "DigitalHealth"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "EHR",
+          "concept_label": "Electronic Health Records",
+          "parent_concept": "DigitalHealth",
+          "keyword_score": 0.5,
+          "embedding_score": 0.7509,
+          "final_score": 0.6506,
+          "matched_keywords": [
+            "ehr",
+            "electronic health record",
+            "health record"
+          ],
+          "evidence_text": "B1: Implement a unified Electronic Health Record (EHR) system across all departments by end of 2027.. Objective: Digital Health Transformation. Modernise the hospital's technology infrastructure to en..."
+        }
+      ]
+    },
+    {
+      "item_id": "goal_B2",
+      "item_type": "strategy_goal",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "goal_B3",
+      "item_type": "strategy_goal",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "goal_B4",
+      "item_type": "strategy_goal",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "goal_B5",
+      "item_type": "strategy_goal",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "goal_C1",
+      "item_type": "strategy_goal",
+      "top_level_areas": [
+        "ResearchInnovation"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "ResearchInnovation",
+          "concept_label": "Research & Innovation",
+          "parent_concept": "ResearchInnovation",
+          "keyword_score": 0.5,
+          "embedding_score": 0.6214,
+          "final_score": 0.5729,
+          "matched_keywords": [
+            "research",
+            "innovation",
+            "clinical research"
+          ],
+          "evidence_text": "C1: Establish a Clinical Research Unit to conduct and coordinate hospital-based studies.. Objective: Research & Innovation. Foster a culture of clinical research and innovation that enhances treatment..."
+        }
+      ]
+    },
+    {
+      "item_id": "goal_C2",
+      "item_type": "strategy_goal",
+      "top_level_areas": [
+        "ResearchInnovation"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "ResearchInnovation",
+          "concept_label": "Research & Innovation",
+          "parent_concept": "ResearchInnovation",
+          "keyword_score": 0.6667,
+          "embedding_score": 0.6487,
+          "final_score": 0.6559,
+          "matched_keywords": [
+            "research",
+            "innovation",
+            "clinical research",
+            "peer-reviewed"
+          ],
+          "evidence_text": "C2: Publish a minimum of 10 peer-reviewed papers annually by 2029.. Objective: Research & Innovation. Foster a culture of clinical research and innovation that enhances treatment outcomes, attracts le..."
+        }
+      ]
+    },
+    {
+      "item_id": "goal_C3",
+      "item_type": "strategy_goal",
+      "top_level_areas": [
+        "ResearchInnovation"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "ResearchInnovation",
+          "concept_label": "Research & Innovation",
+          "parent_concept": "ResearchInnovation",
+          "keyword_score": 0.5,
+          "embedding_score": 0.5941,
+          "final_score": 0.5565,
+          "matched_keywords": [
+            "research",
+            "innovation",
+            "clinical research"
+          ],
+          "evidence_text": "C3: Partner with at least two universities for clinical training and collaborative research.. Objective: Research & Innovation. Foster a culture of clinical research and innovation that enhances treat..."
+        }
+      ]
+    },
+    {
+      "item_id": "goal_C4",
+      "item_type": "strategy_goal",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "goal_D1",
+      "item_type": "strategy_goal",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "goal_D2",
+      "item_type": "strategy_goal",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "goal_D3",
+      "item_type": "strategy_goal",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "goal_D4",
+      "item_type": "strategy_goal",
+      "top_level_areas": [
+        "WorkforceHR"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "SpecialistFellowships",
+          "concept_label": "Specialist Fellowships",
+          "parent_concept": "WorkforceHR",
+          "keyword_score": 1.0,
+          "embedding_score": 0.7053,
+          "final_score": 0.8232,
+          "matched_keywords": [
+            "fellowship",
+            "specialist training",
+            "training fellowship"
+          ],
+          "evidence_text": "D4: Develop specialist training fellowships in cardiac care, nephrology, fertility medicine, and geriatric care.. Objective: Workforce Development. Build, retain, and continuously develop a high-perfo..."
+        }
+      ]
+    },
+    {
+      "item_id": "goal_D5",
+      "item_type": "strategy_goal",
+      "top_level_areas": [],
+      "is_multi_area": false,
+      "mappings": []
+    },
+    {
+      "item_id": "goal_E1",
+      "item_type": "strategy_goal",
+      "top_level_areas": [
+        "CommunityRegionalHealth"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "CommunityRegionalHealth",
+          "concept_label": "Community & Regional Health",
+          "parent_concept": "CommunityRegionalHealth",
+          "keyword_score": 0.6667,
+          "embedding_score": 0.6242,
+          "final_score": 0.6412,
+          "matched_keywords": [
+            "community",
+            "regional health",
+            "community health",
+            "outreach"
+          ],
+          "evidence_text": "E1: Launch community preventive health programmes reaching 25,000 beneficiaries annually by 2029.. Objective: Community & Regional Health Expansion. Extend the hospital's impact beyond its walls throu..."
+        }
+      ]
+    },
+    {
+      "item_id": "goal_E2",
+      "item_type": "strategy_goal",
+      "top_level_areas": [
+        "CommunityRegionalHealth"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "CommunityRegionalHealth",
+          "concept_label": "Community & Regional Health",
+          "parent_concept": "CommunityRegionalHealth",
+          "keyword_score": 0.6667,
+          "embedding_score": 0.4925,
+          "final_score": 0.5622,
+          "matched_keywords": [
+            "community",
+            "regional health",
+            "community health",
+            "outreach"
+          ],
+          "evidence_text": "E2: Establish the Maldives outreach programme with visiting specialist services and telemedicine.. Objective: Community & Regional Health Expansion. Extend the hospital's impact beyond its walls throu..."
+        }
+      ]
+    },
+    {
+      "item_id": "goal_E3",
+      "item_type": "strategy_goal",
+      "top_level_areas": [
+        "CommunityRegionalHealth"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "CommunityRegionalHealth",
+          "concept_label": "Community & Regional Health",
+          "parent_concept": "CommunityRegionalHealth",
+          "keyword_score": 0.6667,
+          "embedding_score": 0.5396,
+          "final_score": 0.5904,
+          "matched_keywords": [
+            "community",
+            "regional health",
+            "community health",
+            "outreach"
+          ],
+          "evidence_text": "E3: Develop corporate wellness partnerships with 50+ employers in the Negombo–Katunayake industrial corridor.. Objective: Community & Regional Health Expansion. Extend the hospital's impact beyond its..."
+        }
+      ]
+    },
+    {
+      "item_id": "goal_E4",
+      "item_type": "strategy_goal",
+      "top_level_areas": [
+        "InternationalMedicalTourism",
+        "CommunityRegionalHealth"
+      ],
+      "is_multi_area": true,
+      "mappings": [
+        {
+          "concept_id": "InternationalMedicalTourism",
+          "concept_label": "International & Medical Tourism",
+          "parent_concept": "InternationalMedicalTourism",
+          "keyword_score": 0.6,
+          "embedding_score": 0.6634,
+          "final_score": 0.638,
+          "matched_keywords": [
+            "medical tourism",
+            "international patient",
+            "concierge"
+          ],
+          "evidence_text": "E4: Create a medical tourism concierge unit to serve international patients end-to-end.. Objective: Community & Regional Health Expansion. Extend the hospital's impact beyond its walls through communi..."
+        },
+        {
+          "concept_id": "CommunityRegionalHealth",
+          "concept_label": "Community & Regional Health",
+          "parent_concept": "CommunityRegionalHealth",
+          "keyword_score": 0.6667,
+          "embedding_score": 0.5133,
+          "final_score": 0.5746,
+          "matched_keywords": [
+            "community",
+            "regional health",
+            "community health",
+            "outreach"
+          ],
+          "evidence_text": "E4: Create a medical tourism concierge unit to serve international patients end-to-end.. Objective: Community & Regional Health Expansion. Extend the hospital's impact beyond its walls through communi..."
+        }
+      ]
+    },
+    {
+      "item_id": "goal_E5",
+      "item_type": "strategy_goal",
+      "top_level_areas": [
+        "CommunityRegionalHealth"
+      ],
+      "is_multi_area": false,
+      "mappings": [
+        {
+          "concept_id": "CommunityRegionalHealth",
+          "concept_label": "Community & Regional Health",
+          "parent_concept": "CommunityRegionalHealth",
+          "keyword_score": 0.6667,
+          "embedding_score": 0.5861,
+          "final_score": 0.6183,
+          "matched_keywords": [
+            "community",
+            "regional health",
+            "community health",
+            "outreach"
+          ],
+          "evidence_text": "E5: Forge partnerships with regional hospitals for referral networks and shared specialty services.. Objective: Community & Regional Health Expansion. Extend the hospital's impact beyond its walls thr..."
+        }
+      ]
+    }
+  ]
+}

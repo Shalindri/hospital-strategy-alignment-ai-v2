@@ -1,0 +1,1026 @@
+{
+  "metadata": {
+    "title": "Nawaloka Hospital Negombo — Strategic Plan 2026–2030",
+    "period": "2026–2030",
+    "version": "1.0",
+    "source_file": "strategic_plan.md"
+  },
+  "vision": "To be the most trusted and innovative private hospital in Western Sri Lanka, delivering internationally accredited, patient-centred care to local communities, expatriates, and international visitors.",
+  "mission": "We provide compassionate, evidence-based healthcare through clinical excellence, technological innovation, and a commitment to the well-being of every patient who entrusts us with their care. We invest in our people, expand access to underserved populations, and pursue continuous improvement across every dimension of hospital operations.",
+  "strategic_direction": [
+    "Capacity Expansion: Doubling bed capacity from 75 to 150 beds through acquisition of adjacent land and phased construction, enabling the hospital to meet rising demand while introducing new specialty services.",
+    "Service Diversification: Launching a dedicated Daycare Medical Centre, an Elderly Care Unit, Aesthetic & Cosmetic Medical Services, and advanced cardiac and nephrology programmes, while expanding the Fertility Centre into a regional reproductive health hub.",
+    "Regional & International Reach: Leveraging our proximity to Bandaranaike International Airport and Negombo's status as a coastal tourist hub to capture medical tourism revenue, with a targeted expansion into the Maldives through visiting specialist services and telemedicine partnerships."
+  ],
+  "swot": {
+    "strengths": [
+      "Strong parent brand (Nawaloka Medicare Group)",
+      "Airport proximity and tourist corridor location",
+      "Established fertility centre with regional reputation",
+      "24/7 emergency and ICU capability",
+      "Experienced nursing and clinical staff"
+    ],
+    "weaknesses": [
+      "Current bed capacity constraints (75 beds)",
+      "Limited sub-specialty depth in cardiology and nephrology",
+      "Reliance on visiting consultants for some specialties",
+      "Ageing IT infrastructure requiring modernisation",
+      "Limited international accreditation status"
+    ],
+    "opportunities": [
+      "Adjacent land available for expansion",
+      "Growing medical tourism market (post-COVID recovery)",
+      "Maldives outreach (limited domestic tertiary care)",
+      "Elderly care demand from ageing population",
+      "Government incentives for healthcare FDI"
+    ],
+    "threats": [
+      "Intensifying competition from Colombo private hospitals",
+      "Economic volatility and currency depreciation risks",
+      "Regulatory changes in healthcare pricing",
+      "Brain drain of specialist clinicians to overseas markets",
+      "Rising pharmaceutical and equipment import costs"
+    ]
+  },
+  "objectives": [
+    {
+      "code": "A",
+      "name": "Patient Care Excellence",
+      "goal_statement": "Deliver consistently outstanding, safe, and patient-centred clinical care across all existing and new service lines, achieving measurable improvements in outcomes and patient satisfaction.",
+      "strategic_goals": [
+        {
+          "id": "A1",
+          "description": "Expand hospital capacity to 150 beds with dedicated wards for cardiac, nephrology, elderly care, and maternity services."
+        },
+        {
+          "id": "A2",
+          "description": "Achieve a Hospital-Acquired Infection (HAI) rate below 2% and surgical site infection rate below 1%."
+        },
+        {
+          "id": "A3",
+          "description": "Attain patient satisfaction scores of ≥90% across all departments."
+        },
+        {
+          "id": "A4",
+          "description": "Launch Aesthetic & Cosmetic Medical Services and the Daycare Medical Centre as standalone service lines."
+        },
+        {
+          "id": "A5",
+          "description": "Upgrade the Fertility Centre to a full-spectrum regional reproductive health hub with an annual case volume exceeding 800 IVF cycles."
+        }
+      ],
+      "kpis": [
+        {
+          "KPI": "Licensed bed capacity",
+          "Baseline (2025)": "75",
+          "Target (2030)": "150"
+        },
+        {
+          "KPI": "Bed occupancy rate",
+          "Baseline (2025)": "72%",
+          "Target (2030)": "82%"
+        },
+        {
+          "KPI": "Patient satisfaction score (NPS)",
+          "Baseline (2025)": "78%",
+          "Target (2030)": "≥92%"
+        },
+        {
+          "KPI": "HAI rate",
+          "Baseline (2025)": "3.1%",
+          "Target (2030)": "<2.0%"
+        },
+        {
+          "KPI": "Surgical site infection rate",
+          "Baseline (2025)": "1.8%",
+          "Target (2030)": "<1.0%"
+        },
+        {
+          "KPI": "IVF cycles per annum",
+          "Baseline (2025)": "320",
+          "Target (2030)": "800+"
+        },
+        {
+          "KPI": "Daycare centre daily patient throughput",
+          "Baseline (2025)": "—",
+          "Target (2030)": "60 patients/day"
+        },
+        {
+          "KPI": "Aesthetic services monthly revenue",
+          "Baseline (2025)": "—",
+          "Target (2030)": "LKR 18M"
+        }
+      ],
+      "timeline": [
+        {
+          "Phase": "Short-term (2026–2027)",
+          "Milestones": "Complete adjacent land acquisition (Q1 2026). Begin Phase 1 construction for 40 additional beds. Launch Daycare Medical Centre (Q3 2026). Commission aesthetic medicine consulting rooms. Pilot elderly care programme with 10-bed unit. Recruit lead cardiac surgeon and interventional cardiologist."
+        },
+        {
+          "Phase": "Mid-term (2028)",
+          "Milestones": "Complete Phase 1 expansion (115 beds operational). Open dedicated cardiac catheterisation laboratory. Establish 20-bed Elderly Care Unit with long-term residential model. Expand Fertility Centre laboratory and add cryopreservation capacity. Achieve 600 IVF cycles/year milestone."
+        },
+        {
+          "Phase": "Long-term (2029–2030)",
+          "Milestones": "Complete Phase 2 expansion (150 beds fully operational). Launch nephrology dialysis unit (12 stations). Achieve ≥90% patient satisfaction hospital-wide. Obtain NABH or JCI accreditation for patient safety standards. Aesthetic services generating LKR 18M+ monthly revenue."
+        }
+      ],
+      "stakeholders": [
+        {
+          "role": "Board of Directors",
+          "responsibility": "Capital approval and land acquisition oversight"
+        },
+        {
+          "role": "Medical Director",
+          "responsibility": "Clinical programme design, consultant recruitment"
+        },
+        {
+          "role": "Director of Nursing",
+          "responsibility": "Patient experience, infection control protocols"
+        },
+        {
+          "role": "Facilities & Projects Director",
+          "responsibility": "Construction management, commissioning"
+        },
+        {
+          "role": "Finance Director",
+          "responsibility": "Budget allocation and expenditure monitoring"
+        }
+      ],
+      "risks_and_mitigation": [
+        {
+          "Risk": "Construction delays due to permitting or supply chain",
+          "Mitigation": "Engage pre-qualified contractors; maintain 15% schedule buffer; secure materials in advance"
+        },
+        {
+          "Risk": "Difficulty recruiting sub-specialists (cardiology, nephrology)",
+          "Mitigation": "Offer competitive remuneration, academic titles, and research opportunities; establish visiting consultant pipeline from Nawaloka Colombo"
+        },
+        {
+          "Risk": "Low initial uptake of elderly care services",
+          "Mitigation": "Partner with insurance providers; conduct community awareness campaigns; offer introductory pricing"
+        }
+      ],
+      "entities": [
+        {
+          "text": "150",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "Hospital-Acquired Infection",
+          "label": "ORG"
+        },
+        {
+          "text": "2%",
+          "label": "PERCENT"
+        },
+        {
+          "text": "1%",
+          "label": "PERCENT"
+        },
+        {
+          "text": "Launch Aesthetic & Cosmetic Medical Services",
+          "label": "ORG"
+        },
+        {
+          "text": "the Daycare Medical Centre",
+          "label": "ORG"
+        },
+        {
+          "text": "the Fertility Centre",
+          "label": "ORG"
+        },
+        {
+          "text": "annual",
+          "label": "DATE"
+        }
+      ],
+      "keywords": [
+        "patient",
+        "care",
+        "service",
+        "line",
+        "improvement",
+        "outcome",
+        "satisfaction",
+        "hospital",
+        "capacity",
+        "bed",
+        "ward",
+        "nephrology",
+        "maternity",
+        "acquired",
+        "infection"
+      ]
+    },
+    {
+      "code": "B",
+      "name": "Digital Health Transformation",
+      "goal_statement": "Modernise the hospital's technology infrastructure to enable seamless digital care delivery, data-driven decision-making, and robust cybersecurity.",
+      "strategic_goals": [
+        {
+          "id": "B1",
+          "description": "Implement a unified Electronic Health Record (EHR) system across all departments by end of 2027."
+        },
+        {
+          "id": "B2",
+          "description": "Deploy a telemedicine platform supporting domestic and international consultations, including the Maldives outreach programme."
+        },
+        {
+          "id": "B3",
+          "description": "Integrate AI-assisted diagnostic tools in radiology and pathology."
+        },
+        {
+          "id": "B4",
+          "description": "Establish a hospital data analytics unit for operational and clinical intelligence."
+        },
+        {
+          "id": "B5",
+          "description": "Achieve ISO 27001 certification for information security management."
+        }
+      ],
+      "kpis": [
+        {
+          "KPI": "EHR adoption rate (departments)",
+          "Baseline (2025)": "35% (partial)",
+          "Target (2030)": "100%"
+        },
+        {
+          "KPI": "Telemedicine consultations/month",
+          "Baseline (2025)": "40",
+          "Target (2030)": "500+"
+        },
+        {
+          "KPI": "AI-assisted radiology reports (%)",
+          "Baseline (2025)": "0%",
+          "Target (2030)": "60%"
+        },
+        {
+          "KPI": "Average patient wait time (OPD)",
+          "Baseline (2025)": "38 min",
+          "Target (2030)": "<20 min"
+        },
+        {
+          "KPI": "System downtime (hours/year)",
+          "Baseline (2025)": "72",
+          "Target (2030)": "<12"
+        },
+        {
+          "KPI": "Cybersecurity incidents (critical)",
+          "Baseline (2025)": "3",
+          "Target (2030)": "0"
+        }
+      ],
+      "timeline": [
+        {
+          "Phase": "Short-term (2026–2027)",
+          "Milestones": "Select and contract EHR vendor (Q1 2026). Deploy EHR across emergency, OPD, and pharmacy by Q4 2026. Launch telemedicine platform for domestic specialist consultations (Q2 2027). Pilot AI-assisted CT and X-ray reporting in radiology."
+        },
+        {
+          "Phase": "Mid-term (2028)",
+          "Milestones": "Full EHR integration including inpatient, surgical, and fertility modules. Extend telemedicine to Maldives partner clinics. Deploy AI pathology screening for common diagnostics. Establish data analytics unit with two dedicated analysts."
+        },
+        {
+          "Phase": "Long-term (2029–2030)",
+          "Milestones": "Achieve ISO 27001 certification. Implement predictive analytics for bed management and resource allocation. Full AI integration in radiology workflow (60% reports AI-assisted). Launch patient mobile application with appointment booking, results, and telehealth access."
+        }
+      ],
+      "stakeholders": [
+        {
+          "role": "Chief Information Officer (CIO)",
+          "responsibility": "Technology strategy and vendor management"
+        },
+        {
+          "role": "Medical Director",
+          "responsibility": "Clinical workflow design and AI validation"
+        },
+        {
+          "role": "IT Department",
+          "responsibility": "Implementation, maintenance, cybersecurity"
+        },
+        {
+          "role": "International Unit",
+          "responsibility": "Telemedicine coordination with Maldives partners"
+        },
+        {
+          "role": "Finance Director",
+          "responsibility": "IT capital and operational budget"
+        }
+      ],
+      "risks_and_mitigation": [
+        {
+          "Risk": "EHR implementation disrupting clinical workflow",
+          "Mitigation": "Phased rollout with parallel running; dedicated clinical champions per department; 24/7 go-live support"
+        },
+        {
+          "Risk": "Data privacy breaches during digital transition",
+          "Mitigation": "Engage external cybersecurity auditor; implement encryption at rest and in transit; mandatory staff training"
+        },
+        {
+          "Risk": "Clinician resistance to AI-assisted diagnostics",
+          "Mitigation": "Position AI as decision-support (not replacement); conduct validation studies; allow opt-out during pilot phase"
+        }
+      ],
+      "entities": [
+        {
+          "text": "Electronic Health Record (",
+          "label": "ORG"
+        },
+        {
+          "text": "EHR",
+          "label": "ORG"
+        },
+        {
+          "text": "2027",
+          "label": "DATE"
+        },
+        {
+          "text": "Maldives",
+          "label": "ORG"
+        },
+        {
+          "text": "Integrate AI-assisted",
+          "label": "PERSON"
+        },
+        {
+          "text": "27001",
+          "label": "CARDINAL"
+        }
+      ],
+      "keywords": [
+        "hospital",
+        "technology",
+        "infrastructure",
+        "care",
+        "delivery",
+        "data",
+        "decision",
+        "making",
+        "cybersecurity",
+        "electronic",
+        "health",
+        "record",
+        "ehr",
+        "system",
+        "department"
+      ]
+    },
+    {
+      "code": "C",
+      "name": "Research & Innovation",
+      "goal_statement": "Foster a culture of clinical research and innovation that enhances treatment outcomes, attracts leading specialists, and positions the hospital as a knowledge hub.",
+      "strategic_goals": [
+        {
+          "id": "C1",
+          "description": "Establish a Clinical Research Unit to conduct and coordinate hospital-based studies."
+        },
+        {
+          "id": "C2",
+          "description": "Publish a minimum of 10 peer-reviewed papers annually by 2029."
+        },
+        {
+          "id": "C3",
+          "description": "Partner with at least two universities for clinical training and collaborative research."
+        },
+        {
+          "id": "C4",
+          "description": "Pilot innovative treatment protocols in fertility, cardiac care, and nephrology."
+        }
+      ],
+      "kpis": [
+        {
+          "KPI": "Peer-reviewed publications/year",
+          "Baseline (2025)": "1",
+          "Target (2030)": "10+"
+        },
+        {
+          "KPI": "Active clinical trials",
+          "Baseline (2025)": "0",
+          "Target (2030)": "3–5"
+        },
+        {
+          "KPI": "University partnerships",
+          "Baseline (2025)": "0",
+          "Target (2030)": "2+"
+        },
+        {
+          "KPI": "Research grant funding secured (LKR)",
+          "Baseline (2025)": "0",
+          "Target (2030)": "25M/year"
+        },
+        {
+          "KPI": "Innovation proposals from staff/year",
+          "Baseline (2025)": "—",
+          "Target (2030)": "15+"
+        }
+      ],
+      "timeline": [
+        {
+          "Phase": "Short-term (2026–2027)",
+          "Milestones": "Appoint Research Coordinator. Establish Ethics Review Committee. Initiate first observational study in fertility outcomes. Sign MOU with one local university (e.g., University of Kelaniya Faculty of Medicine)."
+        },
+        {
+          "Phase": "Mid-term (2028)",
+          "Milestones": "Launch Clinical Research Unit with dedicated office space. Begin multi-centre study in cardiac outcomes. Host first annual Nawaloka Negombo Clinical Symposium. Secure inaugural external research grant."
+        },
+        {
+          "Phase": "Long-term (2029–2030)",
+          "Milestones": "Second university partnership (international, e.g., a Maldivian or regional institution). Achieve 10+ publications annually. Initiate nephrology outcomes research programme. Establish innovation award for hospital staff."
+        }
+      ],
+      "stakeholders": [
+        {
+          "role": "Medical Director",
+          "responsibility": "Research governance and ethics oversight"
+        },
+        {
+          "role": "Research Coordinator",
+          "responsibility": "Day-to-day management of studies"
+        },
+        {
+          "role": "Department Heads",
+          "responsibility": "Clinical participation and data collection"
+        },
+        {
+          "role": "Finance Director",
+          "responsibility": "Research budget and grant administration"
+        },
+        {
+          "role": "HR Director",
+          "responsibility": "Protected research time for participating clinicians"
+        }
+      ],
+      "risks_and_mitigation": [
+        {
+          "Risk": "Insufficient clinician engagement in research activities",
+          "Mitigation": "Allocate protected research time; link research output to performance reviews and promotion"
+        },
+        {
+          "Risk": "Ethical review bottlenecks delaying studies",
+          "Mitigation": "Train Ethics Committee members; establish clear turnaround SLAs (30-day review)"
+        },
+        {
+          "Risk": "Difficulty securing research funding",
+          "Mitigation": "Pursue pharmaceutical industry partnerships; apply for government and WHO research grants"
+        }
+      ],
+      "entities": [
+        {
+          "text": "10",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "annually",
+          "label": "DATE"
+        },
+        {
+          "text": "2029",
+          "label": "DATE"
+        },
+        {
+          "text": "at least two",
+          "label": "CARDINAL"
+        }
+      ],
+      "keywords": [
+        "culture",
+        "research",
+        "innovation",
+        "treatment",
+        "outcome",
+        "specialist",
+        "hospital",
+        "knowledge",
+        "hub",
+        "clinical",
+        "unit",
+        "study",
+        "minimum",
+        "peer",
+        "paper"
+      ]
+    },
+    {
+      "code": "D",
+      "name": "Workforce Development",
+      "goal_statement": "Build, retain, and continuously develop a high-performing, compassionate workforce capable of delivering world-class care across expanding service lines.",
+      "strategic_goals": [
+        {
+          "id": "D1",
+          "description": "Increase clinical staffing by 60% to support 150-bed operations and new service lines."
+        },
+        {
+          "id": "D2",
+          "description": "Reduce annual staff turnover to below 10%."
+        },
+        {
+          "id": "D3",
+          "description": "Implement a structured Continuing Professional Development (CPD) programme for all clinical staff."
+        },
+        {
+          "id": "D4",
+          "description": "Develop specialist training fellowships in cardiac care, nephrology, fertility medicine, and geriatric care."
+        },
+        {
+          "id": "D5",
+          "description": "Establish a leadership development pipeline for mid-level managers."
+        }
+      ],
+      "kpis": [
+        {
+          "KPI": "Total clinical staff (FTE)",
+          "Baseline (2025)": "210",
+          "Target (2030)": "340"
+        },
+        {
+          "KPI": "Annual staff turnover rate",
+          "Baseline (2025)": "16%",
+          "Target (2030)": "<10%"
+        },
+        {
+          "KPI": "CPD hours per clinician/year",
+          "Baseline (2025)": "20",
+          "Target (2030)": "40+"
+        },
+        {
+          "KPI": "Staff satisfaction score",
+          "Baseline (2025)": "71%",
+          "Target (2030)": "≥85%"
+        },
+        {
+          "KPI": "Internal promotion rate for management roles",
+          "Baseline (2025)": "25%",
+          "Target (2030)": "50%"
+        },
+        {
+          "KPI": "Specialist fellows trained/year",
+          "Baseline (2025)": "0",
+          "Target (2030)": "6"
+        }
+      ],
+      "timeline": [
+        {
+          "Phase": "Short-term (2026–2027)",
+          "Milestones": "Recruit 40 additional nurses and 8 specialist consultants for Phase 1 expansion. Launch CPD programme with quarterly training workshops. Introduce employee engagement survey (biannual). Hire geriatric care nursing team (10 staff) for Elderly Care Unit pilot."
+        },
+        {
+          "Phase": "Mid-term (2028)",
+          "Milestones": "Recruit additional 50 staff for Phase 2 services (cardiac lab, expanded fertility, dialysis). Launch first fellowship cohort in cardiac care and fertility medicine. Implement leadership development programme for 15 mid-level managers. Achieve staff satisfaction score of 80%."
+        },
+        {
+          "Phase": "Long-term (2029–2030)",
+          "Milestones": "Reach full staffing complement of 340 FTEs. Reduce turnover below 10%. Graduate second fellowship cohort. Establish Nawaloka Negombo Nursing Academy for in-house training. 50% of new management appointments filled internally."
+        }
+      ],
+      "stakeholders": [
+        {
+          "role": "HR Director",
+          "responsibility": "Recruitment, retention strategy, engagement surveys"
+        },
+        {
+          "role": "Medical Director",
+          "responsibility": "Specialist recruitment and fellowship design"
+        },
+        {
+          "role": "Director of Nursing",
+          "responsibility": "Nursing workforce planning and CPD"
+        },
+        {
+          "role": "Finance Director",
+          "responsibility": "Compensation benchmarking and training budgets"
+        },
+        {
+          "role": "Department Heads",
+          "responsibility": "Team-level development and mentoring"
+        }
+      ],
+      "risks_and_mitigation": [
+        {
+          "Risk": "Specialist clinician attrition to overseas markets",
+          "Mitigation": "Competitive salary packages with retention bonuses; offer academic titles and research opportunities"
+        },
+        {
+          "Risk": "Rapid expansion straining training capacity",
+          "Mitigation": "Partner with Nawaloka Colombo for cross-site secondments; engage external training providers"
+        },
+        {
+          "Risk": "Burnout during expansion transition period",
+          "Mitigation": "Monitor workload metrics; ensure phased staffing precedes capacity increases; provide mental health support"
+        }
+      ],
+      "entities": [
+        {
+          "text": "60%",
+          "label": "PERCENT"
+        },
+        {
+          "text": "150",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "10%",
+          "label": "PERCENT"
+        },
+        {
+          "text": "Continuing Professional Development (CPD",
+          "label": "ORG"
+        }
+      ],
+      "keywords": [
+        "retain",
+        "workforce",
+        "world",
+        "class",
+        "care",
+        "service",
+        "line",
+        "staffing",
+        "bed",
+        "operation",
+        "staff",
+        "turnover",
+        "continuing",
+        "professional",
+        "development"
+      ]
+    },
+    {
+      "code": "E",
+      "name": "Community & Regional Health Expansion",
+      "goal_statement": "Extend the hospital's impact beyond its walls through community health programmes, regional partnerships, and strategic international outreach.",
+      "strategic_goals": [
+        {
+          "id": "E1",
+          "description": "Launch community preventive health programmes reaching 25,000 beneficiaries annually by 2029."
+        },
+        {
+          "id": "E2",
+          "description": "Establish the Maldives outreach programme with visiting specialist services and telemedicine."
+        },
+        {
+          "id": "E3",
+          "description": "Develop corporate wellness partnerships with 50+ employers in the Negombo–Katunayake industrial corridor."
+        },
+        {
+          "id": "E4",
+          "description": "Create a medical tourism concierge unit to serve international patients end-to-end."
+        },
+        {
+          "id": "E5",
+          "description": "Forge partnerships with regional hospitals for referral networks and shared specialty services."
+        }
+      ],
+      "kpis": [
+        {
+          "KPI": "Community programme beneficiaries/year",
+          "Baseline (2025)": "5,000",
+          "Target (2030)": "25,000"
+        },
+        {
+          "KPI": "Corporate wellness partners",
+          "Baseline (2025)": "12",
+          "Target (2030)": "50+"
+        },
+        {
+          "KPI": "International patient admissions/year",
+          "Baseline (2025)": "180",
+          "Target (2030)": "1,200+"
+        },
+        {
+          "KPI": "Maldives telemedicine consultations/month",
+          "Baseline (2025)": "0",
+          "Target (2030)": "80+"
+        },
+        {
+          "KPI": "Visiting specialist trips to Maldives/year",
+          "Baseline (2025)": "0",
+          "Target (2030)": "24 (bi-monthly)"
+        },
+        {
+          "KPI": "Medical tourism revenue (% of total)",
+          "Baseline (2025)": "4%",
+          "Target (2030)": "15%"
+        }
+      ],
+      "timeline": [
+        {
+          "Phase": "Short-term (2026–2027)",
+          "Milestones": "Launch medical tourism concierge unit (Q2 2026). Sign first Maldives clinic partnership agreement. Initiate bi-monthly visiting specialist visits to Malé. Expand corporate wellness client base to 25 employers. Deploy community diabetes and hypertension screening programme in Negombo Division."
+        },
+        {
+          "Phase": "Mid-term (2028)",
+          "Milestones": "Establish telemedicine link with two Maldives partner facilities. Achieve 600 international patient admissions. Launch community women's health initiative (cervical and breast cancer screening). Reach 35 corporate wellness partnerships. Develop airport medical assistance protocol with airport authority."
+        },
+        {
+          "Phase": "Long-term (2029–2030)",
+          "Milestones": "Achieve 1,200+ international admissions annually. Maldives outreach generating LKR 120M+ annually. Reach 25,000 community programme beneficiaries. Establish referral partnerships with 5 regional hospitals. Medical tourism contributing 15% of total hospital revenue."
+        }
+      ],
+      "stakeholders": [
+        {
+          "role": "International Unit Director",
+          "responsibility": "Medical tourism, Maldives programme, airline/hotel partnerships"
+        },
+        {
+          "role": "Medical Director",
+          "responsibility": "Visiting specialist roster and clinical quality"
+        },
+        {
+          "role": "Marketing Director",
+          "responsibility": "Brand positioning, community outreach, corporate wellness"
+        },
+        {
+          "role": "Board of Directors",
+          "responsibility": "Strategic partnership approvals"
+        },
+        {
+          "role": "Finance Director",
+          "responsibility": "International pricing strategy and revenue tracking"
+        }
+      ],
+      "risks_and_mitigation": [
+        {
+          "Risk": "Maldives regulatory barriers for foreign medical providers",
+          "Mitigation": "Engage local legal counsel; structure services through licensed Maldivian partner clinics"
+        },
+        {
+          "Risk": "Medical tourism growth slower than projected",
+          "Mitigation": "Diversify source markets (Middle East, Europe); invest in digital marketing; pursue JCI accreditation to build credibility"
+        },
+        {
+          "Risk": "Community programmes creating unsustainable cost burden",
+          "Mitigation": "Seek CSR funding from corporate partners; apply for government and NGO health grants; integrate screening with paid follow-up services"
+        },
+        {
+          "Risk": "Component",
+          "Mitigation": "Details"
+        },
+        {
+          "Risk": "Visiting specialists",
+          "Mitigation": "Bi-monthly visits (cardiology, nephrology, fertility, orthopaedics) to partner clinics in Malé and Addu City"
+        },
+        {
+          "Risk": "Telemedicine",
+          "Mitigation": "Dedicated virtual consultation slots for Maldivian referring physicians and patients"
+        },
+        {
+          "Risk": "Patient transfer protocol",
+          "Mitigation": "Coordination with Maldivian National Health Insurance (Aasandha) and medical evacuation services"
+        },
+        {
+          "Risk": "Marketing",
+          "Mitigation": "Joint branding with Maldivian partner clinics; digital campaigns targeting Maldivian social media"
+        },
+        {
+          "Risk": "Year",
+          "Mitigation": "Milestone"
+        },
+        {
+          "Risk": "2026",
+          "Mitigation": "Gap analysis against JCI standards; engage accreditation consultant"
+        },
+        {
+          "Risk": "2027",
+          "Mitigation": "Implement JCI-aligned policies, documentation, and quality indicators"
+        },
+        {
+          "Risk": "2028",
+          "Mitigation": "Internal mock survey and corrective action"
+        },
+        {
+          "Risk": "2029",
+          "Mitigation": "Submit JCI accreditation application; undergo formal survey"
+        },
+        {
+          "Risk": "2030",
+          "Mitigation": "Achieve JCI accreditation; leverage for international marketing"
+        }
+      ],
+      "entities": [
+        {
+          "text": "25,000",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "annually",
+          "label": "DATE"
+        },
+        {
+          "text": "2029",
+          "label": "DATE"
+        },
+        {
+          "text": "Maldives",
+          "label": "ORG"
+        },
+        {
+          "text": "50",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "Negombo",
+          "label": "ORG"
+        }
+      ],
+      "keywords": [
+        "hospital",
+        "impact",
+        "wall",
+        "community",
+        "health",
+        "programme",
+        "partnership",
+        "outreach",
+        "launch",
+        "beneficiary",
+        "maldives",
+        "specialist",
+        "service",
+        "telemedicine",
+        "wellness"
+      ]
+    }
+  ],
+  "financial_targets": {
+    "revenue_projections": [
+      {
+        "Year": "2025 (Baseline)",
+        "Projected Revenue (LKR Billion)": "2.1",
+        "YoY Growth": "—"
+      },
+      {
+        "Year": "2026",
+        "Projected Revenue (LKR Billion)": "2.6",
+        "YoY Growth": "24%"
+      },
+      {
+        "Year": "2027",
+        "Projected Revenue (LKR Billion)": "3.2",
+        "YoY Growth": "23%"
+      },
+      {
+        "Year": "2028",
+        "Projected Revenue (LKR Billion)": "4.0",
+        "YoY Growth": "25%"
+      },
+      {
+        "Year": "2029",
+        "Projected Revenue (LKR Billion)": "4.9",
+        "YoY Growth": "22%"
+      },
+      {
+        "Year": "2030",
+        "Projected Revenue (LKR Billion)": "5.8",
+        "YoY Growth": "18%"
+      }
+    ],
+    "capital_investment": [
+      {
+        "Investment Area": "Adjacent land acquisition",
+        "Estimated Cost (LKR M)": "650",
+        "Timeline": "Q1 2026"
+      },
+      {
+        "Investment Area": "Phase 1 construction (40 beds, Daycare Centre)",
+        "Estimated Cost (LKR M)": "1,200",
+        "Timeline": "2026–2027"
+      },
+      {
+        "Investment Area": "Phase 2 construction (35 beds, Elderly Care, Dialysis)",
+        "Estimated Cost (LKR M)": "1,050",
+        "Timeline": "2028–2029"
+      },
+      {
+        "Investment Area": "Cardiac catheterisation laboratory",
+        "Estimated Cost (LKR M)": "480",
+        "Timeline": "2027–2028"
+      },
+      {
+        "Investment Area": "Nephrology dialysis equipment (12 stations)",
+        "Estimated Cost (LKR M)": "220",
+        "Timeline": "2029"
+      },
+      {
+        "Investment Area": "Fertility Centre expansion & lab upgrade",
+        "Estimated Cost (LKR M)": "310",
+        "Timeline": "2027–2028"
+      },
+      {
+        "Investment Area": "Aesthetic medicine facility & equipment",
+        "Estimated Cost (LKR M)": "180",
+        "Timeline": "2026–2027"
+      },
+      {
+        "Investment Area": "EHR system and digital infrastructure",
+        "Estimated Cost (LKR M)": "350",
+        "Timeline": "2026–2028"
+      },
+      {
+        "Investment Area": "AI diagnostic tools and telemedicine platform",
+        "Estimated Cost (LKR M)": "190",
+        "Timeline": "2027–2029"
+      },
+      {
+        "Investment Area": "Total Estimated Capital Investment",
+        "Estimated Cost (LKR M)": "4,630",
+        "Timeline": "2026–2030"
+      }
+    ],
+    "roi_estimates": [
+      {
+        "Project": "Bed expansion (75 → 150)",
+        "Investment (LKR M)": "2,250",
+        "Projected Annual Revenue at Maturity (LKR M)": "1,800",
+        "Payback Period": "3.5 years"
+      },
+      {
+        "Project": "Cardiac catheterisation lab",
+        "Investment (LKR M)": "480",
+        "Projected Annual Revenue at Maturity (LKR M)": "420",
+        "Payback Period": "2.5 years"
+      },
+      {
+        "Project": "Fertility Centre expansion",
+        "Investment (LKR M)": "310",
+        "Projected Annual Revenue at Maturity (LKR M)": "350",
+        "Payback Period": "2.0 years"
+      },
+      {
+        "Project": "Elderly Care Unit",
+        "Investment (LKR M)": "280",
+        "Projected Annual Revenue at Maturity (LKR M)": "190",
+        "Payback Period": "3.0 years"
+      },
+      {
+        "Project": "Aesthetic & Cosmetic Services",
+        "Investment (LKR M)": "180",
+        "Projected Annual Revenue at Maturity (LKR M)": "220",
+        "Payback Period": "1.5 years"
+      },
+      {
+        "Project": "Nephrology dialysis unit",
+        "Investment (LKR M)": "220",
+        "Projected Annual Revenue at Maturity (LKR M)": "180",
+        "Payback Period": "2.5 years"
+      },
+      {
+        "Project": "Medical tourism programme",
+        "Investment (LKR M)": "150",
+        "Projected Annual Revenue at Maturity (LKR M)": "380",
+        "Payback Period": "1.0 year"
+      }
+    ],
+    "revenue_streams": [
+      {
+        "Revenue Stream": "Inpatient services (general & specialty)",
+        "Projected 2030 Revenue (LKR M)": "2,200",
+        "% of Total": "38%"
+      },
+      {
+        "Revenue Stream": "Outpatient & channelling",
+        "Projected 2030 Revenue (LKR M)": "980",
+        "% of Total": "17%"
+      },
+      {
+        "Revenue Stream": "Fertility Centre",
+        "Projected 2030 Revenue (LKR M)": "520",
+        "% of Total": "9%"
+      },
+      {
+        "Revenue Stream": "Cardiac & nephrology services",
+        "Projected 2030 Revenue (LKR M)": "600",
+        "% of Total": "10%"
+      },
+      {
+        "Revenue Stream": "Diagnostic services (lab & imaging)",
+        "Projected 2030 Revenue (LKR M)": "480",
+        "% of Total": "8%"
+      },
+      {
+        "Revenue Stream": "Medical tourism & international patients",
+        "Projected 2030 Revenue (LKR M)": "870",
+        "% of Total": "15%"
+      },
+      {
+        "Revenue Stream": "Aesthetic & cosmetic services",
+        "Projected 2030 Revenue (LKR M)": "220",
+        "% of Total": "4%"
+      },
+      {
+        "Revenue Stream": "Elderly care services",
+        "Projected 2030 Revenue (LKR M)": "190",
+        "% of Total": "3%"
+      },
+      {
+        "Revenue Stream": "Daycare centre & preventive health",
+        "Projected 2030 Revenue (LKR M)": "310",
+        "% of Total": "5%"
+      },
+      {
+        "Revenue Stream": "Total",
+        "Projected 2030 Revenue (LKR M)": "5,800** (approx.)",
+        "% of Total": "100%** (approx.)"
+      }
+    ]
+  }
+}

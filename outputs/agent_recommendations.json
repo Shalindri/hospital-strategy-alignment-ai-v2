@@ -1,0 +1,318 @@
+{
+  "metadata": {
+    "agent_model": "llama3.1:8b",
+    "max_iterations": 5,
+    "issue_threshold": 0.15,
+    "total_issues_diagnosed": 24,
+    "total_recommendations": 5,
+    "total_impact_score": 2.05
+  },
+  "recommendations": [
+    {
+      "rec_id": "rec_orphan_action_1",
+      "issue_id": "orphan_action_1",
+      "issue_type": "orphan_action",
+      "what_to_change": "The misalignment between Action 1 ('Adjacent Land Acquisition Due Diligence & Negotiation') and Objective A (Patient Care Excellence) is due to a lack of clear connection between land acquisition and the hospital's primary objective of delivering outstanding patient care. This disconnect may be attributed to an overemphasis on infrastructure expansion without considering its direct impact on patient care.",
+      "why": "By revising Action 1 and introducing a new objective focused on infrastructure development's impact on patient care, the hospital expects to improve its alignment with Objective A. This should lead to more efficient use of resources and better outcomes for patients. The hospital also anticipates enhanced transparency in its strategic planning process, ensuring that all actions are closely tied to its primary objectives.",
+      "actions": [
+        "Revise Action 1 to explicitly link land acquisition with Objective A by incorporating metrics that measure how the acquired land will enhance patient care, such as increased bed capacity or improved operational efficiency.",
+        "Introduce a new objective (Objective D) focused on infrastructure development and its direct impact on patient care. This would ensure that all actions related to land acquisition are aligned with this new objective.",
+        "Conduct a thorough review of the hospital's strategic plan to identify other areas where similar misalignments may exist, ensuring that all future plans and actions are closely tied to the primary objectives.",
+        "[Revised] None. The proposal demonstrates a clear understanding of the strategic alignment issue and provides concrete recommendations to address it."
+      ],
+      "kpis": [
+        "Land Acquisition Impact on Patient Care (measured by increase in bed capacity or operational efficiency)",
+        "Time-to-Clinical-Start for new service lines",
+        "Reduction in Capital Expenditure per Bed"
+      ],
+      "estimated_budget": 0.0,
+      "estimated_timeline": "Implement changes within 6 weeks, with a phased rollout to ensure minimal disruption to ongoing operations.",
+      "impact_score": 0.38,
+      "affected_objectives": [
+        "A"
+      ],
+      "evidence_ids": [
+        "action_1",
+        "action_2",
+        "action_20",
+        "obj_A",
+        "obj_E",
+        "obj_B",
+        "obj_C",
+        "obj_D"
+      ],
+      "confidence": "HIGH"
+    },
+    {
+      "rec_id": "rec_orphan_action_25",
+      "issue_id": "orphan_action_25",
+      "issue_type": "orphan_action",
+      "what_to_change": "The misalignment between Action 25 and the hospital's strategic plan is due to a mismatch in objectives, where the retail pharmacy outlet expansion does not directly contribute to the community health expansion objective (E), despite being related to it. This discrepancy may be attributed to an incomplete or inaccurate analysis of the action's alignment with the overall strategy.",
+      "why": "By revising Action 25 to align with objective E, the hospital expects to improve patient satisfaction ratings among Negombo town centre residents and enhance its community outreach efforts. This, in turn, should contribute to a more comprehensive and effective implementation of the community health expansion strategy.",
+      "actions": [
+        "Revise Action 25 to explicitly link its outcomes to the community health expansion objective (E) by incorporating metrics such as increased access to healthcare services, improved patient satisfaction, and enhanced community outreach. This will ensure that the action is aligned with the hospital's strategic goals.",
+        "Conduct a thorough review of the retail pharmacy outlet expansion plan to identify opportunities for synergies with other actions, particularly those related to community health (e.g., Action 22). This may involve revising the action's scope or timeline to better integrate it with other initiatives."
+      ],
+      "kpis": [
+        "Alignment score improvement between Action 25 and objective E",
+        "Increase in patient satisfaction ratings among Negombo town centre residents",
+        "Number of community outreach programs conducted through the retail pharmacy outlet"
+      ],
+      "estimated_budget": 0.0,
+      "estimated_timeline": "Implement changes within the next 6 weeks, allowing for a revised action plan to be submitted to stakeholders by the end of Q2.",
+      "impact_score": 0.23,
+      "affected_objectives": [
+        "E"
+      ],
+      "evidence_ids": [
+        "action_25",
+        "action_22",
+        "action_21",
+        "obj_A",
+        "obj_E",
+        "obj_C",
+        "obj_B",
+        "obj_D"
+      ],
+      "confidence": "MEDIUM"
+    },
+    {
+      "rec_id": "rec_under_supported_C",
+      "issue_id": "under_supported_C",
+      "issue_type": "under_supported_strategy",
+      "what_to_change": "** The misalignment between Objective C ('Research & Innovation') and action coverage is due to a lack of prioritization and resource allocation towards research-related initiatives. This is evident from the low score (12%) and limited action coverage for this objective.\n\n**RECOMMENDATION_1:** Establish a clear Research & Innovation Roadmap with specific, measurable goals and timelines to guide action planning and resource allocation. This roadmap should be aligned with the hospital's overall strategic objectives and priorities.\n\n**RECOMMENDATION_2:** Designate a senior leader as the champion for Research & Innovation, responsible for overseeing progress, addressing barriers, and ensuring alignment with other hospital initiatives. This will help to elevate the priority of research-related activities and foster collaboration across departments.\n\n**RECOMMENDATION_3:** Develop a comprehensive plan to recruit and retain research talent, including incentives for researchers, clinicians, and students to participate in clinical trials and innovation projects. This will help to build capacity and expertise in research and innovation.\n\n**NEW_KPIS:**\n\n* Research & Innovation Roadmap completion rate (e.g., 80% of roadmap milestones achieved within the next 12 months)\n* Number of new clinical trials initiated per quarter\n* Percentage increase in research-related publications and presentations\n\n**TIMELINE:** Implement Recommendations 1-3 over the next 6-9 months, with regular progress updates to the hospital's executive leadership.\n\n**BUDGET_ESTIMATE:** Estimated additional budget needed: LKR 50 million (to support Research Coordinator recruitment, Ethics Review Committee establishment, and research-related infrastructure development).\n\n**EXPECTED_OUTCOME:** By implementing these recommendations, we expect to see a significant increase in action coverage for Objective C ('Research & Innovation'), with at least 30% of actions completed within the next 12 months. This will help to position the hospital as a knowledge hub and enhance its reputation for clinical research and innovation.\n\n**CONFIDENCE:** HIGH (based on the clear root cause analysis and actionable recommendations).",
+      "why": "** By implementing these recommendations, we expect to see a significant increase in action coverage for Objective C ('Research & Innovation'), with at least 30% of actions completed within the next 12 months. This will help to position the hospital as a knowledge hub and enhance its reputation for clinical research and innovation.\n\n**CONFIDENCE:** HIGH (based on the clear root cause analysis and actionable recommendations).",
+      "actions": [
+        "** Establish a clear Research & Innovation Roadmap with specific, measurable goals and timelines to guide action planning and resource allocation. This roadmap should be aligned with the hospital's overall strategic objectives and priorities.\n\n**RECOMMENDATION_2:** Designate a senior leader as the champion for Research & Innovation, responsible for overseeing progress, addressing barriers, and ensuring alignment with other hospital initiatives. This will help to elevate the priority of research-related activities and foster collaboration across departments.\n\n**RECOMMENDATION_3:** Develop a comprehensive plan to recruit and retain research talent, including incentives for researchers, clinicians, and students to participate in clinical trials and innovation projects. This will help to build capacity and expertise in research and innovation.\n\n**NEW_KPIS:**\n\n* Research & Innovation Roadmap completion rate (e.g., 80% of roadmap milestones achieved within the next 12 months)\n* Number of new clinical trials initiated per quarter\n* Percentage increase in research-related publications and presentations\n\n**TIMELINE:** Implement Recommendations 1-3 over the next 6-9 months, with regular progress updates to the hospital's executive leadership.\n\n**BUDGET_ESTIMATE:** Estimated additional budget needed: LKR 50 million (to support Research Coordinator recruitment, Ethics Review Committee establishment, and research-related infrastructure development).\n\n**EXPECTED_OUTCOME:** By implementing these recommendations, we expect to see a significant increase in action coverage for Objective C ('Research & Innovation'), with at least 30% of actions completed within the next 12 months. This will help to position the hospital as a knowledge hub and enhance its reputation for clinical research and innovation.\n\n**CONFIDENCE:** HIGH (based on the clear root cause analysis and actionable recommendations).",
+        "** Designate a senior leader as the champion for Research & Innovation, responsible for overseeing progress, addressing barriers, and ensuring alignment with other hospital initiatives. This will help to elevate the priority of research-related activities and foster collaboration across departments.\n\n**RECOMMENDATION_3:** Develop a comprehensive plan to recruit and retain research talent, including incentives for researchers, clinicians, and students to participate in clinical trials and innovation projects. This will help to build capacity and expertise in research and innovation.\n\n**NEW_KPIS:**\n\n* Research & Innovation Roadmap completion rate (e.g., 80% of roadmap milestones achieved within the next 12 months)\n* Number of new clinical trials initiated per quarter\n* Percentage increase in research-related publications and presentations\n\n**TIMELINE:** Implement Recommendations 1-3 over the next 6-9 months, with regular progress updates to the hospital's executive leadership.\n\n**BUDGET_ESTIMATE:** Estimated additional budget needed: LKR 50 million (to support Research Coordinator recruitment, Ethics Review Committee establishment, and research-related infrastructure development).\n\n**EXPECTED_OUTCOME:** By implementing these recommendations, we expect to see a significant increase in action coverage for Objective C ('Research & Innovation'), with at least 30% of actions completed within the next 12 months. This will help to position the hospital as a knowledge hub and enhance its reputation for clinical research and innovation.\n\n**CONFIDENCE:** HIGH (based on the clear root cause analysis and actionable recommendations).",
+        "** Develop a comprehensive plan to recruit and retain research talent, including incentives for researchers, clinicians, and students to participate in clinical trials and innovation projects. This will help to build capacity and expertise in research and innovation.\n\n**NEW_KPIS:**\n\n* Research & Innovation Roadmap completion rate (e.g., 80% of roadmap milestones achieved within the next 12 months)\n* Number of new clinical trials initiated per quarter\n* Percentage increase in research-related publications and presentations\n\n**TIMELINE:** Implement Recommendations 1-3 over the next 6-9 months, with regular progress updates to the hospital's executive leadership.\n\n**BUDGET_ESTIMATE:** Estimated additional budget needed: LKR 50 million (to support Research Coordinator recruitment, Ethics Review Committee establishment, and research-related infrastructure development).\n\n**EXPECTED_OUTCOME:** By implementing these recommendations, we expect to see a significant increase in action coverage for Objective C ('Research & Innovation'), with at least 30% of actions completed within the next 12 months. This will help to position the hospital as a knowledge hub and enhance its reputation for clinical research and innovation.\n\n**CONFIDENCE:** HIGH (based on the clear root cause analysis and actionable recommendations)."
+      ],
+      "kpis": [
+        "Research & Innovation Roadmap completion rate (e.g., 80% of roadmap milestones achieved within the next 12 months)",
+        "Number of new clinical trials initiated per quarter",
+        "Percentage increase in research-related publications and presentations",
+        "*TIMELINE:** Implement Recommendations 1-3 over the next 6-9 months, with regular progress updates to the hospital's executive leadership.",
+        "*BUDGET_ESTIMATE:** Estimated additional budget needed: LKR 50 million (to support Research Coordinator recruitment, Ethics Review Committee establishment, and research-related infrastructure development).",
+        "*EXPECTED_OUTCOME:** By implementing these recommendations, we expect to see a significant increase in action coverage for Objective C ('Research & Innovation'), with at least 30% of actions completed within the next 12 months. This will help to position the hospital as a knowledge hub and enhance its reputation for clinical research and innovation.",
+        "*CONFIDENCE:** HIGH (based on the clear root cause analysis and actionable recommendations)."
+      ],
+      "estimated_budget": 50.0,
+      "estimated_timeline": "** Implement Recommendations 1-3 over the next 6-9 months, with regular progress updates to the hospital's executive leadership.\n\n**BUDGET_ESTIMATE:** Estimated additional budget needed: LKR 50 million (to support Research Coordinator recruitment, Ethics Review Committee establishment, and research-related infrastructure development).\n\n**EXPECTED_OUTCOME:** By implementing these recommendations, we expect to see a significant increase in action coverage for Objective C ('Research & Innovation'), with at least 30% of actions completed within the next 12 months. This will help to position the hospital as a knowledge hub and enhance its reputation for clinical research and innovation.\n\n**CONFIDENCE:** HIGH (based on the clear root cause analysis and actionable recommendations).",
+      "impact_score": 0.605,
+      "affected_objectives": [
+        "C"
+      ],
+      "evidence_ids": [
+        "action_13",
+        "action_15",
+        "obj_C",
+        "obj_B",
+        "action_18",
+        "obj_D",
+        "obj_E",
+        "obj_A"
+      ],
+      "confidence": "HIGH"
+    },
+    {
+      "rec_id": "rec_under_supported_D",
+      "issue_id": "under_supported_D",
+      "issue_type": "under_supported_strategy",
+      "what_to_change": "The misalignment between Objective D (Workforce Development) and action coverage is due to a lack of prioritization and resource allocation towards workforce development initiatives. This is evident from the low score (0.265) assigned to Objective D compared to other strategic objectives.",
+      "why": "By addressing the misalignment between Objective D and action coverage, the hospital expects a significant improvement in workforce development, leading to increased clinical staffing, better patient care, and enhanced reputation as a knowledge hub. This will also contribute to achieving other strategic objectives, such as [obj_E] (Extend the hospital's impact beyond its walls) and [obj_C] (Foster a culture of clinical research and innovation).",
+      "actions": [
+        "Re-evaluate and re-prioritize Objective D by allocating additional resources and increasing its score to match or exceed that of other strategic objectives.",
+        "Identify and eliminate non-essential actions, such as [action_19] (Annual Staff Cricket Tournament & Sports Sponsorship), which do not directly contribute to workforce development. Replace these with high-priority actions focused on clinical staffing, training, and retention.",
+        "Develop a comprehensive workforce development plan that aligns with the hospital's strategic objectives, including specific targets for increasing clinical staffing by 60% (D1). This plan should be integrated into the overall action plan and regularly reviewed to ensure progress.",
+        "[Revised] Consider adding a section on stakeholder engagement and communication to address potential resistance from staff. Additionally, define specific targets for the Workforce Development Score to ensure cl"
+      ],
+      "kpis": [
+        "Workforce Development Score (0.265 -> 0.500)",
+        "Clinical Staffing Increase Rate (%)",
+        "Average Time-to-Fill Vacant Positions"
+      ],
+      "estimated_budget": 50.0,
+      "estimated_timeline": "Implement changes within the next 6 months, with regular review and updates every quarter.",
+      "impact_score": 0.68,
+      "affected_objectives": [
+        "D"
+      ],
+      "evidence_ids": [
+        "action_19",
+        "action_22",
+        "action_16",
+        "obj_E",
+        "obj_C",
+        "obj_D",
+        "obj_A",
+        "obj_B"
+      ],
+      "confidence": "HIGH"
+    },
+    {
+      "rec_id": "rec_under_supported_B",
+      "issue_id": "under_supported_B",
+      "issue_type": "under_supported_strategy",
+      "what_to_change": "Objective B ('Digital Health Transformation') has only 20% action coverage. Gap actions: [].",
+      "why": "",
+      "actions": [
+        "[Revised] ** To revise this recommendation, I suggest providing more specific details on:\n\n1. Proposed actions to improve action coverage of Objective B (Digital Health Transformation)\n2. Expected outcomes and "
+      ],
+      "kpis": [],
+      "estimated_budget": 0.0,
+      "estimated_timeline": "",
+      "impact_score": 0.155,
+      "affected_objectives": [
+        "B"
+      ],
+      "evidence_ids": [
+        "obj_B",
+        "action_10",
+        "action_12",
+        "action_11",
+        "obj_A",
+        "obj_E",
+        "obj_C",
+        "obj_D"
+      ],
+      "confidence": "MEDIUM"
+    }
+  ],
+  "diagnosed_issues_summary": [
+    {
+      "issue_id": "orphan_action_1",
+      "type": "orphan_action",
+      "priority_score": 0.6162,
+      "affected_objectives": [
+        "A"
+      ],
+      "addressed": true
+    },
+    {
+      "issue_id": "orphan_action_25",
+      "type": "orphan_action",
+      "priority_score": 0.6004,
+      "affected_objectives": [
+        "E"
+      ],
+      "addressed": true
+    },
+    {
+      "issue_id": "under_supported_C",
+      "type": "under_supported_strategy",
+      "priority_score": 0.5984,
+      "affected_objectives": [
+        "C"
+      ],
+      "addressed": true
+    },
+    {
+      "issue_id": "under_supported_D",
+      "type": "under_supported_strategy",
+      "priority_score": 0.5712,
+      "affected_objectives": [
+        "D"
+      ],
+      "addressed": true
+    },
+    {
+      "issue_id": "under_supported_B",
+      "type": "under_supported_strategy",
+      "priority_score": 0.544,
+      "affected_objectives": [
+        "B"
+      ],
+      "addressed": true
+    },
+    {
+      "issue_id": "under_supported_E",
+      "type": "under_supported_strategy",
+      "priority_score": 0.5168,
+      "affected_objectives": [
+        "E"
+      ],
+      "addressed": false
+    },
+    {
+      "issue_id": "orphan_action_8",
+      "type": "orphan_action",
+      "priority_score": 0.4792,
+      "affected_objectives": [
+        "A"
+      ],
+      "addressed": false
+    },
+    {
+      "issue_id": "orphan_action_24",
+      "type": "orphan_action",
+      "priority_score": 0.3971,
+      "affected_objectives": [
+        "E"
+      ],
+      "addressed": false
+    },
+    {
+      "issue_id": "orphan_action_3",
+      "type": "orphan_action",
+      "priority_score": 0.2645,
+      "affected_objectives": [
+        "A"
+      ],
+      "addressed": false
+    },
+    {
+      "issue_id": "orphan_action_19",
+      "type": "orphan_action",
+      "priority_score": 0.1772,
+      "affected_objectives": [
+        "D"
+      ],
+      "addressed": false
+    },
+    {
+      "issue_id": "kpi_mismatch_1",
+      "type": "kpi_mismatch",
+      "priority_score": 0.14,
+      "affected_objectives": [
+        "A"
+      ],
+      "addressed": false
+    },
+    {
+      "issue_id": "kpi_mismatch_10",
+      "type": "kpi_mismatch",
+      "priority_score": 0.14,
+      "affected_objectives": [
+        "B"
+      ],
+      "addressed": false
+    },
+    {
+      "issue_id": "kpi_mismatch_11",
+      "type": "kpi_mismatch",
+      "priority_score": 0.14,
+      "affected_objectives": [
+        "B"
+      ],
+      "addressed": false
+    },
+    {
+      "issue_id": "kpi_mismatch_13",
+      "type": "kpi_mismatch",
+      "priority_score": 0.14,
+      "affected_objectives": [
+        "C"
+      ],
+      "addressed": false
+    },
+    {
+      "issue_id": "kpi_mismatch_17",
+      "type": "kpi_mismatch",
+      "priority_score": 0.14,
+      "affected_objectives": [
+        "D"
+      ],
+      "addressed": false
+    }
+  ]
+}

@@ -1,0 +1,1129 @@
+@prefix isps: <http://isps.nawaloka.lk/ontology#> .
+@prefix isps_data: <http://isps.nawaloka.lk/data#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+isps_data:action_kpi_10_1 a isps:KPI ;
+    rdfs:label "Infrastructure audit report completed by Q1 2025" ;
+    isps:hasKPI isps_data:action_10 .
+
+isps_data:action_kpi_10_2 a isps:KPI ;
+    rdfs:label "Network upgrade 80% complete by Q3 2025" ;
+    isps:hasKPI isps_data:action_10 .
+
+isps_data:action_kpi_10_3 a isps:KPI ;
+    rdfs:label "Wi-Fi coverage across 100% of clinical areas by Q4 2025" ;
+    isps:hasKPI isps_data:action_10 .
+
+isps_data:action_kpi_11_1 a isps:KPI ;
+    rdfs:label "Requirements document approved by Q3 2025" ;
+    isps:hasKPI isps_data:action_11 .
+
+isps_data:action_kpi_11_2 a isps:KPI ;
+    rdfs:label "Minimum 3 vendor demonstrations completed by Q4 2025" ;
+    isps:hasKPI isps_data:action_11 .
+
+isps_data:action_kpi_11_3 a isps:KPI ;
+    rdfs:label "Data protection compliance assessment completed by Q4 2025" ;
+    isps:hasKPI isps_data:action_11 .
+
+isps_data:action_kpi_12_1 a isps:KPI ;
+    rdfs:label "Vulnerability assessment completed by Q2 2025" ;
+    isps:hasKPI isps_data:action_12 .
+
+isps_data:action_kpi_12_2 a isps:KPI ;
+    rdfs:label "Information Security Policy approved by Q3 2025" ;
+    isps:hasKPI isps_data:action_12 .
+
+isps_data:action_kpi_12_3 a isps:KPI ;
+    rdfs:label "90% of staff completing cybersecurity training by Q3 2025" ;
+    isps:hasKPI isps_data:action_12 .
+
+isps_data:action_kpi_13_1 a isps:KPI ;
+    rdfs:label "ERC membership finalised by Q1 2025" ;
+    isps:hasKPI isps_data:action_13 .
+
+isps_data:action_kpi_13_2 a isps:KPI ;
+    rdfs:label "ERC charter and SOPs approved by Q2 2025" ;
+    isps:hasKPI isps_data:action_13 .
+
+isps_data:action_kpi_13_3 a isps:KPI ;
+    rdfs:label "Registration with Sri Lanka Medical Association completed by Q2 2025" ;
+    isps:hasKPI isps_data:action_13 .
+
+isps_data:action_kpi_14_1 a isps:KPI ;
+    rdfs:label "Formal partnership discussions initiated by Q1 2025" ;
+    isps:hasKPI isps_data:action_14 .
+
+isps_data:action_kpi_14_2 a isps:KPI ;
+    rdfs:label "MOU signed by Q3 2025" ;
+    isps:hasKPI isps_data:action_14 .
+
+isps_data:action_kpi_14_3 a isps:KPI ;
+    rdfs:label "First collaborative research proposal submitted to ERC by Q4 2025" ;
+    isps:hasKPI isps_data:action_14 .
+
+isps_data:action_kpi_15_1 a isps:KPI ;
+    rdfs:label "Job description approved and advertised by Q1 2025" ;
+    isps:hasKPI isps_data:action_15 .
+
+isps_data:action_kpi_15_2 a isps:KPI ;
+    rdfs:label "Research Coordinator appointed by Q2 2025" ;
+    isps:hasKPI isps_data:action_15 .
+
+isps_data:action_kpi_15_3 a isps:KPI ;
+    rdfs:label "Research project tracking system established by Q3 2025" ;
+    isps:hasKPI isps_data:action_15 .
+
+isps_data:action_kpi_16_1 a isps:KPI ;
+    rdfs:label "Recruitment campaign launched by Q2 2025" ;
+    isps:hasKPI isps_data:action_16 .
+
+isps_data:action_kpi_16_2 a isps:KPI ;
+    rdfs:label "Minimum 20 specialist applications received by Q3 2025" ;
+    isps:hasKPI isps_data:action_16 .
+
+isps_data:action_kpi_16_3 a isps:KPI ;
+    rdfs:label "Conditional offers extended to at least 5 specialists by Q4 2025" ;
+    isps:hasKPI isps_data:action_16 .
+
+isps_data:action_kpi_17_1 a isps:KPI ;
+    rdfs:label "Nursing workforce plan approved by Q2 2025" ;
+    isps:hasKPI isps_data:action_17 .
+
+isps_data:action_kpi_17_2 a isps:KPI ;
+    rdfs:label "Training partnerships formalised with 2 nursing schools by Q3 2025" ;
+    isps:hasKPI isps_data:action_17 .
+
+isps_data:action_kpi_17_3 a isps:KPI ;
+    rdfs:label "15 conditional nursing offers extended by Q4 2025" ;
+    isps:hasKPI isps_data:action_17 .
+
+isps_data:action_kpi_18_1 a isps:KPI ;
+    rdfs:label "CPD programme framework approved by Q1 2025" ;
+    isps:hasKPI isps_data:action_18 .
+
+isps_data:action_kpi_18_2 a isps:KPI ;
+    rdfs:label "4 quarterly workshops delivered in 2025" ;
+    isps:hasKPI isps_data:action_18 .
+
+isps_data:action_kpi_18_3 a isps:KPI ;
+    rdfs:label "80% of clinical staff achieving ≥20 CPD hours by Q4 2025" ;
+    isps:hasKPI isps_data:action_18 .
+
+isps_data:action_kpi_19_1 a isps:KPI ;
+    rdfs:label "Minimum 8 corporate teams participating in staff tournament" ;
+    isps:hasKPI isps_data:action_19 .
+
+isps_data:action_kpi_19_2 a isps:KPI ;
+    rdfs:label "Event media coverage in at least 3 local outlets" ;
+    isps:hasKPI isps_data:action_19 .
+
+isps_data:action_kpi_19_3 a isps:KPI ;
+    rdfs:label "Staff satisfaction survey improvement in \"team engagement\" category" ;
+    isps:hasKPI isps_data:action_19 .
+
+isps_data:action_kpi_1_1 a isps:KPI ;
+    rdfs:label "Land valuation report completed by Q2 2025" ;
+    isps:hasKPI isps_data:action_1 .
+
+isps_data:action_kpi_1_2 a isps:KPI ;
+    rdfs:label "Environmental clearance obtained by Q3 2025" ;
+    isps:hasKPI isps_data:action_1 .
+
+isps_data:action_kpi_1_3 a isps:KPI ;
+    rdfs:label "Board approval for purchase secured by Q4 2025" ;
+    isps:hasKPI isps_data:action_1 .
+
+isps_data:action_kpi_20_1 a isps:KPI ;
+    rdfs:label "Scoping visit to Malé completed by Q2 2025" ;
+    isps:hasKPI isps_data:action_20 .
+
+isps_data:action_kpi_20_2 a isps:KPI ;
+    rdfs:label "Regulatory requirements documentation completed by Q3 2025" ;
+    isps:hasKPI isps_data:action_20 .
+
+isps_data:action_kpi_20_3 a isps:KPI ;
+    rdfs:label "Partnership MOU signed by Q4 2025" ;
+    isps:hasKPI isps_data:action_20 .
+
+isps_data:action_kpi_21_1 a isps:KPI ;
+    rdfs:label "Medical tourism coordinator appointed by Q2 2025" ;
+    isps:hasKPI isps_data:action_21 .
+
+isps_data:action_kpi_21_2 a isps:KPI ;
+    rdfs:label "Hotel partnership agreements signed with 3 properties by Q3 2025" ;
+    isps:hasKPI isps_data:action_21 .
+
+isps_data:action_kpi_21_3 a isps:KPI ;
+    rdfs:label "Patient journey workflow documented and approved by Q4 2025" ;
+    isps:hasKPI isps_data:action_21 .
+
+isps_data:action_kpi_22_1 a isps:KPI ;
+    rdfs:label "Screening programme launched by Q2 2025" ;
+    isps:hasKPI isps_data:action_22 .
+
+isps_data:action_kpi_22_2 a isps:KPI ;
+    rdfs:label "At least 8 screening camps conducted in 2025" ;
+    isps:hasKPI isps_data:action_22 .
+
+isps_data:action_kpi_22_3 a isps:KPI ;
+    rdfs:label "3,000 individuals screened by Q4 2025" ;
+    isps:hasKPI isps_data:action_22 .
+
+isps_data:action_kpi_23_1 a isps:KPI ;
+    rdfs:label "8 new corporate partners signed by Q4 2025" ;
+    isps:hasKPI isps_data:action_23 .
+
+isps_data:action_kpi_23_2 a isps:KPI ;
+    rdfs:label "Corporate wellness revenue increase of 30% year-on-year" ;
+    isps:hasKPI isps_data:action_23 .
+
+isps_data:action_kpi_23_3 a isps:KPI ;
+    rdfs:label "At least 1,500 corporate employees screened in 2025" ;
+    isps:hasKPI isps_data:action_23 .
+
+isps_data:action_kpi_24_1 a isps:KPI ;
+    rdfs:label "Interior design concept approved by Q2 2025" ;
+    isps:hasKPI isps_data:action_24 .
+
+isps_data:action_kpi_24_2 a isps:KPI ;
+    rdfs:label "Installation completed by end of Q3 2025" ;
+    isps:hasKPI isps_data:action_24 .
+
+isps_data:action_kpi_24_3 a isps:KPI ;
+    rdfs:label "VIP patient satisfaction score improvement of 15%" ;
+    isps:hasKPI isps_data:action_24 .
+
+isps_data:action_kpi_25_1 a isps:KPI ;
+    rdfs:label "Premises lease signed by Q1 2025" ;
+    isps:hasKPI isps_data:action_25 .
+
+isps_data:action_kpi_25_2 a isps:KPI ;
+    rdfs:label "Pharmacy fit-out completed by Q2 2025" ;
+    isps:hasKPI isps_data:action_25 .
+
+isps_data:action_kpi_25_3 a isps:KPI ;
+    rdfs:label "Monthly retail revenue target of LKR 3M achieved by Q4 2025" ;
+    isps:hasKPI isps_data:action_25 .
+
+isps_data:action_kpi_2_1 a isps:KPI ;
+    rdfs:label "Architect appointed by end of Q1 2025" ;
+    isps:hasKPI isps_data:action_2 .
+
+isps_data:action_kpi_2_2 a isps:KPI ;
+    rdfs:label "Preliminary design submission by Q2 2025" ;
+    isps:hasKPI isps_data:action_2 .
+
+isps_data:action_kpi_2_3 a isps:KPI ;
+    rdfs:label "Final master plan approved by Board by end of Q3 2025" ;
+    isps:hasKPI isps_data:action_2 .
+
+isps_data:action_kpi_3_1 a isps:KPI ;
+    rdfs:label "Feasibility report submitted to Board by Q3 2025" ;
+    isps:hasKPI isps_data:action_3 .
+
+isps_data:action_kpi_3_2 a isps:KPI ;
+    rdfs:label "Equipment specification document finalised by Q4 2025" ;
+    isps:hasKPI isps_data:action_3 .
+
+isps_data:action_kpi_3_3 a isps:KPI ;
+    rdfs:label "Minimum 3 vendor proposals received and evaluated by Q4 2025" ;
+    isps:hasKPI isps_data:action_3 .
+
+isps_data:action_kpi_4_1 a isps:KPI ;
+    rdfs:label "Clinical protocol manual completed by Q3 2025" ;
+    isps:hasKPI isps_data:action_4 .
+
+isps_data:action_kpi_4_2 a isps:KPI ;
+    rdfs:label "Insurance partner discussions initiated with at least 3 providers by Q4 2025" ;
+    isps:hasKPI isps_data:action_4 .
+
+isps_data:action_kpi_4_3 a isps:KPI ;
+    rdfs:label "Staffing plan finalised with HR by Q4 2025" ;
+    isps:hasKPI isps_data:action_4 .
+
+isps_data:action_kpi_5_1 a isps:KPI ;
+    rdfs:label "Market analysis report completed by Q2 2025" ;
+    isps:hasKPI isps_data:action_5 .
+
+isps_data:action_kpi_5_2 a isps:KPI ;
+    rdfs:label "Business case presented to Board by Q3 2025" ;
+    isps:hasKPI isps_data:action_5 .
+
+isps_data:action_kpi_5_3 a isps:KPI ;
+    rdfs:label "At least 2 specialist practitioners identified for engagement by Q3 2025" ;
+    isps:hasKPI isps_data:action_5 .
+
+isps_data:action_kpi_6_1 a isps:KPI ;
+    rdfs:label "Laboratory audit completed by Q1 2025" ;
+    isps:hasKPI isps_data:action_6 .
+
+isps_data:action_kpi_6_2 a isps:KPI ;
+    rdfs:label "Upgrade specification document finalised by Q2 2025" ;
+    isps:hasKPI isps_data:action_6 .
+
+isps_data:action_kpi_6_3 a isps:KPI ;
+    rdfs:label "Vendor quotes for priority equipment received by Q3 2025" ;
+    isps:hasKPI isps_data:action_6 .
+
+isps_data:action_kpi_7_1 a isps:KPI ;
+    rdfs:label "Regional needs assessment completed by Q3 2025" ;
+    isps:hasKPI isps_data:action_7 .
+
+isps_data:action_kpi_7_2 a isps:KPI ;
+    rdfs:label "Clinical protocol framework drafted by Q4 2025" ;
+    isps:hasKPI isps_data:action_7 .
+
+isps_data:action_kpi_7_3 a isps:KPI ;
+    rdfs:label "Water treatment feasibility study completed by Q4 2025" ;
+    isps:hasKPI isps_data:action_7 .
+
+isps_data:action_kpi_8_1 a isps:KPI ;
+    rdfs:label "Refurbishment design approved by Q2 2025" ;
+    isps:hasKPI isps_data:action_8 .
+
+isps_data:action_kpi_8_2 a isps:KPI ;
+    rdfs:label "Construction and fit-out completed by end of Q3 2025" ;
+    isps:hasKPI isps_data:action_8 .
+
+isps_data:action_kpi_8_3 a isps:KPI ;
+    rdfs:label "Staff workspace satisfaction survey score improvement of 10%" ;
+    isps:hasKPI isps_data:action_8 .
+
+isps_data:action_kpi_9_1 a isps:KPI ;
+    rdfs:label "RFP issued by end of Q1 2025" ;
+    isps:hasKPI isps_data:action_9 .
+
+isps_data:action_kpi_9_2 a isps:KPI ;
+    rdfs:label "Vendor shortlist (3 candidates) finalised by Q2 2025" ;
+    isps:hasKPI isps_data:action_9 .
+
+isps_data:action_kpi_9_3 a isps:KPI ;
+    rdfs:label "Contract signed by Q4 2025" ;
+    isps:hasKPI isps_data:action_9 .
+
+isps_data:goal_A1 a isps:StrategicGoal ;
+    rdfs:label "A1: Expand hospital capacity to 150 beds with dedicated wards for cardiac, nephrolog" ;
+    isps:supportsObjective isps_data:objective_A .
+
+isps_data:goal_A2 a isps:StrategicGoal ;
+    rdfs:label "A2: Achieve a Hospital-Acquired Infection (HAI) rate below 2% and surgical site infe" ;
+    isps:hasScore "0.5818"^^xsd:float,
+        "0.6536"^^xsd:float ;
+    isps:relatedToConcept isps:InfectionControl,
+        isps:PatientCare ;
+    isps:supportsObjective isps_data:objective_A .
+
+isps_data:goal_A3 a isps:StrategicGoal ;
+    rdfs:label "A3: Attain patient satisfaction scores of ≥90% across all departments." ;
+    isps:hasScore "0.5543"^^xsd:float ;
+    isps:relatedToConcept isps:PatientCare ;
+    isps:supportsObjective isps_data:objective_A .
+
+isps_data:goal_A4 a isps:StrategicGoal ;
+    rdfs:label "A4: Launch Aesthetic & Cosmetic Medical Services and the Daycare Medical Centre as s" ;
+    isps:supportsObjective isps_data:objective_A .
+
+isps_data:goal_B2 a isps:StrategicGoal ;
+    rdfs:label "B2: Deploy a telemedicine platform supporting domestic and international consultatio" ;
+    isps:supportsObjective isps_data:objective_B .
+
+isps_data:goal_B3 a isps:StrategicGoal ;
+    rdfs:label "B3: Integrate AI-assisted diagnostic tools in radiology and pathology." ;
+    isps:supportsObjective isps_data:objective_B .
+
+isps_data:goal_B4 a isps:StrategicGoal ;
+    rdfs:label "B4: Establish a hospital data analytics unit for operational and clinical intelligen" ;
+    isps:supportsObjective isps_data:objective_B .
+
+isps_data:goal_B5 a isps:StrategicGoal ;
+    rdfs:label "B5: Achieve ISO 27001 certification for information security management." ;
+    isps:supportsObjective isps_data:objective_B .
+
+isps_data:goal_C1 a isps:StrategicGoal ;
+    rdfs:label "C1: Establish a Clinical Research Unit to conduct and coordinate hospital-based stud" ;
+    isps:hasScore "0.5729"^^xsd:float ;
+    isps:relatedToConcept isps:ResearchInnovation ;
+    isps:supportsObjective isps_data:objective_C .
+
+isps_data:goal_C2 a isps:StrategicGoal ;
+    rdfs:label "C2: Publish a minimum of 10 peer-reviewed papers annually by 2029." ;
+    isps:hasScore "0.6559"^^xsd:float ;
+    isps:relatedToConcept isps:ResearchInnovation ;
+    isps:supportsObjective isps_data:objective_C .
+
+isps_data:goal_C3 a isps:StrategicGoal ;
+    rdfs:label "C3: Partner with at least two universities for clinical training and collaborative r" ;
+    isps:hasScore "0.5565"^^xsd:float ;
+    isps:relatedToConcept isps:ResearchInnovation ;
+    isps:supportsObjective isps_data:objective_C .
+
+isps_data:goal_C4 a isps:StrategicGoal ;
+    rdfs:label "C4: Pilot innovative treatment protocols in fertility, cardiac care, and nephrology." ;
+    isps:supportsObjective isps_data:objective_C .
+
+isps_data:goal_D1 a isps:StrategicGoal ;
+    rdfs:label "D1: Increase clinical staffing by 60% to support 150-bed operations and new service " ;
+    isps:supportsObjective isps_data:objective_D .
+
+isps_data:goal_D2 a isps:StrategicGoal ;
+    rdfs:label "D2: Reduce annual staff turnover to below 10%." ;
+    isps:supportsObjective isps_data:objective_D .
+
+isps_data:goal_D3 a isps:StrategicGoal ;
+    rdfs:label "D3: Implement a structured Continuing Professional Development (CPD) programme for a" ;
+    isps:supportsObjective isps_data:objective_D .
+
+isps_data:goal_D4 a isps:StrategicGoal ;
+    rdfs:label "D4: Develop specialist training fellowships in cardiac care, nephrology, fertility m" ;
+    isps:hasScore "0.8232"^^xsd:float ;
+    isps:relatedToConcept isps:SpecialistFellowships ;
+    isps:supportsObjective isps_data:objective_D .
+
+isps_data:goal_D5 a isps:StrategicGoal ;
+    rdfs:label "D5: Establish a leadership development pipeline for mid-level managers." ;
+    isps:supportsObjective isps_data:objective_D .
+
+isps_data:kpi_A_1 a isps:KPI ;
+    rdfs:label "Licensed bed capacity" ;
+    isps:hasKPI isps_data:objective_A .
+
+isps_data:kpi_A_2 a isps:KPI ;
+    rdfs:label "Bed occupancy rate" ;
+    isps:hasKPI isps_data:objective_A .
+
+isps_data:kpi_A_3 a isps:KPI ;
+    rdfs:label "Patient satisfaction score (NPS)" ;
+    isps:hasKPI isps_data:objective_A .
+
+isps_data:kpi_A_4 a isps:KPI ;
+    rdfs:label "HAI rate" ;
+    isps:hasKPI isps_data:objective_A .
+
+isps_data:kpi_A_5 a isps:KPI ;
+    rdfs:label "Surgical site infection rate" ;
+    isps:hasKPI isps_data:objective_A .
+
+isps_data:kpi_A_6 a isps:KPI ;
+    rdfs:label "IVF cycles per annum" ;
+    isps:hasKPI isps_data:objective_A .
+
+isps_data:kpi_A_7 a isps:KPI ;
+    rdfs:label "Daycare centre daily patient throughput" ;
+    isps:hasKPI isps_data:objective_A .
+
+isps_data:kpi_A_8 a isps:KPI ;
+    rdfs:label "Aesthetic services monthly revenue" ;
+    isps:hasKPI isps_data:objective_A .
+
+isps_data:kpi_B_1 a isps:KPI ;
+    rdfs:label "EHR adoption rate (departments)" ;
+    isps:hasKPI isps_data:objective_B .
+
+isps_data:kpi_B_2 a isps:KPI ;
+    rdfs:label "Telemedicine consultations/month" ;
+    isps:hasKPI isps_data:objective_B .
+
+isps_data:kpi_B_3 a isps:KPI ;
+    rdfs:label "AI-assisted radiology reports (%)" ;
+    isps:hasKPI isps_data:objective_B .
+
+isps_data:kpi_B_4 a isps:KPI ;
+    rdfs:label "Average patient wait time (OPD)" ;
+    isps:hasKPI isps_data:objective_B .
+
+isps_data:kpi_B_5 a isps:KPI ;
+    rdfs:label "System downtime (hours/year)" ;
+    isps:hasKPI isps_data:objective_B .
+
+isps_data:kpi_B_6 a isps:KPI ;
+    rdfs:label "Cybersecurity incidents (critical)" ;
+    isps:hasKPI isps_data:objective_B .
+
+isps_data:kpi_C_1 a isps:KPI ;
+    rdfs:label "Peer-reviewed publications/year" ;
+    isps:hasKPI isps_data:objective_C .
+
+isps_data:kpi_C_2 a isps:KPI ;
+    rdfs:label "Active clinical trials" ;
+    isps:hasKPI isps_data:objective_C .
+
+isps_data:kpi_C_3 a isps:KPI ;
+    rdfs:label "University partnerships" ;
+    isps:hasKPI isps_data:objective_C .
+
+isps_data:kpi_C_4 a isps:KPI ;
+    rdfs:label "Research grant funding secured (LKR)" ;
+    isps:hasKPI isps_data:objective_C .
+
+isps_data:kpi_C_5 a isps:KPI ;
+    rdfs:label "Innovation proposals from staff/year" ;
+    isps:hasKPI isps_data:objective_C .
+
+isps_data:kpi_D_1 a isps:KPI ;
+    rdfs:label "Total clinical staff (FTE)" ;
+    isps:hasKPI isps_data:objective_D .
+
+isps_data:kpi_D_2 a isps:KPI ;
+    rdfs:label "Annual staff turnover rate" ;
+    isps:hasKPI isps_data:objective_D .
+
+isps_data:kpi_D_3 a isps:KPI ;
+    rdfs:label "CPD hours per clinician/year" ;
+    isps:hasKPI isps_data:objective_D .
+
+isps_data:kpi_D_4 a isps:KPI ;
+    rdfs:label "Staff satisfaction score" ;
+    isps:hasKPI isps_data:objective_D .
+
+isps_data:kpi_D_5 a isps:KPI ;
+    rdfs:label "Internal promotion rate for management roles" ;
+    isps:hasKPI isps_data:objective_D .
+
+isps_data:kpi_D_6 a isps:KPI ;
+    rdfs:label "Specialist fellows trained/year" ;
+    isps:hasKPI isps_data:objective_D .
+
+isps_data:kpi_E_1 a isps:KPI ;
+    rdfs:label "Community programme beneficiaries/year" ;
+    isps:hasKPI isps_data:objective_E .
+
+isps_data:kpi_E_2 a isps:KPI ;
+    rdfs:label "Corporate wellness partners" ;
+    isps:hasKPI isps_data:objective_E .
+
+isps_data:kpi_E_3 a isps:KPI ;
+    rdfs:label "International patient admissions/year" ;
+    isps:hasKPI isps_data:objective_E .
+
+isps_data:kpi_E_4 a isps:KPI ;
+    rdfs:label "Maldives telemedicine consultations/month" ;
+    isps:hasKPI isps_data:objective_E .
+
+isps_data:kpi_E_5 a isps:KPI ;
+    rdfs:label "Visiting specialist trips to Maldives/year" ;
+    isps:hasKPI isps_data:objective_E .
+
+isps_data:kpi_E_6 a isps:KPI ;
+    rdfs:label "Medical tourism revenue (% of total)" ;
+    isps:hasKPI isps_data:objective_E .
+
+isps:AI_AssistedDiagnostics a owl:Class ;
+    rdfs:label "AI-Assisted Diagnostics" ;
+    rdfs:comment "AI-powered radiology, pathology screening, predictive analytics, machine learning." ;
+    rdfs:subClassOf isps:DigitalHealth .
+
+isps:Accreditation a owl:Class ;
+    rdfs:label "International Accreditation" ;
+    rdfs:comment "JCI accreditation, international quality standards, accreditation roadmap." ;
+    rdfs:subClassOf isps:InternationalMedicalTourism .
+
+isps:CapitalInvestment a owl:Class ;
+    rdfs:label "Capital Investment" ;
+    rdfs:comment "Capital expenditure, construction funding, equipment procurement budget." ;
+    rdfs:subClassOf isps:Finance .
+
+isps:ClinicalResearch a owl:Class ;
+    rdfs:label "Clinical Research" ;
+    rdfs:comment "Clinical research unit, observational studies, clinical trials, ethics review." ;
+    rdfs:subClassOf isps:ResearchInnovation .
+
+isps:CostManagement a owl:Class ;
+    rdfs:label "Cost Management" ;
+    rdfs:comment "Budget allocation, cost control, operational expenditure management." ;
+    rdfs:subClassOf isps:Finance .
+
+isps:DataAnalytics a owl:Class ;
+    rdfs:label "Data Analytics" ;
+    rdfs:comment "Hospital analytics, operational intelligence, clinical outcome benchmarking." ;
+    rdfs:subClassOf isps:DigitalHealth .
+
+isps:DaycareServices a owl:Class ;
+    rdfs:label "Daycare Services" ;
+    rdfs:comment "Daycare medical centre, day surgery, outpatient procedures, daily throughput." ;
+    rdfs:subClassOf isps:ClinicalServices .
+
+isps:EmergencyServices a owl:Class ;
+    rdfs:label "Emergency Services" ;
+    rdfs:comment "24/7 accident and emergency department, trauma care, ambulance services." ;
+    rdfs:subClassOf isps:PatientCare .
+
+isps:FacilityManagement a owl:Class ;
+    rdfs:label "Facility Management" ;
+    rdfs:comment "Building maintenance, MEP systems, housekeeping, utility management." ;
+    rdfs:subClassOf isps:Operations .
+
+isps:FacilityUpgrade a owl:Class ;
+    rdfs:label "Facility Upgrade" ;
+    rdfs:comment "Building refurbishment, equipment installation, laboratory upgrade, fit-out." ;
+    rdfs:subClassOf isps:InfrastructureExpansion .
+
+isps:InnovationProgrammes a owl:Class ;
+    rdfs:label "Innovation Programmes" ;
+    rdfs:comment "Innovation awards, novel treatment protocols, staff innovation proposals." ;
+    rdfs:subClassOf isps:ResearchInnovation .
+
+isps:InpatientCare a owl:Class ;
+    rdfs:label "Inpatient Care" ;
+    rdfs:comment "Hospital admission, bed capacity, ward management, bed occupancy." ;
+    rdfs:subClassOf isps:PatientCare .
+
+isps:LeadershipDevelopment a owl:Class ;
+    rdfs:label "Leadership Development" ;
+    rdfs:comment "Management pipeline, leadership programme, internal promotion, mentoring." ;
+    rdfs:subClassOf isps:WorkforceHR .
+
+isps:OutpatientCare a owl:Class ;
+    rdfs:label "Outpatient Care" ;
+    rdfs:comment "OPD consultations, specialist channelling, patient wait times." ;
+    rdfs:subClassOf isps:PatientCare .
+
+isps:PatientExperience a owl:Class ;
+    rdfs:label "Patient Experience" ;
+    rdfs:comment "Patient satisfaction scores, NPS, complaints management, patient feedback." ;
+    rdfs:subClassOf isps:PatientCare .
+
+isps:PreventiveCare a owl:Class ;
+    rdfs:label "Preventive Care" ;
+    rdfs:comment "Preventive health, health education, women's health, cancer screening." ;
+    rdfs:subClassOf isps:CommunityRegionalHealth .
+
+isps:Publications a owl:Class ;
+    rdfs:label "Publications" ;
+    rdfs:comment "Peer-reviewed papers, research output, clinical symposium." ;
+    rdfs:subClassOf isps:ResearchInnovation .
+
+isps:QualityAssurance a owl:Class ;
+    rdfs:label "Quality Assurance" ;
+    rdfs:comment "JCI accreditation, NABH standards, clinical governance, quality indicators." ;
+    rdfs:subClassOf isps:Operations .
+
+isps:Retention a owl:Class ;
+    rdfs:label "Staff Retention" ;
+    rdfs:comment "Staff turnover, retention strategy, employee satisfaction, remuneration packages." ;
+    rdfs:subClassOf isps:WorkforceHR .
+
+isps:RevenueGrowth a owl:Class ;
+    rdfs:label "Revenue Growth" ;
+    rdfs:comment "Revenue targets, service line revenue, financial performance, CAGR." ;
+    rdfs:subClassOf isps:Finance .
+
+isps:SupplyChain a owl:Class ;
+    rdfs:label "Supply Chain" ;
+    rdfs:comment "Procurement, equipment vendor management, medical supplies, inventory." ;
+    rdfs:subClassOf isps:Operations .
+
+isps:SurgicalServices a owl:Class ;
+    rdfs:label "Surgical Services" ;
+    rdfs:comment "Operating theatres, day surgery, surgical site infection rates." ;
+    rdfs:subClassOf isps:PatientCare .
+
+isps:Telemedicine a owl:Class ;
+    rdfs:label "Telemedicine" ;
+    rdfs:comment "Virtual consultations, remote specialist access, telehealth platform." ;
+    rdfs:subClassOf isps:DigitalHealth .
+
+isps:hasActionNumber a owl:DatatypeProperty ;
+    rdfs:label "hasActionNumber" ;
+    rdfs:comment "Action sequential number." ;
+    rdfs:range xsd:integer .
+
+isps:hasBudget a owl:ObjectProperty ;
+    rdfs:label "hasBudget" ;
+    rdfs:comment "Specifies the budget allocation for an action." .
+
+isps:hasBudgetValue a owl:DatatypeProperty ;
+    rdfs:label "hasBudgetValue" ;
+    rdfs:comment "Budget in LKR millions." ;
+    rdfs:range xsd:float .
+
+isps:hasEmbeddingScore a owl:DatatypeProperty ;
+    rdfs:label "hasEmbeddingScore" ;
+    rdfs:comment "Embedding similarity score (0-1)." ;
+    rdfs:range xsd:float .
+
+isps:hasEvidenceText a owl:ObjectProperty ;
+    rdfs:label "hasEvidenceText" ;
+    rdfs:comment "Stores evidence text supporting a mapping." .
+
+isps:hasKPI a owl:ObjectProperty ;
+    rdfs:label "hasKPI" ;
+    rdfs:comment "Associates a KPI with an objective or action." .
+
+isps:hasKeywordScore a owl:DatatypeProperty ;
+    rdfs:label "hasKeywordScore" ;
+    rdfs:comment "Keyword match score (0-1)." ;
+    rdfs:range xsd:float .
+
+isps:hasObjectiveCode a owl:DatatypeProperty ;
+    rdfs:label "hasObjectiveCode" ;
+    rdfs:comment "Strategic objective letter code." ;
+    rdfs:range xsd:string .
+
+isps:hasOwner a owl:ObjectProperty ;
+    rdfs:label "hasOwner" ;
+    rdfs:comment "Specifies the responsible stakeholder for an action." .
+
+isps:hasScore a owl:DatatypeProperty ;
+    rdfs:label "hasScore" ;
+    rdfs:comment "Mapping score (0-1)." ;
+    rdfs:range xsd:float .
+
+isps:hasTimeline a owl:ObjectProperty ;
+    rdfs:label "hasTimeline" ;
+    rdfs:comment "Specifies the timeline for an action or objective." .
+
+isps:implementsGoal a owl:ObjectProperty ;
+    rdfs:label "implementsGoal" ;
+    rdfs:comment "Links an action to the specific strategic goal it implements." .
+
+isps:relatedToConcept a owl:ObjectProperty ;
+    rdfs:label "relatedToConcept" ;
+    rdfs:comment "Links an item (action/goal) to an ontology concept." .
+
+isps:supportsObjective a owl:ObjectProperty ;
+    rdfs:label "supportsObjective" ;
+    rdfs:comment "Links an action to the strategic objective it supports." .
+
+isps_data:goal_A5 a isps:StrategicGoal ;
+    rdfs:label "A5: Upgrade the Fertility Centre to a full-spectrum regional reproductive health hub" ;
+    isps:hasScore "0.6513"^^xsd:float ;
+    isps:relatedToConcept isps:Fertility ;
+    isps:supportsObjective isps_data:objective_A .
+
+isps_data:goal_B1 a isps:StrategicGoal ;
+    rdfs:label "B1: Implement a unified Electronic Health Record (EHR) system across all departments" ;
+    isps:hasScore "0.6506"^^xsd:float ;
+    isps:relatedToConcept isps:EHR ;
+    isps:supportsObjective isps_data:objective_B .
+
+isps_data:goal_E1 a isps:StrategicGoal ;
+    rdfs:label "E1: Launch community preventive health programmes reaching 25,000 beneficiaries annu" ;
+    isps:hasScore "0.6412"^^xsd:float ;
+    isps:relatedToConcept isps:CommunityRegionalHealth ;
+    isps:supportsObjective isps_data:objective_E .
+
+isps_data:goal_E2 a isps:StrategicGoal ;
+    rdfs:label "E2: Establish the Maldives outreach programme with visiting specialist services and " ;
+    isps:hasScore "0.5622"^^xsd:float ;
+    isps:relatedToConcept isps:CommunityRegionalHealth ;
+    isps:supportsObjective isps_data:objective_E .
+
+isps_data:goal_E3 a isps:StrategicGoal ;
+    rdfs:label "E3: Develop corporate wellness partnerships with 50+ employers in the Negombo–Katuna" ;
+    isps:hasScore "0.5904"^^xsd:float ;
+    isps:relatedToConcept isps:CommunityRegionalHealth ;
+    isps:supportsObjective isps_data:objective_E .
+
+isps_data:goal_E4 a isps:StrategicGoal ;
+    rdfs:label "E4: Create a medical tourism concierge unit to serve international patients end-to-e" ;
+    isps:hasScore "0.5746"^^xsd:float,
+        "0.638"^^xsd:float ;
+    isps:relatedToConcept isps:CommunityRegionalHealth,
+        isps:InternationalMedicalTourism ;
+    isps:supportsObjective isps_data:objective_E .
+
+isps_data:goal_E5 a isps:StrategicGoal ;
+    rdfs:label "E5: Forge partnerships with regional hospitals for referral networks and shared spec" ;
+    isps:hasScore "0.6183"^^xsd:float ;
+    isps:relatedToConcept isps:CommunityRegionalHealth ;
+    isps:supportsObjective isps_data:objective_E .
+
+isps:AcademicPartnerships a owl:Class ;
+    rdfs:label "Academic Partnerships" ;
+    rdfs:comment "University collaboration, MOU, student placements, co-supervision." ;
+    rdfs:subClassOf isps:ResearchInnovation .
+
+isps:AestheticMedicine a owl:Class ;
+    rdfs:label "Aesthetic Medicine" ;
+    rdfs:comment "Aesthetic and cosmetic medical services, dermatological aesthetics, laser treatments." ;
+    rdfs:subClassOf isps:ClinicalServices .
+
+isps:AirlineHotelPartnerships a owl:Class ;
+    rdfs:label "Airline & Hotel Partnerships" ;
+    rdfs:comment "SriLankan Airlines medical travel, hotel recovery packages, airport coordination." ;
+    rdfs:subClassOf isps:InternationalMedicalTourism .
+
+isps:BedExpansion a owl:Class ;
+    rdfs:label "Bed Expansion" ;
+    rdfs:comment "Capacity expansion from 75 to 150 beds, ward construction, phased building." ;
+    rdfs:subClassOf isps:InfrastructureExpansion .
+
+isps:Cardiology a owl:Class ;
+    rdfs:label "Cardiology" ;
+    rdfs:comment "Cardiac catheterisation laboratory, interventional cardiology, cardiac surgeon." ;
+    rdfs:subClassOf isps:ClinicalServices .
+
+isps:ConciergeServices a owl:Class ;
+    rdfs:label "Concierge Services" ;
+    rdfs:comment "Medical tourism concierge unit, patient journey coordination, visa assistance." ;
+    rdfs:subClassOf isps:InternationalMedicalTourism .
+
+isps:CorporateWellness a owl:Class ;
+    rdfs:label "Corporate Wellness" ;
+    rdfs:comment "Corporate wellness partnerships, employer health packages, executive health checks." ;
+    rdfs:subClassOf isps:CommunityRegionalHealth .
+
+isps:Cybersecurity a owl:Class ;
+    rdfs:label "Cybersecurity" ;
+    rdfs:comment "Information security, ISO 27001, data protection, PDPA compliance, vulnerability assessment." ;
+    rdfs:subClassOf isps:DigitalHealth .
+
+isps:ElderlyCare a owl:Class ;
+    rdfs:label "Elderly Care" ;
+    rdfs:comment "Elderly care unit, geriatric nursing, long-term residential care, occupational therapy." ;
+    rdfs:subClassOf isps:ClinicalServices .
+
+isps:InfectionControl a owl:Class ;
+    rdfs:label "Infection Control" ;
+    rdfs:comment "Hospital-acquired infection prevention, HAI rate, sterilisation protocols." ;
+    rdfs:subClassOf isps:PatientCare .
+
+isps:LandAcquisition a owl:Class ;
+    rdfs:label "Land Acquisition" ;
+    rdfs:comment "Adjacent land purchase, due diligence, environmental assessment, town planning." ;
+    rdfs:subClassOf isps:InfrastructureExpansion .
+
+isps:MaldivesOutreach a owl:Class ;
+    rdfs:label "Maldives Outreach" ;
+    rdfs:comment "Maldives partnership, visiting specialists to Male and Addu City, Aasandha reimbursement." ;
+    rdfs:subClassOf isps:InternationalMedicalTourism .
+
+isps:Nephrology a owl:Class ;
+    rdfs:label "Nephrology" ;
+    rdfs:comment "Nephrology dialysis unit, haemodialysis, peritoneal dialysis, water treatment." ;
+    rdfs:subClassOf isps:ClinicalServices .
+
+isps:Recruitment a owl:Class ;
+    rdfs:label "Recruitment" ;
+    rdfs:comment "Staff recruitment, specialist hiring, nursing workforce expansion." ;
+    rdfs:subClassOf isps:WorkforceHR .
+
+isps:ScreeningPrograms a owl:Class ;
+    rdfs:label "Screening Programmes" ;
+    rdfs:comment "Community health screening, diabetes, hypertension, cardiovascular risk screening." ;
+    rdfs:subClassOf isps:CommunityRegionalHealth .
+
+isps:SpecialistFellowships a owl:Class ;
+    rdfs:label "Specialist Fellowships" ;
+    rdfs:comment "Training fellowships in cardiac care, nephrology, fertility medicine, geriatric care." ;
+    rdfs:subClassOf isps:WorkforceHR .
+
+isps:Training a owl:Class ;
+    rdfs:label "Training & CPD" ;
+    rdfs:comment "Continuing professional development, clinical skills workshops, simulation training." ;
+    rdfs:subClassOf isps:WorkforceHR .
+
+isps:EHR a owl:Class ;
+    rdfs:label "Electronic Health Records" ;
+    rdfs:comment "EHR system implementation, clinical documentation, HL7 FHIR interoperability." ;
+    rdfs:subClassOf isps:DigitalHealth .
+
+isps:Fertility a owl:Class ;
+    rdfs:label "Fertility Centre" ;
+    rdfs:comment "IVF cycles, fertility centre, embryology laboratory, cryopreservation, reproductive health." ;
+    rdfs:subClassOf isps:ClinicalServices .
+
+isps_data:action_1 a isps:ActionItem ;
+    rdfs:label "Action 1: Adjacent Land Acquisition Due Diligence & Negotiation" ;
+    isps:hasActionNumber 1 ;
+    isps:hasBudgetValue "35.0"^^xsd:float ;
+    isps:hasOwner "Facilities & Projects Director (with Legal Counsel)" ;
+    isps:hasTimeline "Q1–Q4 2025" ;
+    isps:relatedToConcept isps:LandAcquisition ;
+    isps:supportsObjective isps_data:objective_A .
+
+isps_data:action_10 a isps:ActionItem ;
+    rdfs:label "Action 10: IT Infrastructure Assessment & Network Upgrade" ;
+    isps:hasActionNumber 10 ;
+    isps:hasBudgetValue "45.0"^^xsd:float ;
+    isps:hasOwner "CIO (with IT Department)" ;
+    isps:hasTimeline "Q1–Q4 2025" ;
+    isps:supportsObjective isps_data:objective_B .
+
+isps_data:action_11 a isps:ActionItem ;
+    rdfs:label "Action 11: Telemedicine Platform Requirements & Vendor Engagement" ;
+    isps:hasActionNumber 11 ;
+    isps:hasBudgetValue "8.0"^^xsd:float ;
+    isps:hasOwner "CIO (with International Unit Director)" ;
+    isps:hasTimeline "Q2–Q4 2025" ;
+    isps:supportsObjective isps_data:objective_B .
+
+isps_data:action_12 a isps:ActionItem ;
+    rdfs:label "Action 12: Cybersecurity Baseline Assessment & Policy Development" ;
+    isps:hasActionNumber 12 ;
+    isps:hasBudgetValue "12.0"^^xsd:float ;
+    isps:hasOwner "CIO" ;
+    isps:hasTimeline "Q1–Q3 2025" ;
+    isps:relatedToConcept isps:Cybersecurity ;
+    isps:supportsObjective isps_data:objective_B .
+
+isps_data:action_13 a isps:ActionItem ;
+    rdfs:label "Action 13: Establishment of Ethics Review Committee" ;
+    isps:hasActionNumber 13 ;
+    isps:hasBudgetValue "3.0"^^xsd:float ;
+    isps:hasOwner "Medical Director" ;
+    isps:hasTimeline "Q1–Q2 2025" ;
+    isps:supportsObjective isps_data:objective_C .
+
+isps_data:action_14 a isps:ActionItem ;
+    rdfs:label "Action 14: University Research Partnership MOU" ;
+    isps:hasActionNumber 14 ;
+    isps:hasBudgetValue "4.0"^^xsd:float ;
+    isps:hasOwner "Medical Director" ;
+    isps:hasTimeline "Q1–Q3 2025" ;
+    isps:relatedToConcept isps:AcademicPartnerships ;
+    isps:supportsObjective isps_data:objective_C .
+
+isps_data:action_15 a isps:ActionItem ;
+    rdfs:label "Action 15: Appointment of Research Coordinator" ;
+    isps:hasActionNumber 15 ;
+    isps:hasBudgetValue "4.0"^^xsd:float ;
+    isps:hasOwner "HR Director (with Medical Director)" ;
+    isps:hasTimeline "Q1–Q2 2025" ;
+    isps:supportsObjective isps_data:objective_C .
+
+isps_data:action_16 a isps:ActionItem ;
+    rdfs:label "Action 16: Specialist Clinician Recruitment Drive" ;
+    isps:hasActionNumber 16 ;
+    isps:hasBudgetValue "18.0"^^xsd:float ;
+    isps:hasOwner "HR Director (with Medical Director)" ;
+    isps:hasTimeline "Q2–Q4 2025" ;
+    isps:supportsObjective isps_data:objective_D .
+
+isps_data:action_17 a isps:ActionItem ;
+    rdfs:label "Action 17: Nursing Workforce Expansion Planning" ;
+    isps:hasActionNumber 17 ;
+    isps:hasBudgetValue "15.0"^^xsd:float ;
+    isps:hasOwner "Director of Nursing (with HR Director)" ;
+    isps:hasTimeline "Q2–Q4 2025" ;
+    isps:relatedToConcept isps:Recruitment ;
+    isps:supportsObjective isps_data:objective_D .
+
+isps_data:action_18 a isps:ActionItem ;
+    rdfs:label "Action 18: Continuing Professional Development (CPD) Programme Launch" ;
+    isps:hasActionNumber 18 ;
+    isps:hasBudgetValue "10.0"^^xsd:float ;
+    isps:hasOwner "Director of Nursing (with Medical Director)" ;
+    isps:hasTimeline "Q1–Q4 2025" ;
+    isps:relatedToConcept isps:Training ;
+    isps:supportsObjective isps_data:objective_D .
+
+isps_data:action_19 a isps:ActionItem ;
+    rdfs:label "Action 19: Annual Staff Cricket Tournament & Sports Sponsorship" ;
+    isps:hasActionNumber 19 ;
+    isps:hasBudgetValue "8.0"^^xsd:float ;
+    isps:hasOwner "HR Director (with Marketing Director)" ;
+    isps:hasTimeline "Q3 2025" ;
+    isps:supportsObjective isps_data:objective_D .
+
+isps_data:action_2 a isps:ActionItem ;
+    rdfs:label "Action 2: Architectural Master Plan for 150-Bed Expansion" ;
+    isps:hasActionNumber 2 ;
+    isps:hasBudgetValue "28.0"^^xsd:float ;
+    isps:hasOwner "Facilities & Projects Director" ;
+    isps:hasTimeline "Q1–Q3 2025" ;
+    isps:relatedToConcept isps:BedExpansion ;
+    isps:supportsObjective isps_data:objective_A .
+
+isps_data:action_20 a isps:ActionItem ;
+    rdfs:label "Action 20: Maldives Partnership Scoping & Negotiations" ;
+    isps:hasActionNumber 20 ;
+    isps:hasBudgetValue "14.0"^^xsd:float ;
+    isps:hasOwner "International Unit Director" ;
+    isps:hasTimeline "Q1–Q4 2025" ;
+    isps:relatedToConcept isps:MaldivesOutreach ;
+    isps:supportsObjective isps_data:objective_E .
+
+isps_data:action_21 a isps:ActionItem ;
+    rdfs:label "Action 21: Medical Tourism Concierge Unit Setup" ;
+    isps:hasActionNumber 21 ;
+    isps:hasBudgetValue "12.0"^^xsd:float ;
+    isps:hasOwner "International Unit Director (with Marketing Director)" ;
+    isps:hasTimeline "Q2–Q4 2025" ;
+    isps:relatedToConcept isps:AirlineHotelPartnerships,
+        isps:ConciergeServices ;
+    isps:supportsObjective isps_data:objective_E .
+
+isps_data:action_22 a isps:ActionItem ;
+    rdfs:label "Action 22: Community Preventive Health Screening Programme — Negombo Di" ;
+    isps:hasActionNumber 22 ;
+    isps:hasBudgetValue "9.0"^^xsd:float ;
+    isps:hasOwner "Marketing Director (with Medical Director)" ;
+    isps:hasTimeline "Q2–Q4 2025" ;
+    isps:implementsGoal isps_data:goal_E1,
+        isps_data:goal_E2,
+        isps_data:goal_E3,
+        isps_data:goal_E4,
+        isps_data:goal_E5 ;
+    isps:relatedToConcept isps:CommunityRegionalHealth,
+        isps:ScreeningPrograms ;
+    isps:supportsObjective isps_data:objective_E .
+
+isps_data:action_23 a isps:ActionItem ;
+    rdfs:label "Action 23: Corporate Wellness Partnership Expansion" ;
+    isps:hasActionNumber 23 ;
+    isps:hasBudgetValue "7.0"^^xsd:float ;
+    isps:hasOwner "Marketing Director" ;
+    isps:hasTimeline "Q1–Q4 2025" ;
+    isps:relatedToConcept isps:CorporateWellness ;
+    isps:supportsObjective isps_data:objective_E .
+
+isps_data:action_24 a isps:ActionItem ;
+    rdfs:label "Action 24: Executive Lounge Furniture & Premium Décor Upgrade" ;
+    isps:hasActionNumber 24 ;
+    isps:hasBudgetValue "18.0"^^xsd:float ;
+    isps:hasOwner "Facilities & Projects Director" ;
+    isps:hasTimeline "Q2–Q3 2025" ;
+    isps:supportsObjective isps_data:objective_E .
+
+isps_data:action_25 a isps:ActionItem ;
+    rdfs:label "Action 25: Retail Pharmacy Outlet Expansion — Negombo Town Centre" ;
+    isps:hasActionNumber 25 ;
+    isps:hasBudgetValue "25.0"^^xsd:float ;
+    isps:hasOwner "Finance Director (with Marketing Director)" ;
+    isps:hasTimeline "Q1–Q3 2025" ;
+    isps:supportsObjective isps_data:objective_E .
+
+isps_data:action_3 a isps:ActionItem ;
+    rdfs:label "Action 3: Cardiac Catheterisation Laboratory Feasibility & Equipment S" ;
+    isps:hasActionNumber 3 ;
+    isps:hasBudgetValue "12.0"^^xsd:float ;
+    isps:hasOwner "Medical Director" ;
+    isps:hasTimeline "Q2–Q4 2025" ;
+    isps:relatedToConcept isps:Cardiology ;
+    isps:supportsObjective isps_data:objective_A .
+
+isps_data:action_4 a isps:ActionItem ;
+    rdfs:label "Action 4: Elderly Care Unit Pilot Programme Design" ;
+    isps:hasActionNumber 4 ;
+    isps:hasBudgetValue "8.0"^^xsd:float ;
+    isps:hasOwner "Medical Director (with Director of Nursing)" ;
+    isps:hasTimeline "Q2–Q4 2025" ;
+    isps:relatedToConcept isps:ElderlyCare ;
+    isps:supportsObjective isps_data:objective_A .
+
+isps_data:action_5 a isps:ActionItem ;
+    rdfs:label "Action 5: Aesthetic & Cosmetic Medicine Service Feasibility Study" ;
+    isps:hasActionNumber 5 ;
+    isps:hasBudgetValue "6.0"^^xsd:float ;
+    isps:hasOwner "Medical Director (with Marketing Director)" ;
+    isps:hasTimeline "Q1–Q3 2025" ;
+    isps:relatedToConcept isps:AestheticMedicine ;
+    isps:supportsObjective isps_data:objective_A .
+
+isps_data:action_6 a isps:ActionItem ;
+    rdfs:label "Action 6: Fertility Centre Laboratory Upgrade Planning" ;
+    isps:hasActionNumber 6 ;
+    isps:hasBudgetValue "10.0"^^xsd:float ;
+    isps:hasOwner "Medical Director (Fertility Centre Lead)" ;
+    isps:hasTimeline "Q1–Q3 2025" ;
+    isps:implementsGoal isps_data:goal_A5 ;
+    isps:relatedToConcept isps:Fertility ;
+    isps:supportsObjective isps_data:objective_A .
+
+isps_data:action_7 a isps:ActionItem ;
+    rdfs:label "Action 7: Nephrology Service Development Roadmap" ;
+    isps:hasActionNumber 7 ;
+    isps:hasBudgetValue "5.0"^^xsd:float ;
+    isps:hasOwner "Medical Director" ;
+    isps:hasTimeline "Q2–Q4 2025" ;
+    isps:relatedToConcept isps:Nephrology ;
+    isps:supportsObjective isps_data:objective_A .
+
+isps_data:action_8 a isps:ActionItem ;
+    rdfs:label "Action 8: Administrative Office Refurbishment Programme" ;
+    isps:hasActionNumber 8 ;
+    isps:hasBudgetValue "22.0"^^xsd:float ;
+    isps:hasOwner "Facilities & Projects Director" ;
+    isps:hasTimeline "Q2–Q3 2025" ;
+    isps:supportsObjective isps_data:objective_A .
+
+isps_data:action_9 a isps:ActionItem ;
+    rdfs:label "Action 9: EHR Vendor Selection & Contract Negotiation" ;
+    isps:hasActionNumber 9 ;
+    isps:hasBudgetValue "15.0"^^xsd:float ;
+    isps:hasOwner "Chief Information Officer (CIO)" ;
+    isps:hasTimeline "Q1–Q4 2025" ;
+    isps:implementsGoal isps_data:goal_B1 ;
+    isps:relatedToConcept isps:EHR ;
+    isps:supportsObjective isps_data:objective_B .
+
+isps:Finance a owl:Class ;
+    rdfs:label "Finance" ;
+    rdfs:comment "Financial planning, budgeting, revenue growth, capital investment, ROI analysis, and cost management." .
+
+isps:InfrastructureExpansion a owl:Class ;
+    rdfs:label "Infrastructure Expansion" ;
+    rdfs:comment "Physical infrastructure development, construction, bed expansion, facility upgrades, and land acquisition." .
+
+isps:Operations a owl:Class ;
+    rdfs:label "Operations" ;
+    rdfs:comment "Hospital operational management, process efficiency, supply chain, quality assurance, and accreditation." .
+
+isps:DigitalHealth a owl:Class ;
+    rdfs:label "Digital Health" ;
+    rdfs:comment "Health information technology, electronic health records, telemedicine, data analytics, and digital transformation." .
+
+isps:InternationalMedicalTourism a owl:Class ;
+    rdfs:label "International & Medical Tourism" ;
+    rdfs:comment "Medical tourism, international patients, Maldives outreach, concierge services, and cross-border healthcare." .
+
+isps:StrategicObjective a owl:Class ;
+    rdfs:label "StrategicObjective" ;
+    rdfs:comment "A high-level strategic objective (A-E)." .
+
+isps:WorkforceHR a owl:Class ;
+    rdfs:label "Workforce & HR" ;
+    rdfs:comment "Workforce planning, recruitment, retention, training, professional development, and employee engagement." .
+
+isps:ClinicalServices a owl:Class ;
+    rdfs:label "Clinical Services" ;
+    rdfs:comment "Specialist clinical service lines including cardiology, nephrology, fertility, aesthetics, elderly care, and daycare." .
+
+isps:ResearchInnovation a owl:Class ;
+    rdfs:label "Research & Innovation" ;
+    rdfs:comment "Clinical research, innovation, academic partnerships, peer-reviewed publications, and clinical trials." .
+
+isps:PatientCare a owl:Class ;
+    rdfs:label "Patient Care" ;
+    rdfs:comment "Clinical care delivery, patient safety, treatment outcomes, patient satisfaction, and infection control across all service lines." .
+
+isps:CommunityRegionalHealth a owl:Class ;
+    rdfs:label "Community & Regional Health" ;
+    rdfs:comment "Community health programmes, preventive care, screening, regional partnerships, and public health outreach." .
+
+isps_data:objective_C a isps:StrategicObjective ;
+    rdfs:label "Objective C: Research & Innovation" ;
+    isps:hasObjectiveCode "C" .
+
+isps_data:objective_B a isps:StrategicObjective ;
+    rdfs:label "Objective B: Digital Health Transformation" ;
+    isps:hasObjectiveCode "B" .
+
+isps_data:objective_D a isps:StrategicObjective ;
+    rdfs:label "Objective D: Workforce Development" ;
+    isps:hasObjectiveCode "D" .
+
+isps_data:objective_E a isps:StrategicObjective ;
+    rdfs:label "Objective E: Community & Regional Health Expansion" ;
+    isps:hasObjectiveCode "E" .
+
+isps_data:objective_A a isps:StrategicObjective ;
+    rdfs:label "Objective A: Patient Care Excellence" ;
+    isps:hasObjectiveCode "A" .
+
+isps:StrategicGoal a owl:Class ;
+    rdfs:label "StrategicGoal" ;
+    rdfs:comment "A specific goal under a strategic objective." .
+
+isps:ActionItem a owl:Class ;
+    rdfs:label "ActionItem" ;
+    rdfs:comment "An operational action item from the action plan." .
+
+isps:KPI a owl:Class ;
+    rdfs:label "KPI" ;
+    rdfs:comment "A key performance indicator." .
+

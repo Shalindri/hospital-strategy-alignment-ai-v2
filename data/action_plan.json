@@ -1,0 +1,1649 @@
+{
+  "metadata": {
+    "title": "Nawaloka Hospital Negombo — Annual Action Plan 2025",
+    "period": "2025",
+    "version": "1.0",
+    "source_file": "action_plan.md"
+  },
+  "actions": [
+    {
+      "action_number": 1,
+      "title": "Adjacent Land Acquisition Due Diligence & Negotiation",
+      "strategic_objective_code": "A",
+      "strategic_objective_name": "Patient Care Excellence",
+      "description": "Conduct comprehensive due diligence on the adjacent land parcel identified for hospital expansion. This includes commissioning an independent land valuation, environmental impact assessment, legal title verification, and preliminary town planning approvals. Negotiate terms of purchase with the landowner and prepare the Board submission for acquisition approval, targeting completion of the purchase agreement by Q4 2025 to enable construction commencement in Q1 2026.",
+      "action_owner": "Facilities & Projects Director (with Legal Counsel)",
+      "timeline": "Q1–Q4 2025",
+      "quarters": [
+        "Q1",
+        "Q4"
+      ],
+      "budget_lkr_millions": 35.0,
+      "budget_raw": "LKR 35M (valuation, legal fees, environmental assessment, survey costs; excludes land purchase price)",
+      "expected_outcome": "Board-approved land acquisition agreement ready for execution in Q1 2026, with all regulatory clearances obtained.",
+      "kpis": [
+        "Land valuation report completed by Q2 2025",
+        "Environmental clearance obtained by Q3 2025",
+        "Board approval for purchase secured by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "Board",
+          "label": "ORG"
+        },
+        {
+          "text": "Q4 2025",
+          "label": "PRODUCT"
+        },
+        {
+          "text": "Q1 2026",
+          "label": "DATE"
+        }
+      ],
+      "keywords": [
+        "adjacent",
+        "land",
+        "acquisition",
+        "diligence",
+        "negotiation",
+        "parcel",
+        "hospital",
+        "expansion",
+        "valuation",
+        "impact",
+        "assessment",
+        "title",
+        "verification",
+        "town",
+        "planning"
+      ]
+    },
+    {
+      "action_number": 2,
+      "title": "Architectural Master Plan for 150-Bed Expansion",
+      "strategic_objective_code": "A",
+      "strategic_objective_name": "Patient Care Excellence",
+      "description": "Engage a healthcare-specialised architectural firm to develop the master plan for the phased expansion from 75 to 150 beds. The plan must incorporate dedicated wards for cardiac care, nephrology, elderly care, maternity, the Daycare Medical Centre, and aesthetic medicine facilities. Deliverables include preliminary designs, construction phasing schedules, MEP (mechanical, electrical, plumbing) specifications, and cost estimates for Phase 1 (2026–2027) and Phase 2 (2028–2029).",
+      "action_owner": "Facilities & Projects Director",
+      "timeline": "Q1–Q3 2025",
+      "quarters": [
+        "Q1",
+        "Q3"
+      ],
+      "budget_lkr_millions": 28.0,
+      "budget_raw": "LKR 28M (architectural fees, structural engineering, MEP consultancy)",
+      "expected_outcome": "Finalised master plan with Board-approved construction timeline and budget envelope for Phase 1.",
+      "kpis": [
+        "Architect appointed by end of Q1 2025",
+        "Preliminary design submission by Q2 2025",
+        "Final master plan approved by Board by end of Q3 2025"
+      ],
+      "entities": [
+        {
+          "text": "150",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "75",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "the Daycare Medical Centre",
+          "label": "ORG"
+        },
+        {
+          "text": "MEP",
+          "label": "ORG"
+        },
+        {
+          "text": "Phase 1",
+          "label": "LAW"
+        },
+        {
+          "text": "2026–2027",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "Phase 2",
+          "label": "LAW"
+        }
+      ],
+      "keywords": [
+        "architectural",
+        "master",
+        "plan",
+        "bed",
+        "expansion",
+        "healthcare",
+        "firm",
+        "ward",
+        "care",
+        "nephrology",
+        "maternity",
+        "daycare",
+        "medical",
+        "centre",
+        "medicine"
+      ]
+    },
+    {
+      "action_number": 3,
+      "title": "Cardiac Catheterisation Laboratory Feasibility & Equipment Specification",
+      "strategic_objective_code": "A",
+      "strategic_objective_name": "Patient Care Excellence",
+      "description": "Commission a clinical and financial feasibility study for the proposed cardiac catheterisation laboratory. Identify equipment requirements (angiography system, haemodynamic monitoring, ancillary devices), evaluate vendors, and prepare a procurement timeline aligned with Phase 1 construction. Engage a visiting interventional cardiologist from Nawaloka Colombo to advise on clinical specifications and workflow design.",
+      "action_owner": "Medical Director",
+      "timeline": "Q2–Q4 2025",
+      "quarters": [
+        "Q2",
+        "Q4"
+      ],
+      "budget_lkr_millions": 12.0,
+      "budget_raw": "LKR 12M (feasibility study, consultant fees, vendor evaluation travel)",
+      "expected_outcome": "Board-approved equipment specification and procurement plan with vendor shortlist for cardiac lab commissioning in 2027–2028.",
+      "kpis": [
+        "Feasibility report submitted to Board by Q3 2025",
+        "Equipment specification document finalised by Q4 2025",
+        "Minimum 3 vendor proposals received and evaluated by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "Cardiac Catheterisation Laboratory Feasibility & Equipment Specification",
+          "label": "ORG"
+        },
+        {
+          "text": "Phase 1",
+          "label": "LAW"
+        },
+        {
+          "text": "Nawaloka Colombo",
+          "label": "ORG"
+        }
+      ],
+      "keywords": [
+        "cardiac",
+        "catheterisation",
+        "laboratory",
+        "feasibility",
+        "equipment",
+        "specification",
+        "commission",
+        "study",
+        "requirement",
+        "angiography",
+        "system",
+        "monitoring",
+        "device",
+        "vendor",
+        "procurement"
+      ]
+    },
+    {
+      "action_number": 4,
+      "title": "Elderly Care Unit Pilot Programme Design",
+      "strategic_objective_code": "A",
+      "strategic_objective_name": "Patient Care Excellence",
+      "description": "Develop the operational model for the 10-bed Elderly Care Unit pilot, including clinical protocols for long-term residential care, staffing requirements (geriatric nursing, physiotherapy, occupational therapy), pricing structure, insurance partnerships, and admission criteria. Benchmark against established elderly care facilities in Colombo and regionally. Prepare for pilot launch in Q1 2026.",
+      "action_owner": "Medical Director (with Director of Nursing)",
+      "timeline": "Q2–Q4 2025",
+      "quarters": [
+        "Q2",
+        "Q4"
+      ],
+      "budget_lkr_millions": 8.0,
+      "budget_raw": "LKR 8M (benchmarking visits, protocol development, consultant engagement)",
+      "expected_outcome": "Fully documented operational model and staffing plan for the Elderly Care Unit, ready for recruitment and fit-out in early 2026.",
+      "kpis": [
+        "Clinical protocol manual completed by Q3 2025",
+        "Insurance partner discussions initiated with at least 3 providers by Q4 2025",
+        "Staffing plan finalised with HR by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "Elderly Care Unit Pilot Programme Design",
+          "label": "ORG"
+        },
+        {
+          "text": "10",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "Elderly Care Unit",
+          "label": "ORG"
+        },
+        {
+          "text": "Benchmark",
+          "label": "PERSON"
+        },
+        {
+          "text": "Colombo",
+          "label": "GPE"
+        },
+        {
+          "text": "Q1 2026",
+          "label": "DATE"
+        }
+      ],
+      "keywords": [
+        "elderly",
+        "care",
+        "unit",
+        "pilot",
+        "programme",
+        "design",
+        "model",
+        "bed",
+        "protocol",
+        "term",
+        "staffing",
+        "requirement",
+        "geriatric",
+        "nursing",
+        "physiotherapy"
+      ]
+    },
+    {
+      "action_number": 5,
+      "title": "Aesthetic & Cosmetic Medicine Service Feasibility Study",
+      "strategic_objective_code": "A",
+      "strategic_objective_name": "Patient Care Excellence",
+      "description": "Conduct a market analysis and clinical feasibility study for the proposed Aesthetic & Cosmetic Medical Services line. Assess demand from local, expatriate, and tourist populations. Define service scope (dermatological aesthetics, minor cosmetic procedures, laser treatments, anti-ageing), identify equipment needs, and evaluate potential consultant dermatologists and plastic surgeons for engagement. Prepare a business case for Board review.",
+      "action_owner": "Medical Director (with Marketing Director)",
+      "timeline": "Q1–Q3 2025",
+      "quarters": [
+        "Q1",
+        "Q3"
+      ],
+      "budget_lkr_millions": 6.0,
+      "budget_raw": "LKR 6M (market research, consultant fees, benchmarking)",
+      "expected_outcome": "Board-approved business case with defined service scope, revenue projections, and launch timeline for Q2 2026.",
+      "kpis": [
+        "Market analysis report completed by Q2 2025",
+        "Business case presented to Board by Q3 2025",
+        "At least 2 specialist practitioners identified for engagement by Q3 2025"
+      ],
+      "entities": [
+        {
+          "text": "Aesthetic & Cosmetic Medicine Service Feasibility Study",
+          "label": "ORG"
+        },
+        {
+          "text": "Aesthetic & Cosmetic Medical Services",
+          "label": "ORG"
+        }
+      ],
+      "keywords": [
+        "aesthetic",
+        "cosmetic",
+        "medicine",
+        "service",
+        "feasibility",
+        "study",
+        "market",
+        "analysis",
+        "medical",
+        "services",
+        "line",
+        "assess",
+        "demand",
+        "expatriate",
+        "tourist"
+      ]
+    },
+    {
+      "action_number": 6,
+      "title": "Fertility Centre Laboratory Upgrade Planning",
+      "strategic_objective_code": "A",
+      "strategic_objective_name": "Patient Care Excellence",
+      "description": "Assess current Fertility Centre laboratory infrastructure against international best-practice standards for IVF laboratories. Develop a detailed upgrade plan covering embryology lab environment controls (air quality, temperature, VOC filtration), cryopreservation storage expansion, and new equipment procurement (time-lapse incubators, micromanipulation systems). Align upgrade timeline with the strategic target of 800 IVF cycles per annum by 2030.",
+      "action_owner": "Medical Director (Fertility Centre Lead)",
+      "timeline": "Q1–Q3 2025",
+      "quarters": [
+        "Q1",
+        "Q3"
+      ],
+      "budget_lkr_millions": 10.0,
+      "budget_raw": "LKR 10M (laboratory audit, environmental assessment, equipment specification)",
+      "expected_outcome": "Detailed Fertility Centre upgrade plan with equipment specifications, vendor quotes, and phased implementation schedule for 2026–2028.",
+      "kpis": [
+        "Laboratory audit completed by Q1 2025",
+        "Upgrade specification document finalised by Q2 2025",
+        "Vendor quotes for priority equipment received by Q3 2025"
+      ],
+      "entities": [
+        {
+          "text": "Fertility Centre Laboratory Upgrade Planning",
+          "label": "ORG"
+        },
+        {
+          "text": "Fertility Centre",
+          "label": "ORG"
+        },
+        {
+          "text": "800",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "2030",
+          "label": "DATE"
+        }
+      ],
+      "keywords": [
+        "fertility",
+        "centre",
+        "laboratory",
+        "upgrade",
+        "planning",
+        "infrastructure",
+        "practice",
+        "standard",
+        "ivf",
+        "plan",
+        "embryology",
+        "lab",
+        "environment",
+        "air",
+        "quality"
+      ]
+    },
+    {
+      "action_number": 7,
+      "title": "Nephrology Service Development Roadmap",
+      "strategic_objective_code": "A",
+      "strategic_objective_name": "Patient Care Excellence",
+      "description": "Develop a clinical and operational roadmap for introducing a nephrology dialysis unit (targeted at 12 stations by 2029). This includes needs assessment for the Negombo–Gampaha region, clinical protocol development for haemodialysis and peritoneal dialysis, water treatment plant specifications, and workforce planning for nephrology nurses and technicians.",
+      "action_owner": "Medical Director",
+      "timeline": "Q2–Q4 2025",
+      "quarters": [
+        "Q2",
+        "Q4"
+      ],
+      "budget_lkr_millions": 5.0,
+      "budget_raw": "LKR 5M (needs assessment, clinical consultancy, water treatment feasibility)",
+      "expected_outcome": "Comprehensive nephrology roadmap approved by the Medical Advisory Committee, with clear milestones for 2026–2029.",
+      "kpis": [
+        "Regional needs assessment completed by Q3 2025",
+        "Clinical protocol framework drafted by Q4 2025",
+        "Water treatment feasibility study completed by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "Nephrology Service Development Roadmap",
+          "label": "ORG"
+        },
+        {
+          "text": "12",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "2029",
+          "label": "DATE"
+        },
+        {
+          "text": "Negombo",
+          "label": "ORG"
+        },
+        {
+          "text": "Gampaha",
+          "label": "GPE"
+        }
+      ],
+      "keywords": [
+        "nephrology",
+        "service",
+        "development",
+        "roadmap",
+        "dialysis",
+        "unit",
+        "station",
+        "need",
+        "assessment",
+        "negombo",
+        "gampaha",
+        "region",
+        "protocol",
+        "haemodialysis",
+        "water"
+      ]
+    },
+    {
+      "action_number": 8,
+      "title": "Administrative Office Refurbishment Programme",
+      "strategic_objective_code": "A",
+      "strategic_objective_name": "Patient Care Excellence",
+      "description": "Undertake a comprehensive refurbishment of the hospital's administrative wing, including repainting, replacement of floor coverings, installation of new ergonomic office furniture, upgraded lighting fixtures, and modernisation of the executive boardroom. The programme aims to improve the working environment for administrative and support staff and present a refreshed corporate image to visiting stakeholders.",
+      "action_owner": "Facilities & Projects Director",
+      "timeline": "Q2–Q3 2025",
+      "quarters": [
+        "Q2",
+        "Q3"
+      ],
+      "budget_lkr_millions": 22.0,
+      "budget_raw": "LKR 22M (construction, furniture, fixtures, fittings)",
+      "expected_outcome": "Fully refurbished administrative wing with modernised boardroom and improved staff workspace amenities.",
+      "kpis": [
+        "Refurbishment design approved by Q2 2025",
+        "Construction and fit-out completed by end of Q3 2025",
+        "Staff workspace satisfaction survey score improvement of 10%"
+      ],
+      "entities": [
+        {
+          "text": "Administrative Office Refurbishment Programme",
+          "label": "ORG"
+        }
+      ],
+      "keywords": [
+        "administrative",
+        "office",
+        "refurbishment",
+        "programme",
+        "hospital",
+        "wing",
+        "repainting",
+        "replacement",
+        "floor",
+        "covering",
+        "installation",
+        "furniture",
+        "lighting",
+        "fixture",
+        "modernisation"
+      ]
+    },
+    {
+      "action_number": 9,
+      "title": "EHR Vendor Selection & Contract Negotiation",
+      "strategic_objective_code": "B",
+      "strategic_objective_name": "Digital Health Transformation",
+      "description": "Issue a Request for Proposal (RFP) to qualified EHR vendors for a unified cloud-based Electronic Health Record system. Evaluate proposals against criteria including HL7 FHIR interoperability, local language support (Sinhala, Tamil), telemedicine module integration, clinical decision support, and total cost of ownership. Conduct vendor demonstrations, reference site visits, and negotiate contract terms for deployment commencing Q1 2026.",
+      "action_owner": "Chief Information Officer (CIO)",
+      "timeline": "Q1–Q4 2025",
+      "quarters": [
+        "Q1",
+        "Q4"
+      ],
+      "budget_lkr_millions": 15.0,
+      "budget_raw": "LKR 15M (RFP process, vendor evaluation, legal review, reference visits)",
+      "expected_outcome": "Signed EHR vendor contract with agreed implementation roadmap, SLAs, and pricing for 2026–2027 deployment.",
+      "kpis": [
+        "RFP issued by end of Q1 2025",
+        "Vendor shortlist (3 candidates) finalised by Q2 2025",
+        "Contract signed by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "EHR Vendor Selection & Contract Negotiation",
+          "label": "ORG"
+        },
+        {
+          "text": "EHR",
+          "label": "ORG"
+        },
+        {
+          "text": "Electronic Health",
+          "label": "ORG"
+        },
+        {
+          "text": "Sinhala",
+          "label": "GPE"
+        },
+        {
+          "text": "Tamil",
+          "label": "PERSON"
+        },
+        {
+          "text": "Q1 2026",
+          "label": "DATE"
+        }
+      ],
+      "keywords": [
+        "ehr",
+        "vendor",
+        "selection",
+        "contract",
+        "negotiation",
+        "request",
+        "proposal",
+        "rfp",
+        "cloud",
+        "electronic",
+        "health",
+        "record",
+        "system",
+        "criterion",
+        "hl7"
+      ]
+    },
+    {
+      "action_number": 10,
+      "title": "IT Infrastructure Assessment & Network Upgrade",
+      "strategic_objective_code": "B",
+      "strategic_objective_name": "Digital Health Transformation",
+      "description": "Conduct a comprehensive assessment of the hospital's current IT infrastructure, including network architecture, server capacity, Wi-Fi coverage, endpoint devices, and disaster recovery capabilities. Develop and execute an upgrade plan to ensure readiness for EHR deployment, telemedicine operations, and AI-assisted diagnostic tools. Priority investments include redundant fibre-optic backbone, upgraded Wi-Fi access points across all clinical areas, and a secondary data centre for business continuity.",
+      "action_owner": "CIO (with IT Department)",
+      "timeline": "Q1–Q4 2025",
+      "quarters": [
+        "Q1",
+        "Q4"
+      ],
+      "budget_lkr_millions": 45.0,
+      "budget_raw": "LKR 45M (network hardware, cabling, Wi-Fi, server upgrades, DR site)",
+      "expected_outcome": "Hospital-wide IT infrastructure upgraded to support cloud-based EHR, telemedicine, and AI workloads with 99.9% uptime target.",
+      "kpis": [
+        "Infrastructure audit report completed by Q1 2025",
+        "Network upgrade 80% complete by Q3 2025",
+        "Wi-Fi coverage across 100% of clinical areas by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "EHR",
+          "label": "ORG"
+        },
+        {
+          "text": "AI",
+          "label": "GPE"
+        }
+      ],
+      "keywords": [
+        "infrastructure",
+        "assessment",
+        "network",
+        "upgrade",
+        "hospital",
+        "architecture",
+        "server",
+        "capacity",
+        "coverage",
+        "endpoint",
+        "device",
+        "disaster",
+        "recovery",
+        "capability",
+        "plan"
+      ]
+    },
+    {
+      "action_number": 11,
+      "title": "Telemedicine Platform Requirements & Vendor Engagement",
+      "strategic_objective_code": "B",
+      "strategic_objective_name": "Digital Health Transformation",
+      "description": "Define functional and technical requirements for the hospital's telemedicine platform, incorporating domestic specialist consultations, Maldives outreach capability, and post-discharge follow-up. Engage potential platform vendors for demonstrations and pilot feasibility. Ensure platform compliance with Sri Lanka's data protection regulations and international standards (HIPAA-aligned for Maldives cross-border use).",
+      "action_owner": "CIO (with International Unit Director)",
+      "timeline": "Q2–Q4 2025",
+      "quarters": [
+        "Q2",
+        "Q4"
+      ],
+      "budget_lkr_millions": 8.0,
+      "budget_raw": "LKR 8M (requirements analysis, vendor engagement, compliance review)",
+      "expected_outcome": "Finalised telemedicine platform requirements document and vendor shortlist, ready for procurement in Q1 2026.",
+      "kpis": [
+        "Requirements document approved by Q3 2025",
+        "Minimum 3 vendor demonstrations completed by Q4 2025",
+        "Data protection compliance assessment completed by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "Telemedicine Platform Requirements & Vendor Engagement",
+          "label": "ORG"
+        },
+        {
+          "text": "Maldives",
+          "label": "ORG"
+        },
+        {
+          "text": "Sri Lanka's",
+          "label": "PERSON"
+        }
+      ],
+      "keywords": [
+        "telemedicine",
+        "platform",
+        "requirements",
+        "vendor",
+        "engagement",
+        "define",
+        "requirement",
+        "hospital",
+        "specialist",
+        "consultation",
+        "maldives",
+        "outreach",
+        "capability",
+        "follow",
+        "demonstration"
+      ]
+    },
+    {
+      "action_number": 12,
+      "title": "Cybersecurity Baseline Assessment & Policy Development",
+      "strategic_objective_code": "B",
+      "strategic_objective_name": "Digital Health Transformation",
+      "description": "Engage an external cybersecurity firm to conduct a baseline vulnerability assessment of all hospital IT systems. Develop a comprehensive Information Security Policy aligned with ISO 27001 requirements and Sri Lanka's Personal Data Protection Act (PDPA). Implement priority remediation measures and establish a cybersecurity incident response plan. Deploy mandatory awareness training for all staff.",
+      "action_owner": "CIO",
+      "timeline": "Q1–Q3 2025",
+      "quarters": [
+        "Q1",
+        "Q3"
+      ],
+      "budget_lkr_millions": 12.0,
+      "budget_raw": "LKR 12M (external audit, policy development, remediation, training)",
+      "expected_outcome": "Documented cybersecurity baseline, approved Information Security Policy, and trained workforce, establishing the foundation for ISO 27001 certification by 2029.",
+      "kpis": [
+        "Vulnerability assessment completed by Q2 2025",
+        "Information Security Policy approved by Q3 2025",
+        "90% of staff completing cybersecurity training by Q3 2025"
+      ],
+      "entities": [
+        {
+          "text": "Cybersecurity Baseline Assessment & Policy Development",
+          "label": "ORG"
+        },
+        {
+          "text": "Information Security Policy",
+          "label": "ORG"
+        },
+        {
+          "text": "ISO 27001",
+          "label": "ORG"
+        },
+        {
+          "text": "Sri Lanka's",
+          "label": "PERSON"
+        },
+        {
+          "text": "Personal Data Protection Act",
+          "label": "ORG"
+        }
+      ],
+      "keywords": [
+        "cybersecurity",
+        "baseline",
+        "assessment",
+        "policy",
+        "development",
+        "firm",
+        "vulnerability",
+        "hospital",
+        "system",
+        "information",
+        "security",
+        "iso",
+        "requirement",
+        "sri",
+        "lanka"
+      ]
+    },
+    {
+      "action_number": 13,
+      "title": "Establishment of Ethics Review Committee",
+      "strategic_objective_code": "C",
+      "strategic_objective_name": "Research & Innovation",
+      "description": "Constitute a hospital Ethics Review Committee (ERC) to oversee and approve clinical research activities. Recruit committee members including external independent reviewers, legal representation, and community representatives as per national research ethics guidelines. Develop the ERC charter, standard operating procedures, and submission templates. Register the committee with the Sri Lanka Medical Association.",
+      "action_owner": "Medical Director",
+      "timeline": "Q1–Q2 2025",
+      "quarters": [
+        "Q1",
+        "Q2"
+      ],
+      "budget_lkr_millions": 3.0,
+      "budget_raw": "LKR 3M (committee setup, training, legal consultation)",
+      "expected_outcome": "Fully constituted and registered Ethics Review Committee operational by Q2 2025, capable of reviewing research proposals within a 30-day turnaround.",
+      "kpis": [
+        "ERC membership finalised by Q1 2025",
+        "ERC charter and SOPs approved by Q2 2025",
+        "Registration with Sri Lanka Medical Association completed by Q2 2025"
+      ],
+      "entities": [
+        {
+          "text": "Ethics Review Committee",
+          "label": "ORG"
+        },
+        {
+          "text": "ERC",
+          "label": "ORG"
+        },
+        {
+          "text": "Recruit",
+          "label": "ORG"
+        },
+        {
+          "text": "the Sri Lanka Medical Association",
+          "label": "ORG"
+        }
+      ],
+      "keywords": [
+        "establishment",
+        "ethics",
+        "review",
+        "committee",
+        "hospital",
+        "erc",
+        "research",
+        "activity",
+        "recruit",
+        "member",
+        "reviewer",
+        "representation",
+        "community",
+        "representative",
+        "ethic"
+      ]
+    },
+    {
+      "action_number": 14,
+      "title": "University Research Partnership MOU",
+      "strategic_objective_code": "C",
+      "strategic_objective_name": "Research & Innovation",
+      "description": "Initiate formal discussions with the University of Kelaniya Faculty of Medicine for a collaborative research and clinical training partnership. Negotiate a Memorandum of Understanding (MOU) covering joint research projects, student clinical placements, shared access to research facilities, and co-supervision of postgraduate dissertations. Identify inaugural research topics aligned with the hospital's strategic priorities in fertility, cardiac care, and community health.",
+      "action_owner": "Medical Director",
+      "timeline": "Q1–Q3 2025",
+      "quarters": [
+        "Q1",
+        "Q3"
+      ],
+      "budget_lkr_millions": 4.0,
+      "budget_raw": "LKR 4M (engagement activities, legal review, inaugural project seed funding)",
+      "expected_outcome": "Signed MOU with University of Kelaniya and at least one collaborative research project initiated by Q4 2025.",
+      "kpis": [
+        "Formal partnership discussions initiated by Q1 2025",
+        "MOU signed by Q3 2025",
+        "First collaborative research proposal submitted to ERC by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "University Research Partnership MOU",
+          "label": "ORG"
+        },
+        {
+          "text": "the University of Kelaniya Faculty of Medicine",
+          "label": "ORG"
+        },
+        {
+          "text": "a Memorandum of Understanding",
+          "label": "WORK_OF_ART"
+        },
+        {
+          "text": "MOU",
+          "label": "ORG"
+        }
+      ],
+      "keywords": [
+        "university",
+        "research",
+        "partnership",
+        "mou",
+        "discussion",
+        "kelaniya",
+        "faculty",
+        "medicine",
+        "training",
+        "memorandum",
+        "understanding",
+        "project",
+        "student",
+        "placement",
+        "access"
+      ]
+    },
+    {
+      "action_number": 15,
+      "title": "Appointment of Research Coordinator",
+      "strategic_objective_code": "C",
+      "strategic_objective_name": "Research & Innovation",
+      "description": "Recruit a dedicated Research Coordinator to manage the hospital's emerging clinical research portfolio. The role will be responsible for coordinating ethics submissions, managing research databases, liaising with university partners, supporting grant applications, and tracking research output. The position reports to the Medical Director and will form the nucleus of the future Clinical Research Unit.",
+      "action_owner": "HR Director (with Medical Director)",
+      "timeline": "Q1–Q2 2025",
+      "quarters": [
+        "Q1",
+        "Q2"
+      ],
+      "budget_lkr_millions": 4.0,
+      "budget_raw": "LKR 4M (salary, benefits, office setup, training)",
+      "expected_outcome": "Research Coordinator in post by Q2 2025, actively managing the research pipeline and supporting the first observational study.",
+      "kpis": [
+        "Job description approved and advertised by Q1 2025",
+        "Research Coordinator appointed by Q2 2025",
+        "Research project tracking system established by Q3 2025"
+      ],
+      "entities": [
+        {
+          "text": "Research Coordinator",
+          "label": "ORG"
+        },
+        {
+          "text": "Clinical Research Unit",
+          "label": "ORG"
+        }
+      ],
+      "keywords": [
+        "appointment",
+        "research",
+        "coordinator",
+        "recruit",
+        "hospital",
+        "portfolio",
+        "role",
+        "ethic",
+        "submission",
+        "database",
+        "university",
+        "partner",
+        "grant",
+        "application",
+        "output"
+      ]
+    },
+    {
+      "action_number": 16,
+      "title": "Specialist Clinician Recruitment Drive",
+      "strategic_objective_code": "D",
+      "strategic_objective_name": "Workforce Development",
+      "description": "Launch a targeted recruitment campaign for specialist clinicians required for the 2026 expansion, focusing on interventional cardiology, nephrology, geriatric medicine, reproductive medicine, and dermatological aesthetics. Develop competitive remuneration packages including performance incentives, academic titles, and research time. Engage with the Nawaloka Colombo consultant network, Sri Lankan medical diaspora, and specialist recruitment agencies.",
+      "action_owner": "HR Director (with Medical Director)",
+      "timeline": "Q2–Q4 2025",
+      "quarters": [
+        "Q2",
+        "Q4"
+      ],
+      "budget_lkr_millions": 18.0,
+      "budget_raw": "LKR 18M (recruitment agency fees, advertising, relocation packages, signing incentives)",
+      "expected_outcome": "Conditional appointment offers extended to at least 5 priority specialists by Q4 2025, with start dates aligned to Phase 1 commissioning.",
+      "kpis": [
+        "Recruitment campaign launched by Q2 2025",
+        "Minimum 20 specialist applications received by Q3 2025",
+        "Conditional offers extended to at least 5 specialists by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "Specialist Clinician Recruitment Drive",
+          "label": "ORG"
+        },
+        {
+          "text": "clinicians",
+          "label": "NORP"
+        },
+        {
+          "text": "2026",
+          "label": "DATE"
+        },
+        {
+          "text": "geriatric medicine",
+          "label": "ORG"
+        },
+        {
+          "text": "Nawaloka Colombo",
+          "label": "ORG"
+        },
+        {
+          "text": "Sri Lankan",
+          "label": "PERSON"
+        }
+      ],
+      "keywords": [
+        "clinician",
+        "recruitment",
+        "drive",
+        "campaign",
+        "expansion",
+        "cardiology",
+        "nephrology",
+        "medicine",
+        "aesthetic",
+        "remuneration",
+        "package",
+        "performance",
+        "incentive",
+        "title",
+        "research"
+      ]
+    },
+    {
+      "action_number": 17,
+      "title": "Nursing Workforce Expansion Planning",
+      "strategic_objective_code": "D",
+      "strategic_objective_name": "Workforce Development",
+      "description": "Develop a comprehensive nursing recruitment and training plan to support the phased expansion from 75 to 150 beds. Identify staffing requirements by specialty ward (cardiac, nephrology, elderly care, maternity, ICU), establish training partnerships with nursing schools, and plan an accelerated orientation programme for new recruits. Initiate recruitment for the first cohort of 40 additional nurses required for Phase 1 (2026–2027).",
+      "action_owner": "Director of Nursing (with HR Director)",
+      "timeline": "Q2–Q4 2025",
+      "quarters": [
+        "Q2",
+        "Q4"
+      ],
+      "budget_lkr_millions": 15.0,
+      "budget_raw": "LKR 15M (recruitment, orientation programme development, training partnerships)",
+      "expected_outcome": "Nursing workforce plan approved and first-cohort recruitment pipeline established, with 15 conditional offers extended by Q4 2025.",
+      "kpis": [
+        "Nursing workforce plan approved by Q2 2025",
+        "Training partnerships formalised with 2 nursing schools by Q3 2025",
+        "15 conditional nursing offers extended by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "75",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "150",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "ICU",
+          "label": "ORG"
+        },
+        {
+          "text": "first",
+          "label": "ORDINAL"
+        },
+        {
+          "text": "40",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "Phase 1",
+          "label": "LAW"
+        },
+        {
+          "text": "2026–2027",
+          "label": "CARDINAL"
+        }
+      ],
+      "keywords": [
+        "nursing",
+        "workforce",
+        "expansion",
+        "planning",
+        "recruitment",
+        "training",
+        "plan",
+        "bed",
+        "staffing",
+        "requirement",
+        "specialty",
+        "ward",
+        "nephrology",
+        "care",
+        "maternity"
+      ]
+    },
+    {
+      "action_number": 18,
+      "title": "Continuing Professional Development (CPD) Programme Launch",
+      "strategic_objective_code": "D",
+      "strategic_objective_name": "Workforce Development",
+      "description": "Design and launch a structured Continuing Professional Development programme for all clinical staff. The programme will include quarterly clinical skills workshops, monthly journal clubs, annual simulation-based emergency training, and online learning modules. Establish CPD tracking and link completion to annual performance appraisals. Target a minimum of 20 CPD hours per clinician in 2025 as a baseline, scaling to 40 hours by 2030.",
+      "action_owner": "Director of Nursing (with Medical Director)",
+      "timeline": "Q1–Q4 2025",
+      "quarters": [
+        "Q1",
+        "Q4"
+      ],
+      "budget_lkr_millions": 10.0,
+      "budget_raw": "LKR 10M (programme development, external trainers, simulation equipment, e-learning platform)",
+      "expected_outcome": "CPD programme operational with quarterly workshops delivered and 80% clinician participation by Q4 2025.",
+      "kpis": [
+        "CPD programme framework approved by Q1 2025",
+        "4 quarterly workshops delivered in 2025",
+        "80% of clinical staff achieving ≥20 CPD hours by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "Continuing Professional Development (CPD",
+          "label": "ORG"
+        },
+        {
+          "text": "Continuing Professional Development",
+          "label": "ORG"
+        },
+        {
+          "text": "quarterly",
+          "label": "DATE"
+        },
+        {
+          "text": "monthly",
+          "label": "DATE"
+        },
+        {
+          "text": "Establish CPD",
+          "label": "ORG"
+        },
+        {
+          "text": "annual",
+          "label": "DATE"
+        },
+        {
+          "text": "20",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "CPD",
+          "label": "ORG"
+        },
+        {
+          "text": "2025",
+          "label": "DATE"
+        },
+        {
+          "text": "40 hours",
+          "label": "TIME"
+        },
+        {
+          "text": "2030",
+          "label": "DATE"
+        }
+      ],
+      "keywords": [
+        "professional",
+        "development",
+        "cpd",
+        "programme",
+        "launch",
+        "design",
+        "continuing",
+        "staff",
+        "skill",
+        "workshop",
+        "journal",
+        "club",
+        "simulation",
+        "emergency",
+        "training"
+      ]
+    },
+    {
+      "action_number": 19,
+      "title": "Annual Staff Cricket Tournament & Sports Sponsorship",
+      "strategic_objective_code": "D",
+      "strategic_objective_name": "Workforce Development",
+      "description": "Organise and sponsor the Nawaloka Hospital Negombo Annual Staff Cricket Tournament, expanded in 2025 to include teams from neighbouring corporate organisations in the Negombo–Katunayake industrial zone. The event will feature a two-day tournament at a local cricket ground, with branded merchandise, catering, and a closing ceremony with prizes. An additional sponsorship allocation supports the Negombo District Inter-School Cricket Championship as part of the hospital's community engagement profile.",
+      "action_owner": "HR Director (with Marketing Director)",
+      "timeline": "Q3 2025",
+      "quarters": [
+        "Q3"
+      ],
+      "budget_lkr_millions": 8.0,
+      "budget_raw": "LKR 8M (venue hire, catering, merchandise, inter-school sponsorship, prizes, event management)",
+      "expected_outcome": "Enhanced staff morale and external brand visibility through sports engagement. Strengthened corporate relationships in the Katunayake corridor.",
+      "kpis": [
+        "Minimum 8 corporate teams participating in staff tournament",
+        "Event media coverage in at least 3 local outlets",
+        "Staff satisfaction survey improvement in \"team engagement\" category"
+      ],
+      "entities": [
+        {
+          "text": "Cricket Tournament & Sports Sponsorship",
+          "label": "ORG"
+        },
+        {
+          "text": "the Nawaloka Hospital Negombo Annual",
+          "label": "ORG"
+        },
+        {
+          "text": "Cricket Tournament",
+          "label": "PERSON"
+        },
+        {
+          "text": "2025",
+          "label": "DATE"
+        },
+        {
+          "text": "Negombo",
+          "label": "ORG"
+        },
+        {
+          "text": "two-day",
+          "label": "DATE"
+        }
+      ],
+      "keywords": [
+        "annual",
+        "staff",
+        "cricket",
+        "tournament",
+        "sports",
+        "sponsorship",
+        "organise",
+        "nawaloka",
+        "hospital",
+        "negombo",
+        "team",
+        "organisation",
+        "zone",
+        "event",
+        "day"
+      ]
+    },
+    {
+      "action_number": 20,
+      "title": "Maldives Partnership Scoping & Negotiations",
+      "strategic_objective_code": "E",
+      "strategic_objective_name": "Community & Regional Health Expansion",
+      "description": "Initiate formal engagement with healthcare providers in the Maldives to establish the visiting specialist and telemedicine partnership. Identify potential partner clinics in Malé and Addu City, conduct scoping visits, assess regulatory requirements for foreign medical practitioners, and negotiate preliminary partnership terms. Engage with the Maldivian Ministry of Health and Aasandha (National Health Insurance) to understand reimbursement pathways.",
+      "action_owner": "International Unit Director",
+      "timeline": "Q1–Q4 2025",
+      "quarters": [
+        "Q1",
+        "Q4"
+      ],
+      "budget_lkr_millions": 14.0,
+      "budget_raw": "LKR 14M (scoping visits, legal counsel in Maldives, regulatory engagement, partnership negotiations)",
+      "expected_outcome": "Signed preliminary partnership agreement with at least one Maldivian clinic by Q4 2025, with regulatory pathway documented.",
+      "kpis": [
+        "Scoping visit to Malé completed by Q2 2025",
+        "Regulatory requirements documentation completed by Q3 2025",
+        "Partnership MOU signed by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "Maldives Partnership Scoping & Negotiations",
+          "label": "ORG"
+        },
+        {
+          "text": "Maldives",
+          "label": "ORG"
+        },
+        {
+          "text": "Malé",
+          "label": "GPE"
+        },
+        {
+          "text": "Addu City",
+          "label": "GPE"
+        },
+        {
+          "text": "the Maldivian Ministry of Health",
+          "label": "ORG"
+        },
+        {
+          "text": "National Health Insurance",
+          "label": "ORG"
+        }
+      ],
+      "keywords": [
+        "maldives",
+        "partnership",
+        "scoping",
+        "negotiations",
+        "engagement",
+        "healthcare",
+        "provider",
+        "specialist",
+        "telemedicine",
+        "partner",
+        "clinic",
+        "malé",
+        "addu",
+        "city",
+        "visit"
+      ]
+    },
+    {
+      "action_number": 21,
+      "title": "Medical Tourism Concierge Unit Setup",
+      "strategic_objective_code": "E",
+      "strategic_objective_name": "Community & Regional Health Expansion",
+      "description": "Establish the Medical Tourism Concierge Unit as a dedicated operational function. Recruit a bilingual (English/Sinhala) medical tourism coordinator, develop patient journey workflows covering pre-arrival consultation, airport transfers, hospital admission, hotel recovery partnerships, and post-discharge follow-up. Negotiate agreements with 3–5 Negombo hotels for recovery stay packages and initiate discussions with SriLankan Airlines for medical travel fare arrangements.",
+      "action_owner": "International Unit Director (with Marketing Director)",
+      "timeline": "Q2–Q4 2025",
+      "quarters": [
+        "Q2",
+        "Q4"
+      ],
+      "budget_lkr_millions": 12.0,
+      "budget_raw": "LKR 12M (staff recruitment, CRM software, hotel negotiations, marketing collateral, airline engagement)",
+      "expected_outcome": "Operational Medical Tourism Concierge Unit by Q4 2025, with documented workflows, hotel partnerships, and initial marketing materials.",
+      "kpis": [
+        "Medical tourism coordinator appointed by Q2 2025",
+        "Hotel partnership agreements signed with 3 properties by Q3 2025",
+        "Patient journey workflow documented and approved by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "the Medical Tourism Concierge Unit",
+          "label": "ORG"
+        },
+        {
+          "text": "English/Sinhala",
+          "label": "ORG"
+        },
+        {
+          "text": "3–5",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "SriLankan Airlines",
+          "label": "ORG"
+        }
+      ],
+      "keywords": [
+        "medical",
+        "tourism",
+        "concierge",
+        "unit",
+        "setup",
+        "function",
+        "bilingual",
+        "english",
+        "sinhala",
+        "coordinator",
+        "journey",
+        "consultation",
+        "airport",
+        "transfer",
+        "hospital"
+      ]
+    },
+    {
+      "action_number": 22,
+      "title": "Community Preventive Health Screening Programme — Negombo Division",
+      "strategic_objective_code": "E",
+      "strategic_objective_name": "Community & Regional Health Expansion",
+      "description": "Design and launch a community preventive health screening programme targeting diabetes, hypertension, and cardiovascular risk in the Negombo Divisional Secretariat area. Partner with local Grama Niladhari (village officer) networks and community health midwives for outreach. Conduct monthly screening camps at community centres, temples, and churches. Provide referral pathways to Nawaloka Hospital for identified cases requiring further investigation or treatment.",
+      "action_owner": "Marketing Director (with Medical Director)",
+      "timeline": "Q2–Q4 2025",
+      "quarters": [
+        "Q2",
+        "Q4"
+      ],
+      "budget_lkr_millions": 9.0,
+      "budget_raw": "LKR 9M (screening equipment, consumables, logistics, community mobilisation, staff overtime)",
+      "expected_outcome": "Minimum 3,000 individuals screened in 2025 with established referral pathways, building towards the strategic target of 25,000 beneficiaries annually by 2029.",
+      "kpis": [
+        "Screening programme launched by Q2 2025",
+        "At least 8 screening camps conducted in 2025",
+        "3,000 individuals screened by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "Community Preventive Health Screening Programme",
+          "label": "ORG"
+        },
+        {
+          "text": "Negombo Division",
+          "label": "ORG"
+        },
+        {
+          "text": "Grama Niladhari",
+          "label": "PERSON"
+        },
+        {
+          "text": "monthly",
+          "label": "DATE"
+        },
+        {
+          "text": "Nawaloka Hospital",
+          "label": "ORG"
+        }
+      ],
+      "keywords": [
+        "community",
+        "preventive",
+        "health",
+        "screening",
+        "programme",
+        "negombo",
+        "division",
+        "design",
+        "diabetes",
+        "hypertension",
+        "risk",
+        "divisional",
+        "secretariat",
+        "area",
+        "partner"
+      ]
+    },
+    {
+      "action_number": 23,
+      "title": "Corporate Wellness Partnership Expansion",
+      "strategic_objective_code": "E",
+      "strategic_objective_name": "Community & Regional Health Expansion",
+      "description": "Expand the hospital's corporate wellness client base from 12 to 20 employers, targeting the Negombo–Katunayake Free Trade Zone and hotel/tourism sector. Develop tiered wellness packages (basic health screening, executive health checks, on-site health education, mental health awareness workshops). Assign a dedicated corporate sales executive to manage relationships and drive uptake.",
+      "action_owner": "Marketing Director",
+      "timeline": "Q1–Q4 2025",
+      "quarters": [
+        "Q1",
+        "Q4"
+      ],
+      "budget_lkr_millions": 7.0,
+      "budget_raw": "LKR 7M (sales executive recruitment, marketing collateral, package development, client entertainment)",
+      "expected_outcome": "Increase corporate wellness partner base from 12 to 20, generating incremental screening and outpatient revenue.",
+      "kpis": [
+        "8 new corporate partners signed by Q4 2025",
+        "Corporate wellness revenue increase of 30% year-on-year",
+        "At least 1,500 corporate employees screened in 2025"
+      ],
+      "entities": [
+        {
+          "text": "Corporate Wellness Partnership Expansion",
+          "label": "ORG"
+        },
+        {
+          "text": "12",
+          "label": "CARDINAL"
+        },
+        {
+          "text": "20",
+          "label": "CARDINAL"
+        }
+      ],
+      "keywords": [
+        "corporate",
+        "wellness",
+        "partnership",
+        "expansion",
+        "hospital",
+        "client",
+        "base",
+        "employer",
+        "negombo",
+        "katunayake",
+        "free",
+        "trade",
+        "zone",
+        "hotel",
+        "tourism"
+      ]
+    },
+    {
+      "action_number": 24,
+      "title": "Executive Lounge Furniture & Premium Décor Upgrade",
+      "strategic_objective_code": "E",
+      "strategic_objective_name": "Community & Regional Health Expansion",
+      "description": "Procure and install premium-grade furniture and interior décor for the hospital's executive patient lounge and VIP waiting area. The upgrade includes Italian designer seating, ambient lighting, a dedicated refreshment station with imported coffee machine, premium wall finishes, and curated artwork. The initiative aims to elevate the first impression for high-value patients, particularly international visitors and medical tourism clients.",
+      "action_owner": "Facilities & Projects Director",
+      "timeline": "Q2–Q3 2025",
+      "quarters": [
+        "Q2",
+        "Q3"
+      ],
+      "budget_lkr_millions": 18.0,
+      "budget_raw": "LKR 18M (furniture procurement, interior design consultancy, installation, artwork)",
+      "expected_outcome": "Fully upgraded executive lounge and VIP area projecting a premium, internationally competitive patient environment.",
+      "kpis": [
+        "Interior design concept approved by Q2 2025",
+        "Installation completed by end of Q3 2025",
+        "VIP patient satisfaction score improvement of 15%"
+      ],
+      "entities": [
+        {
+          "text": "Executive Lounge Furniture & Premium Décor Upgrade",
+          "label": "ORG"
+        },
+        {
+          "text": "Italian",
+          "label": "NORP"
+        },
+        {
+          "text": "first",
+          "label": "ORDINAL"
+        }
+      ],
+      "keywords": [
+        "executive",
+        "lounge",
+        "furniture",
+        "premium",
+        "décor",
+        "upgrade",
+        "procure",
+        "grade",
+        "hospital",
+        "patient",
+        "vip",
+        "waiting",
+        "area",
+        "designer",
+        "seating"
+      ]
+    },
+    {
+      "action_number": 25,
+      "title": "Retail Pharmacy Outlet Expansion — Negombo Town Centre",
+      "strategic_objective_code": "E",
+      "strategic_objective_name": "Community & Regional Health Expansion",
+      "description": "Establish a standalone retail pharmacy outlet in Negombo town centre, separate from the hospital campus. The outlet will offer over-the-counter medications, prescription dispensing, basic medical supplies, and health and wellness retail products. The initiative leverages the Nawaloka brand for retail pharmaceutical sales and aims to increase community touchpoints and brand presence in the Negombo commercial district.",
+      "action_owner": "Finance Director (with Marketing Director)",
+      "timeline": "Q1–Q3 2025",
+      "quarters": [
+        "Q1",
+        "Q3"
+      ],
+      "budget_lkr_millions": 25.0,
+      "budget_raw": "LKR 25M (lease, fit-out, inventory, staffing, licensing, POS systems)",
+      "expected_outcome": "Operational retail pharmacy in Negombo town centre by Q3 2025, generating standalone retail revenue.",
+      "kpis": [
+        "Premises lease signed by Q1 2025",
+        "Pharmacy fit-out completed by Q2 2025",
+        "Monthly retail revenue target of LKR 3M achieved by Q4 2025"
+      ],
+      "entities": [
+        {
+          "text": "Retail Pharmacy Outlet Expansion",
+          "label": "ORG"
+        },
+        {
+          "text": "Negombo",
+          "label": "ORG"
+        },
+        {
+          "text": "Nawaloka",
+          "label": "GPE"
+        }
+      ],
+      "keywords": [
+        "retail",
+        "pharmacy",
+        "outlet",
+        "expansion",
+        "negombo",
+        "town",
+        "centre",
+        "hospital",
+        "campus",
+        "counter",
+        "medication",
+        "prescription",
+        "dispensing",
+        "supply",
+        "health"
+      ]
+    }
+  ],
+  "summary_budget": [
+    {
+      "#": "1",
+      "Action": "Adjacent Land Acquisition Due Diligence",
+      "Strategic Obj.": "A",
+      "Budget (LKR M)": "35"
+    },
+    {
+      "#": "2",
+      "Action": "Architectural Master Plan (150-Bed Expansion)",
+      "Strategic Obj.": "A",
+      "Budget (LKR M)": "28"
+    },
+    {
+      "#": "3",
+      "Action": "Cardiac Cath Lab Feasibility & Equipment Spec",
+      "Strategic Obj.": "A",
+      "Budget (LKR M)": "12"
+    },
+    {
+      "#": "4",
+      "Action": "Elderly Care Unit Pilot Programme Design",
+      "Strategic Obj.": "A",
+      "Budget (LKR M)": "8"
+    },
+    {
+      "#": "5",
+      "Action": "Aesthetic Medicine Feasibility Study",
+      "Strategic Obj.": "A",
+      "Budget (LKR M)": "6"
+    },
+    {
+      "#": "6",
+      "Action": "Fertility Centre Lab Upgrade Planning",
+      "Strategic Obj.": "A",
+      "Budget (LKR M)": "10"
+    },
+    {
+      "#": "7",
+      "Action": "Nephrology Service Development Roadmap",
+      "Strategic Obj.": "A",
+      "Budget (LKR M)": "5"
+    },
+    {
+      "#": "8",
+      "Action": "Administrative Office Refurbishment",
+      "Strategic Obj.": "A",
+      "Budget (LKR M)": "22"
+    },
+    {
+      "#": "9",
+      "Action": "EHR Vendor Selection & Contract",
+      "Strategic Obj.": "B",
+      "Budget (LKR M)": "15"
+    },
+    {
+      "#": "10",
+      "Action": "IT Infrastructure & Network Upgrade",
+      "Strategic Obj.": "B",
+      "Budget (LKR M)": "45"
+    },
+    {
+      "#": "11",
+      "Action": "Telemedicine Platform Requirements",
+      "Strategic Obj.": "B",
+      "Budget (LKR M)": "8"
+    },
+    {
+      "#": "12",
+      "Action": "Cybersecurity Assessment & Policy",
+      "Strategic Obj.": "B",
+      "Budget (LKR M)": "12"
+    },
+    {
+      "#": "13",
+      "Action": "Ethics Review Committee Establishment",
+      "Strategic Obj.": "C",
+      "Budget (LKR M)": "3"
+    },
+    {
+      "#": "14",
+      "Action": "University Research Partnership MOU",
+      "Strategic Obj.": "C",
+      "Budget (LKR M)": "4"
+    },
+    {
+      "#": "15",
+      "Action": "Research Coordinator Appointment",
+      "Strategic Obj.": "C",
+      "Budget (LKR M)": "4"
+    },
+    {
+      "#": "16",
+      "Action": "Specialist Clinician Recruitment Drive",
+      "Strategic Obj.": "D",
+      "Budget (LKR M)": "18"
+    },
+    {
+      "#": "17",
+      "Action": "Nursing Workforce Expansion Planning",
+      "Strategic Obj.": "D",
+      "Budget (LKR M)": "15"
+    },
+    {
+      "#": "18",
+      "Action": "CPD Programme Launch",
+      "Strategic Obj.": "D",
+      "Budget (LKR M)": "10"
+    },
+    {
+      "#": "19",
+      "Action": "Staff Cricket Tournament & Sports Sponsorship",
+      "Strategic Obj.": "D",
+      "Budget (LKR M)": "8"
+    },
+    {
+      "#": "20",
+      "Action": "Maldives Partnership Scoping",
+      "Strategic Obj.": "E",
+      "Budget (LKR M)": "14"
+    },
+    {
+      "#": "21",
+      "Action": "Medical Tourism Concierge Unit Setup",
+      "Strategic Obj.": "E",
+      "Budget (LKR M)": "12"
+    },
+    {
+      "#": "22",
+      "Action": "Community Health Screening Programme",
+      "Strategic Obj.": "E",
+      "Budget (LKR M)": "9"
+    },
+    {
+      "#": "23",
+      "Action": "Corporate Wellness Partnership Expansion",
+      "Strategic Obj.": "E",
+      "Budget (LKR M)": "7"
+    },
+    {
+      "#": "24",
+      "Action": "Executive Lounge Premium Furniture Upgrade",
+      "Strategic Obj.": "E",
+      "Budget (LKR M)": "18"
+    },
+    {
+      "#": "25",
+      "Action": "Retail Pharmacy Outlet — Negombo Town",
+      "Strategic Obj.": "E",
+      "Budget (LKR M)": "25"
+    },
+    {
+      "#": "",
+      "Action": "Total 2025 Action Plan Budget",
+      "Strategic Obj.": "",
+      "Budget (LKR M)": "LKR 397M"
+    }
+  ],
+  "budget_by_objective": [
+    {
+      "Strategic Objective": "A — Patient Care Excellence",
+      "Number of Actions": "8",
+      "Budget (LKR M)": "126",
+      "% of Action Budget": "31.7%"
+    },
+    {
+      "Strategic Objective": "B — Digital Health Transformation",
+      "Number of Actions": "4",
+      "Budget (LKR M)": "80",
+      "% of Action Budget": "20.2%"
+    },
+    {
+      "Strategic Objective": "C — Research & Innovation",
+      "Number of Actions": "3",
+      "Budget (LKR M)": "11",
+      "% of Action Budget": "2.8%"
+    },
+    {
+      "Strategic Objective": "D — Workforce Development",
+      "Number of Actions": "4",
+      "Budget (LKR M)": "51",
+      "% of Action Budget": "12.8%"
+    },
+    {
+      "Strategic Objective": "E — Community & Regional Health Expansion",
+      "Number of Actions": "6",
+      "Budget (LKR M)": "85",
+      "% of Action Budget": "21.4%"
+    },
+    {
+      "Strategic Objective": "Total",
+      "Number of Actions": "25",
+      "Budget (LKR M)": "397",
+      "% of Action Budget": "100%"
+    }
+  ]
+}

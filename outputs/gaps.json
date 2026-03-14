@@ -1,0 +1,132 @@
+{
+  "uncovered_strategy_concepts": [
+    {
+      "concept_id": "InfectionControl",
+      "related_strategy_goals": [
+        "goal_A2"
+      ],
+      "note": "No action maps to concept 'InfectionControl' above threshold."
+    },
+    {
+      "concept_id": "InternationalMedicalTourism",
+      "related_strategy_goals": [
+        "goal_E4"
+      ],
+      "note": "No action maps to concept 'InternationalMedicalTourism' above threshold."
+    },
+    {
+      "concept_id": "PatientCare",
+      "related_strategy_goals": [
+        "goal_A2",
+        "goal_A3"
+      ],
+      "note": "No action maps to concept 'PatientCare' above threshold."
+    },
+    {
+      "concept_id": "ResearchInnovation",
+      "related_strategy_goals": [
+        "goal_C1",
+        "goal_C2",
+        "goal_C3"
+      ],
+      "note": "No action maps to concept 'ResearchInnovation' above threshold."
+    },
+    {
+      "concept_id": "SpecialistFellowships",
+      "related_strategy_goals": [
+        "goal_D4"
+      ],
+      "note": "No action maps to concept 'SpecialistFellowships' above threshold."
+    }
+  ],
+  "weak_actions": [
+    {
+      "action_id": "action_2",
+      "best_concept": "BedExpansion",
+      "best_score": 0.587,
+      "average_score": 0.587,
+      "note": "Marginal mapping — only weakly aligned to generic concepts."
+    },
+    {
+      "action_id": "action_8",
+      "best_concept": "FacilityUpgrade",
+      "best_score": 0.4752,
+      "note": "No concept mapping above threshold."
+    },
+    {
+      "action_id": "action_10",
+      "best_concept": "FacilityUpgrade",
+      "best_score": 0.3422,
+      "note": "No concept mapping above threshold."
+    },
+    {
+      "action_id": "action_11",
+      "best_concept": "Telemedicine",
+      "best_score": 0.4173,
+      "note": "No concept mapping above threshold."
+    },
+    {
+      "action_id": "action_13",
+      "best_concept": "ClinicalResearch",
+      "best_score": 0.5142,
+      "note": "No concept mapping above threshold."
+    },
+    {
+      "action_id": "action_14",
+      "best_concept": "AcademicPartnerships",
+      "best_score": 0.5869,
+      "average_score": 0.5869,
+      "note": "Marginal mapping — only weakly aligned to generic concepts."
+    },
+    {
+      "action_id": "action_15",
+      "best_concept": "ClinicalResearch",
+      "best_score": 0.4183,
+      "note": "No concept mapping above threshold."
+    },
+    {
+      "action_id": "action_16",
+      "best_concept": "Recruitment",
+      "best_score": 0.449,
+      "note": "No concept mapping above threshold."
+    },
+    {
+      "action_id": "action_17",
+      "best_concept": "Recruitment",
+      "best_score": 0.5846,
+      "average_score": 0.5846,
+      "note": "Marginal mapping — only weakly aligned to generic concepts."
+    },
+    {
+      "action_id": "action_19",
+      "best_concept": "Retention",
+      "best_score": 0.3159,
+      "note": "No concept mapping above threshold."
+    },
+    {
+      "action_id": "action_22",
+      "best_concept": "ScreeningPrograms",
+      "best_score": 0.5819,
+      "average_score": 0.5808,
+      "note": "Marginal mapping — only weakly aligned to generic concepts."
+    },
+    {
+      "action_id": "action_24",
+      "best_concept": "FacilityUpgrade",
+      "best_score": 0.3071,
+      "note": "No concept mapping above threshold."
+    },
+    {
+      "action_id": "action_25",
+      "best_concept": "SupplyChain",
+      "best_score": 0.2385,
+      "note": "No concept mapping above threshold."
+    }
+  ],
+  "conflicting_actions": [],
+  "summary": {
+    "uncovered_concept_count": 5,
+    "weak_action_count": 13,
+    "conflicting_action_count": 0
+  }
+}

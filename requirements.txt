@@ -1,0 +1,32 @@
+# LLM & RAG Framework
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-openai>=0.1.0
+
+# Vector Database
+chromadb>=0.5.0
+
+# Embeddings
+sentence-transformers>=3.0.0
+
+# Web Dashboard
+streamlit>=1.35.0
+plotly>=5.22.0
+matplotlib
+
+# Knowledge Graph & Ontology
+networkx>=3.3
+rdflib>=7.0.0
+
+# NLP
+spacy>=3.7.0
+
+# PDF Processing
+pdfplumber>=0.10.0
+reportlab
+
+# Utilities
+python-dotenv>=1.0.0
+pandas>=2.2.0
+numpy>=1.26.0
+scikit-learn>=1.5.0

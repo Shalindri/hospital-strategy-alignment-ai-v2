@@ -1,0 +1,627 @@
+{
+  "per_suggestion": [
+    {
+      "source": "rag_improvement",
+      "id": "rag_imp_7",
+      "action_number": 7,
+      "action_title": "Nephrology Service Development Roadmap",
+      "objective": "A",
+      "kpis": [
+        "Nephrology service line patient satisfaction score (NPS) \u226585% within 2 years of launch",
+        "Dialysis unit bed occupancy rate \u226580% within 3 years of launch",
+        "Number of nephrology patients treated annually, with a target increase of 20% within 2 years",
+        "These changes aim to improve alignment with the strategic objective by:",
+        "1. Clearly connecting the action to the strategic objective of Patient Care Excellence.",
+        "2. Adding relevant KPIs that measure success in terms of patient satisfaction, bed occupancy, and treatment volume.",
+        "3. Adjusting the timeline to ensure earlier completion and implementation.",
+        "4. Reallocating resources to support the development of the dialysis unit and recruitment of specialized staff.",
+        "By implementing these changes, the hospital can better achieve its strategic objective of Patient Care Excellence and improve outcomes in nephrology care."
+      ],
+      "relevance": 0.5397,
+      "specificity": 0.5422,
+      "actionability": 0.8,
+      "coherence": 0.8,
+      "composite": 0.6703
+    },
+    {
+      "source": "rag_improvement",
+      "id": "rag_imp_8",
+      "action_number": 8,
+      "action_title": "Administrative Office Refurbishment Programme",
+      "objective": "A",
+      "kpis": [
+        "Staff satisfaction survey score improvement of 15% (measurable target)",
+        "Reduction in administrative errors by 20% due to improved workflow and communication",
+        "Increase in patient care coordination efficiency by 25%",
+        "The revised action description explicitly connects to the strategic objective by highlighting how the refurbished administrative wing will enhance patient care coordination and support services. The additional KPIs focus on staff satisfaction, error reduction, and efficiency improvements that directly contribute to Patient Care Excellence objectives. By realigning resources and timelines, this project will better support the hospital's strategic goals."
+      ],
+      "relevance": 0.5104,
+      "specificity": 0.4341,
+      "actionability": 0.6,
+      "coherence": 0.8,
+      "composite": 0.5899
+    },
+    {
+      "source": "rag_improvement",
+      "id": "rag_imp_16",
+      "action_number": 16,
+      "action_title": "Specialist Clinician Recruitment Drive",
+      "objective": "D",
+      "kpis": [
+        "Specialist clinicians recruited/year (target: 10)",
+        "Time-to-hire for specialist positions (target: <6 months)",
+        "Net promoter score of specialist clinicians (target: >80)",
+        "\"Q2\u2013Q4 2025 remains a reasonable timeline, but we should also consider accelerating the recruitment process to ensure that at least 10 specialists are recruited by Q3 2025.\"",
+        "\"No change required in terms of budget allocation, but we may need to reallocate some resources from other areas to support the accelerated recruitment effort. Specifically, we could allocate an additional LKR 2M for temporary staffing or contract services to help with the increased workload.\"",
+        "\"This action directly supports Objective D: Workforce Development by increasing clinical staffing and enhancing our capacity to deliver world-class care across expanding service lines, which is critical to achieving our goal of building a high-performing, compassionate workforce.\"",
+        "These changes should improve the alignment between Action 16 and the strategic plan by making it more explicit how the action supports Objective D: Workforce Development. By adding additional KPIs, adjusting the timeline, and potentially reallocating resources, we can ensure that this effort is more closely tied to our overall strategic objectives."
+      ],
+      "relevance": 0.5217,
+      "specificity": 0.6615,
+      "actionability": 0.8,
+      "coherence": 0.8,
+      "composite": 0.6888
+    },
+    {
+      "source": "rag_improvement",
+      "id": "rag_imp_25",
+      "action_number": 25,
+      "action_title": "Retail Pharmacy Outlet Expansion \u2014 Negombo Town Centre",
+      "objective": "E",
+      "kpis": [
+        "Number of community health education sessions conducted at the pharmacy outlet/year (target: 100 sessions/year)",
+        "Percentage of pharmacy customers who are referred to hospital services/year (target: 20% by Q4 2025)"
+      ],
+      "relevance": 0.5639,
+      "specificity": 0.5161,
+      "actionability": 0.8,
+      "coherence": 0.8,
+      "composite": 0.6724
+    },
+    {
+      "source": "rag_new_action",
+      "id": "rag_new_B_1",
+      "action_number": null,
+      "action_title": "Develop a Digital Health Roadmap and Governance Framework",
+      "objective": "B",
+      "kpis": [
+        "Roadmap adoption rate (% of departments)",
+        "Governance framework implementation status (% complete)"
+      ],
+      "timeline": "- Q1 2025: Conduct stakeholder analysis and develop initial roadmap draft\n- Q2 2025: Finalize roadmap and governance framework documents\n- Q3 2025: Present roadmap to hospital leadership for approval",
+      "budget": "LKR 10 million (inclusive of consultant fees)",
+      "owner": "Chief Medical Officer (CMO) in collaboration with IT Department",
+      "relevance": 0.6487,
+      "specificity": 0.2916,
+      "actionability": 0.8,
+      "coherence": 0.8,
+      "composite": 0.6529
+    },
+    {
+      "source": "rag_new_action",
+      "id": "rag_new_B_2",
+      "action_number": null,
+      "action_title": "Develop AI-Powered Clinical Decision Support System",
+      "objective": "B",
+      "kpis": [
+        "CDSS adoption rate (% of clinicians using the system)",
+        "Reduction in medical errors (number per quarter)"
+      ],
+      "timeline": "- Q1 2025: Conduct literature review and identify suitable AI algorithms\n- Q2 2025: Develop prototype CDSS and conduct pilot testing\n- Q3 2025: Refine CDSS based on pilot feedback and deploy to selected departments",
+      "budget": "LKR 20 million (inclusive of software development costs)",
+      "owner": "IT Department in collaboration with Medical Informatics Unit",
+      "relevance": 0.563,
+      "specificity": 0.5248,
+      "actionability": 0.8,
+      "coherence": 0.8,
+      "composite": 0.6739
+    },
+    {
+      "source": "rag_new_action",
+      "id": "rag_new_C_1",
+      "action_number": null,
+      "action_title": "Clinical Trial Registry and Management System",
+      "objective": "C",
+      "kpis": [
+        "Number of clinical trials registered on the system/year",
+        "Time taken to register a new trial (days)"
+      ],
+      "timeline": "- Q1 2025: Conduct feasibility study and vendor selection\n- Q2-Q3 2025: System design and development\n- Q4 2025: Pilot testing and training",
+      "budget": "LKR 15 million",
+      "owner": "Information Technology Department",
+      "relevance": 0.5509,
+      "specificity": 0.7938,
+      "actionability": 0.8,
+      "coherence": 0.8,
+      "composite": 0.724
+    },
+    {
+      "source": "rag_new_action",
+      "id": "rag_new_C_2",
+      "action_number": null,
+      "action_title": "Research Capacity Building Program",
+      "objective": "C",
+      "kpis": [
+        "Number of staff trained/year",
+        "Feedback from participants on program effectiveness (satisfaction ratings)"
+      ],
+      "timeline": "- Q1 2025: Needs assessment and curriculum development\n- Q2-Q3 2025: Program implementation and delivery\n- Q4 2025: Evaluation and feedback",
+      "budget": "LKR 10 million",
+      "owner": "Medical Education Department",
+      "relevance": 0.6714,
+      "specificity": 0.5718,
+      "actionability": 0.8,
+      "coherence": 0.8,
+      "composite": 0.7158
+    },
+    {
+      "source": "rag_new_action",
+      "id": "rag_new_C_3",
+      "action_number": null,
+      "action_title": "Innovation Incubator and Funding Mechanism",
+      "objective": "C",
+      "kpis": [
+        "Number of innovation projects supported/year",
+        "Funding amount secured for innovative projects (LKR)"
+      ],
+      "timeline": "- Q1 2025: Concept development and business planning\n- Q2-Q3 2025: Incubator setup and funding mechanism establishment\n- Q4 2025: First cohort of innovation projects launched",
+      "budget": "LKR 20 million",
+      "owner": "Research Department",
+      "relevance": 0.4583,
+      "specificity": 0.4827,
+      "actionability": 0.8,
+      "coherence": 0.8,
+      "composite": 0.634
+    },
+    {
+      "source": "rag_new_action",
+      "id": "rag_new_D_1",
+      "action_number": null,
+      "action_title": "Clinical Leadership Development Programme",
+      "objective": "D",
+      "kpis": [
+        "Number of mid-level managers participating in the programme",
+        "Feedback ratings from participants on programme effectiveness"
+      ],
+      "timeline": "Q1 2025: Programme design and development\nQ2-Q3 2025: Pilot launch with 10 mid-level managers\nQ4 2025: Full-scale implementation across the hospital",
+      "budget": "LKR 20 million (programme design and delivery)",
+      "owner": "Department of Human Resources",
+      "relevance": 0.6524,
+      "specificity": 0.697,
+      "actionability": 0.8,
+      "coherence": 0.8,
+      "composite": 0.7351
+    },
+    {
+      "source": "rag_new_action",
+      "id": "rag_new_D_2",
+      "action_number": null,
+      "action_title": "Workforce Analytics and Planning System (WAPS)",
+      "objective": "D",
+      "kpis": [
+        "Staff utilization rates (percentage of staff working at optimal levels)",
+        "Turnover rates for clinical staff"
+      ],
+      "timeline": "Q1 2025: System design and development\nQ2-Q3 2025: Pilot launch with key departments\nQ4 2025: Full-scale implementation across the hospital",
+      "budget": "LKR 30 million (system design, delivery, and training)",
+      "owner": "Department of Information Technology",
+      "relevance": 0.402,
+      "specificity": 0.5806,
+      "actionability": 1.0,
+      "coherence": 0.8,
+      "composite": 0.6867
+    },
+    {
+      "source": "rag_new_action",
+      "id": "rag_new_E_1",
+      "action_number": null,
+      "action_title": "Establish a Community Outreach Team",
+      "objective": "E",
+      "kpis": [
+        "Number of community program beneficiaries/year",
+        "Partnerships established with regional organizations/year"
+      ],
+      "timeline": "- Q1 2025: Recruit and onboard team members (2)\n- Q2 2025: Develop a comprehensive community outreach strategy\n- Q3 2025: Launch initial community programs with 5,000 beneficiaries",
+      "budget": "LKR 10 million",
+      "owner": "Department of Community Health",
+      "relevance": 0.659,
+      "specificity": 0.2088,
+      "actionability": 0.8,
+      "coherence": 0.8,
+      "composite": 0.6395
+    },
+    {
+      "source": "rag_new_action",
+      "id": "rag_new_E_2",
+      "action_number": null,
+      "action_title": "Develop a Regional Healthcare Network Platform",
+      "objective": "E",
+      "kpis": [
+        "Number of registered users on the platform/year",
+        "Partnerships established with regional hospitals/year"
+      ],
+      "timeline": "- Q1 2025: Conduct stakeholder analysis and requirements gathering\n- Q2 2025: Develop a functional prototype\n- Q3 2025: Launch the platform with initial regional partners (5)",
+      "budget": "LKR 15 million",
+      "owner": "Department of Information Technology",
+      "relevance": 0.5735,
+      "specificity": 0.4974,
+      "actionability": 0.8,
+      "coherence": 0.8,
+      "composite": 0.6715
+    },
+    {
+      "source": "agent_recommendation",
+      "id": "rec_orphan_action_1",
+      "action_number": null,
+      "action_title": "orphan_action_1",
+      "objective": "A",
+      "kpis": [
+        "Land Acquisition Impact on Patient Care (measured by increase in bed capacity or operational efficiency)",
+        "Time-to-Clinical-Start for new service lines",
+        "Reduction in Capital Expenditure per Bed"
+      ],
+      "relevance": 0.49,
+      "specificity": 0.5193,
+      "actionability": 0.2,
+      "coherence": 0.8,
+      "composite": 0.5009
+    },
+    {
+      "source": "agent_recommendation",
+      "id": "rec_orphan_action_25",
+      "action_number": null,
+      "action_title": "orphan_action_25",
+      "objective": "E",
+      "kpis": [
+        "Alignment score improvement between Action 25 and objective E",
+        "Increase in patient satisfaction ratings among Negombo town centre residents",
+        "Number of community outreach programs conducted through the retail pharmacy outlet"
+      ],
+      "relevance": 0.5438,
+      "specificity": 0.4271,
+      "actionability": 0.2,
+      "coherence": 0.8,
+      "composite": 0.4986
+    },
+    {
+      "source": "agent_recommendation",
+      "id": "rec_under_supported_C",
+      "action_number": null,
+      "action_title": "under_supported_C",
+      "objective": "C",
+      "kpis": [
+        "Research & Innovation Roadmap completion rate (e.g., 80% of roadmap milestones achieved within the next 12 months)",
+        "Number of new clinical trials initiated per quarter",
+        "Percentage increase in research-related publications and presentations"
+      ],
+      "relevance": 0.7009,
+      "specificity": 0.5114,
+      "actionability": 1.0,
+      "coherence": 0.8,
+      "composite": 0.7625
+    },
+    {
+      "source": "agent_recommendation",
+      "id": "rec_under_supported_D",
+      "action_number": null,
+      "action_title": "under_supported_D",
+      "objective": "D",
+      "kpis": [
+        "Workforce Development Score (0.265 -> 0.500)",
+        "Clinical Staffing Increase Rate (%)",
+        "Average Time-to-Fill Vacant Positions"
+      ],
+      "relevance": 0.5274,
+      "specificity": 0.6023,
+      "actionability": 0.4,
+      "coherence": 0.8,
+      "composite": 0.5787
+    },
+    {
+      "source": "agent_recommendation",
+      "id": "rec_under_supported_B",
+      "action_number": null,
+      "action_title": "under_supported_B",
+      "objective": "B",
+      "kpis": [],
+      "relevance": 0.4346,
+      "specificity": 0.4752,
+      "actionability": 0.2,
+      "coherence": 0.8,
+      "composite": 0.4754
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rag_imp_7",
+      "action_number": 7,
+      "action_title": "Nephrology Service Development Roadmap",
+      "objective": "A",
+      "kpis": [],
+      "relevance": 0.5858,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.3258
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rag_imp_8",
+      "action_number": 8,
+      "action_title": "Administrative Office Refurbishment Programme",
+      "objective": "A",
+      "kpis": [],
+      "relevance": 0.5858,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.3258
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rag_imp_16",
+      "action_number": 16,
+      "action_title": "Specialist Clinician Recruitment Drive",
+      "objective": "D",
+      "kpis": [],
+      "relevance": 0.4572,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.2871
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rag_imp_25",
+      "action_number": 25,
+      "action_title": "Retail Pharmacy Outlet Expansion \u2014 Negombo Town Centre",
+      "objective": "E",
+      "kpis": [],
+      "relevance": 0.6899,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.357
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rag_new_B_1",
+      "action_number": null,
+      "action_title": "Develop a Digital Health Roadmap and Governance Framework",
+      "objective": "B",
+      "kpis": [],
+      "relevance": 0.7119,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.3636
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rag_new_B_2",
+      "action_number": null,
+      "action_title": "Develop AI-Powered Clinical Decision Support System",
+      "objective": "B",
+      "kpis": [],
+      "relevance": 0.7119,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.3636
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rag_new_C_1",
+      "action_number": null,
+      "action_title": "Clinical Trial Registry and Management System",
+      "objective": "C",
+      "kpis": [],
+      "relevance": 0.5693,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.3208
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rag_new_C_2",
+      "action_number": null,
+      "action_title": "Research Capacity Building Program",
+      "objective": "C",
+      "kpis": [],
+      "relevance": 0.5693,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.3208
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rag_new_C_3",
+      "action_number": null,
+      "action_title": "Innovation Incubator and Funding Mechanism",
+      "objective": "C",
+      "kpis": [],
+      "relevance": 0.5693,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.3208
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rag_new_D_1",
+      "action_number": null,
+      "action_title": "Clinical Leadership Development Programme",
+      "objective": "D",
+      "kpis": [],
+      "relevance": 0.4572,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.2871
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rag_new_D_2",
+      "action_number": null,
+      "action_title": "Workforce Analytics and Planning System (WAPS)",
+      "objective": "D",
+      "kpis": [],
+      "relevance": 0.4572,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.2871
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rag_new_E_1",
+      "action_number": null,
+      "action_title": "Establish a Community Outreach Team",
+      "objective": "E",
+      "kpis": [],
+      "relevance": 0.6899,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.357
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rag_new_E_2",
+      "action_number": null,
+      "action_title": "Develop a Regional Healthcare Network Platform",
+      "objective": "E",
+      "kpis": [],
+      "relevance": 0.6899,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.357
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rec_orphan_action_1",
+      "action_number": null,
+      "action_title": "orphan_action_1",
+      "objective": "A",
+      "kpis": [],
+      "relevance": 0.5858,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.3258
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rec_orphan_action_25",
+      "action_number": null,
+      "action_title": "orphan_action_25",
+      "objective": "E",
+      "kpis": [],
+      "relevance": 0.6899,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.357
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rec_under_supported_C",
+      "action_number": null,
+      "action_title": "under_supported_C",
+      "objective": "C",
+      "kpis": [],
+      "relevance": 0.5693,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.3208
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rec_under_supported_D",
+      "action_number": null,
+      "action_title": "under_supported_D",
+      "objective": "D",
+      "kpis": [],
+      "relevance": 0.4572,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.2871
+    },
+    {
+      "source": "baseline_generic",
+      "id": "baseline_rec_under_supported_B",
+      "action_number": null,
+      "action_title": "under_supported_B",
+      "objective": "B",
+      "kpis": [],
+      "relevance": 0.7119,
+      "specificity": 0.0,
+      "actionability": 0.0,
+      "coherence": 0.6,
+      "composite": 0.3636
+    }
+  ],
+  "aggregated": {
+    "rag_improvement": {
+      "count": 4,
+      "mean_relevance": 0.5339,
+      "mean_specificity": 0.5385,
+      "mean_actionability": 0.75,
+      "mean_coherence": 0.8,
+      "mean_composite": 0.6554
+    },
+    "rag_new_action": {
+      "count": 9,
+      "mean_relevance": 0.5755,
+      "mean_specificity": 0.5165,
+      "mean_actionability": 0.8222,
+      "mean_coherence": 0.8,
+      "mean_composite": 0.6815
+    },
+    "agent_recommendation": {
+      "count": 5,
+      "mean_relevance": 0.5393,
+      "mean_specificity": 0.5071,
+      "mean_actionability": 0.4,
+      "mean_coherence": 0.8,
+      "mean_composite": 0.5632
+    },
+    "baseline_generic": {
+      "count": 18,
+      "mean_relevance": 0.5977,
+      "mean_specificity": 0.0,
+      "mean_actionability": 0.0,
+      "mean_coherence": 0.6,
+      "mean_composite": 0.3293
+    }
+  },
+  "isps_vs_baseline": {
+    "isps_weighted_avg": {
+      "count": 18,
+      "mean_relevance": 0.5562,
+      "mean_specificity": 0.5188,
+      "mean_actionability": 0.6889,
+      "mean_coherence": 0.8,
+      "mean_composite": 0.6428
+    },
+    "baseline": {
+      "count": 18,
+      "mean_relevance": 0.5977,
+      "mean_specificity": 0.0,
+      "mean_actionability": 0.0,
+      "mean_coherence": 0.6,
+      "mean_composite": 0.3293
+    },
+    "improvement": {
+      "mean_relevance": -0.0415,
+      "mean_specificity": 0.5188,
+      "mean_actionability": 0.6889,
+      "mean_coherence": 0.2,
+      "mean_composite": 0.3135
+    }
+  }
+}

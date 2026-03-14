@@ -1,0 +1,3236 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-13">
+    <creator>NetworkX 3.6.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="edge">
+      <attribute id="8" title="edge_type" type="string" />
+      <attribute id="9" title="created_by" type="string" />
+      <attribute id="10" title="evidence" type="string" />
+      <attribute id="11" title="method" type="string" />
+    </attributes>
+    <attributes mode="static" class="node">
+      <attribute id="0" title="node_type" type="string" />
+      <attribute id="1" title="colour" type="string" />
+      <attribute id="2" title="priority" type="double" />
+      <attribute id="3" title="size" type="double" />
+      <attribute id="4" title="alignment_score" type="double" />
+      <attribute id="5" title="budget" type="double" />
+      <attribute id="6" title="timeline" type="string" />
+      <attribute id="7" title="parent_concept" type="string" />
+    </attributes>
+    <nodes>
+      <node id="obj_A" label="Objective A: Patient Care Excellence">
+        <attvalues>
+          <attvalue for="0" value="StrategyObjective" />
+          <attvalue for="1" value="#4285F4" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="30.0" />
+        </attvalues>
+      </node>
+      <node id="goal_A1" label="A1: Expand hospital capacity to 150 beds with dedicated wards fo">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_A2" label="A2: Achieve a Hospital-Acquired Infection (HAI) rate below 2% an">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_A3" label="A3: Attain patient satisfaction scores of ≥90% across all depart">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_A4" label="A4: Launch Aesthetic &amp; Cosmetic Medical Services and the Daycare">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_A5" label="A5: Upgrade the Fertility Centre to a full-spectrum regional rep">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_A_licensed_bed_capacity" label="Licensed bed capacity">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_A_bed_occupancy_rate" label="Bed occupancy rate">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_A_patient_satisfaction_score_nps_" label="Patient satisfaction score (NPS)">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_A_hai_rate" label="HAI rate">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_A_surgical_site_infection_rate" label="Surgical site infection rate">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_A_ivf_cycles_per_annum" label="IVF cycles per annum">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_A_daycare_centre_daily_patient_throughput" label="Daycare centre daily patient throughput">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_A_aesthetic_services_monthly_revenue" label="Aesthetic services monthly revenue">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="obj_B" label="Objective B: Digital Health Transformation">
+        <attvalues>
+          <attvalue for="0" value="StrategyObjective" />
+          <attvalue for="1" value="#4285F4" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="30.0" />
+        </attvalues>
+      </node>
+      <node id="goal_B1" label="B1: Implement a unified Electronic Health Record (EHR) system ac">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_B2" label="B2: Deploy a telemedicine platform supporting domestic and inter">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_B3" label="B3: Integrate AI-assisted diagnostic tools in radiology and path">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_B4" label="B4: Establish a hospital data analytics unit for operational and">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_B5" label="B5: Achieve ISO 27001 certification for information security man">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_B_ehr_adoption_rate_departments_" label="EHR adoption rate (departments)">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_B_telemedicine_consultations_month" label="Telemedicine consultations/month">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_B_ai_assisted_radiology_reports_" label="AI-assisted radiology reports (%)">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_B_average_patient_wait_time_opd_" label="Average patient wait time (OPD)">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_B_system_downtime_hours_year_" label="System downtime (hours/year)">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_B_cybersecurity_incidents_critical_" label="Cybersecurity incidents (critical)">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="obj_C" label="Objective C: Research &amp; Innovation">
+        <attvalues>
+          <attvalue for="0" value="StrategyObjective" />
+          <attvalue for="1" value="#4285F4" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="30.0" />
+        </attvalues>
+      </node>
+      <node id="goal_C1" label="C1: Establish a Clinical Research Unit to conduct and coordinate">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_C2" label="C2: Publish a minimum of 10 peer-reviewed papers annually by 202">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_C3" label="C3: Partner with at least two universities for clinical training">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_C4" label="C4: Pilot innovative treatment protocols in fertility, cardiac c">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_C_peer_reviewed_publications_year" label="Peer-reviewed publications/year">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_C_active_clinical_trials" label="Active clinical trials">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_C_university_partnerships" label="University partnerships">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_C_research_grant_funding_secured_lkr_" label="Research grant funding secured (LKR)">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_C_innovation_proposals_from_staff_year" label="Innovation proposals from staff/year">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="obj_D" label="Objective D: Workforce Development">
+        <attvalues>
+          <attvalue for="0" value="StrategyObjective" />
+          <attvalue for="1" value="#4285F4" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="30.0" />
+        </attvalues>
+      </node>
+      <node id="goal_D1" label="D1: Increase clinical staffing by 60% to support 150-bed operati">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_D2" label="D2: Reduce annual staff turnover to below 10%.">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_D3" label="D3: Implement a structured Continuing Professional Development (">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_D4" label="D4: Develop specialist training fellowships in cardiac care, nep">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_D5" label="D5: Establish a leadership development pipeline for mid-level ma">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_D_total_clinical_staff_fte_" label="Total clinical staff (FTE)">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_D_annual_staff_turnover_rate" label="Annual staff turnover rate">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_D_cpd_hours_per_clinician_year" label="CPD hours per clinician/year">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_D_staff_satisfaction_score" label="Staff satisfaction score">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_D_internal_promotion_rate_for_management_r" label="Internal promotion rate for management roles">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_D_specialist_fellows_trained_year" label="Specialist fellows trained/year">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="obj_E" label="Objective E: Community &amp; Regional Health Expansion">
+        <attvalues>
+          <attvalue for="0" value="StrategyObjective" />
+          <attvalue for="1" value="#4285F4" />
+          <attvalue for="2" value="1.0" />
+          <attvalue for="3" value="30.0" />
+        </attvalues>
+      </node>
+      <node id="goal_E1" label="E1: Launch community preventive health programmes reaching 25,00">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_E2" label="E2: Establish the Maldives outreach programme with visiting spec">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_E3" label="E3: Develop corporate wellness partnerships with 50+ employers i">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_E4" label="E4: Create a medical tourism concierge unit to serve internation">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="goal_E5" label="E5: Forge partnerships with regional hospitals for referral netw">
+        <attvalues>
+          <attvalue for="0" value="StrategyGoal" />
+          <attvalue for="1" value="#81D4FA" />
+          <attvalue for="3" value="18.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_E_community_programme_beneficiaries_year" label="Community programme beneficiaries/year">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_E_corporate_wellness_partners" label="Corporate wellness partners">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_E_international_patient_admissions_year" label="International patient admissions/year">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_E_maldives_telemedicine_consultations_mont" label="Maldives telemedicine consultations/month">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_E_visiting_specialist_trips_to_maldives_ye" label="Visiting specialist trips to Maldives/year">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_obj_E_medical_tourism_revenue_of_total_" label="Medical tourism revenue (% of total)">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="10.0" />
+        </attvalues>
+      </node>
+      <node id="action_1" label="Action 1: Adjacent Land Acquisition Due Diligence &amp; Negotiat">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.3153" />
+          <attvalue for="5" value="35.0" />
+          <attvalue for="6" value="Q1–Q4 2025" />
+          <attvalue for="3" value="4.91" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_1_1" label="Land valuation report completed by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_1_2" label="Environmental clearance obtained by Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_1_3" label="Board approval for purchase secured by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_facilities_projects_director_with_legal_" label="Facilities &amp; Projects Director (with Legal Counsel">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="quarter_Q1_2025" label="Q1 2025">
+        <attvalues>
+          <attvalue for="0" value="TimelineQuarter" />
+          <attvalue for="1" value="#9E9E9E" />
+          <attvalue for="3" value="12.0" />
+        </attvalues>
+      </node>
+      <node id="quarter_Q4_2025" label="Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="TimelineQuarter" />
+          <attvalue for="1" value="#9E9E9E" />
+          <attvalue for="3" value="12.0" />
+        </attvalues>
+      </node>
+      <node id="action_2" label="Action 2: Architectural Master Plan for 150-Bed Expansion">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.5391" />
+          <attvalue for="5" value="28.0" />
+          <attvalue for="6" value="Q1–Q3 2025" />
+          <attvalue for="3" value="7.88" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_2_1" label="Architect appointed by end of Q1 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_2_2" label="Preliminary design submission by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_2_3" label="Final master plan approved by Board by end of Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_facilities_projects_director" label="Facilities &amp; Projects Director">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="quarter_Q3_2025" label="Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="TimelineQuarter" />
+          <attvalue for="1" value="#9E9E9E" />
+          <attvalue for="3" value="12.0" />
+        </attvalues>
+      </node>
+      <node id="action_3" label="Action 3: Cardiac Catheterisation Laboratory Feasibility &amp; E">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.3877" />
+          <attvalue for="5" value="12.0" />
+          <attvalue for="6" value="Q2–Q4 2025" />
+          <attvalue for="3" value="4.32" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_3_1" label="Feasibility report submitted to Board by Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_3_2" label="Equipment specification document finalised by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_3_3" label="Minimum 3 vendor proposals received and evaluated by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_medical_director" label="Medical Director">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="quarter_Q2_2025" label="Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="TimelineQuarter" />
+          <attvalue for="1" value="#9E9E9E" />
+          <attvalue for="3" value="12.0" />
+        </attvalues>
+      </node>
+      <node id="action_4" label="Action 4: Elderly Care Unit Pilot Programme Design">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.4913" />
+          <attvalue for="5" value="8.0" />
+          <attvalue for="6" value="Q2–Q4 2025" />
+          <attvalue for="3" value="4.69" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_4_1" label="Clinical protocol manual completed by Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_4_2" label="Insurance partner discussions initiated with at least 3 prov">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_4_3" label="Staffing plan finalised with HR by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_medical_director_with_director_of_nursin" label="Medical Director (with Director of Nursing)">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_5" label="Action 5: Aesthetic &amp; Cosmetic Medicine Service Feasibility ">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.4811" />
+          <attvalue for="5" value="6.0" />
+          <attvalue for="6" value="Q1–Q3 2025" />
+          <attvalue for="3" value="4.07" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_5_1" label="Market analysis report completed by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_5_2" label="Business case presented to Board by Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_5_3" label="At least 2 specialist practitioners identified for engagemen">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_medical_director_with_marketing_director" label="Medical Director (with Marketing Director)">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_6" label="Action 6: Fertility Centre Laboratory Upgrade Planning">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.5638" />
+          <attvalue for="5" value="10.0" />
+          <attvalue for="6" value="Q1–Q3 2025" />
+          <attvalue for="3" value="5.87" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_6_1" label="Laboratory audit completed by Q1 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_6_2" label="Upgrade specification document finalised by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_6_3" label="Vendor quotes for priority equipment received by Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_medical_director_fertility_centre_lead_" label="Medical Director (Fertility Centre Lead)">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_7" label="Action 7: Nephrology Service Development Roadmap">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.4275" />
+          <attvalue for="5" value="5.0" />
+          <attvalue for="6" value="Q2–Q4 2025" />
+          <attvalue for="3" value="3.33" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_7_1" label="Regional needs assessment completed by Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_7_2" label="Clinical protocol framework drafted by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_7_3" label="Water treatment feasibility study completed by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="action_8" label="Action 8: Administrative Office Refurbishment Programme">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.395" />
+          <attvalue for="5" value="22.0" />
+          <attvalue for="6" value="Q2–Q3 2025" />
+          <attvalue for="3" value="5.38" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_8_1" label="Refurbishment design approved by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_8_2" label="Construction and fit-out completed by end of Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_8_3" label="Staff workspace satisfaction survey score improvement of 10%">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="action_9" label="Action 9: EHR Vendor Selection &amp; Contract Negotiation">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.5901" />
+          <attvalue for="5" value="15.0" />
+          <attvalue for="6" value="Q1–Q4 2025" />
+          <attvalue for="3" value="7.11" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_9_1" label="RFP issued by end of Q1 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_9_2" label="Vendor shortlist (3 candidates) finalised by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_9_3" label="Contract signed by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_chief_information_officer_cio_" label="Chief Information Officer (CIO)">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_10" label="Action 10: IT Infrastructure Assessment &amp; Network Upgrade">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.6722" />
+          <attvalue for="5" value="45.0" />
+          <attvalue for="6" value="Q1–Q4 2025" />
+          <attvalue for="3" value="11.18" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_10_1" label="Infrastructure audit report completed by Q1 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_10_2" label="Network upgrade 80% complete by Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_10_3" label="Wi-Fi coverage across 100% of clinical areas by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_cio_with_it_department_" label="CIO (with IT Department)">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_11" label="Action 11: Telemedicine Platform Requirements &amp; Vendor Engage">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.7203" />
+          <attvalue for="5" value="8.0" />
+          <attvalue for="6" value="Q2–Q4 2025" />
+          <attvalue for="3" value="6.87" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_11_1" label="Requirements document approved by Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_11_2" label="Minimum 3 vendor demonstrations completed by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_11_3" label="Data protection compliance assessment completed by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_cio_with_international_unit_director_" label="CIO (with International Unit Director)">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_12" label="Action 12: Cybersecurity Baseline Assessment &amp; Policy Develop">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.6431" />
+          <attvalue for="5" value="12.0" />
+          <attvalue for="6" value="Q1–Q3 2025" />
+          <attvalue for="3" value="7.16" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_12_1" label="Vulnerability assessment completed by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_12_2" label="Information Security Policy approved by Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_12_3" label="90% of staff completing cybersecurity training by Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_cio" label="CIO">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_13" label="Action 13: Establishment of Ethics Review Committee">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.4289" />
+          <attvalue for="5" value="3.0" />
+          <attvalue for="6" value="Q1–Q2 2025" />
+          <attvalue for="3" value="2.58" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_13_1" label="ERC membership finalised by Q1 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_13_2" label="ERC charter and SOPs approved by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_13_3" label="Registration with Sri Lanka Medical Association completed by">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="action_14" label="Action 14: University Research Partnership MOU">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.6081" />
+          <attvalue for="5" value="4.0" />
+          <attvalue for="6" value="Q1–Q3 2025" />
+          <attvalue for="3" value="4.25" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_14_1" label="Formal partnership discussions initiated by Q1 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_14_2" label="MOU signed by Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_14_3" label="First collaborative research proposal submitted to ERC by Q4">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="action_15" label="Action 15: Appointment of Research Coordinator">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.5402" />
+          <attvalue for="5" value="4.0" />
+          <attvalue for="6" value="Q1–Q2 2025" />
+          <attvalue for="3" value="3.78" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_15_1" label="Job description approved and advertised by Q1 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_15_2" label="Research Coordinator appointed by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_15_3" label="Research project tracking system established by Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_hr_director_with_medical_director_" label="HR Director (with Medical Director)">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_16" label="Action 16: Specialist Clinician Recruitment Drive">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.4921" />
+          <attvalue for="5" value="18.0" />
+          <attvalue for="6" value="Q2–Q4 2025" />
+          <attvalue for="3" value="6.29" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_16_1" label="Recruitment campaign launched by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_16_2" label="Minimum 20 specialist applications received by Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_16_3" label="Conditional offers extended to at least 5 specialists by Q4 ">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="action_17" label="Action 17: Nursing Workforce Expansion Planning">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.5277" />
+          <attvalue for="5" value="15.0" />
+          <attvalue for="6" value="Q2–Q4 2025" />
+          <attvalue for="3" value="6.35" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_17_1" label="Nursing workforce plan approved by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_17_2" label="Training partnerships formalised with 2 nursing schools by Q">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_17_3" label="15 conditional nursing offers extended by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_director_of_nursing_with_hr_director_" label="Director of Nursing (with HR Director)">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_18" label="Action 18: Continuing Professional Development (CPD) Programm">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.7156" />
+          <attvalue for="5" value="10.0" />
+          <attvalue for="6" value="Q1–Q4 2025" />
+          <attvalue for="3" value="7.45" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_18_1" label="CPD programme framework approved by Q1 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_18_2" label="4 quarterly workshops delivered in 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_18_3" label="80% of clinical staff achieving ≥20 CPD hours by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_director_of_nursing_with_medical_directo" label="Director of Nursing (with Medical Director)">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_19" label="Action 19: Annual Staff Cricket Tournament &amp; Sports Sponsorsh">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.3846" />
+          <attvalue for="5" value="8.0" />
+          <attvalue for="6" value="Q3 2025" />
+          <attvalue for="3" value="3.67" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_19_1" label="Minimum 8 corporate teams participating in staff tournament">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_19_2" label="Event media coverage in at least 3 local outlets">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_19_3" label="Staff satisfaction survey improvement in &quot;team engagement&quot; c">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_hr_director_with_marketing_director_" label="HR Director (with Marketing Director)">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_20" label="Action 20: Maldives Partnership Scoping &amp; Negotiations">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.7032" />
+          <attvalue for="5" value="14.0" />
+          <attvalue for="6" value="Q1–Q4 2025" />
+          <attvalue for="3" value="8.27" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_20_1" label="Scoping visit to Malé completed by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_20_2" label="Regulatory requirements documentation completed by Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_20_3" label="Partnership MOU signed by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_international_unit_director" label="International Unit Director">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_21" label="Action 21: Medical Tourism Concierge Unit Setup">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.6205" />
+          <attvalue for="5" value="12.0" />
+          <attvalue for="6" value="Q2–Q4 2025" />
+          <attvalue for="3" value="6.91" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_21_1" label="Medical tourism coordinator appointed by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_21_2" label="Hotel partnership agreements signed with 3 properties by Q3 ">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_21_3" label="Patient journey workflow documented and approved by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_international_unit_director_with_marketi" label="International Unit Director (with Marketing Direct">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_22" label="Action 22: Community Preventive Health Screening Programme — ">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.458" />
+          <attvalue for="5" value="9.0" />
+          <attvalue for="6" value="Q2–Q4 2025" />
+          <attvalue for="3" value="4.58" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_22_1" label="Screening programme launched by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_22_2" label="At least 8 screening camps conducted in 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_22_3" label="3,000 individuals screened by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_marketing_director_with_medical_director" label="Marketing Director (with Medical Director)">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_23" label="Action 23: Corporate Wellness Partnership Expansion">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.5079" />
+          <attvalue for="5" value="7.0" />
+          <attvalue for="6" value="Q1–Q4 2025" />
+          <attvalue for="3" value="4.59" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_23_1" label="8 new corporate partners signed by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_23_2" label="Corporate wellness revenue increase of 30% year-on-year">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_23_3" label="At least 1,500 corporate employees screened in 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_marketing_director" label="Marketing Director">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="action_24" label="Action 24: Executive Lounge Furniture &amp; Premium Décor Upgrade">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.3872" />
+          <attvalue for="5" value="18.0" />
+          <attvalue for="6" value="Q2–Q3 2025" />
+          <attvalue for="3" value="4.95" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_24_1" label="Interior design concept approved by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_24_2" label="Installation completed by end of Q3 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_24_3" label="VIP patient satisfaction score improvement of 15%">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="action_25" label="Action 25: Retail Pharmacy Outlet Expansion — Negombo Town Ce">
+        <attvalues>
+          <attvalue for="0" value="Action" />
+          <attvalue for="1" value="#4CAF50" />
+          <attvalue for="4" value="0.3329" />
+          <attvalue for="5" value="25.0" />
+          <attvalue for="6" value="Q1–Q3 2025" />
+          <attvalue for="3" value="4.71" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_25_1" label="Premises lease signed by Q1 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_25_2" label="Pharmacy fit-out completed by Q2 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="kpi_act_25_3" label="Monthly retail revenue target of LKR 3M achieved by Q4 2025">
+        <attvalues>
+          <attvalue for="0" value="KPI" />
+          <attvalue for="1" value="#FFEB3B" />
+          <attvalue for="3" value="8.0" />
+        </attvalues>
+      </node>
+      <node id="owner_finance_director_with_marketing_director" label="Finance Director (with Marketing Director)">
+        <attvalues>
+          <attvalue for="0" value="Stakeholder" />
+          <attvalue for="1" value="#FF9800" />
+          <attvalue for="3" value="14.0" />
+        </attvalues>
+      </node>
+      <node id="concept_LandAcquisition" label="Land Acquisition">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="InfrastructureExpansion" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_BedExpansion" label="Bed Expansion">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="InfrastructureExpansion" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_Cardiology" label="Cardiology">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="ClinicalServices" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_ElderlyCare" label="Elderly Care">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="ClinicalServices" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_AestheticMedicine" label="Aesthetic Medicine">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="ClinicalServices" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_Fertility" label="Fertility Centre">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="ClinicalServices" />
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </node>
+      <node id="concept_Nephrology" label="Nephrology">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="ClinicalServices" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_EHR" label="Electronic Health Records">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="DigitalHealth" />
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </node>
+      <node id="concept_Cybersecurity" label="Cybersecurity">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="DigitalHealth" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_AcademicPartnerships" label="Academic Partnerships">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="ResearchInnovation" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_Recruitment" label="Recruitment">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="WorkforceHR" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_Training" label="Training &amp; CPD">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="WorkforceHR" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_MaldivesOutreach" label="Maldives Outreach">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="InternationalMedicalTourism" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_AirlineHotelPartnerships" label="Airline &amp; Hotel Partnerships">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="InternationalMedicalTourism" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_ConciergeServices" label="Concierge Services">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="InternationalMedicalTourism" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_ScreeningPrograms" label="Screening Programmes">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="CommunityRegionalHealth" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_CommunityRegionalHealth" label="Community &amp; Regional Health">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="CommunityRegionalHealth" />
+          <attvalue for="3" value="40.0" />
+        </attvalues>
+      </node>
+      <node id="concept_CorporateWellness" label="Corporate Wellness">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="CommunityRegionalHealth" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_InfectionControl" label="Infection Control">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="PatientCare" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_PatientCare" label="Patient Care">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="PatientCare" />
+          <attvalue for="3" value="20.0" />
+        </attvalues>
+      </node>
+      <node id="concept_ResearchInnovation" label="Research &amp; Innovation">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="ResearchInnovation" />
+          <attvalue for="3" value="25.0" />
+        </attvalues>
+      </node>
+      <node id="concept_SpecialistFellowships" label="Specialist Fellowships">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="WorkforceHR" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+      <node id="concept_InternationalMedicalTourism" label="International &amp; Medical Tourism">
+        <attvalues>
+          <attvalue for="0" value="OntologyConcept" />
+          <attvalue for="1" value="#9C27B0" />
+          <attvalue for="7" value="InternationalMedicalTourism" />
+          <attvalue for="3" value="15.0" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="obj_A" target="goal_A1" id="0" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="goal_A2" id="1" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="goal_A3" id="2" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="goal_A4" id="3" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="goal_A5" id="4" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="kpi_obj_A_licensed_bed_capacity" id="5" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="kpi_obj_A_bed_occupancy_rate" id="6" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="kpi_obj_A_patient_satisfaction_score_nps_" id="7" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="kpi_obj_A_hai_rate" id="8" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="kpi_obj_A_surgical_site_infection_rate" id="9" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="kpi_obj_A_ivf_cycles_per_annum" id="10" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="kpi_obj_A_daycare_centre_daily_patient_throughput" id="11" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="kpi_obj_A_aesthetic_services_monthly_revenue" id="12" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="action_2" id="13" weight="0.5391">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.5391" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="action_4" id="14" weight="0.4913">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.4913" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="action_5" id="15" weight="0.4811">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.4811" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="action_6" id="16" weight="0.5638">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.5638" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="action_10" id="17" weight="0.4731">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.4731" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="action_16" id="18" weight="0.4584">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.4584" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="action_17" id="19" weight="0.4605">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.4605" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_A" target="action_21" id="20" weight="0.4638">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.4638" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="goal_A2" target="concept_InfectionControl" id="21" weight="0.6536">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[hai, hospital-acquired infection, infection rate]; score=0.654" />
+        </attvalues>
+      </edge>
+      <edge source="goal_A2" target="concept_PatientCare" id="22" weight="0.5818">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[patient care, clinical care, patient satisfaction]; score=0.582" />
+        </attvalues>
+      </edge>
+      <edge source="goal_A3" target="concept_PatientCare" id="23" weight="0.5543">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[patient care, clinical care, patient satisfaction]; score=0.554" />
+        </attvalues>
+      </edge>
+      <edge source="goal_A5" target="concept_Fertility" id="24" weight="0.6513">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[fertility, ivf, reproductive, fertility centre]; score=0.651" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="goal_B1" id="25" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="goal_B2" id="26" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="goal_B3" id="27" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="goal_B4" id="28" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="goal_B5" id="29" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="kpi_obj_B_ehr_adoption_rate_departments_" id="30" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="kpi_obj_B_telemedicine_consultations_month" id="31" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="kpi_obj_B_ai_assisted_radiology_reports_" id="32" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="kpi_obj_B_average_patient_wait_time_opd_" id="33" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="kpi_obj_B_system_downtime_hours_year_" id="34" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="kpi_obj_B_cybersecurity_incidents_critical_" id="35" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="action_9" id="36" weight="0.5901">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.5901" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="action_10" id="37" weight="0.6722">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.6722" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="action_11" id="38" weight="0.7203">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.7203" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="action_12" id="39" weight="0.6431">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.6431" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_B" target="action_20" id="40" weight="0.5307">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.5307" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="goal_B1" target="concept_EHR" id="41" weight="0.6506">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[ehr, electronic health record, health record]; score=0.651" />
+        </attvalues>
+      </edge>
+      <edge source="obj_C" target="goal_C1" id="42" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_C" target="goal_C2" id="43" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_C" target="goal_C3" id="44" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_C" target="goal_C4" id="45" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_C" target="kpi_obj_C_peer_reviewed_publications_year" id="46" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_C" target="kpi_obj_C_active_clinical_trials" id="47" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_C" target="kpi_obj_C_university_partnerships" id="48" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_C" target="kpi_obj_C_research_grant_funding_secured_lkr_" id="49" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_C" target="kpi_obj_C_innovation_proposals_from_staff_year" id="50" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_C" target="action_14" id="51" weight="0.6081">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.6081" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_C" target="action_15" id="52" weight="0.5402">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.5402" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_C" target="action_16" id="53" weight="0.4661">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.4661" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="goal_C1" target="concept_ResearchInnovation" id="54" weight="0.5729">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[research, innovation, clinical research]; score=0.573" />
+        </attvalues>
+      </edge>
+      <edge source="goal_C2" target="concept_ResearchInnovation" id="55" weight="0.6559">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[research, innovation, clinical research, peer-reviewed]; score=0.656" />
+        </attvalues>
+      </edge>
+      <edge source="goal_C3" target="concept_ResearchInnovation" id="56" weight="0.5565">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[research, innovation, clinical research]; score=0.556" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="goal_D1" id="57" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="goal_D2" id="58" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="goal_D3" id="59" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="goal_D4" id="60" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="goal_D5" id="61" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="kpi_obj_D_total_clinical_staff_fte_" id="62" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="kpi_obj_D_annual_staff_turnover_rate" id="63" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="kpi_obj_D_cpd_hours_per_clinician_year" id="64" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="kpi_obj_D_staff_satisfaction_score" id="65" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="kpi_obj_D_internal_promotion_rate_for_management_r" id="66" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="kpi_obj_D_specialist_fellows_trained_year" id="67" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="action_4" id="68" weight="0.4738">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.4738" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="action_16" id="69" weight="0.4921">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.4921" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="action_17" id="70" weight="0.5277">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.5277" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_D" target="action_18" id="71" weight="0.7156">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.7156" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="goal_D4" target="concept_SpecialistFellowships" id="72" weight="0.8232">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[fellowship, specialist training, training fellowship]; score=0.823" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="goal_E1" id="73" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="goal_E2" id="74" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="goal_E3" id="75" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="goal_E4" id="76" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="goal_E5" id="77" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_goal" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="kpi_obj_E_community_programme_beneficiaries_year" id="78" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="kpi_obj_E_corporate_wellness_partners" id="79" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="kpi_obj_E_international_patient_admissions_year" id="80" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="kpi_obj_E_maldives_telemedicine_consultations_mont" id="81" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="kpi_obj_E_visiting_specialist_trips_to_maldives_ye" id="82" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="kpi_obj_E_medical_tourism_revenue_of_total_" id="83" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="action_11" id="84" weight="0.6041">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.6041" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="action_16" id="85" weight="0.47">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.4700" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="action_20" id="86" weight="0.7032">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.7032" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="action_21" id="87" weight="0.6205">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.6205" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="action_22" id="88" weight="0.458">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.4580" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="obj_E" target="action_23" id="89" weight="0.5079">
+        <attvalues>
+          <attvalue for="8" value="alignment" />
+          <attvalue for="9" value="alignment" />
+          <attvalue for="10" value="cosine_similarity=0.5079" />
+          <attvalue for="11" value="embedding+keyword" />
+        </attvalues>
+      </edge>
+      <edge source="goal_E1" target="concept_CommunityRegionalHealth" id="90" weight="0.6412">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[community, regional health, community health, outreach]; score=0.641" />
+        </attvalues>
+      </edge>
+      <edge source="goal_E2" target="concept_CommunityRegionalHealth" id="91" weight="0.5622">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[community, regional health, community health, outreach]; score=0.562" />
+        </attvalues>
+      </edge>
+      <edge source="goal_E3" target="concept_CommunityRegionalHealth" id="92" weight="0.5904">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[community, regional health, community health, outreach]; score=0.590" />
+        </attvalues>
+      </edge>
+      <edge source="goal_E4" target="concept_InternationalMedicalTourism" id="93" weight="0.638">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[medical tourism, international patient, concierge]; score=0.638" />
+        </attvalues>
+      </edge>
+      <edge source="goal_E4" target="concept_CommunityRegionalHealth" id="94" weight="0.5746">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[community, regional health, community health, outreach]; score=0.575" />
+        </attvalues>
+      </edge>
+      <edge source="goal_E5" target="concept_CommunityRegionalHealth" id="95" weight="0.6183">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[community, regional health, community health, outreach]; score=0.618" />
+        </attvalues>
+      </edge>
+      <edge source="action_1" target="kpi_act_1_1" id="96" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_1" target="kpi_act_1_2" id="97" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_1" target="kpi_act_1_3" id="98" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_1" target="owner_facilities_projects_director_with_legal_" id="99" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_1" target="quarter_Q1_2025" id="100" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_1" target="quarter_Q4_2025" id="101" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_1" target="concept_LandAcquisition" id="102" weight="0.8165">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[land acquisition, adjacent land, land valuation, environmental clearance, town planning]; score=0.817" />
+        </attvalues>
+      </edge>
+      <edge source="action_2" target="kpi_act_2_1" id="103" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_2" target="kpi_act_2_2" id="104" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_2" target="kpi_act_2_3" id="105" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_2" target="owner_facilities_projects_director" id="106" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_2" target="quarter_Q1_2025" id="107" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_2" target="quarter_Q3_2025" id="108" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_2" target="concept_BedExpansion" id="109" weight="0.587">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[bed expansion, 150 bed, 75 to 150]; score=0.587" />
+        </attvalues>
+      </edge>
+      <edge source="action_3" target="kpi_act_3_1" id="110" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_3" target="kpi_act_3_2" id="111" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_3" target="kpi_act_3_3" id="112" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_3" target="owner_medical_director" id="113" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_3" target="quarter_Q2_2025" id="114" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_3" target="quarter_Q4_2025" id="115" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_3" target="concept_Cardiology" id="116" weight="0.6382">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[cardiac, cardiac catheterisation, interventional cardiologist, angiography]; score=0.638" />
+        </attvalues>
+      </edge>
+      <edge source="action_4" target="kpi_act_4_1" id="117" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_4" target="kpi_act_4_2" id="118" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_4" target="kpi_act_4_3" id="119" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_4" target="owner_medical_director_with_director_of_nursin" id="120" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_4" target="quarter_Q2_2025" id="121" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_4" target="quarter_Q4_2025" id="122" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_4" target="concept_ElderlyCare" id="123" weight="0.639">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[elderly care, geriatric, geriatric nursing, long-term residential, occupational therapy]; score=0.639" />
+        </attvalues>
+      </edge>
+      <edge source="action_5" target="kpi_act_5_1" id="124" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_5" target="kpi_act_5_2" id="125" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_5" target="kpi_act_5_3" id="126" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_5" target="owner_medical_director_with_marketing_director" id="127" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_5" target="quarter_Q1_2025" id="128" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_5" target="quarter_Q3_2025" id="129" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_5" target="concept_AestheticMedicine" id="130" weight="0.7695">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[aesthetic, cosmetic, dermatological, laser treatment, anti-ageing]; score=0.769" />
+        </attvalues>
+      </edge>
+      <edge source="action_6" target="kpi_act_6_1" id="131" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_6" target="kpi_act_6_2" id="132" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_6" target="kpi_act_6_3" id="133" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_6" target="owner_medical_director_fertility_centre_lead_" id="134" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_6" target="quarter_Q1_2025" id="135" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_6" target="quarter_Q3_2025" id="136" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_6" target="concept_Fertility" id="137" weight="0.6762">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[fertility, ivf, embryology, cryopreservation, fertility centre]; score=0.676" />
+        </attvalues>
+      </edge>
+      <edge source="action_7" target="kpi_act_7_1" id="138" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_7" target="kpi_act_7_2" id="139" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_7" target="kpi_act_7_3" id="140" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_7" target="owner_medical_director" id="141" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_7" target="quarter_Q2_2025" id="142" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_7" target="quarter_Q4_2025" id="143" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_7" target="concept_Nephrology" id="144" weight="0.7448">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[nephrology, dialysis, haemodialysis, peritoneal dialysis, water treatment]; score=0.745" />
+        </attvalues>
+      </edge>
+      <edge source="action_8" target="kpi_act_8_1" id="145" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_8" target="kpi_act_8_2" id="146" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_8" target="kpi_act_8_3" id="147" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_8" target="owner_facilities_projects_director" id="148" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_8" target="quarter_Q2_2025" id="149" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_8" target="quarter_Q3_2025" id="150" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_9" target="kpi_act_9_1" id="151" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_9" target="kpi_act_9_2" id="152" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_9" target="kpi_act_9_3" id="153" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_9" target="owner_chief_information_officer_cio_" id="154" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_9" target="quarter_Q1_2025" id="155" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_9" target="quarter_Q4_2025" id="156" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_9" target="concept_EHR" id="157" weight="0.7538">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[ehr, electronic health record, health record, hl7, fhir]; score=0.754" />
+        </attvalues>
+      </edge>
+      <edge source="action_10" target="kpi_act_10_1" id="158" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_10" target="kpi_act_10_2" id="159" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_10" target="kpi_act_10_3" id="160" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_10" target="owner_cio_with_it_department_" id="161" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_10" target="quarter_Q1_2025" id="162" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_10" target="quarter_Q4_2025" id="163" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_11" target="kpi_act_11_1" id="164" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_11" target="kpi_act_11_2" id="165" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_11" target="kpi_act_11_3" id="166" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_11" target="owner_cio_with_international_unit_director_" id="167" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_11" target="quarter_Q2_2025" id="168" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_11" target="quarter_Q4_2025" id="169" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_12" target="kpi_act_12_1" id="170" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_12" target="kpi_act_12_2" id="171" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_12" target="kpi_act_12_3" id="172" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_12" target="owner_cio" id="173" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_12" target="quarter_Q1_2025" id="174" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_12" target="quarter_Q3_2025" id="175" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_12" target="concept_Cybersecurity" id="176" weight="0.6812">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[cybersecurity, information security, iso 27001, data protection, pdpa]; score=0.681" />
+        </attvalues>
+      </edge>
+      <edge source="action_13" target="kpi_act_13_1" id="177" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_13" target="kpi_act_13_2" id="178" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_13" target="kpi_act_13_3" id="179" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_13" target="owner_medical_director" id="180" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_13" target="quarter_Q1_2025" id="181" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_13" target="quarter_Q2_2025" id="182" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_14" target="kpi_act_14_1" id="183" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_14" target="kpi_act_14_2" id="184" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_14" target="kpi_act_14_3" id="185" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_14" target="owner_medical_director" id="186" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_14" target="quarter_Q1_2025" id="187" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_14" target="quarter_Q3_2025" id="188" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_14" target="concept_AcademicPartnerships" id="189" weight="0.5869">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[university, mou, collaborative research, university of kelaniya]; score=0.587" />
+        </attvalues>
+      </edge>
+      <edge source="action_15" target="kpi_act_15_1" id="190" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_15" target="kpi_act_15_2" id="191" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_15" target="kpi_act_15_3" id="192" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_15" target="owner_hr_director_with_medical_director_" id="193" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_15" target="quarter_Q1_2025" id="194" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_15" target="quarter_Q2_2025" id="195" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_16" target="kpi_act_16_1" id="196" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_16" target="kpi_act_16_2" id="197" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_16" target="kpi_act_16_3" id="198" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_16" target="owner_hr_director_with_medical_director_" id="199" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_16" target="quarter_Q2_2025" id="200" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_16" target="quarter_Q4_2025" id="201" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_17" target="kpi_act_17_1" id="202" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_17" target="kpi_act_17_2" id="203" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_17" target="kpi_act_17_3" id="204" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_17" target="owner_director_of_nursing_with_hr_director_" id="205" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_17" target="quarter_Q2_2025" id="206" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_17" target="quarter_Q4_2025" id="207" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_17" target="concept_Recruitment" id="208" weight="0.5846">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[recruitment, recruit, workforce expansion]; score=0.585" />
+        </attvalues>
+      </edge>
+      <edge source="action_18" target="kpi_act_18_1" id="209" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_18" target="kpi_act_18_2" id="210" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_18" target="kpi_act_18_3" id="211" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_18" target="owner_director_of_nursing_with_medical_directo" id="212" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_18" target="quarter_Q1_2025" id="213" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_18" target="quarter_Q4_2025" id="214" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_18" target="concept_Training" id="215" weight="0.7881">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[training, cpd, continuing professional development, workshop, simulation]; score=0.788" />
+        </attvalues>
+      </edge>
+      <edge source="action_19" target="kpi_act_19_1" id="216" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_19" target="kpi_act_19_2" id="217" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_19" target="kpi_act_19_3" id="218" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_19" target="owner_hr_director_with_marketing_director_" id="219" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_19" target="quarter_Q3_2025" id="220" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_20" target="kpi_act_20_1" id="221" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_20" target="kpi_act_20_2" id="222" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_20" target="kpi_act_20_3" id="223" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_20" target="owner_international_unit_director" id="224" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_20" target="quarter_Q1_2025" id="225" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_20" target="quarter_Q4_2025" id="226" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_20" target="concept_MaldivesOutreach" id="227" weight="0.7637">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[maldives, addu city, aasandha, maldivian, visiting specialist]; score=0.764" />
+        </attvalues>
+      </edge>
+      <edge source="action_21" target="kpi_act_21_1" id="228" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_21" target="kpi_act_21_2" id="229" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_21" target="kpi_act_21_3" id="230" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_21" target="owner_international_unit_director_with_marketi" id="231" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_21" target="quarter_Q2_2025" id="232" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_21" target="quarter_Q4_2025" id="233" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_21" target="concept_AirlineHotelPartnerships" id="234" weight="0.7362">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[srilankan airlines, hotel partnership, hotel recovery, airline]; score=0.736" />
+        </attvalues>
+      </edge>
+      <edge source="action_21" target="concept_ConciergeServices" id="235" weight="0.6748">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[concierge, medical tourism concierge, patient journey]; score=0.675" />
+        </attvalues>
+      </edge>
+      <edge source="action_22" target="kpi_act_22_1" id="236" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_22" target="kpi_act_22_2" id="237" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_22" target="kpi_act_22_3" id="238" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_22" target="owner_marketing_director_with_medical_director" id="239" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_22" target="quarter_Q2_2025" id="240" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_22" target="quarter_Q4_2025" id="241" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_22" target="concept_ScreeningPrograms" id="242" weight="0.5819">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[screening, screening camp, health screening]; score=0.582" />
+        </attvalues>
+      </edge>
+      <edge source="action_22" target="concept_CommunityRegionalHealth" id="243" weight="0.5798">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[community, community health, outreach, screening programme]; score=0.580" />
+        </attvalues>
+      </edge>
+      <edge source="action_23" target="kpi_act_23_1" id="244" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_23" target="kpi_act_23_2" id="245" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_23" target="kpi_act_23_3" id="246" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_23" target="owner_marketing_director" id="247" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_23" target="quarter_Q1_2025" id="248" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_23" target="quarter_Q4_2025" id="249" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_23" target="concept_CorporateWellness" id="250" weight="0.8287">
+        <attvalues>
+          <attvalue for="8" value="ontology_mapping" />
+          <attvalue for="9" value="ontology" />
+          <attvalue for="10" value="keywords=[corporate wellness, employer, executive health, wellness package, corporate partner]; score=0.829" />
+        </attvalues>
+      </edge>
+      <edge source="action_24" target="kpi_act_24_1" id="251" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_24" target="kpi_act_24_2" id="252" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_24" target="kpi_act_24_3" id="253" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_24" target="owner_facilities_projects_director" id="254" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_24" target="quarter_Q2_2025" id="255" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_24" target="quarter_Q3_2025" id="256" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_25" target="kpi_act_25_1" id="257" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_25" target="kpi_act_25_2" id="258" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_25" target="kpi_act_25_3" id="259" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_kpi" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_25" target="owner_finance_director_with_marketing_director" id="260" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_owner" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_25" target="quarter_Q1_2025" id="261" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+      <edge source="action_25" target="quarter_Q3_2025" id="262" weight="1.0">
+        <attvalues>
+          <attvalue for="8" value="has_timeline" />
+          <attvalue for="9" value="structure" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

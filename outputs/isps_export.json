@@ -1,0 +1,493 @@
+{
+  "action_alignments": [
+    {
+      "Action #": 1,
+      "Title": "Adjacent Land Acquisition Due Diligence & Negotiation",
+      "Declared Obj": "A",
+      "Best Obj": "A",
+      "Best Score": 0.3153,
+      "Classification": "Poor",
+      "Is Orphan": true,
+      "Owner": "Facilities & Projects Director (with Legal Counsel)",
+      "Budget (LKR M)": 35.0
+    },
+    {
+      "Action #": 2,
+      "Title": "Architectural Master Plan for 150-Bed Expansion",
+      "Declared Obj": "A",
+      "Best Obj": "A",
+      "Best Score": 0.5391,
+      "Classification": "Fair",
+      "Is Orphan": false,
+      "Owner": "Facilities & Projects Director",
+      "Budget (LKR M)": 28.0
+    },
+    {
+      "Action #": 3,
+      "Title": "Cardiac Catheterisation Laboratory Feasibility & Equipment Specification",
+      "Declared Obj": "A",
+      "Best Obj": "B",
+      "Best Score": 0.3877,
+      "Classification": "Poor",
+      "Is Orphan": true,
+      "Owner": "Medical Director",
+      "Budget (LKR M)": 12.0
+    },
+    {
+      "Action #": 4,
+      "Title": "Elderly Care Unit Pilot Programme Design",
+      "Declared Obj": "A",
+      "Best Obj": "A",
+      "Best Score": 0.4913,
+      "Classification": "Fair",
+      "Is Orphan": false,
+      "Owner": "Medical Director (with Director of Nursing)",
+      "Budget (LKR M)": 8.0
+    },
+    {
+      "Action #": 5,
+      "Title": "Aesthetic & Cosmetic Medicine Service Feasibility Study",
+      "Declared Obj": "A",
+      "Best Obj": "A",
+      "Best Score": 0.4811,
+      "Classification": "Fair",
+      "Is Orphan": false,
+      "Owner": "Medical Director (with Marketing Director)",
+      "Budget (LKR M)": 6.0
+    },
+    {
+      "Action #": 6,
+      "Title": "Fertility Centre Laboratory Upgrade Planning",
+      "Declared Obj": "A",
+      "Best Obj": "A",
+      "Best Score": 0.5638,
+      "Classification": "Fair",
+      "Is Orphan": false,
+      "Owner": "Medical Director (Fertility Centre Lead)",
+      "Budget (LKR M)": 10.0
+    },
+    {
+      "Action #": 7,
+      "Title": "Nephrology Service Development Roadmap",
+      "Declared Obj": "A",
+      "Best Obj": "C",
+      "Best Score": 0.4275,
+      "Classification": "Poor",
+      "Is Orphan": true,
+      "Owner": "Medical Director",
+      "Budget (LKR M)": 5.0
+    },
+    {
+      "Action #": 8,
+      "Title": "Administrative Office Refurbishment Programme",
+      "Declared Obj": "A",
+      "Best Obj": "A",
+      "Best Score": 0.395,
+      "Classification": "Poor",
+      "Is Orphan": true,
+      "Owner": "Facilities & Projects Director",
+      "Budget (LKR M)": 22.0
+    },
+    {
+      "Action #": 9,
+      "Title": "EHR Vendor Selection & Contract Negotiation",
+      "Declared Obj": "B",
+      "Best Obj": "B",
+      "Best Score": 0.5901,
+      "Classification": "Fair",
+      "Is Orphan": false,
+      "Owner": "Chief Information Officer (CIO)",
+      "Budget (LKR M)": 15.0
+    },
+    {
+      "Action #": 10,
+      "Title": "IT Infrastructure Assessment & Network Upgrade",
+      "Declared Obj": "B",
+      "Best Obj": "B",
+      "Best Score": 0.6722,
+      "Classification": "Good",
+      "Is Orphan": false,
+      "Owner": "CIO (with IT Department)",
+      "Budget (LKR M)": 45.0
+    },
+    {
+      "Action #": 11,
+      "Title": "Telemedicine Platform Requirements & Vendor Engagement",
+      "Declared Obj": "B",
+      "Best Obj": "B",
+      "Best Score": 0.7203,
+      "Classification": "Good",
+      "Is Orphan": false,
+      "Owner": "CIO (with International Unit Director)",
+      "Budget (LKR M)": 8.0
+    },
+    {
+      "Action #": 12,
+      "Title": "Cybersecurity Baseline Assessment & Policy Development",
+      "Declared Obj": "B",
+      "Best Obj": "B",
+      "Best Score": 0.6431,
+      "Classification": "Good",
+      "Is Orphan": false,
+      "Owner": "CIO",
+      "Budget (LKR M)": 12.0
+    },
+    {
+      "Action #": 13,
+      "Title": "Establishment of Ethics Review Committee",
+      "Declared Obj": "C",
+      "Best Obj": "B",
+      "Best Score": 0.4289,
+      "Classification": "Poor",
+      "Is Orphan": true,
+      "Owner": "Medical Director",
+      "Budget (LKR M)": 3.0
+    },
+    {
+      "Action #": 14,
+      "Title": "University Research Partnership MOU",
+      "Declared Obj": "C",
+      "Best Obj": "C",
+      "Best Score": 0.6081,
+      "Classification": "Good",
+      "Is Orphan": false,
+      "Owner": "Medical Director",
+      "Budget (LKR M)": 4.0
+    },
+    {
+      "Action #": 15,
+      "Title": "Appointment of Research Coordinator",
+      "Declared Obj": "C",
+      "Best Obj": "C",
+      "Best Score": 0.5402,
+      "Classification": "Fair",
+      "Is Orphan": false,
+      "Owner": "HR Director (with Medical Director)",
+      "Budget (LKR M)": 4.0
+    },
+    {
+      "Action #": 16,
+      "Title": "Specialist Clinician Recruitment Drive",
+      "Declared Obj": "D",
+      "Best Obj": "D",
+      "Best Score": 0.4921,
+      "Classification": "Fair",
+      "Is Orphan": false,
+      "Owner": "HR Director (with Medical Director)",
+      "Budget (LKR M)": 18.0
+    },
+    {
+      "Action #": 17,
+      "Title": "Nursing Workforce Expansion Planning",
+      "Declared Obj": "D",
+      "Best Obj": "D",
+      "Best Score": 0.5277,
+      "Classification": "Fair",
+      "Is Orphan": false,
+      "Owner": "Director of Nursing (with HR Director)",
+      "Budget (LKR M)": 15.0
+    },
+    {
+      "Action #": 18,
+      "Title": "Continuing Professional Development (CPD) Programme Launch",
+      "Declared Obj": "D",
+      "Best Obj": "D",
+      "Best Score": 0.7156,
+      "Classification": "Good",
+      "Is Orphan": false,
+      "Owner": "Director of Nursing (with Medical Director)",
+      "Budget (LKR M)": 10.0
+    },
+    {
+      "Action #": 19,
+      "Title": "Annual Staff Cricket Tournament & Sports Sponsorship",
+      "Declared Obj": "D",
+      "Best Obj": "E",
+      "Best Score": 0.3846,
+      "Classification": "Poor",
+      "Is Orphan": true,
+      "Owner": "HR Director (with Marketing Director)",
+      "Budget (LKR M)": 8.0
+    },
+    {
+      "Action #": 20,
+      "Title": "Maldives Partnership Scoping & Negotiations",
+      "Declared Obj": "E",
+      "Best Obj": "E",
+      "Best Score": 0.7032,
+      "Classification": "Good",
+      "Is Orphan": false,
+      "Owner": "International Unit Director",
+      "Budget (LKR M)": 14.0
+    },
+    {
+      "Action #": 21,
+      "Title": "Medical Tourism Concierge Unit Setup",
+      "Declared Obj": "E",
+      "Best Obj": "E",
+      "Best Score": 0.6205,
+      "Classification": "Good",
+      "Is Orphan": false,
+      "Owner": "International Unit Director (with Marketing Director)",
+      "Budget (LKR M)": 12.0
+    },
+    {
+      "Action #": 22,
+      "Title": "Community Preventive Health Screening Programme \u2014 Negombo Division",
+      "Declared Obj": "E",
+      "Best Obj": "E",
+      "Best Score": 0.458,
+      "Classification": "Fair",
+      "Is Orphan": false,
+      "Owner": "Marketing Director (with Medical Director)",
+      "Budget (LKR M)": 9.0
+    },
+    {
+      "Action #": 23,
+      "Title": "Corporate Wellness Partnership Expansion",
+      "Declared Obj": "E",
+      "Best Obj": "E",
+      "Best Score": 0.5079,
+      "Classification": "Fair",
+      "Is Orphan": false,
+      "Owner": "Marketing Director",
+      "Budget (LKR M)": 7.0
+    },
+    {
+      "Action #": 24,
+      "Title": "Executive Lounge Furniture & Premium D\u00e9cor Upgrade",
+      "Declared Obj": "E",
+      "Best Obj": "A",
+      "Best Score": 0.3872,
+      "Classification": "Poor",
+      "Is Orphan": true,
+      "Owner": "Facilities & Projects Director",
+      "Budget (LKR M)": 18.0
+    },
+    {
+      "Action #": 25,
+      "Title": "Retail Pharmacy Outlet Expansion \u2014 Negombo Town Centre",
+      "Declared Obj": "E",
+      "Best Obj": "A",
+      "Best Score": 0.3329,
+      "Classification": "Poor",
+      "Is Orphan": true,
+      "Owner": "Finance Director (with Marketing Director)",
+      "Budget (LKR M)": 25.0
+    }
+  ],
+  "objective_alignments": [
+    {
+      "Code": "A",
+      "Name": "Patient Care Excellence",
+      "Mean Similarity": 0.404,
+      "Max Similarity": 0.5638,
+      "Coverage": 0.32,
+      "Aligned Actions": 8,
+      "Declared Actions": 8
+    },
+    {
+      "Code": "B",
+      "Name": "Digital Health Transformation",
+      "Mean Similarity": 0.3961,
+      "Max Similarity": 0.7203,
+      "Coverage": 0.2,
+      "Aligned Actions": 5,
+      "Declared Actions": 4
+    },
+    {
+      "Code": "C",
+      "Name": "Research & Innovation",
+      "Mean Similarity": 0.3707,
+      "Max Similarity": 0.6081,
+      "Coverage": 0.12,
+      "Aligned Actions": 3,
+      "Declared Actions": 3
+    },
+    {
+      "Code": "D",
+      "Name": "Workforce Development",
+      "Mean Similarity": 0.3478,
+      "Max Similarity": 0.7156,
+      "Coverage": 0.16,
+      "Aligned Actions": 4,
+      "Declared Actions": 4
+    },
+    {
+      "Code": "E",
+      "Name": "Community & Regional Health Expansion",
+      "Mean Similarity": 0.3945,
+      "Max Similarity": 0.7032,
+      "Coverage": 0.24,
+      "Aligned Actions": 6,
+      "Declared Actions": 6
+    }
+  ],
+  "improvements": [
+    {
+      "Action #": 1,
+      "Title": "Adjacent Land Acquisition Due Diligence & Negotiation",
+      "Declared Obj": "A",
+      "Alignment Score": 0.3153,
+      "Confidence": "MEDIUM",
+      "Modified Desc": "",
+      "Strategic Linkage": ""
+    },
+    {
+      "Action #": 3,
+      "Title": "Cardiac Catheterisation Laboratory Feasibility & Equipment Specification",
+      "Declared Obj": "A",
+      "Alignment Score": 0.3877,
+      "Confidence": "MEDIUM",
+      "Modified Desc": "",
+      "Strategic Linkage": ""
+    },
+    {
+      "Action #": 4,
+      "Title": "Elderly Care Unit Pilot Programme Design",
+      "Declared Obj": "A",
+      "Alignment Score": 0.4913,
+      "Confidence": "MEDIUM",
+      "Modified Desc": "",
+      "Strategic Linkage": ""
+    },
+    {
+      "Action #": 5,
+      "Title": "Aesthetic & Cosmetic Medicine Service Feasibility Study",
+      "Declared Obj": "A",
+      "Alignment Score": 0.4811,
+      "Confidence": "MEDIUM",
+      "Modified Desc": "",
+      "Strategic Linkage": ""
+    },
+    {
+      "Action #": 7,
+      "Title": "Nephrology Service Development Roadmap",
+      "Declared Obj": "A",
+      "Alignment Score": 0.4275,
+      "Confidence": "HIGH",
+      "Modified Desc": "** Develop and implement a comprehensive nephrology service line, including a dialysis unit, to enhance patient care and outcomes in the Negombo-Gampaha region. This initiative aligns with Objective A: Patient Care Excellence by expanding hospital capacity and improving clinical services.\n\n_KPIS:...",
+      "Strategic Linkage": "** This action directly supports Objective A: Patient Care Excellence by expanding hospital capacity, improving clinical services, and enhancing patient outcomes in nephrology care.\n\n** HIGH\n\nThese..."
+    },
+    {
+      "Action #": 8,
+      "Title": "Administrative Office Refurbishment Programme",
+      "Declared Obj": "A",
+      "Alignment Score": 0.395,
+      "Confidence": "HIGH",
+      "Modified Desc": "** Refurbish the administrative wing to enhance patient care coordination and support services, improving staff efficiency and effectiveness in delivering high-quality patient care. This project will also provide a modernized workspace for administrative staff, enabling them to better support cli...",
+      "Strategic Linkage": "** This project will enhance the administrative wing's capacity to support clinical teams in achieving Patient Care Excellence objectives, particularly A2 (Hospital-Acquired Infection rate below 2%..."
+    },
+    {
+      "Action #": 13,
+      "Title": "Establishment of Ethics Review Committee",
+      "Declared Obj": "C",
+      "Alignment Score": 0.4289,
+      "Confidence": "MEDIUM",
+      "Modified Desc": "",
+      "Strategic Linkage": ""
+    },
+    {
+      "Action #": 16,
+      "Title": "Specialist Clinician Recruitment Drive",
+      "Declared Obj": "D",
+      "Alignment Score": 0.4921,
+      "Confidence": "HIGH",
+      "Modified Desc": "** \n\"Recruit and retain specialist clinicians required for the 2026 expansion through a targeted campaign, focusing on interventional cardiology, nephrology, geriatric medicine, reproductive medicine, and dermatological aesthetics. This effort will support Objective D: Workforce Development by in...",
+      "Strategic Linkage": "**\n\"This action directly supports Objective D: Workforce Development by increasing clinical staffing and enhancing our capacity to deliver world-class care across expanding service lines, which is..."
+    },
+    {
+      "Action #": 19,
+      "Title": "Annual Staff Cricket Tournament & Sports Sponsorship",
+      "Declared Obj": "D",
+      "Alignment Score": 0.3846,
+      "Confidence": "MEDIUM",
+      "Modified Desc": "",
+      "Strategic Linkage": ""
+    },
+    {
+      "Action #": 22,
+      "Title": "Community Preventive Health Screening Programme \u2014 Negombo Division",
+      "Declared Obj": "E",
+      "Alignment Score": 0.458,
+      "Confidence": "MEDIUM",
+      "Modified Desc": "",
+      "Strategic Linkage": ""
+    },
+    {
+      "Action #": 24,
+      "Title": "Executive Lounge Furniture & Premium D\u00e9cor Upgrade",
+      "Declared Obj": "E",
+      "Alignment Score": 0.3872,
+      "Confidence": "MEDIUM",
+      "Modified Desc": "",
+      "Strategic Linkage": ""
+    },
+    {
+      "Action #": 25,
+      "Title": "Retail Pharmacy Outlet Expansion \u2014 Negombo Town Centre",
+      "Declared Obj": "E",
+      "Alignment Score": 0.3329,
+      "Confidence": "HIGH",
+      "Modified Desc": "** Establish a retail pharmacy outlet in Negombo town centre as part of the hospital's Community & Regional Health Expansion strategy, aiming to increase community touchpoints and brand presence while providing convenient access to healthcare services for local residents.\n\n_KPIS:**\n\n* Number of c...",
+      "Strategic Linkage": "** This retail pharmacy outlet will directly support the strategic objective of Community & Regional Health Expansion by increasing community touchpoints, providing convenient access to healthcare..."
+    }
+  ],
+  "agent_recommendations": [
+    {
+      "Rec ID": "rec_orphan_action_1",
+      "Issue Type": "orphan_action",
+      "Impact Score": 0.38,
+      "Confidence": "HIGH",
+      "Budget (LKR M)": 0.0,
+      "Timeline": "Implement changes within 6 weeks, with a phased rollout to ensure minimal disruption to ongoing operations.",
+      "What to Change": "The misalignment between Action 1 ('Adjacent Land Acquisition Due Diligence & Negotiation') and Objective A (Patient Care Excellence) is due to a lack of clear connection between land acquisition and the hospital's primary objective of delivering outstanding patient care. This disconnect may be a...",
+      "Actions": "Revise Action 1 to explicitly link land acquisition with Objective A by incorporating metrics that measure how the acquired land will enhance patie...; Introduce a new objective (Objective D) focused on infrastructure development and its direct impact on patient care. This would ensure that all act...; Conduct a thorough review of the hospital's strategic plan to identify other areas where similar misalignments may exist, ensuring that all future...; [Revised] None. The proposal demonstrates a clear understanding of the strategic alignment issue and provides concrete recommendations to address it.",
+      "KPIs": "Land Acquisition Impact on Patient Care (measured by increase in bed capacity or operational effi...; Time-to-Clinical-Start for new service lines; Reduction in Capital Expenditure per Bed"
+    },
+    {
+      "Rec ID": "rec_orphan_action_25",
+      "Issue Type": "orphan_action",
+      "Impact Score": 0.23,
+      "Confidence": "MEDIUM",
+      "Budget (LKR M)": 0.0,
+      "Timeline": "Implement changes within the next 6 weeks, allowing for a revised action plan to be submitted to stakeholders by the end of Q2.",
+      "What to Change": "The misalignment between Action 25 and the hospital's strategic plan is due to a mismatch in objectives, where the retail pharmacy outlet expansion does not directly contribute to the community health expansion objective (E), despite being related to it. This discrepancy may be attributed to an i...",
+      "Actions": "Revise Action 25 to explicitly link its outcomes to the community health expansion objective (E) by incorporating metrics such as increased access...; Conduct a thorough review of the retail pharmacy outlet expansion plan to identify opportunities for synergies with other actions, particularly tho...",
+      "KPIs": "Alignment score improvement between Action 25 and objective E; Increase in patient satisfaction ratings among Negombo town centre residents; Number of community outreach programs conducted through the retail pharmacy outlet"
+    },
+    {
+      "Rec ID": "rec_under_supported_C",
+      "Issue Type": "under_supported_strategy",
+      "Impact Score": 0.605,
+      "Confidence": "HIGH",
+      "Budget (LKR M)": 50.0,
+      "Timeline": "** Implement Recommendations 1-3 over the next 6-9 months, with regular progress updates to the hospital's executive leadership.\n\n**BUDGET_ESTIMATE:** Estimated additional budget needed: LKR 50 million (to support Research Coordinator recruitment, Ethics Review Committee establishment, and research-related infrastructure development).\n\n**EXPECTED_OUTCOME:** By implementing these recommendations, we expect to see a significant increase in action coverage for Objective C ('Research & Innovation'), with at least 30% of actions completed within the next 12 months. This will help to position the hospital as a knowledge hub and enhance its reputation for clinical research and innovation.\n\n**CONFIDENCE:** HIGH (based on the clear root cause analysis and actionable recommendations).",
+      "What to Change": "** The misalignment between Objective C ('Research & Innovation') and action coverage is due to a lack of prioritization and resource allocation towards research-related initiatives. This is evident from the low score (12%) and limited action coverage for this objective.\n\n_1:** Establish a clear...",
+      "Actions": "** Establish a clear Research & Innovation Roadmap with specific, measurable goals and timelines to guide action planning and resource allocation....; ** Designate a senior leader as the champion for Research & Innovation, responsible for overseeing progress, addressing barriers, and ensuring alig...; ** Develop a comprehensive plan to recruit and retain research talent, including incentives for researchers, clinicians, and students to participat...",
+      "KPIs": "Research & Innovation Roadmap completion rate (e.g., 80% of roadmap milestones achieved within th...; Number of new clinical trials initiated per quarter; Percentage increase in research-related publications and presentations; *TIMELINE:** Implement Recommendations 1-3 over the next 6-9 months, with regular progress update...; *BUDGET_ESTIMATE:** Estimated additional budget needed: LKR 50 million (to support Research Coord...; *EXPECTED_OUTCOME:** By implementing these recommendations, we expect to see a significant increa...; *CONFIDENCE:** HIGH (based on the clear root cause analysis and actionable recommendations)."
+    },
+    {
+      "Rec ID": "rec_under_supported_D",
+      "Issue Type": "under_supported_strategy",
+      "Impact Score": 0.68,
+      "Confidence": "HIGH",
+      "Budget (LKR M)": 50.0,
+      "Timeline": "Implement changes within the next 6 months, with regular review and updates every quarter.",
+      "What to Change": "The misalignment between Objective D (Workforce Development) and action coverage is due to a lack of prioritization and resource allocation towards workforce development initiatives. This is evident from the low score (0.265) assigned to Objective D compared to other strategic objectives.",
+      "Actions": "Re-evaluate and re-prioritize Objective D by allocating additional resources and increasing its score to match or exceed that of other strategic ob...; Identify and eliminate non-essential actions, such as [action_19] (Annual Staff Cricket Tournament & Sports Sponsorship), which do not directly con...; Develop a comprehensive workforce development plan that aligns with the hospital's strategic objectives, including specific targets for increasing...; [Revised] Consider adding a section on stakeholder engagement and communication to address potential resistance from staff. Additionally, define sp...",
+      "KPIs": "Workforce Development Score (0.265 -> 0.500); Clinical Staffing Increase Rate (%); Average Time-to-Fill Vacant Positions"
+    },
+    {
+      "Rec ID": "rec_under_supported_B",
+      "Issue Type": "under_supported_strategy",
+      "Impact Score": 0.155,
+      "Confidence": "MEDIUM",
+      "Budget (LKR M)": 0.0,
+      "Timeline": "",
+      "What to Change": "Objective B ('Digital Health Transformation') has only 20% action coverage. Gap actions: [].",
+      "Actions": "[Revised] ** To revise this recommendation, I suggest providing more specific details on:\n\n1. Proposed actions to improve action coverage of Object...",
+      "KPIs": ""
+    }
+  ]
+}

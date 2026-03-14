@@ -1,0 +1,37 @@
+source,id,objective,action_title,relevance,specificity,actionability,coherence,composite
+rag_improvement,rag_imp_7,A,Nephrology Service Development Roadmap,0.5397,0.5422,0.8,0.8,0.6703
+rag_improvement,rag_imp_8,A,Administrative Office Refurbishment Programme,0.5104,0.4341,0.6,0.8,0.5899
+rag_improvement,rag_imp_16,D,Specialist Clinician Recruitment Drive,0.5217,0.6615,0.8,0.8,0.6888
+rag_improvement,rag_imp_25,E,Retail Pharmacy Outlet Expansion — Negombo Town Centre,0.5639,0.5161,0.8,0.8,0.6724
+rag_new_action,rag_new_B_1,B,Develop a Digital Health Roadmap and Governance Framework,0.6487,0.2916,0.8,0.8,0.6529
+rag_new_action,rag_new_B_2,B,Develop AI-Powered Clinical Decision Support System,0.563,0.5248,0.8,0.8,0.6739
+rag_new_action,rag_new_C_1,C,Clinical Trial Registry and Management System,0.5509,0.7938,0.8,0.8,0.724
+rag_new_action,rag_new_C_2,C,Research Capacity Building Program,0.6714,0.5718,0.8,0.8,0.7158
+rag_new_action,rag_new_C_3,C,Innovation Incubator and Funding Mechanism,0.4583,0.4827,0.8,0.8,0.634
+rag_new_action,rag_new_D_1,D,Clinical Leadership Development Programme,0.6524,0.697,0.8,0.8,0.7351
+rag_new_action,rag_new_D_2,D,Workforce Analytics and Planning System (WAPS),0.402,0.5806,1.0,0.8,0.6867
+rag_new_action,rag_new_E_1,E,Establish a Community Outreach Team,0.659,0.2088,0.8,0.8,0.6395
+rag_new_action,rag_new_E_2,E,Develop a Regional Healthcare Network Platform,0.5735,0.4974,0.8,0.8,0.6715
+agent_recommendation,rec_orphan_action_1,A,orphan_action_1,0.49,0.5193,0.2,0.8,0.5009
+agent_recommendation,rec_orphan_action_25,E,orphan_action_25,0.5438,0.4271,0.2,0.8,0.4986
+agent_recommendation,rec_under_supported_C,C,under_supported_C,0.7009,0.5114,1.0,0.8,0.7625
+agent_recommendation,rec_under_supported_D,D,under_supported_D,0.5274,0.6023,0.4,0.8,0.5787
+agent_recommendation,rec_under_supported_B,B,under_supported_B,0.4346,0.4752,0.2,0.8,0.4754
+baseline_generic,baseline_rag_imp_7,A,Nephrology Service Development Roadmap,0.5858,0.0,0.0,0.6,0.3258
+baseline_generic,baseline_rag_imp_8,A,Administrative Office Refurbishment Programme,0.5858,0.0,0.0,0.6,0.3258
+baseline_generic,baseline_rag_imp_16,D,Specialist Clinician Recruitment Drive,0.4572,0.0,0.0,0.6,0.2871
+baseline_generic,baseline_rag_imp_25,E,Retail Pharmacy Outlet Expansion — Negombo Town Centre,0.6899,0.0,0.0,0.6,0.357
+baseline_generic,baseline_rag_new_B_1,B,Develop a Digital Health Roadmap and Governance Framework,0.7119,0.0,0.0,0.6,0.3636
+baseline_generic,baseline_rag_new_B_2,B,Develop AI-Powered Clinical Decision Support System,0.7119,0.0,0.0,0.6,0.3636
+baseline_generic,baseline_rag_new_C_1,C,Clinical Trial Registry and Management System,0.5693,0.0,0.0,0.6,0.3208
+baseline_generic,baseline_rag_new_C_2,C,Research Capacity Building Program,0.5693,0.0,0.0,0.6,0.3208
+baseline_generic,baseline_rag_new_C_3,C,Innovation Incubator and Funding Mechanism,0.5693,0.0,0.0,0.6,0.3208
+baseline_generic,baseline_rag_new_D_1,D,Clinical Leadership Development Programme,0.4572,0.0,0.0,0.6,0.2871
+baseline_generic,baseline_rag_new_D_2,D,Workforce Analytics and Planning System (WAPS),0.4572,0.0,0.0,0.6,0.2871
+baseline_generic,baseline_rag_new_E_1,E,Establish a Community Outreach Team,0.6899,0.0,0.0,0.6,0.357
+baseline_generic,baseline_rag_new_E_2,E,Develop a Regional Healthcare Network Platform,0.6899,0.0,0.0,0.6,0.357
+baseline_generic,baseline_rec_orphan_action_1,A,orphan_action_1,0.5858,0.0,0.0,0.6,0.3258
+baseline_generic,baseline_rec_orphan_action_25,E,orphan_action_25,0.6899,0.0,0.0,0.6,0.357
+baseline_generic,baseline_rec_under_supported_C,C,under_supported_C,0.5693,0.0,0.0,0.6,0.3208
+baseline_generic,baseline_rec_under_supported_D,D,under_supported_D,0.4572,0.0,0.0,0.6,0.2871
+baseline_generic,baseline_rec_under_supported_B,B,under_supported_B,0.7119,0.0,0.0,0.6,0.3636
