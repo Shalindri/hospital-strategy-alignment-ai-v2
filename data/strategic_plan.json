@@ -3,27 +3,27 @@
     {
       "id": "O1",
       "title": "Improve Patient Safety",
-      "description": "This objective aims to enhance the overall safety of patients by reducing hospital-acquired infections (HAIs) and serious clinical incidents. With a current HAI rate of 3.1%, the goal is to achieve a rate below 2.0% through rigorous infection control measures and mandatory staff training. The initiative will also focus on minimizing medication errors and achieving Joint Commission International (JCI) accreditation, which will validate the hospital's commitment to global safety standards."
+      "description": "Patient safety is the cornerstone of clinical excellence. Nawaloka Hospital Negombo currently records a hospital-acquired infection (HAI) rate of 3.1% — above the NHS England benchmark of 2.0%. The Trust Board has made patient safety the highest-priority objective for 2025–2028, with a zero-tolerance approach to preventable patient harm. Achieving this objective requires a system-wide cultural shift towards proactive clinical risk prevention."
     },
     {
       "id": "O2",
       "title": "Modernise Hospital Technology",
-      "description": "The objective seeks to transform the hospital's IT infrastructure by implementing a cloud-hosted Electronic Health Record (EHR) system, thereby eliminating paper-based records. This modernization will enhance data accuracy and accessibility, reduce administrative burdens, and improve clinical decision-making through AI-powered diagnostic tools. Additionally, strengthening cybersecurity measures will protect sensitive patient information and ensure compliance with data security regulations."
+      "description": "Nawaloka Hospital Negombo's current IT infrastructure was last comprehensively upgraded in 2016, with significant reliance on paper-based clinical records. This objective will transform the Trust into a digitally mature, data-driven organisation through the deployment of a cloud-hosted Electronic Health Record system and AI-powered diagnostic tools. Enhanced cybersecurity measures will also be implemented to protect sensitive patient data."
     },
     {
       "id": "O3",
       "title": "Enhance Patient Experience and Satisfaction",
-      "description": "This objective focuses on placing patients at the center of care by improving their overall experience within the hospital. Key initiatives include reducing outpatient waiting times, expanding multilingual communication services, and launching a self-service patient portal. By systematically collecting and acting on patient feedback, the hospital aims to significantly increase patient satisfaction scores and foster loyalty among its diverse patient population."
+      "description": "The Friends and Family Test (FFT) score for Nawaloka Hospital Negombo is currently below the London average, with significant outpatient waiting times and limited translation services. This objective aims to place the patient at the centre of every service decision by redesigning the patient journey, introducing multilingual communication, and systematically collecting and acting on patient feedback to improve satisfaction and loyalty."
     },
     {
       "id": "O4",
       "title": "Develop and Retain a Skilled Workforce",
-      "description": "The objective aims to cultivate a highly skilled workforce by implementing comprehensive training and development programs. This includes addressing nursing vacancy rates and enhancing staff retention through career advancement opportunities and supportive work environments. By investing in workforce development, the hospital seeks to ensure that its clinical teams are equipped with the necessary skills and knowledge to deliver high-quality care."
+      "description": "A skilled workforce is essential for delivering high-quality healthcare. Nawaloka Hospital Negombo faces challenges with nursing vacancy rates and staff retention. This objective focuses on implementing comprehensive training programs, career development pathways, and employee engagement initiatives to attract and retain top talent, ensuring that the hospital maintains a competent and motivated workforce."
     },
     {
       "id": "O5",
       "title": "Achieve Financial Sustainability",
-      "description": "This objective is centered on ensuring the hospital's long-term financial health by addressing the current deficit and optimizing resource allocation. Strategies will include improving operational efficiencies, enhancing revenue cycles, and exploring new service lines. By achieving financial sustainability, the hospital can continue to invest in quality care and technological advancements, ultimately benefiting patients and the community."
+      "description": "Financial sustainability is critical for the long-term viability of Nawaloka Hospital Negombo. The Trust has experienced a significant deficit in the previous financial year. This objective will focus on optimizing procurement processes, enhancing revenue cycle management, and identifying new funding opportunities to ensure that the hospital can operate within its means while continuing to invest in quality care."
     }
   ]
 }

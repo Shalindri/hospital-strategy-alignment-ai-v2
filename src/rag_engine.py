@@ -1,176 +1,92 @@
 """
-rag_engine.py
--------------
-Retrieval-Augmented Generation (RAG) pipeline for alignment improvement suggestions.
-
-How it fits in the pipeline:
-  alignment_scorer → [this module] → agent_reasoner / dashboard
-
-Beginner note:
-  RAG = Retrieve then Generate.
-
-  Step 1 — RETRIEVE: query ChromaDB for the most relevant strategic objective
-           chunks for a given poorly-aligned action.
-
-  Step 2 — GENERATE: send those retrieved chunks + the action text to GPT-4o-mini
-           and ask it to suggest concrete improvements.
-
-  Why RAG instead of just prompting the LLM?
-  Because the LLM's training data does NOT include YOUR hospital's specific
-  strategic objectives. RAG gives the LLM exactly the right context from YOUR
-  documents, making suggestions much more relevant.
+rag_engine.py — RAG pipeline: retrieve relevant objectives from ChromaDB, then generate
+improvement suggestions and new action proposals via GPT-4o-mini.
 """
 
-# --- Standard library ---
-import json
-
-# --- Local ---
-from src.config import (
-    get_openai_client,
-    OPENAI_MODEL,
-    THRESHOLD_GOOD,
-    THRESHOLD_EXCELLENT,
-    OBJECTIVES_COLLECTION,
-)
+from src.config import get_openai_client, OPENAI_MODEL, THRESHOLD_GOOD, OBJECTIVES_COLLECTION
 from src import vector_store
 
 
-# =============================================================================
-# HELPER: IMPROVEMENT SUGGESTION VIA RAG
-# =============================================================================
-
 def get_improvement_suggestion(action: dict, top_k_results: list) -> str:
     """
-    Ask GPT-4o-mini to suggest 3 improvements for a poorly-aligned action.
-
-    The retrieved objective chunks are provided as context so the LLM
-    grounds its suggestions in the actual strategic plan.
+    Ask GPT-4o-mini for 3 improvements to a poorly-aligned action.
 
     Args:
-        action (dict): The poorly-aligned action (id, title, description).
-        top_k_results (list): Top-K results from vector_store.query() —
-                              each has keys: id, document, distance, metadata.
+        action: Action dict (id, title, description).
+        top_k_results: Retrieved objective chunks from vector_store.query().
 
     Returns:
-        str: The LLM's 3 improvement suggestions as plain text.
-
-    Raises:
-        RuntimeError: If the OpenAI API call fails.
+        LLM suggestion text.
     """
-    # Step 1 — Build the context string from retrieved objective chunks
-    # Join the top-K retrieved documents into one block of text
-    context_parts = []
-    for result in top_k_results:
-        obj_id  = result["id"]
-        obj_text = result["document"]
-        context_parts.append(f"[{obj_id}] {obj_text}")
+    context = "\n".join(f"[{r['id']}] {r['document']}" for r in top_k_results)
 
-    context = "\n".join(context_parts)
-
-    # Step 2 — Build the prompt
     prompt = f"""You are a hospital strategy consultant helping align operational actions
 with strategic objectives.
 
-Strategic objective context (retrieved from the strategic plan):
+Strategic objective context:
 {context}
 
-This annual action plan item has POOR alignment with the strategic objectives:
+Poorly-aligned action:
 Title: {action['title']}
-Description: {action.get('description', 'No description provided.')}
+Description: {action.get('description', '')}
 
-Please suggest exactly 3 specific, actionable improvements to better align
-this action with the strategic objectives above. Format your response as:
-
-1. [Improvement title]: [Specific description of what to change and why it helps]
-2. [Improvement title]: [Specific description of what to change and why it helps]
-3. [Improvement title]: [Specific description of what to change and why it helps]"""
+Suggest exactly 3 specific, actionable improvements:
+1. [Title]: [Description]
+2. [Title]: [Description]
+3. [Title]: [Description]"""
 
     try:
         client   = get_openai_client()
         response = client.chat.completions.create(
-            model       = OPENAI_MODEL,
-            messages    = [{"role": "user", "content": prompt}],
-            temperature = 0.3,   # slightly creative but still focused
+            model=OPENAI_MODEL,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.3,
         )
-        suggestion = response.choices[0].message.content.strip()
-
+        return response.choices[0].message.content.strip()
     except Exception as e:
-        raise RuntimeError(
-            f"OpenAI API call failed for action [{action['id']}]: {e}\n"
-            "Check your OPENAI_API_KEY and internet connection."
-        )
+        raise RuntimeError(f"API call failed for [{action['id']}]: {e}")
 
-    return suggestion
-
-
-# =============================================================================
-# HELPER: NEW ACTION PROPOSAL
-# =============================================================================
 
 def generate_new_action_proposal(objective: dict) -> str:
     """
-    For an objective with no Excellent-tier action, propose one new action.
-
-    This helps decision-makers identify gaps in the action plan.
+    Propose one new action for an objective with no Excellent-tier action.
 
     Args:
-        objective (dict): Objective dict (id, title, description).
+        objective: Objective dict (id, title, description).
 
     Returns:
-        str: A proposed new action as plain text.
+        Proposed action text.
     """
-    prompt = f"""You are a hospital strategy consultant reviewing a hospital's annual action plan.
+    prompt = f"""You are a hospital strategy consultant reviewing an action plan.
 
-The following strategic objective currently has NO action plan item that directly
-and strongly supports it (no "Excellent" alignment):
+This objective has NO action that strongly supports it:
+[{objective['id']}] {objective['title']}
+{objective.get('description', '')}
 
-Strategic Objective [{objective['id']}]:
-Title: {objective['title']}
-Description: {objective.get('description', 'No description provided.')}
-
-Propose ONE specific, concrete new action plan item that would directly and
-strongly operationalise this strategic objective. Format your response as:
-
-Proposed Action Title: [short, clear title]
-Description: [2-3 sentences describing what the action involves, who is responsible,
-and how it directly advances the objective above]"""
+Propose ONE specific new action that would directly operationalise this objective.
+Format:
+Proposed Action Title: [title]
+Description: [2-3 sentences]"""
 
     try:
         client   = get_openai_client()
         response = client.chat.completions.create(
-            model       = OPENAI_MODEL,
-            messages    = [{"role": "user", "content": prompt}],
-            temperature = 0.4,
+            model=OPENAI_MODEL,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.4,
         )
-        proposal = response.choices[0].message.content.strip()
-
+        return response.choices[0].message.content.strip()
     except Exception as e:
-        raise RuntimeError(
-            f"OpenAI API call failed for objective [{objective['id']}]: {e}\n"
-            "Check your OPENAI_API_KEY and internet connection."
-        )
+        raise RuntimeError(f"API call failed for [{objective['id']}]: {e}")
 
-    return proposal
-
-
-# =============================================================================
-# MAIN ENTRY POINT
-# =============================================================================
 
 def run_rag_suggestions(alignment_result: dict) -> dict:
     """
-    Generate RAG improvement suggestions for poor actions and new action proposals
-    for uncovered objectives.
-
-    Poor action = best alignment score < THRESHOLD_GOOD across all objectives.
-    Uncovered objective = no action has "Excellent" tier for that objective.
-
-    Args:
-        alignment_result (dict): Output from alignment_scorer.run_alignment().
-                                 Must have keys: classifications, objectives, actions.
+    Generate improvement suggestions for poorly-aligned actions and new action
+    proposals for objectives with no Excellent-tier action.
 
     Returns:
-        dict: {
+        {
             "improvement_suggestions": {action_id: suggestion_text},
             "new_action_proposals":    {objective_id: proposal_text}
         }
@@ -183,93 +99,47 @@ def run_rag_suggestions(alignment_result: dict) -> dict:
     objectives      = alignment_result["objectives"]
     actions         = alignment_result["actions"]
 
-    # -------------------------------------------------------------------------
-    # PART A: Improvement suggestions for poorly-aligned actions
-    # -------------------------------------------------------------------------
-    print("\n📌 Part A: Generating improvement suggestions for poor actions...")
-
-    # Find each action's best score across all objectives
-    # best_scores: {action_id: float}
-    best_scores: dict = {}
+    # Part A — improvements for poorly-aligned actions
+    best_scores = {}
     for c in classifications:
-        act_id = c["action_id"]
-        if act_id not in best_scores or c["score"] > best_scores[act_id]:
-            best_scores[act_id] = c["score"]
+        aid = c["action_id"]
+        if aid not in best_scores or c["score"] > best_scores[aid]:
+            best_scores[aid] = c["score"]
 
-    # Actions whose best score is below THRESHOLD_GOOD need improvement
-    poor_actions = [
-        act for act in actions
-        if best_scores.get(act["id"], 0.0) < THRESHOLD_GOOD
-    ]
+    poor_actions = [a for a in actions if best_scores.get(a["id"], 0.0) < THRESHOLD_GOOD]
+    print(f"\n📌 Part A: {len(poor_actions)} action(s) need improvement...")
 
-    print(f"   Found {len(poor_actions)} action(s) with best score < {THRESHOLD_GOOD}")
-
-    improvement_suggestions: dict = {}
-
+    improvement_suggestions = {}
     for act in poor_actions:
-        print(f"\n   Generating suggestion for action [{act['id']}]: {act['title'][:50]}...")
-
-        # Retrieve top-3 most relevant objectives from ChromaDB
-        query_text = act["title"] + " " + act.get("description", "")
-        top_results = vector_store.query(
-            text            = query_text,
-            collection_name = OBJECTIVES_COLLECTION,
-            top_k           = 3,
-        )
+        print(f"   Generating for [{act['id']}]: {act['title'][:50]}...")
+        query_text  = act["title"] + " " + act.get("description", "")
+        top_results = vector_store.query(query_text, OBJECTIVES_COLLECTION, top_k=3)
 
         if not top_results:
-            print(f"   ⚠️  No objectives in ChromaDB — skipping RAG for [{act['id']}]")
-            improvement_suggestions[act["id"]] = (
-                "Could not generate suggestion: no objectives indexed in ChromaDB. "
-                "Run vector_store.embed_and_store() on objectives first."
-            )
+            improvement_suggestions[act["id"]] = "No objectives in ChromaDB. Run embed_and_store first."
             continue
 
-        # Call GPT-4o-mini with the retrieved context
         try:
-            suggestion = get_improvement_suggestion(act, top_results)
-            improvement_suggestions[act["id"]] = suggestion
-            print(f"   ✅ Suggestion generated for [{act['id']}].")
+            improvement_suggestions[act["id"]] = get_improvement_suggestion(act, top_results)
+            print(f"   ✅ Done [{act['id']}].")
         except RuntimeError as e:
-            print(f"   ❌ Error: {e}")
-            improvement_suggestions[act["id"]] = f"Error generating suggestion: {e}"
+            improvement_suggestions[act["id"]] = f"Error: {e}"
 
-    # -------------------------------------------------------------------------
-    # PART B: New action proposals for uncovered objectives
-    # -------------------------------------------------------------------------
-    print("\n📌 Part B: Generating new action proposals for uncovered objectives...")
+    # Part B — new proposals for uncovered objectives
+    excellent_obj_ids = {c["objective_id"] for c in classifications if c["tier"] == "Excellent"}
+    uncovered = [o for o in objectives if o["id"] not in excellent_obj_ids]
+    print(f"\n📌 Part B: {len(uncovered)} objective(s) lack an Excellent action...")
 
-    # Find objectives with no Excellent-tier action
-    # Build a set of objective IDs that have at least one "Excellent" action
-    excellent_objective_ids = {
-        c["objective_id"]
-        for c in classifications
-        if c["tier"] == "Excellent"
-    }
-
-    uncovered_objectives = [
-        obj for obj in objectives
-        if obj["id"] not in excellent_objective_ids
-    ]
-
-    print(f"   Found {len(uncovered_objectives)} objective(s) with no Excellent-tier action.")
-
-    new_action_proposals: dict = {}
-
-    for obj in uncovered_objectives:
-        print(f"\n   Generating proposal for objective [{obj['id']}]: {obj['title'][:50]}...")
-
+    new_action_proposals = {}
+    for obj in uncovered:
+        print(f"   Generating for [{obj['id']}]: {obj['title'][:50]}...")
         try:
-            proposal = generate_new_action_proposal(obj)
-            new_action_proposals[obj["id"]] = proposal
-            print(f"   ✅ Proposal generated for [{obj['id']}].")
+            new_action_proposals[obj["id"]] = generate_new_action_proposal(obj)
+            print(f"   ✅ Done [{obj['id']}].")
         except RuntimeError as e:
-            print(f"   ❌ Error: {e}")
-            new_action_proposals[obj["id"]] = f"Error generating proposal: {e}"
+            new_action_proposals[obj["id"]] = f"Error: {e}"
 
-    print("\n✅ RAG engine complete.")
-    print(f"   Generated {len(improvement_suggestions)} improvement suggestions.")
-    print(f"   Generated {len(new_action_proposals)} new action proposals.")
+    print(f"\n✅ RAG complete. {len(improvement_suggestions)} suggestions, {len(new_action_proposals)} proposals.")
 
     return {
         "improvement_suggestions": improvement_suggestions,
