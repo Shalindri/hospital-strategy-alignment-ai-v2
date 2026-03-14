@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 700px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#4A90D9", "font": {"color": "#333333"}, "id": "O1", "label": "O1", "shape": "dot", "size": 26, "title": "\u003cb\u003eImprove Patient Safety and Care Quality\u003c/b\u003e\u003cbr\u003eType: objective\u003cbr\u003eCentrality: 0.158\u003cbr\u003eReduce hospital-acquired infections, surgical errors, and adverse incidents. Achieve accreditation standards, implement ..."}, {"color": "#4A90D9", "font": {"color": "#333333"}, "id": "O2", "label": "O2", "shape": "dot", "size": 26, "title": "\u003cb\u003eExpand Hospital Capacity and Infrastructure\u003c/b\u003e\u003cbr\u003eType: objective\u003cbr\u003eCentrality: 0.158\u003cbr\u003eIncrease bed capacity from 75 to 150 beds by acquiring adjacent land and completing a phased construction programme. Add..."}, {"color": "#4A90D9", "font": {"color": "#333333"}, "id": "O3", "label": "O3", "shape": "dot", "size": 26, "title": "\u003cb\u003eDevelop and Retain a Skilled Workforce\u003c/b\u003e\u003cbr\u003eType: objective\u003cbr\u003eCentrality: 0.158\u003cbr\u003eRecruit specialist clinicians, invest in nurse training programmes, reduce staff turnover, and build a culture of contin..."}, {"color": "#4A90D9", "font": {"color": "#333333"}, "id": "O4", "label": "O4", "shape": "dot", "size": 26, "title": "\u003cb\u003eModernise Digital Systems and Technology\u003c/b\u003e\u003cbr\u003eType: objective\u003cbr\u003eCentrality: 0.158\u003cbr\u003eReplace the ageing hospital information system with a modern electronic health record platform, automate administrative ..."}, {"color": "#4A90D9", "font": {"color": "#333333"}, "id": "O5", "label": "O5", "shape": "dot", "size": 22, "title": "\u003cb\u003eAchieve Financial Sustainability and Growth\u003c/b\u003e\u003cbr\u003eType: objective\u003cbr\u003eCentrality: 0.053\u003cbr\u003eGrow revenue through new service lines and medical tourism, control operational costs, improve procurement efficiency, a..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A1", "label": "A1", "shape": "dot", "size": 22, "title": "\u003cb\u003eLaunch Infection Control Audit Programme\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.053\u003cbr\u003eConduct monthly ward audits to monitor hand hygiene compliance, sterilisation procedures, and personal protective equipm..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A2", "label": "A2", "shape": "dot", "size": 24, "title": "\u003cb\u003eImplement Patient Safety Incident Reporting System\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.105\u003cbr\u003eDeploy a digital tool that allows all staff to report near-misses and adverse events. Review weekly reports in a safety ..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A3", "label": "A3", "shape": "dot", "size": 20, "title": "\u003cb\u003eAchieve JCI Accreditation for Core Clinical Departments\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.000\u003cbr\u003ePrepare the emergency, surgical, and maternity departments for Joint Commission International accreditation. Assign a de..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A4", "label": "A4", "shape": "dot", "size": 22, "title": "\u003cb\u003eAcquire Adjacent Land for Hospital Expansion\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.053\u003cbr\u003eComplete legal due diligence, environmental assessment, and land valuation for the adjacent plot. Secure Board approval ..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A5", "label": "A5", "shape": "dot", "size": 22, "title": "\u003cb\u003eDesign and Build 75-Bed Expansion Wing\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.053\u003cbr\u003eCommission architects to design the new 75-bed wing including cardiac, elderly care, and maternity wards. Award construc..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A6", "label": "A6", "shape": "dot", "size": 22, "title": "\u003cb\u003eOpen Dedicated Elderly Care Unit\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.053\u003cbr\u003eFit out and staff a 15-bed elderly care unit with specialist geriatric nursing, physiotherapy, and dementia support serv..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A7", "label": "A7", "shape": "dot", "size": 22, "title": "\u003cb\u003eLaunch Specialist Nursing Training Programme\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.053\u003cbr\u003ePartner with a nursing college to deliver a 6-month advanced clinical skills programme for registered nurses in ICU, onc..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A8", "label": "A8", "shape": "dot", "size": 22, "title": "\u003cb\u003eIntroduce Staff Retention Incentive Scheme\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.053\u003cbr\u003eDesign and roll out a retention package including performance bonuses, flexible scheduling, funded continuing education,..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A9", "label": "A9", "shape": "dot", "size": 22, "title": "\u003cb\u003eRecruit 10 Specialist Consultants\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.053\u003cbr\u003eAdvertise and fill 10 specialist consultant posts in cardiology, nephrology, oncology, and orthopaedics. Use a mix of fu..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A10", "label": "A10", "shape": "dot", "size": 22, "title": "\u003cb\u003eDeploy Electronic Health Record System\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.053\u003cbr\u003eReplace the paper-based patient record system with a cloud-based electronic health record platform. Complete data migrat..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A11", "label": "A11", "shape": "dot", "size": 20, "title": "\u003cb\u003eAutomate Appointment Scheduling and Billing\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.000\u003cbr\u003eImplement an online patient portal and automated billing system to reduce manual administrative workload, cut appointmen..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A12", "label": "A12", "shape": "dot", "size": 22, "title": "\u003cb\u003eUpgrade Cybersecurity and Data Backup Infrastructure\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.053\u003cbr\u003eConduct a cybersecurity audit, patch all critical vulnerabilities, implement multi-factor authentication for clinical sy..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A13", "label": "A13", "shape": "dot", "size": 24, "title": "\u003cb\u003eLaunch Medical Tourism Package for International Patients\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.105\u003cbr\u003eDevelop affordable surgical and wellness packages targeting expatriates and visitors. Partner with two travel agencies, ..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A14", "label": "A14", "shape": "dot", "size": 20, "title": "\u003cb\u003eRenegotiate Supplier Contracts to Reduce Procurement Costs\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.000\u003cbr\u003eReview all pharmaceutical and medical supply contracts, consolidate to preferred suppliers, and negotiate volume discoun..."}, {"color": "#5BAD72", "font": {"color": "#333333"}, "id": "A15", "label": "A15", "shape": "dot", "size": 20, "title": "\u003cb\u003eOrganise Annual Hospital Sports Day\u003c/b\u003e\u003cbr\u003eType: action\u003cbr\u003eCentrality: 0.000\u003cbr\u003ePlan and host a full-day sports and social event for all hospital staff and their families. Include team games, a barbec..."}]);
+                  edges = new vis.DataSet([{"arrows": "to", "color": "#aaaaaa", "from": "O1", "title": "Score: 0.486 (Fair)", "to": "A1", "width": 2.9452}, {"arrows": "to", "color": "#aaaaaa", "from": "O1", "title": "Score: 0.511 (Fair)", "to": "A2", "width": 3.044}, {"arrows": "to", "color": "#aaaaaa", "from": "O1", "title": "Score: 0.423 (Fair)", "to": "A13", "width": 2.6912000000000003}, {"arrows": "to", "color": "#aaaaaa", "from": "O2", "title": "Score: 0.556 (Fair)", "to": "A4", "width": 3.2252}, {"arrows": "to", "color": "#aaaaaa", "from": "O2", "title": "Score: 0.572 (Fair)", "to": "A5", "width": 3.2868}, {"arrows": "to", "color": "#aaaaaa", "from": "O2", "title": "Score: 0.471 (Fair)", "to": "A6", "width": 2.8852}, {"arrows": "to", "color": "#aaaaaa", "from": "O3", "title": "Score: 0.610 (Good)", "to": "A7", "width": 3.44}, {"arrows": "to", "color": "#aaaaaa", "from": "O3", "title": "Score: 0.552 (Fair)", "to": "A8", "width": 3.2096}, {"arrows": "to", "color": "#aaaaaa", "from": "O3", "title": "Score: 0.435 (Fair)", "to": "A9", "width": 2.7384}, {"arrows": "to", "color": "#aaaaaa", "from": "O4", "title": "Score: 0.486 (Fair)", "to": "A2", "width": 2.944}, {"arrows": "to", "color": "#aaaaaa", "from": "O4", "title": "Score: 0.767 (Excellent)", "to": "A10", "width": 4.069599999999999}, {"arrows": "to", "color": "#aaaaaa", "from": "O4", "title": "Score: 0.466 (Fair)", "to": "A12", "width": 2.8624}, {"arrows": "to", "color": "#aaaaaa", "from": "O5", "title": "Score: 0.509 (Fair)", "to": "A13", "width": 3.0344}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"physics": {"forceAtlas2Based": {"gravitationalConstant": -50, "centralGravity": 0.01, "springLength": 150, "springConstant": 0.08}, "solver": "forceAtlas2Based", "stabilization": {"iterations": 200}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

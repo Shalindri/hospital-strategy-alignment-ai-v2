@@ -1,276 +1,179 @@
-# Intelligent Strategic Plan Synchronization System (ISPS)
+# ISPS — Intelligent Strategic Plan Synchronization System
 
-An AI-powered system that measures how well a hospital's annual action plan aligns with its long-term strategic plan. Uses semantic embeddings, ontology mapping, knowledge graphs, and Retrieval-Augmented Generation (RAG) to produce quantitative alignment scores, detect misaligned actions, and generate improvement recommendations.
+An MSc Information Retrieval coursework project that measures how well a hospital's
+annual action plan aligns with its long-term strategic plan.
 
-## Problem Statement
+The system uses semantic embeddings, ontology mapping, knowledge graphs, and
+Retrieval-Augmented Generation (RAG) to produce alignment scores, detect misaligned
+actions, and generate improvement recommendations for decision-makers.
 
-Hospitals produce multi-year strategic plans and annual action plans, but manually checking whether 25+ operational actions genuinely support 5+ strategic objectives is slow, subjective, and error-prone. Misalignment means wasted budgets, missed goals, and strategic drift. ISPS automates this assessment with a data-driven, reproducible approach — replacing subjective review with objective, evidence-based analysis.
+---
 
-## Case Study
+## What It Does
 
-**Nawaloka Hospital Negombo, Sri Lanka**
-- Strategic Plan: 2026-2030 (5 strategic objectives, capacity expansion from 75 to 150 beds)
-- Action Plan: 2026 (25 operational actions across the five objectives)
-- 58-pair human-annotated ground truth dataset for system evaluation
-- Validated: AUC = 0.94 | F1 = 0.87 | Pearson r = 0.76
+| Feature | Description |
+|---|---|
+| Alignment scoring | Cosine similarity matrix (objectives × actions) with tier labels |
+| Orphan detection | Actions with no meaningful link to any strategic objective |
+| RAG suggestions | GPT-4o-mini improves poorly-aligned actions using retrieved context |
+| Ontology mapping | Maps each item to a healthcare concept (ClinicalCare, Finance, etc.) |
+| Knowledge graph | Interactive network showing objective→action connections |
+| Agentic reasoning | Plan→Act→Reflect loop for automated analysis |
+| Evaluation | Precision / Recall / F1 / AUC vs 58-pair human-annotated ground truth |
 
-The system is **domain-agnostic** — any hospital or organisation can upload their strategic and action plan PDFs through the dashboard for analysis.
-
-## Architecture
-
-```
-┌──────────────┐    ┌──────────────┐
-│  Strategic   │    │   Action     │
-│  Plan (PDF)  │    │  Plan (PDF)  │
-└──────┬───────┘    └──────┬───────┘
-       │                   │
-       └─────────┬─────────┘
-                 ▼
-       ┌─────────────────┐
-       │  PDF Processor   │  GPT-4o-mini structured extraction
-       │  → JSON          │
-       └────────┬─────────┘
-                │
-    ┌───────────┼───────────────────────────────┐
-    │           │                               │
-    ▼           ▼                               ▼
-┌────────┐ ┌──────────┐                  ┌────────────┐
-│ChromaDB│ │Alignment │                  │  Ontology  │
-│Vector  │ │Scoring   │                  │  Mapper    │
-│Store   │ │(Cosine)  │                  │  (RDF/OWL) │
-└───┬────┘ └────┬─────┘                  └─────┬──────┘
-    │           │                               │
-    │     ┌─────┴──────┐               ┌────────┴────────┐
-    │     │ Knowledge  │               │  Gap Detection  │
-    │     │ Graph      │               │                 │
-    │     │ (NetworkX) │               └─────────────────┘
-    │     └─────┬──────┘
-    │           │
-    ├───────────┤
-    ▼           ▼
-┌────────┐ ┌──────────┐
-│  RAG   │ │  Agent   │
-│Engine  │ │ Reasoner │
-│(LLM)  │ │ (LLM)   │
-└───┬────┘ └────┬─────┘
-    │           │
-    └─────┬─────┘
-          ▼
-  ┌───────────────┐
-  │   Streamlit   │
-  │   Dashboard   │
-  └───────────────┘
-```
-
-## Pipeline Stages
-
-| Stage | Module | Description | LLM |
-|-------|--------|-------------|:---:|
-| 1. PDF Extraction | `pdf_processor.py` | PDF text → structured JSON via GPT-4o-mini | Yes |
-| 2. Vector Embedding | `vector_store.py` | Text → 384-dim embeddings, stored in ChromaDB | No |
-| 3. Alignment Scoring | `synchronization_analyzer.py` | 5x25 cosine similarity matrix + classification | No |
-| 4. Ontology Mapping | `ontology_mapper.py` | RDF/OWL concept mapping + gap detection | No |
-| 5. Knowledge Graph | `knowledge_graph.py` | NetworkX graph with centrality & community analysis | No |
-| 6. RAG Recommendations | `rag_engine.py` | Context-aware improvement suggestions via GPT-4o-mini | Yes |
-| 7. Agent Reasoning | `agent_reasoner.py` | Plan-Act-Reflect diagnostic reasoning | Yes |
+---
 
 ## Project Structure
 
 ```
-hospital-strategy-alignment-ai/
-├── src/                              # Core pipeline modules
-│   ├── config.py                     # Centralised config, thresholds, LLM factory
-│   ├── pdf_processor.py              # PDF extraction via OpenAI GPT-4o-mini
-│   ├── vector_store.py               # ChromaDB embeddings (all-MiniLM-L6-v2)
-│   ├── synchronization_analyzer.py   # Alignment scoring engine
-│   ├── dynamic_analyzer.py           # Dynamic analysis for uploaded PDFs
-│   ├── ontology_mapper.py            # RDF/OWL ontology mapping
-│   ├── knowledge_graph.py            # NetworkX knowledge graph
-│   ├── rag_engine.py                 # RAG recommendation engine
-│   └── agent_reasoner.py             # Agentic AI reasoning (Plan-Act-Reflect)
-├── dashboard/                        # Streamlit UI
-│   ├── app.py                        # Main dashboard application
-│   ├── pipeline_runner.py            # Dynamic pipeline orchestration
-│   ├── data_adapter.py               # Data format conversion
-│   └── utils.py                      # PDF report, charts, exports
-├── data/                             # Processed data (JSON)
-│   ├── strategic_plan.json
-│   ├── action_plan.json
-│   └── alignment_report.json
-├── tests/                            # Evaluation & ground truth
-│   ├── evaluation.py                 # P/R/F1/AUC against baselines
-│   ├── evaluate_suggestions.py       # Suggestion quality metrics
-│   ├── create_ground_truth.py        # Ground truth labelling tool
-│   └── ground_truth.json             # 58-pair human-annotated dataset
-├── experiments/                      # Parameter tuning notebooks
-│   └── parameter_tuning.ipynb
-├── outputs/                          # Generated artefacts (ontology, KG, etc.)
-├── models/                           # Model artefacts and caches
-├── chroma_db/                        # ChromaDB persistent storage
-├── .env                              # API keys (gitignored)
+hospital-strategy-alignment-ai-v2/
+├── .env                          ← your OPENAI_API_KEY (never commit this)
 ├── requirements.txt
-└── README.md
+├── README.md
+│
+├── src/
+│   ├── config.py                 ← all constants, thresholds, model names
+│   ├── pdf_processor.py          ← extract PDF text → structured JSON
+│   ├── vector_store.py           ← embed text, store/query ChromaDB
+│   ├── alignment_scorer.py       ← cosine similarity matrix + tier labels
+│   ├── ontology_mapper.py        ← RDF/OWL concept mapping
+│   ├── knowledge_graph.py        ← NetworkX graph + pyvis HTML export
+│   ├── rag_engine.py             ← RAG: retrieve context → LLM suggestion
+│   └── agent_reasoner.py         ← Plan → Act → Reflect agentic loop
+│
+├── dashboard/
+│   └── app.py                    ← Streamlit UI (5 tabs)
+│
+├── data/
+│   ├── strategic_plan.json       ← extracted objectives
+│   └── action_plan.json          ← extracted action items
+│
+├── tests/
+│   ├── ground_truth.json         ← 58-pair annotated dataset
+│   └── evaluation.py             ← Precision / Recall / F1 / AUC
+│
+├── outputs/                      ← generated files (HTML, TTL, JSON)
+├── chroma_db/                    ← ChromaDB vector storage (auto-created)
+└── docs/
+    └── hosting_architecture.md   ← deployment write-up (CW sections 3.6–3.7)
 ```
 
-## Tech Stack
+---
 
-| Component | Technology | Purpose |
-|-----------|-----------|---------|
-| LLM | OpenAI GPT-4o-mini | PDF extraction, RAG recommendations, agent reasoning |
-| LLM Framework | LangChain + langchain-openai | Prompt templating, chain composition |
-| Embeddings | all-MiniLM-L6-v2 (384-dim) | Semantic text encoding (14K sent/sec on CPU) |
-| Vector DB | ChromaDB | Persistent local storage, HNSW indexing, cosine search |
-| Ontology | RDFLib (RDF/OWL) | Healthcare concept hierarchy, Turtle export |
-| Knowledge Graph | NetworkX | Centrality analysis, community detection |
-| Dashboard | Streamlit + Plotly | Interactive UI with heatmaps, gauges, network graphs |
-| PDF Processing | pdfplumber + ReportLab | Multi-column PDF extraction + report generation |
-| Evaluation | scikit-learn, SciPy | Precision/Recall/F1, ROC/AUC, statistical tests |
-| Language | Python 3.10+ | ML/NLP ecosystem |
+## Setup (Step by Step)
 
-## Setup & Installation
-
-### Prerequisites
-
-- Python 3.10 or higher
-- An OpenAI API key ([get one here](https://platform.openai.com/api-keys))
-
-### 1. Clone the Repository
+### 1. Clone the repository
 
 ```bash
-git clone <repo-url>
-cd hospital-strategy-alignment-ai
+git clone <your-repo-url>
+cd hospital-strategy-alignment-ai-v2
 ```
 
-### 2. Create a Virtual Environment
+### 2. Create a Python virtual environment
 
 ```bash
-python -m venv venv
-source venv/bin/activate        # macOS / Linux
-# venv\Scripts\activate          # Windows
+python3 -m venv venv
+source venv/bin/activate       # on macOS/Linux
+# or on Windows:
+# venv\Scripts\activate
 ```
 
-### 3. Install Dependencies
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Configure the OpenAI API Key
+This installs everything: OpenAI SDK, sentence-transformers, ChromaDB, rdflib,
+networkx, pyvis, Streamlit, Plotly, scikit-learn, and more.
 
-Create a `.env` file in the project root:
+### 4. Set your OpenAI API key
 
-```bash
-# .env
-OPENAI_API_KEY=sk-your-api-key-here
-OPENAI_MODEL=gpt-4o-mini
+Create a file called `.env` in the project root:
+
+```
+OPENAI_API_KEY=sk-your-key-here
 ```
 
-The system reads this file automatically via `python-dotenv`. Never commit this file — it is already in `.gitignore`.
+Never commit this file — it is already in `.gitignore`.
 
-### 5. Download the spaCy Language Model
+### 5. (Optional) Process your own PDFs
+
+If you want to extract objectives/actions from new PDFs:
 
 ```bash
-python -m spacy download en_core_web_sm
+python -c "
+from src.pdf_processor import process_pdf
+process_pdf('data/StrategicPlan20262030_test1.pdf', 'strategic_plan', 'strategic_plan.json')
+process_pdf('data/AnnualActionPlan2026_test1.pdf',  'action_plan',    'action_plan.json')
+"
 ```
 
-### 6. Run the Dashboard
+The existing `data/strategic_plan.json` and `data/action_plan.json` are already
+populated, so you can skip this step for testing.
+
+### 6. Run the dashboard
 
 ```bash
 streamlit run dashboard/app.py
 ```
 
-The dashboard will open at `http://localhost:8501`.
+Open your browser at [http://localhost:8501](http://localhost:8501).
 
-## Usage
+On first load the alignment scoring runs automatically (~30 seconds).
 
-1. Open the dashboard in your browser
-2. Upload a **Strategic Plan PDF** (e.g., a 5-year hospital strategic plan)
-3. Upload an **Action Plan PDF** (e.g., an annual operational action plan)
-4. Click **Run Analysis** — the 6-step pipeline processes both documents
-5. Explore the five dashboard tabs:
+---
 
-| Tab | What You See |
-|-----|-------------|
-| **Synchronization** | Overall alignment score gauge, 5x25 heatmap, score distribution, action detail table |
-| **Recommendations** | AI-generated improvement suggestions, new action proposals, strategic gap alerts |
-| **Knowledge Graph** | Interactive network visualization, bridge nodes, suggested connections |
-| **Ontology Browser** | Healthcare concept hierarchy, coverage badges, sunburst chart |
-| **Evaluation** | Cross-method agreement, precision/recall metrics, declaration mismatch table |
+## Running the Evaluation
 
-6. Export results as a **PDF report** or **CSV data** from the dashboard
+To compare the system against the 58-pair ground truth dataset:
 
-## Alignment Scoring
+```bash
+python tests/evaluation.py
+```
 
-The system classifies each action-objective pair into four tiers (configurable in `src/config.py`):
+Results are printed to the terminal and saved to `outputs/evaluation_results.json`.
 
-| Score | Classification | Interpretation |
-|-------|---------------|----------------|
-| >= 0.75 | Excellent | Near-direct operationalisation of strategy |
-| 0.60 - 0.74 | Good | Clear strategic support |
-| 0.42 - 0.59 | Fair | Partial or indirect alignment |
+---
+
+## Alignment Score Tiers
+
+| Score | Label | Meaning |
+|---|---|---|
+| ≥ 0.75 | Excellent | Action directly operationalises the strategy |
+| 0.60–0.74 | Good | Clear strategic support |
+| 0.42–0.59 | Fair | Partial or indirect alignment |
 | < 0.42 | Poor / Orphan | Weak or no meaningful alignment |
 
-Actions scoring below 0.42 for **all** objectives are flagged as **orphan actions** — operational activities with no strategic anchor.
+An action is an **orphan** if it scores below 0.42 against *every* objective.
 
-## Evaluation Results
+---
 
-Validated against a **58-pair human-annotated ground truth** dataset:
+## Technology Stack
 
-| Metric | Score |
-|--------|:-----:|
-| AUC (ROC) | 0.94 |
-| F1 Score | 0.87 |
-| Precision | 0.83 |
-| Recall | 0.91 |
-| Pearson r | 0.76 |
-| MRR (RAG retrieval) | 0.85 |
+| Component | Library |
+|---|---|
+| LLM | OpenAI `gpt-4o-mini` |
+| Embeddings | `sentence-transformers` (all-MiniLM-L6-v2, 384-dim) |
+| Vector DB | `chromadb` (local persistent) |
+| Ontology | `rdflib` (RDF/OWL, Turtle format) |
+| Knowledge graph | `networkx` + `pyvis` |
+| Dashboard | `streamlit` + `plotly` |
+| PDF reading | `pdfplumber` |
+| Evaluation | `scikit-learn` + `scipy` |
+| Secrets | `python-dotenv` |
 
-## Deploying to Streamlit Cloud
+---
 
-1. Push your code to a GitHub repository
-2. Go to [share.streamlit.io](https://share.streamlit.io) and connect your repo
-3. Set the main file path to `dashboard/app.py`
-4. Add your secrets in the Streamlit Cloud dashboard under **Settings > Secrets**:
-   ```toml
-   OPENAI_API_KEY = "sk-your-api-key-here"
-   OPENAI_MODEL = "gpt-4o-mini"
-   ```
-5. Deploy — the app will install dependencies from `requirements.txt` automatically
+## Coursework Mapping
 
-## Running Experiments
-
-### Evaluation Against Ground Truth
-
-```bash
-python -m tests.evaluation
-```
-
-### Parameter Tuning Notebooks
-
-```bash
-jupyter notebook experiments/parameter_tuning.ipynb
-```
-
-Four experiments are included:
-1. **Embedding Model Comparison** — 4 sentence-transformer models compared on AUC, F1, Pearson r
-2. **Threshold Sweep** — 46 thresholds tested to find F1-optimal classification boundary
-3. **Ontology Weight Calibration** — embedding vs keyword balance for hybrid scoring
-4. **RAG top_k Tuning** — retrieval depth optimisation for recommendation quality
-
-## Configuration
-
-All key parameters are centralised in `src/config.py`:
-
-| Parameter | Default | Description |
-|-----------|:-------:|-------------|
-| `THRESHOLD_EXCELLENT` | 0.75 | Cosine similarity for "Excellent" alignment |
-| `THRESHOLD_GOOD` | 0.60 | Cosine similarity for "Good" alignment |
-| `THRESHOLD_FAIR` | 0.42 | Cosine similarity for "Fair" alignment |
-| `ORPHAN_THRESHOLD` | 0.42 | Below this for all objectives = orphan action |
-| `OPENAI_MODEL` | gpt-4o-mini | OpenAI model for extraction and recommendations |
-| `LLM_TEMPERATURE` | 0.2 | LLM temperature for generation |
-| `MAX_ITERATIONS` | 3 | Agent reasoning iterations |
-
-## License
-
-This project is developed as part of an MSc in Computer Science (Information Retrieval) programme. For academic use only.
+| CW Section | Marks | File |
+|---|---|---|
+| 3.1 & 3.2 Overall + strategy-wise sync | 20 | `src/alignment_scorer.py` |
+| 3.3 RAG improvement suggestions | 10 | `src/rag_engine.py` |
+| 3.4 Smart dashboard | 10 | `dashboard/app.py` |
+| 3.5 Agentic AI reasoning | 10 | `src/agent_reasoner.py` |
+| 3.5 Ontology mapping | 10 | `src/ontology_mapper.py` |
+| 3.5 Knowledge graph | 10 | `src/knowledge_graph.py` |
+| 3.6 & 3.7 Hosting architecture | 10 | `docs/hosting_architecture.md` |
+| 3.8 Testing & evaluation | 10 | `tests/evaluation.py` |

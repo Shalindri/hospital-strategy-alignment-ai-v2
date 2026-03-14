@@ -40,3 +40,4 @@ logs/
 # ChromaDB
 chroma_db/
 .claude
+CLAUDE.md

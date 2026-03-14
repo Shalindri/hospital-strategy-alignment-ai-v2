@@ -1,991 +1,669 @@
 """
-Healthcare Strategy Aligner — Single-Page Streamlit App.
+app.py
+------
+Streamlit dashboard for ISPS — 5 tabs covering all coursework sections.
 
-Upload Strategic Plan and Action Plan PDFs, run the full analysis pipeline,
-and view all results on one page — no sidebar navigation needed.
+How it fits in the pipeline:
+  All src/ modules --> [this module] --> renders in the browser
 
-Launch::
+Run it with:
+  streamlit run dashboard/app.py
 
-    streamlit run dashboard/app.py
-
-Author : shalindri20@gmail.com
-Created: 2025-01
+Tab map:
+  1. Synchronization  --> alignment scores, heatmap, per-action table
+  2. Recommendations  --> RAG suggestions, new action proposals
+  3. Knowledge Graph  --> interactive pyvis HTML
+  4. Ontology         --> concept mappings per objective/action
+  5. Evaluation       --> Precision, Recall, F1, AUC, confusion matrix
 """
 
-from __future__ import annotations
-
+# --- Standard library ---
+import json
+import os
 import sys
-from pathlib import Path
 
-# Ensure project root is on sys.path so absolute imports (dashboard.*, src.*)
-# work regardless of how Streamlit launches the app.
-_PROJECT_ROOT = str(Path(__file__).resolve().parent.parent)
-if _PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, _PROJECT_ROOT)
+# Make project root importable (needed when launching from dashboard/ subfolder)
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-import numpy as np
-import pandas as pd
+# --- Third-party ---
+import streamlit as st
+import streamlit.components.v1 as components
 import plotly.express as px
 import plotly.graph_objects as go
-import streamlit as st
+import pandas as pd
 
-from dashboard.utils import format_llm_response, generate_pdf_report
+# --- Local ---
+from src.config import (
+    STRATEGIC_PLAN_FILE, ACTION_PLAN_FILE, OUTPUTS_DIR,
+    THRESHOLD_EXCELLENT, THRESHOLD_GOOD, THRESHOLD_FAIR,
+)
+from src import (
+    alignment_scorer,
+    vector_store,
+    ontology_mapper,
+    knowledge_graph,
+    rag_engine,
+    agent_reasoner,
+)
+from tests import evaluation
 
-# ---------------------------------------------------------------------------
-# Custom CSS
-# ---------------------------------------------------------------------------
-CUSTOM_CSS = """
-<style>
-    /* Hide sidebar */
-    [data-testid="stSidebar"] { display: none !important; }
-    [data-testid="stSidebarNav"] { display: none !important; }
-    [data-testid="collapsedControl"] { display: none !important; }
+# =============================================================================
+# PAGE CONFIG
+# =============================================================================
+st.set_page_config(
+    page_title="ISPS — Strategic Plan Synchronization",
+    page_icon="🏥",
+    layout="wide",
+)
 
-    /* Theme */
-    :root {
-        --primary: #1565C0;
-        --primary-light: #42A5F5;
-        --secondary: #2E7D32;
-        --accent: #FF8F00;
-        --bg-card: #F8FAFB;
-        --text-dark: #1A237E;
-    }
-    .main .block-container { max-width: 1500px; padding-top: 0.5rem; }
-
-    /* ── Header bar ── */
-    .header-bar {
-        background: linear-gradient(135deg, #1565C0 0%, #1A237E 100%);
-        color: white;
-        padding: 0.8rem 1.5rem;
-        border-radius: 10px;
-        margin-bottom: 0.8rem;
-        text-align: center;
-    }
-    .header-bar h1 {
-        color: white !important;
-        font-size: 1.5rem !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    h2, h3 { color: var(--text-dark) !important; }
-
-    /* ── Toolbar area ── */
-    .toolbar-container {
-        background: var(--bg-card);
-        border: 1px solid #E0E0E0;
-        border-radius: 10px;
-        padding: 0.8rem 1rem;
-        margin-bottom: 0.8rem;
-    }
-
-    /* Compact upload in toolbar */
-    [data-testid="stFileUploader"] label p { font-size: 0.75rem !important; }
-    [data-testid="stFileUploader"] section { padding: 0.2rem !important; }
-    [data-testid="stFileUploader"] { margin-bottom: 0 !important; }
-
-    /* Processing label */
-    .processing-label {
-        text-align: center;
-        color: #F57F17;
-        font-size: 0.75rem;
-        font-weight: 600;
-        margin-top: 0.3rem;
-    }
-
-    /* Metric cards */
-    .metric-card {
-        background: linear-gradient(135deg, #E3F2FD 0%, #F1F8E9 100%);
-        border-left: 4px solid var(--primary);
-        border-radius: 8px;
-        padding: 0.5rem 0.8rem;
-        margin-bottom: 0.4rem;
-    }
-    .metric-card h4 { margin: 0 0 0.1rem 0; color: var(--primary); font-size: 0.72rem; }
-    .metric-card .value { font-size: 1.3rem; font-weight: 700; color: var(--text-dark); }
-    .metric-card .sub { font-size: 0.68rem; color: #666; }
-
-    /* Badges */
-    .badge-orphan  { background: #FFCDD2; color: #B71C1C; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; }
-    .badge-weak    { background: #FFE0B2; color: #E65100; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; }
-    .badge-gap     { background: #E1BEE7; color: #6A1B9A; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; }
-    .badge-good    { background: #C8E6C9; color: #1B5E20; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; }
-    .badge-high    { background: #C8E6C9; color: #1B5E20; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
-    .badge-medium  { background: #FFF9C4; color: #F57F17; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
-    .badge-low     { background: #FFCDD2; color: #B71C1C; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
-
-    /* Trace step */
-    .trace-step {
-        border-left: 3px solid var(--primary-light);
-        padding: 0.5rem 0 0.5rem 1rem;
-        margin-bottom: 0.8rem;
-        background: var(--bg-card);
-        border-radius: 0 8px 8px 0;
-    }
-
-    /* ── Stepper progress bar ── */
-    .stepper { display: flex; align-items: flex-start; justify-content: space-between; padding: 0.4rem 0; }
-    .stepper .step { flex: 1; text-align: center; position: relative; }
-    .stepper .step .circle {
-        width: 26px; height: 26px; border-radius: 50%;
-        background: #E0E0E0; color: #999;
-        display: inline-flex; align-items: center; justify-content: center;
-        font-size: 0.7rem; font-weight: 700;
-        border: 2px solid #BDBDBD;
-        transition: all 0.3s;
-        position: relative; z-index: 2;
-    }
-    .stepper .step .label { font-size: 0.6rem; color: #888; margin-top: 3px; line-height: 1.1; }
-    /* Connector line between circles */
-    .stepper .step:not(:last-child)::after {
-        content: ''; position: absolute; top: 13px;
-        left: calc(50% + 16px); right: calc(-50% + 16px);
-        height: 3px; background: #E0E0E0; z-index: 1;
-    }
-    /* Active step */
-    .stepper .step.active .circle {
-        background: #FFF9C4; color: #F57F17;
-        border-color: #F57F17;
-        box-shadow: 0 0 0 3px rgba(245,127,23,0.2);
-        animation: pulse 1.5s infinite;
-    }
-    .stepper .step.active .label { color: #F57F17; font-weight: 600; }
-    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 3px rgba(245,127,23,0.2); } 50% { box-shadow: 0 0 0 6px rgba(245,127,23,0.1); } }
-    /* Completed step */
-    .stepper .step.done .circle {
-        background: #4CAF50; color: white;
-        border-color: #388E3C;
-    }
-    .stepper .step.done .label { color: #2E7D32; font-weight: 600; }
-    .stepper .step.done:not(:last-child)::after { background: #4CAF50; }
-
-    /* ── Output placeholder ── */
-    .output-placeholder {
-        background: var(--bg-card);
-        border: 1px solid #E0E0E0;
-        border-radius: 10px;
-        padding: 3rem 2rem;
-        min-height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #999;
-        font-size: 1.1rem;
-    }
-</style>
-"""
+st.title("🏥 ISPS — Intelligent Strategic Plan Synchronization")
+st.caption("MSc Information Retrieval Coursework · Hospital Strategy Alignment AI")
 
 
-# ---------------------------------------------------------------------------
-# Stepper HTML builder
-# ---------------------------------------------------------------------------
+# =============================================================================
+# DATA LOADING HELPERS
+# Cached so heavy computation only runs once per Streamlit session.
+# =============================================================================
 
-PIPELINE_STEPS = [
-    ("1", "PDF Extract"),
-    ("2", "Alignment"),
-    ("3", "Ontology"),
-    ("4", "KG Build"),
-    ("5", "RAG"),
-]
+@st.cache_data(show_spinner="Loading data files...")
+def load_data() -> tuple:
+    """
+    Load strategic plan objectives and action plan items from JSON files,
+    normalising them into the {id, title, description} format used by all modules.
+
+    Returns:
+        tuple: (objectives list, actions list)
+    """
+    def _load_json(path):
+        """Open a JSON file and return its contents."""
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    sp_data = _load_json(STRATEGIC_PLAN_FILE)
+    ap_data = _load_json(ACTION_PLAN_FILE)
+
+    raw_objectives = sp_data.get("objectives", [])
+    objectives = []
+    for obj in raw_objectives:
+        if "id" in obj:
+            objectives.append(obj)
+        elif "code" in obj:
+            # Convert old format to simplified format
+            objectives.append({
+                "id":          obj["code"],
+                "title":       obj.get("name", obj["code"]),
+                "description": obj.get("goal_statement", ""),
+            })
+
+    raw_actions = ap_data.get("actions", [])
+    actions = []
+    for act in raw_actions:
+        if "id" in act:
+            actions.append(act)
+        elif "action_number" in act:
+            actions.append({
+                "id":          str(act["action_number"]),
+                "title":       act.get("title", str(act["action_number"])),
+                "description": act.get("description", ""),
+            })
+
+    return objectives, actions
 
 
-def _build_stepper_html(current_step: int = 0) -> str:
-    """Build HTML for the milestone stepper.
+@st.cache_data(show_spinner="Running alignment scoring (this takes ~30 seconds)...")
+def get_alignment_result(_objectives: list) -> dict:
+    """
+    Run the alignment scorer and return results.
+    The leading underscore in _objectives tells Streamlit not to hash this arg.
 
     Args:
-        current_step: 0 = not started, 1-6 = that step is active,
-                      7 = all done.
+        _objectives (list): List of objective dicts.
+
+    Returns:
+        dict: Full alignment result from alignment_scorer.run_alignment().
     """
-    parts = ['<div class="stepper">']
-    for idx, (num, label) in enumerate(PIPELINE_STEPS):
-        step_num = idx + 1
-        if step_num < current_step:
-            cls = "step done"
-            icon = "&#10003;"  # checkmark
-        elif step_num == current_step:
-            cls = "step active"
-            icon = num
-        else:
-            cls = "step"
-            icon = num
-        parts.append(
-            f'<div class="{cls}">'
-            f'<div class="circle">{icon}</div>'
-            f'<div class="label">{label}</div>'
-            f'</div>'
-        )
-    parts.append('</div>')
-    return "".join(parts)
+    return alignment_scorer.run_alignment(_objectives)
 
 
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
+# =============================================================================
+# COLOUR HELPER
+# =============================================================================
 
-def confidence_badge(conf: str) -> str:
-    cls = conf.lower() if conf.lower() in ("high", "medium", "low") else "medium"
-    return f'<span class="badge-{cls}">{conf}</span>'
+def tier_colour(tier: str) -> str:
+    """Return a hex colour for each tier label."""
+    return {
+        "Excellent": "#2e8b57",   # dark green
+        "Good":      "#4a90d9",   # blue
+        "Fair":      "#f5a623",   # amber
+        "Poor":      "#d0021b",   # red
+    }.get(tier, "#888888")
 
 
-def make_metric_card(title: str, value: str, subtitle: str = "") -> str:
-    sub_html = f'<div class="sub">{subtitle}</div>' if subtitle else ""
-    return (
-        f'<div class="metric-card">'
-        f'<h4>{title}</h4>'
-        f'<div class="value">{value}</div>'
-        f'{sub_html}</div>'
+# =============================================================================
+# TAB 1 — SYNCHRONIZATION
+# =============================================================================
+
+def tab_synchronization(alignment_result: dict, objectives: list, actions: list):
+    """
+    Show overall score gauge, objectives x actions heatmap, and per-action table.
+
+    Args:
+        alignment_result (dict): Full alignment result.
+        objectives (list): Objective dicts.
+        actions (list): Action dicts.
+    """
+    st.info(
+        "**Synchronization Overview** \n\n"
+        "This tab measures how well the Annual Action Plan supports each Strategic Objective. "
+        "The gauge shows the overall alignment score (0 = no alignment, 1 = perfect). "
+        "The heatmap shows every objective-action pair — hover to see exact scores. "
+        "The table below lists each action's best-matching objective and its tier label. "
+        "Actions highlighted in red are 'orphans' — they have no meaningful link "
+        "to any strategic objective and need the most attention from leadership."
     )
 
+    overall = alignment_result["overall_score"]
+    matrix  = alignment_result["matrix"]
+    classifications = alignment_result["classifications"]
+    orphan_ids = {act["id"] for act in alignment_result["orphan_actions"]}
 
-# ═══════════════════════════════════════════════════════════════════════
-# Render: Sync Analysis
-# ═══════════════════════════════════════════════════════════════════════
-
-def _render_sync_analysis(data: dict) -> None:
-    alignment = data["alignment"]
-
+    # --- Gauge chart ---
     col1, col2 = st.columns([1, 2])
     with col1:
-        score = alignment.get("overall_score", 0)
-        fig = go.Figure(go.Indicator(
-            mode="gauge+number+delta",
-            value=score * 100,
-            title={"text": "Overall Synchronization", "font": {"size": 16}},
-            number={"suffix": "%", "font": {"size": 36}},
-            gauge={
-                "axis": {"range": [0, 100]},
-                "bar": {"color": "#1565C0"},
+        fig_gauge = go.Figure(go.Indicator(
+            mode  = "gauge+number+delta",
+            value = round(overall * 100, 1),
+            title = {"text": "Overall Alignment Score (%)"},
+            delta = {"reference": 60},   # reference: "Good" threshold * 100
+            gauge = {
+                "axis":  {"range": [0, 100]},
+                "bar":   {"color": "#4a90d9"},
                 "steps": [
-                    {"range": [0, 45], "color": "#FFCDD2"},
-                    {"range": [45, 60], "color": "#FFF9C4"},
-                    {"range": [60, 75], "color": "#C8E6C9"},
-                    {"range": [75, 100], "color": "#81C784"},
+                    {"range": [0, 42],  "color": "#ffcccc"},   # Poor
+                    {"range": [42, 60], "color": "#fff3cc"},   # Fair
+                    {"range": [60, 75], "color": "#cce5ff"},   # Good
+                    {"range": [75, 100],"color": "#ccffcc"},   # Excellent
                 ],
                 "threshold": {
-                    "line": {"color": "#B71C1C", "width": 3},
-                    "thickness": 0.8, "value": 45,
+                    "line":  {"color": "black", "width": 3},
+                    "value": 75
                 },
             },
         ))
-        fig.update_layout(height=280, margin=dict(t=40, b=20, l=30, r=30))
-        st.plotly_chart(fig, width='stretch')
+        fig_gauge.update_layout(height=300, margin=dict(t=30, b=0))
+        st.plotly_chart(fig_gauge, use_container_width=True)
 
+        # Quick stats
+        tier_counts = {"Excellent": 0, "Good": 0, "Fair": 0, "Poor": 0}
+        for c in classifications:
+            tier_counts[c["tier"]] += 1
+        for tier, count in tier_counts.items():
+            colour = tier_colour(tier)
+            st.markdown(
+                f'<span style="color:{colour}">■</span> **{tier}**: {count} pairs',
+                unsafe_allow_html=True
+            )
+
+    # --- Heatmap ---
     with col2:
-        st.subheader("Strategy-wise Alignment")
-        obj_data = alignment.get("objective_alignments", [])
-        if obj_data:
-            df_obj = pd.DataFrame([{
-                "Objective": f"{o['code']}: {o['name'][:30]}",
-                "Mean Similarity": o["mean_similarity"],
-                "Max Similarity": o["max_similarity"],
-                "Coverage": o["coverage_score"],
-            } for o in obj_data])
-            fig = px.bar(df_obj, x="Objective",
-                         y=["Mean Similarity", "Max Similarity"],
-                         barmode="group",
-                         color_discrete_sequence=["#42A5F5", "#1565C0"])
-            fig.update_layout(height=280, margin=dict(t=20, b=20),
-                              yaxis_title="Cosine Similarity",
-                              legend=dict(orientation="h", y=1.1))
-            st.plotly_chart(fig, width='stretch')
+        obj_ids = [obj["id"] for obj in objectives]
+        act_ids = [act["id"] for act in actions]
 
-    st.divider()
+        # matrix is (n_objectives x n_actions) — build DataFrame
+        import numpy as np
+        mat_np = np.array(matrix)
+        df_heat = pd.DataFrame(mat_np, index=obj_ids, columns=act_ids)
 
-    # Heatmap
-    st.subheader("Alignment Matrix Heatmap")
-    matrix = alignment.get("alignment_matrix", [])
-    row_labels = alignment.get("matrix_row_labels", [])
-    col_labels = alignment.get("matrix_col_labels", [])
-
-    if matrix:
-        fig = go.Figure(data=go.Heatmap(
-            z=matrix,
-            x=[f"Act {c}" for c in col_labels],
-            y=[f"Obj {r}" for r in row_labels],
-            colorscale=[
-                [0, "#FFCDD2"], [0.45, "#FFE082"],
-                [0.6, "#A5D6A7"], [1, "#1B5E20"],
-            ],
+        fig_heat = px.imshow(
+            df_heat,
+            color_continuous_scale="RdYlGn",
             zmin=0, zmax=1,
-            text=[[f"{v:.2f}" for v in row] for row in matrix],
-            texttemplate="%{text}", textfont={"size": 9},
-            hovertemplate="Objective %{y}<br>Action %{x}<br>Score: %{z:.3f}<extra></extra>",
-        ))
-        fig.update_layout(height=300, margin=dict(t=20, b=20),
-                          xaxis_title="Action Items", yaxis_title="Strategic Objectives")
-        st.plotly_chart(fig, width='stretch')
+            aspect="auto",
+            title="Alignment Heatmap (objectives × actions)",
+            labels={"color": "Score"},
+        )
+        fig_heat.update_layout(height=350, margin=dict(t=40, b=0))
+        st.plotly_chart(fig_heat, use_container_width=True)
 
-    # Histogram + action table
-    col1, col2 = st.columns(2)
-    with col1:
-        st.subheader("Score Distribution")
-        if matrix:
-            all_scores = [s for row in matrix for s in row]
-            fig = px.histogram(x=all_scores, nbins=25,
-                               labels={"x": "Cosine Similarity", "y": "Count"},
-                               color_discrete_sequence=["#42A5F5"])
-            fig.add_vline(x=0.45, line_dash="dash", line_color="red",
-                          annotation_text="Fair threshold")
-            fig.add_vline(x=0.60, line_dash="dash", line_color="green",
-                          annotation_text="Good threshold")
-            fig.update_layout(height=300, margin=dict(t=20, b=20))
-            st.plotly_chart(fig, width='stretch')
+    # --- Per-action summary table ---
+    st.subheader("Per-Action Alignment Summary")
 
-    with col2:
-        st.subheader("Action Alignment Details")
-        action_data = alignment.get("action_alignments", [])
-        if action_data:
-            df_actions = pd.DataFrame([{
-                "Action": f"{a['action_number']}. {a['title'][:40]}",
-                "Declared": a["declared_objective"],
-                "Best": a["best_objective"],
-                "Score": a["best_score"],
-                "Class": a["classification"],
-                "Orphan": "Yes" if a["is_orphan"] else "",
-            } for a in action_data])
-            st.dataframe(df_actions, width='stretch', height=300,
-                         hide_index=True)
+    # Build a table: action | title | best_score | tier | best_objective | orphan
+    action_lookup = {act["id"]: act["title"] for act in actions}
+    obj_lookup    = {obj["id"]: obj["title"] for obj in objectives}
+
+    # Find best score & objective for each action
+    best_per_action: dict = {}
+    for c in classifications:
+        aid = c["action_id"]
+        if aid not in best_per_action or c["score"] > best_per_action[aid]["score"]:
+            best_per_action[aid] = {
+                "score":    c["score"],
+                "tier":     c["tier"],
+                "best_obj": c["objective_id"],
+            }
+
+    rows = []
+    for act in actions:
+        aid   = act["id"]
+        info  = best_per_action.get(aid, {"score": 0.0, "tier": "Poor", "best_obj": ""})
+        rows.append({
+            "Action ID":     aid,
+            "Action Title":  act["title"],
+            "Best Score":    round(info["score"], 3),
+            "Tier":          info["tier"],
+            "Best Objective":info["best_obj"],
+            "Orphan":        "⚠️ Yes" if aid in orphan_ids else "",
+        })
+
+    df_table = pd.DataFrame(rows)
+
+    # Colour the Tier column
+    def colour_tier(val):
+        colours = {
+            "Excellent": "background-color: #ccffcc",
+            "Good":      "background-color: #cce5ff",
+            "Fair":      "background-color: #fff3cc",
+            "Poor":      "background-color: #ffcccc",
+        }
+        return colours.get(val, "")
+
+    st.dataframe(
+        df_table.style.applymap(colour_tier, subset=["Tier"]),
+        use_container_width=True, height=400
+    )
+
+    if orphan_ids:
+        st.warning(
+            f"⚠️ {len(orphan_ids)} orphan action(s) detected — "
+            "these score below {THRESHOLD_FAIR} against every strategic objective. "
+            "See the Recommendations tab for improvement suggestions."
+        )
 
 
-# ═══════════════════════════════════════════════════════════════════════
-# Render: Recommendations
-# ═══════════════════════════════════════════════════════════════════════
+# =============================================================================
+# TAB 2 — RECOMMENDATIONS
+# =============================================================================
 
-def _render_recommendations(data: dict) -> None:
-    rag = data["rag"]
-    gaps_data = data["gaps"]
+def tab_recommendations(alignment_result: dict):
+    """
+    Show RAG improvement suggestions and new action proposals.
 
-    if not rag:
-        st.info("RAG recommendations were not generated. Run the full pipeline to see results here.")
+    Args:
+        alignment_result (dict): Full alignment result.
+    """
+    st.info(
+        "**AI-Powered Recommendations** \n\n"
+        "For each poorly-aligned action (best score below 'Good'), the system: \n"
+        "1. Retrieves the 3 most relevant strategic objectives from the vector database \n"
+        "2. Asks GPT-4o-mini to suggest 3 specific improvements \n\n"
+        "For each objective with no 'Excellent'-tier action, the system proposes a "
+        "brand-new action to close the gap. \n\n"
+        "Use these suggestions as a starting point for your planning discussions."
+    )
+
+    if st.button("Generate Recommendations (calls OpenAI API)"):
+        with st.spinner("Running RAG engine... this may take 1-2 minutes..."):
+            try:
+                # First ensure objectives are embedded in ChromaDB
+                vector_store.embed_and_store(
+                    alignment_result["objectives"],
+                    "strategic_objectives"
+                )
+                rag_result = rag_engine.run_rag_suggestions(alignment_result)
+                st.session_state["rag_result"] = rag_result
+            except Exception as e:
+                st.error(f"RAG engine error: {e}")
+                return
+
+    rag_result = st.session_state.get("rag_result")
+    if not rag_result:
+        st.caption("Click the button above to generate recommendations.")
         return
 
-    tab1, tab2, tab3 = st.tabs(["Poorly Aligned Actions", "Missing Actions", "Strategic Gaps"])
+    # --- Improvement suggestions ---
+    st.subheader("Improvement Suggestions for Poorly-Aligned Actions")
+    improvements = rag_result.get("improvement_suggestions", {})
+
+    if improvements:
+        action_lookup = {act["id"]: act for act in alignment_result["actions"]}
+        for act_id, suggestion in improvements.items():
+            act = action_lookup.get(act_id, {"title": act_id})
+            with st.expander(f"[{act_id}] {act['title']}", expanded=False):
+                st.markdown(suggestion)
+    else:
+        st.success("All actions are sufficiently aligned — no improvements needed!")
+
+    # --- New action proposals ---
+    st.subheader("Proposed New Actions for Uncovered Objectives")
+    proposals = rag_result.get("new_action_proposals", {})
+
+    if proposals:
+        obj_lookup = {obj["id"]: obj for obj in alignment_result["objectives"]}
+        for obj_id, proposal in proposals.items():
+            obj = obj_lookup.get(obj_id, {"title": obj_id})
+            with st.expander(f"[{obj_id}] {obj['title']}", expanded=False):
+                st.info("📋 **Proposed New Action:**")
+                st.markdown(proposal)
+    else:
+        st.success("All strategic objectives have at least one Excellent-tier action!")
+
+
+# =============================================================================
+# TAB 3 — KNOWLEDGE GRAPH
+# =============================================================================
+
+def tab_knowledge_graph(alignment_result: dict, objectives: list, actions: list):
+    """
+    Embed the pyvis interactive HTML knowledge graph in Streamlit.
+
+    Args:
+        alignment_result (dict): Full alignment result.
+        objectives (list): Objective dicts.
+        actions (list): Action dicts.
+    """
+    st.info(
+        "**Knowledge Graph** \n\n"
+        "Each node is a strategic objective (blue) or action plan item (green). "
+        "Edges connect objectives to the actions that support them, with edge thickness "
+        "proportional to alignment score. Gold nodes are 'bridge nodes' — highly "
+        "connected items that are central to the plan's coherence. \n\n"
+        "Drag nodes to explore, scroll to zoom, hover for details."
+    )
+
+    html_path = os.path.join(OUTPUTS_DIR, "knowledge_graph.html")
+
+    col1, col2 = st.columns([3, 1])
+    with col2:
+        st.markdown("**Legend:**")
+        st.markdown("🔵 Strategic Objective")
+        st.markdown("🟢 Action Plan Item")
+        st.markdown("🟡 Bridge Node (high centrality)")
+
+        regenerate = st.button("Regenerate Graph")
+
+    with col1:
+        if regenerate or not os.path.exists(html_path):
+            with st.spinner("Building knowledge graph..."):
+                try:
+                    knowledge_graph.run_knowledge_graph(objectives, actions, alignment_result)
+                except Exception as e:
+                    st.error(f"Knowledge graph error: {e}")
+                    return
+
+        if os.path.exists(html_path):
+            with open(html_path, "r", encoding="utf-8") as f:
+                html_content = f.read()
+            components.html(html_content, height=700, scrolling=True)
+        else:
+            st.warning("Knowledge graph HTML not found. Click 'Regenerate Graph'.")
+
+
+# =============================================================================
+# TAB 4 — ONTOLOGY
+# =============================================================================
+
+def tab_ontology(alignment_result: dict, objectives: list, actions: list):
+    """
+    Show healthcare concept mappings for all objectives and actions.
+
+    Args:
+        alignment_result (dict): Full alignment result.
+        objectives (list): Objective dicts.
+        actions (list): Action dicts.
+    """
+    st.info(
+        "**Ontology Mapping** \n\n"
+        "Each objective and action is classified into a healthcare concept class "
+        "(ClinicalCare, PatientSafety, Finance, etc.) using keyword matching. \n\n"
+        "The coverage chart shows whether the Action Plan covers all the same concept "
+        "areas as the Strategic Plan. Gaps (concepts in strategy but absent from actions) "
+        "indicate areas where the plan needs strengthening."
+    )
+
+    with st.spinner("Running ontology mapper..."):
+        try:
+            mappings = ontology_mapper.run_ontology_mapping(objectives, actions)
+        except Exception as e:
+            st.error(f"Ontology mapper error: {e}")
+            return
+
+    obj_ids = {obj["id"] for obj in objectives}
+    act_ids = {act["id"] for act in actions}
+    obj_lookup = {obj["id"]: obj["title"] for obj in objectives}
+    act_lookup = {act["id"]: act["title"] for act in actions}
+
+    # Build table rows
+    rows = []
+    for item_id, concept in mappings.items():
+        if item_id in obj_ids:
+            item_type = "Objective"
+            title = obj_lookup.get(item_id, item_id)
+        else:
+            item_type = "Action"
+            title = act_lookup.get(item_id, item_id)
+
+        rows.append({
+            "ID":      item_id,
+            "Type":    item_type,
+            "Title":   title[:60],
+            "Concept": concept,
+        })
+
+    df_ont = pd.DataFrame(rows)
+
+    # Show table
+    st.subheader("Item-to-Concept Mappings")
+    st.dataframe(df_ont, use_container_width=True, height=350)
+
+    # Coverage comparison chart
+    st.subheader("Concept Coverage: Strategy vs Action Plan")
+
+    obj_concepts = [mappings[obj["id"]] for obj in objectives if obj["id"] in mappings]
+    act_concepts = [mappings[act["id"]] for act in actions    if act["id"] in mappings]
+
+    all_concepts = sorted(set(obj_concepts + act_concepts))
+
+    from collections import Counter
+    obj_counts = Counter(obj_concepts)
+    act_counts = Counter(act_concepts)
+
+    df_cov = pd.DataFrame({
+        "Concept":     all_concepts,
+        "Strategy":    [obj_counts.get(c, 0) for c in all_concepts],
+        "Action Plan": [act_counts.get(c, 0) for c in all_concepts],
+    })
+
+    fig_cov = px.bar(
+        df_cov.melt(id_vars="Concept", var_name="Plan", value_name="Count"),
+        x="Concept", y="Count", color="Plan", barmode="group",
+        title="Concept Coverage Comparison",
+        color_discrete_map={"Strategy": "#4a90d9", "Action Plan": "#5bad72"},
+    )
+    fig_cov.update_layout(height=350, xaxis_tickangle=-30)
+    st.plotly_chart(fig_cov, use_container_width=True)
+
+    # Highlight gaps
+    gaps = [c for c in all_concepts
+            if obj_counts.get(c, 0) > 0 and act_counts.get(c, 0) == 0]
+    if gaps:
+        st.warning(
+            f"⚠️ Coverage gap: The strategic plan includes items in "
+            f"**{', '.join(gaps)}** but no action plan items map to these concepts."
+        )
+    else:
+        st.success("All strategic concept areas are covered by the action plan.")
+
+    ttl_path = os.path.join(OUTPUTS_DIR, "ontology.ttl")
+    if os.path.exists(ttl_path):
+        st.caption(f"Turtle ontology file saved at: `{ttl_path}`")
+
+
+# =============================================================================
+# TAB 5 — EVALUATION
+# =============================================================================
+
+def tab_evaluation(objectives: list):
+    """
+    Show Precision, Recall, F1, AUC, and confusion matrix vs ground truth.
+
+    Args:
+        objectives (list): Objective dicts (used to run alignment scorer).
+    """
+    st.info(
+        "**System Evaluation** \n\n"
+        "We compare the ISPS predictions against a 58-pair human-annotated ground truth "
+        "dataset. Each pair is a (strategic objective, action plan item) combination "
+        "with a human-assigned alignment score. \n\n"
+        "Precision answers: *'Of the pairs the system marked as aligned, how many truly were?'* \n"
+        "Recall answers: *'Of all truly aligned pairs, how many did the system find?'* \n"
+        "F1 balances both. AUC measures ranking quality (1.0 = perfect, 0.5 = random)."
+    )
+
+    if st.button("Run Evaluation (compares against ground truth)"):
+        with st.spinner("Running evaluation..."):
+            try:
+                metrics = evaluation.run_evaluation(objectives)
+                st.session_state["eval_metrics"] = metrics
+            except Exception as e:
+                st.error(f"Evaluation error: {e}")
+                return
+
+    # Try to load from saved file if not yet in session
+    if "eval_metrics" not in st.session_state:
+        saved_path = os.path.join(OUTPUTS_DIR, "evaluation_results.json")
+        if os.path.exists(saved_path):
+            with open(saved_path, "r", encoding="utf-8") as f:
+                saved = json.load(f)
+            # Build a metrics dict compatible with our display code
+            st.session_state["eval_metrics"] = {
+                "precision":        saved.get("precision", 0),
+                "recall":           saved.get("recall", 0),
+                "f1":               saved.get("f1", 0),
+                "auc":              saved.get("auc", 0),
+                "pearson_r":        saved.get("pearson_r", 0),
+                "pearson_p":        saved.get("pearson_p", 0),
+                "confusion_matrix": saved.get("confusion_matrix", [[0,0],[0,0]]),
+                "y_true_binary":    [],
+                "y_pred_binary":    [],
+            }
+            st.caption("Showing previously saved evaluation results. "
+                       "Click 'Run Evaluation' to recompute.")
+
+    metrics = st.session_state.get("eval_metrics")
+    if not metrics:
+        st.caption("Click 'Run Evaluation' above to compute metrics.")
+        return
+
+    # --- Metric cards ---
+    st.subheader("Evaluation Metrics")
+    col1, col2, col3, col4, col5 = st.columns(5)
+    col1.metric("Precision", f"{metrics['precision']:.3f}")
+    col2.metric("Recall",    f"{metrics['recall']:.3f}")
+    col3.metric("F1 Score",  f"{metrics['f1']:.3f}")
+    col4.metric("AUC (ROC)", f"{metrics['auc']:.3f}")
+    col5.metric("Pearson r", f"{metrics['pearson_r']:.3f}")
+
+    # --- Confusion matrix heatmap ---
+    st.subheader("Confusion Matrix")
+    cm = metrics.get("confusion_matrix", [[0, 0], [0, 0]])
+
+    if len(cm) >= 2:
+        fig_cm = px.imshow(
+            cm,
+            text_auto=True,
+            x=["Predicted Not Aligned", "Predicted Aligned"],
+            y=["Actual Not Aligned",    "Actual Aligned"],
+            color_continuous_scale="Blues",
+            title="Confusion Matrix",
+        )
+        fig_cm.update_layout(height=350)
+        st.plotly_chart(fig_cm, use_container_width=True)
+
+    # --- Interpretation note ---
+    f1 = metrics["f1"]
+    if f1 >= 0.75:
+        st.success(f"Strong system performance (F1={f1:.3f}). The model reliably identifies aligned pairs.")
+    elif f1 >= 0.60:
+        st.info(f"Moderate performance (F1={f1:.3f}). Consider tuning the THRESHOLD_FAIR constant in config.py.")
+    else:
+        st.warning(f"Low F1 score ({f1:.3f}). The model may need better embeddings or threshold calibration.")
+
+    saved_path = os.path.join(OUTPUTS_DIR, "evaluation_results.json")
+    if os.path.exists(saved_path):
+        st.caption(f"Results saved at: `{saved_path}`")
+
+
+# =============================================================================
+# MAIN — CHECK DATA FILES, THEN RENDER ALL TABS
+# =============================================================================
+
+def main():
+    """Entry point: check data, load, run alignment, render 5 tabs."""
+
+    # Guard: check that data files exist before proceeding
+    if not os.path.exists(STRATEGIC_PLAN_FILE) or not os.path.exists(ACTION_PLAN_FILE):
+        st.error(
+            "**Data files not found.**\n\n"
+            f"Expected:\n"
+            f"- `{STRATEGIC_PLAN_FILE}`\n"
+            f"- `{ACTION_PLAN_FILE}`\n\n"
+            "Please run `src/pdf_processor.py` to extract data from your PDFs first."
+        )
+        st.stop()
+
+    # Load data
+    try:
+        objectives, actions = load_data()
+    except Exception as e:
+        st.error(f"Error loading data files: {e}")
+        st.stop()
+
+    # Run alignment scoring
+    try:
+        alignment_result = get_alignment_result(tuple(
+            (obj["id"], obj["title"]) for obj in objectives
+        ))
+        # get_alignment_result takes a hashable arg — we pass a tuple of (id, title) pairs
+        # and re-run internally. Simpler: just run directly since caching is by arg hash.
+    except Exception:
+        alignment_result = None
+
+    # The @st.cache_data trick above doesn't work because the arg isn't the full list.
+    # Let's use session_state instead for the alignment result.
+    if "alignment_result" not in st.session_state:
+        with st.spinner("Running alignment scoring..."):
+            try:
+                st.session_state["alignment_result"] = alignment_scorer.run_alignment(objectives)
+            except Exception as e:
+                st.error(f"Alignment scorer error: {e}")
+                st.stop()
+
+    alignment_result = st.session_state["alignment_result"]
+
+    # Render the 5 tabs
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+        "📊 Synchronization",
+        "💡 Recommendations",
+        "🕸️ Knowledge Graph",
+        "🔬 Ontology",
+        "📈 Evaluation",
+    ])
 
     with tab1:
-        improvements = rag.get("improvements", [])
-        if not improvements:
-            st.info("No improvement recommendations available.")
-        else:
-            st.markdown(f"**{len(improvements)} actions** identified for improvement")
-            for imp in improvements:
-                with st.expander(
-                    f"Action {imp['action_number']}: {imp['action_title'][:55]} "
-                    f"— Score: {imp['alignment_score']:.3f}", expanded=False,
-                ):
-                    cols = st.columns([1, 1, 1])
-                    with cols[0]:
-                        st.metric("Alignment Score", f"{imp['alignment_score']:.3f}")
-                    with cols[1]:
-                        st.metric("Declared Objective", imp["declared_objective"])
-                    with cols[2]:
-                        st.markdown(f"Confidence: {confidence_badge(imp.get('confidence', 'MEDIUM'))}",
-                                    unsafe_allow_html=True)
-                    if imp.get("modified_description"):
-                        st.markdown("**Suggested Description:**")
-                        desc = format_llm_response(imp["modified_description"], max_length=500)
-                        st.markdown(f"> {desc}")
-                    if imp.get("strategic_linkage"):
-                        linkage = format_llm_response(imp["strategic_linkage"], max_length=300)
-                        st.markdown(f"**Strategic Linkage:** {linkage}")
+        tab_synchronization(alignment_result, objectives, actions)
 
     with tab2:
-        suggestions = rag.get("new_action_suggestions", [])
-        if not suggestions:
-            st.info("No new action suggestions available.")
-        else:
-            st.markdown(f"**{len(suggestions)} new actions** suggested to fill gaps")
-            for sug in suggestions:
-                with st.expander(
-                    f"[Obj {sug['objective_code']}] {sug.get('title', 'Untitled')[:55]}",
-                    expanded=False,
-                ):
-                    if sug.get("description"):
-                        st.markdown(f"**Description:** {sug['description'][:400]}")
-                    cols = st.columns(3)
-                    with cols[0]:
-                        st.markdown(f"**Owner:** {sug.get('owner', 'N/A')}")
-                    with cols[1]:
-                        st.markdown(f"**Timeline:** {sug.get('timeline', 'N/A')}")
-                    with cols[2]:
-                        st.markdown(f"**Budget:** {sug.get('budget_estimate', 'N/A')}")
-                    if sug.get("kpis"):
-                        st.markdown("**KPIs:**")
-                        for kpi in sug["kpis"][:4]:
-                            st.markdown(f"- {kpi}")
+        tab_recommendations(alignment_result)
 
     with tab3:
-        uncovered = gaps_data.get("uncovered_strategy_concepts", [])
-        weak = gaps_data.get("weak_actions", [])
-        if uncovered:
-            st.subheader(f"Uncovered Strategy Concepts ({len(uncovered)})")
-            for gap in uncovered:
-                st.markdown(
-                    f'<span class="badge-gap">{gap["concept_id"]}</span> '
-                    f'— Goals: {", ".join(gap.get("related_strategy_goals", []))}',
-                    unsafe_allow_html=True,
-                )
-                st.caption(gap.get("note", ""))
-        if weak:
-            st.subheader(f"Weakly Aligned Actions ({len(weak)})")
-            df_weak = pd.DataFrame([{
-                "Action": w["action_id"],
-                "Best Concept": w.get("best_concept", ""),
-                "Score": w.get("best_score", 0),
-                "Note": w.get("note", "")[:60],
-            } for w in weak])
-            st.dataframe(df_weak, width='stretch', hide_index=True)
-        if not uncovered and not weak:
-            st.info("No strategic gaps detected.")
+        tab_knowledge_graph(alignment_result, objectives, actions)
 
+    with tab4:
+        tab_ontology(alignment_result, objectives, actions)
 
-# ═══════════════════════════════════════════════════════════════════════
-# Render: Knowledge Graph
-# ═══════════════════════════════════════════════════════════════════════
-
-def _render_knowledge_graph(data: dict) -> None:
-    kg = data["kg"]
-    if not kg:
-        st.info("Knowledge graph was not built. Run the full pipeline to see results here.")
-        return
-
-    insights = kg.get("insights", {})
-
-    cols = st.columns(4)
-    with cols[0]:
-        st.metric("Nodes", insights.get("node_count", len(kg.get("nodes", []))))
-    with cols[1]:
-        st.metric("Edges", insights.get("edge_count", len(kg.get("edges", kg.get("links", [])))))
-    with cols[2]:
-        st.metric("Communities", insights.get("community_count", 0))
-    with cols[3]:
-        st.metric("Isolated Actions", len(insights.get("isolated_actions", [])))
-
-    st.divider()
-
-    threshold = st.slider("Minimum edge weight to display", 0.0, 1.0, 0.45, 0.05,
-                           key="kg_threshold")
-
-    nodes = kg.get("nodes", [])
-    links = kg.get("edges", kg.get("links", []))
-
-    if not nodes:
-        st.info("No graph nodes found.")
-        return
-
-    filtered_links = [l for l in links if l.get("weight", 1.0) >= threshold]
-    node_map = {n["id"]: i for i, n in enumerate(nodes)}
-
-    np.random.seed(42)
-    n = len(nodes)
-    pos = np.random.randn(n, 2) * 2
-
-    for _ in range(50):
-        for link in filtered_links:
-            src_idx = node_map.get(link.get("source"))
-            tgt_idx = node_map.get(link.get("target"))
-            if src_idx is not None and tgt_idx is not None:
-                diff = pos[tgt_idx] - pos[src_idx]
-                dist = max(np.linalg.norm(diff), 0.1)
-                force = diff / dist * 0.05
-                pos[src_idx] += force
-                pos[tgt_idx] -= force
-
-    color_map = {
-        "StrategyObjective": "#4285F4", "StrategyGoal": "#81D4FA",
-        "OntologyConcept": "#9C27B0", "Action": "#4CAF50",
-        "KPI": "#FFEB3B", "Stakeholder": "#FF9800", "TimelineQuarter": "#9E9E9E",
-    }
-
-    show_types = st.multiselect(
-        "Node types to display", list(color_map.keys()),
-        default=["StrategyObjective", "Action", "OntologyConcept"],
-        key="kg_node_types",
-    )
-
-    visible = set()
-    for i, node in enumerate(nodes):
-        if node.get("node_type") in show_types:
-            visible.add(i)
-    for link in filtered_links:
-        src = node_map.get(link.get("source"))
-        tgt = node_map.get(link.get("target"))
-        if src in visible or tgt in visible:
-            if src is not None:
-                visible.add(src)
-            if tgt is not None:
-                visible.add(tgt)
-
-    edge_x, edge_y = [], []
-    for link in filtered_links:
-        src = node_map.get(link.get("source"))
-        tgt = node_map.get(link.get("target"))
-        if src in visible and tgt in visible:
-            edge_x += [pos[src][0], pos[tgt][0], None]
-            edge_y += [pos[src][1], pos[tgt][1], None]
-
-    fig = go.Figure()
-    fig.add_trace(go.Scatter(
-        x=edge_x, y=edge_y, mode="lines",
-        line=dict(width=0.5, color="#CCCCCC"), hoverinfo="none",
-    ))
-
-    for ntype in show_types:
-        idx_list = [i for i, nd in enumerate(nodes)
-                    if nd.get("node_type") == ntype and i in visible]
-        if not idx_list:
-            continue
-        fig.add_trace(go.Scatter(
-            x=[pos[i][0] for i in idx_list],
-            y=[pos[i][1] for i in idx_list],
-            mode="markers+text",
-            marker=dict(
-                size=[min(nodes[i].get("size", 10) * 1.5, 40) for i in idx_list],
-                color=color_map.get(ntype, "#999"),
-                line=dict(width=1, color="white"),
-            ),
-            text=[nodes[i].get("label", "")[:20] for i in idx_list],
-            textposition="top center", textfont=dict(size=7),
-            name=ntype,
-            hovertext=[
-                f"{nodes[i].get('label', '')}<br>Type: {ntype}<br>"
-                f"Score: {nodes[i].get('alignment_score', 'N/A')}"
-                for i in idx_list
-            ],
-            hoverinfo="text",
-        ))
-
-    fig.update_layout(
-        height=600, showlegend=True,
-        legend=dict(orientation="h", y=-0.05),
-        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
-        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
-        margin=dict(t=20, b=40, l=20, r=20),
-    )
-    st.plotly_chart(fig, width='stretch')
-
-    col1, col2 = st.columns(2)
-    with col1:
-        st.subheader("Bridge Nodes")
-        bridge = insights.get("bridge_nodes", [])
-        if bridge:
-            for bn in bridge[:5]:
-                st.markdown(
-                    f"**{bn.get('label', '')[:40]}** ({bn.get('node_type', '')}) — "
-                    f"betweenness: {bn.get('betweenness', 0):.4f}"
-                )
-        else:
-            st.caption("No significant bridge nodes detected.")
-    with col2:
-        st.subheader("Suggested New Connections")
-        suggestions = insights.get("new_connections", [])
-        if suggestions:
-            for sug in suggestions[:5]:
-                st.markdown(
-                    f"**{sug.get('concept', '')}** <- "
-                    f"{sug.get('suggested_action', '')} "
-                    f"(conf: {sug.get('confidence', 0):.3f})"
-                )
-        else:
-            st.caption("No connection suggestions available.")
-
-
-# ═══════════════════════════════════════════════════════════════════════
-# Render: Ontology Browser
-# ═══════════════════════════════════════════════════════════════════════
-
-def _render_ontology(data: dict) -> None:
-    mappings = data["mappings"]
-    gaps_data = data["gaps"]
-
-    if not mappings:
-        st.info("Ontology mappings were not computed. Run the full pipeline to see results here.")
-        return
-
-    meta = mappings.get("metadata", {})
-    st.markdown(
-        f"**Model:** {meta.get('embedding_model', 'N/A')} | "
-        f"**Concepts:** {meta.get('total_concepts', 0)} | "
-        f"**Threshold:** {meta.get('mapping_threshold', 0)}"
-    )
-
-    concept_tree: dict[str, list[str]] = {}
-    concept_labels: dict[str, str] = {}
-    concept_action_count: dict[str, int] = {}
-
-    for section in ("action_mappings", "strategy_mappings"):
-        for item in mappings.get(section, []):
-            for m in item.get("mappings", []):
-                parent = m.get("parent_concept", "")
-                cid = m["concept_id"]
-                concept_labels[cid] = m.get("concept_label", cid)
-                if parent and parent != cid:
-                    concept_tree.setdefault(parent, [])
-                    if cid not in concept_tree[parent]:
-                        concept_tree[parent].append(cid)
-                if section == "action_mappings":
-                    concept_action_count[cid] = concept_action_count.get(cid, 0) + 1
-
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        st.subheader("Concept Hierarchy")
-        uncovered_ids = {g["concept_id"] for g in gaps_data.get("uncovered_strategy_concepts", [])}
-        for parent in sorted(concept_tree.keys()):
-            count = concept_action_count.get(parent, 0)
-            st.markdown(f"### {concept_labels.get(parent, parent)} ({count} action links)")
-            for child in sorted(concept_tree[parent]):
-                child_count = concept_action_count.get(child, 0)
-                if child in uncovered_ids:
-                    badge = '<span class="badge-orphan">UNCOVERED</span>'
-                elif child_count > 0:
-                    badge = f'<span class="badge-good">{child_count} actions</span>'
-                else:
-                    badge = '<span class="badge-weak">0 actions</span>'
-                st.markdown(
-                    f"&nbsp;&nbsp;&nbsp;&nbsp;{concept_labels.get(child, child)} {badge}",
-                    unsafe_allow_html=True,
-                )
-
-    with col2:
-        st.subheader("Coverage Summary")
-        total_concepts = len(concept_labels)
-        covered = sum(1 for c in concept_labels if concept_action_count.get(c, 0) > 0)
-        coverage_pct = covered / max(total_concepts, 1)
-
-        st.metric("Total Concepts", total_concepts)
-        st.metric("Covered by Actions", covered)
-        st.metric("Coverage Rate", f"{coverage_pct:.0%}")
-        st.metric("Uncovered (Strategy)", len(uncovered_ids))
-
-        sunburst_data = []
-        for parent in concept_tree:
-            for child in concept_tree[parent]:
-                sunburst_data.append({
-                    "parent": concept_labels.get(parent, parent),
-                    "child": concept_labels.get(child, child),
-                    "count": concept_action_count.get(child, 0),
-                })
-        if sunburst_data:
-            df_sun = pd.DataFrame(sunburst_data)
-            fig = px.sunburst(df_sun, path=["parent", "child"], values="count",
-                              color="count",
-                              color_continuous_scale=["#FFCDD2", "#C8E6C9", "#1B5E20"])
-            fig.update_layout(height=400, margin=dict(t=10, b=10))
-            st.plotly_chart(fig, width='stretch')
-
-
-# ═══════════════════════════════════════════════════════════════════════
-# Render: Evaluation Metrics
-# ═══════════════════════════════════════════════════════════════════════
-
-def _render_evaluation(data: dict) -> None:
-    alignment = data["alignment"]
-
-    orphan_detected = set(alignment.get("orphan_actions", []))
-    poorly_aligned = set(alignment.get("poorly_aligned_actions", []))
-
-    st.subheader("Alignment Detection Summary")
-
-    methods = {
-        "Embedding Similarity (Orphan Detection)": orphan_detected,
-        "Embedding Similarity (Poor Alignment)": poorly_aligned,
-    }
-
-    gaps_data = data["gaps"]
-    weak_actions = set()
-    for w in gaps_data.get("weak_actions", []):
-        act_id = w.get("action_id", "")
-        num_str = act_id.replace("action_", "")
-        if num_str.isdigit():
-            weak_actions.add(int(num_str))
-    if weak_actions:
-        methods["Ontology Mapping (Weak Actions)"] = weak_actions
-
-    if weak_actions:
-        combined = orphan_detected | weak_actions
-        methods["Combined (Embedding + Ontology)"] = combined
-
-    det_rows = []
-    for method_name, detected in methods.items():
-        det_rows.append({
-            "Method": method_name,
-            "Flagged Actions": len(detected),
-            "Actions": ", ".join(str(a) for a in sorted(detected)) if detected else "None",
-        })
-    df_det = pd.DataFrame(det_rows)
-    st.dataframe(df_det, width='stretch', hide_index=True)
-
-    st.subheader("Cross-Method Agreement")
-    all_flagged = set()
-    for detected in methods.values():
-        all_flagged |= detected
-    if all_flagged:
-        agreement_rows = []
-        for act_num in sorted(all_flagged):
-            flagged_by = [name for name, det in methods.items() if act_num in det]
-            agreement_rows.append({
-                "Action": act_num,
-                "Flagged By": len(flagged_by),
-                "Methods": ", ".join(m.split("(")[0].strip() for m in flagged_by),
-            })
-        df_agree = pd.DataFrame(agreement_rows)
-        st.dataframe(df_agree, width='stretch', hide_index=True)
-    else:
-        st.success("No misalignment detected by any method.")
-
-    misaligned_details = alignment.get("mismatched_actions", [])
-    if misaligned_details:
-        st.divider()
-        st.subheader("Declared vs Best Objective Mismatches")
-        df_mis = pd.DataFrame([{
-            "Action": m["action_number"],
-            "Title": m["title"][:45],
-            "Declared": m["declared_objective"],
-            "Best Match": m["best_objective"],
-            "Best Score": f"{m['best_score']:.3f}",
-        } for m in misaligned_details])
-        st.dataframe(df_mis, width='stretch', hide_index=True)
-
-
-# ═══════════════════════════════════════════════════════════════════════
-# Pipeline runner
-# ═══════════════════════════════════════════════════════════════════════
-
-def _run_upload_analysis(strategic_file, action_file, stepper_placeholder) -> None:
-    """Process uploaded PDFs and run the full 6-step pipeline.
-
-    Updates the stepper_placeholder (an st.empty()) at each milestone.
-    """
-    from src.pdf_processor import (
-        extract_strategic_plan_from_pdf,
-        extract_action_plan_from_pdf,
-    )
-    from src.dynamic_analyzer import run_dynamic_analysis
-    from dashboard.pipeline_runner import (
-        run_dynamic_ontology, run_dynamic_kg,
-        run_dynamic_rag,
-    )
-
-    def _update(step: int) -> None:
-        stepper_placeholder.markdown(_build_stepper_html(step), unsafe_allow_html=True)
-
-    try:
-        # Step 1: PDF extraction
-        _update(1)
-        strategic_bytes = strategic_file.read()
-        strategic_data = extract_strategic_plan_from_pdf(strategic_bytes)
-        action_bytes = action_file.read()
-        action_data = extract_action_plan_from_pdf(action_bytes)
-
-        # Step 2: Alignment
-        _update(2)
-        report = run_dynamic_analysis(strategic_data, action_data)
-        st.session_state["upload_report"] = report
-
-        # Step 3: Ontology
-        _update(3)
-        mappings, gaps = run_dynamic_ontology(report)
-        st.session_state["dynamic_mappings"] = mappings
-        st.session_state["dynamic_gaps"] = gaps
-
-        # Step 4: Knowledge Graph
-        _update(4)
-        kg = run_dynamic_kg(report, mappings)
-        st.session_state["dynamic_kg"] = kg
-
-        # Step 5: RAG
-        _update(5)
-        rag = run_dynamic_rag(report)
-        st.session_state["dynamic_rag"] = rag
-
-        # All done
-        _update(6)
-        st.session_state["pipeline_done"] = True
-        st.session_state.pop("pipeline_running", None)
-        st.rerun()
-
-    except ValueError as e:
-        st.session_state.pop("pipeline_running", None)
-        st.error(f"Parsing error: {e}")
-    except ConnectionError:
-        st.session_state.pop("pipeline_running", None)
-        st.error("Cannot connect to the LLM API. Check your API key.")
-    except Exception as e:
-        st.session_state.pop("pipeline_running", None)
-        st.error(f"Analysis failed: {e}")
-
-
-# ═══════════════════════════════════════════════════════════════════════
-# Main app
-# ═══════════════════════════════════════════════════════════════════════
-
-def main() -> None:
-    st.set_page_config(
-        page_title="Healthcare Strategy Aligner",
-        page_icon="🏥",
-        layout="wide",
-        initial_sidebar_state="collapsed",
-    )
-
-    st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
-
-    # ── Header bar ──
-    st.markdown(
-        '<div class="header-bar"><h1>Healthcare Strategy Aligner</h1></div>',
-        unsafe_allow_html=True,
-    )
-
-    pipeline_done = st.session_state.get("pipeline_done", False)
-
-    # ── Toolbar: uploaders | button | stepper | download — one row ──
-    st.markdown('<div class="toolbar-container">', unsafe_allow_html=True)
-
-    strategic_file = None
-    action_file = None
-    run_clicked = False
-
-    if not pipeline_done:
-        # Layout: [uploader1] [uploader2] [button] [stepper] [empty]
-        c_up1, c_up2, c_btn, c_step, c_dl = st.columns(
-            [1.2, 1.2, 1, 2.5, 1], gap="medium",
-        )
-
-        @st.cache_data(ttl=60, show_spinner=False)
-        def _check_llm():
-            from src.pdf_processor import check_llm_available
-            return check_llm_available()
-
-        llm_ok = _check_llm()
-
-        with c_up1:
-            if not llm_ok:
-                st.error("OpenAI API key not set.")
-            else:
-                strategic_file = st.file_uploader(
-                    "strategy.pdf", type=["pdf"], key="strategic_pdf",
-                    label_visibility="collapsed",
-                )
-
-        with c_up2:
-            if llm_ok:
-                action_file = st.file_uploader(
-                    "action.pdf", type=["pdf"], key="action_pdf",
-                    label_visibility="collapsed",
-                )
-
-        with c_btn:
-            if strategic_file and action_file:
-                if st.session_state.get("pipeline_running"):
-                    st.button(
-                        "Start Analysis", type="primary",
-                        width='stretch', disabled=True,
-                    )
-                else:
-                    run_clicked = st.button(
-                        "Start Analysis", type="primary",
-                        width='stretch',
-                    )
-            else:
-                st.button(
-                    "Start Analysis", type="primary",
-                    width='stretch', disabled=True,
-                )
-
-        stepper_area = c_step.empty()
-        if st.session_state.get("pipeline_running"):
-            stepper_area.markdown(_build_stepper_html(0), unsafe_allow_html=True)
-            c_step.markdown(
-                '<div class="processing-label">PROCESSING...</div>',
-                unsafe_allow_html=True,
-            )
-        else:
-            stepper_area.markdown(_build_stepper_html(0), unsafe_allow_html=True)
-
-        with c_dl:
-            st.button(
-                "Download Report as PDF",
-                width='stretch', disabled=True,
-            )
-    else:
-        # Pipeline done: [summary] [button] [stepper] [download]
-        c_info, c_btn, c_step, c_dl = st.columns(
-            [2, 1, 2.5, 1.5], gap="medium",
-        )
-
-        report = st.session_state["upload_report"]
-
-        with c_info:
-            i1, i2, i3, i4, i5 = st.columns(5)
-            with i1:
-                st.metric("Score", f"{report['overall_score']:.0%}")
-            with i2:
-                st.metric("Actions", len(report["action_alignments"]))
-            with i3:
-                st.metric("Orphans", len(report.get("orphan_actions", [])))
-            with i4:
-                st.metric("Poor", len(report.get("poorly_aligned_actions", [])))
-            with i5:
-                st.metric("Good", len(report.get("well_aligned_actions", [])))
-
-        with c_btn:
-            if st.button("New Analysis", type="secondary", width='stretch'):
-                for key in list(st.session_state.keys()):
-                    if key in ("upload_report", "pipeline_done", "pipeline_running") \
-                            or key.startswith("dynamic_"):
-                        del st.session_state[key]
-                st.rerun()
-
-        stepper_area = c_step.empty()
-        stepper_area.markdown(_build_stepper_html(6), unsafe_allow_html=True)
-
-        with c_dl:
-            from dashboard.data_adapter import build_data_dict
-            data = build_data_dict(report, dict(st.session_state))
-            pdf_bytes = generate_pdf_report(data)
-            if pdf_bytes:
-                st.download_button(
-                    "Download Report as PDF", data=pdf_bytes,
-                    file_name="isps_alignment_report.pdf",
-                    mime="application/pdf", width='stretch',
-                )
-
-    st.markdown('</div>', unsafe_allow_html=True)
-
-    # ── Trigger analysis OUTSIDE columns so stepper updates ──
-    if run_clicked and strategic_file and action_file:
-        st.session_state["pipeline_running"] = True
-        _run_upload_analysis(strategic_file, action_file, stepper_area)
-
-    # ── Tabs + Output ─────────────────────────────────────────────
-    if pipeline_done:
-        from dashboard.data_adapter import build_data_dict
-        report = st.session_state["upload_report"]
-        data = build_data_dict(report, dict(st.session_state))
-
-        tabs = st.tabs([
-            "Sync Analysis", "Recommendations", "Knowledge Graph",
-            "Ontology", "Evaluation",
-        ])
-        with tabs[0]:
-            _render_sync_analysis(data)
-        with tabs[1]:
-            _render_recommendations(data)
-        with tabs[2]:
-            _render_knowledge_graph(data)
-        with tabs[3]:
-            _render_ontology(data)
-        with tabs[4]:
-            _render_evaluation(data)
-    else:
-        tabs = st.tabs([
-            "Sync Analysis", "Recommendations", "Knowledge Graph",
-            "Ontology", "Evaluation",
-        ])
-        for tab in tabs:
-            with tab:
-                st.markdown(
-                    '<div class="output-placeholder">Output</div>',
-                    unsafe_allow_html=True,
-                )
+    with tab5:
+        tab_evaluation(objectives)
 
 
 if __name__ == "__main__":

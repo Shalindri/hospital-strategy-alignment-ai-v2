@@ -1,369 +1,330 @@
 """
-PDF Processor for the ISPS system.
+pdf_processor.py
+----------------
+Extract text from a PDF file and parse it into structured JSON using an LLM.
 
-Extracts text from uploaded PDF files and uses an LLM (OpenAI GPT-4o-mini)
-to parse the content into the structured JSON schema expected by the
-downstream embedding and alignment pipeline.
+How it fits in the pipeline:
+  [this module] → vector_store → alignment_scorer → dashboard
 
-Two LLM prompts are used:
-  1. Strategic plan extraction -> objectives with goals, KPIs, etc.
-  2. Action plan extraction   -> action items with titles, owners, budgets, etc.
-
-Typical usage (from the Streamlit dashboard)::
-
-    from src.pdf_processor import extract_strategic_plan_from_pdf, extract_action_plan_from_pdf
-
-    strategic_data = extract_strategic_plan_from_pdf(uploaded_bytes)
-    action_data    = extract_action_plan_from_pdf(uploaded_bytes)
-
-Author : shalindri20@gmail.com
-Created: 2025-01
+Beginner note: PDFs store content in a layout format (positions, fonts, boxes),
+not as plain text. pdfplumber reads those boxes and gives us the text per page.
+We then send all that raw text to GPT-4o-mini and ask it to return clean JSON
+with a list of objectives or actions.
 """
 
-from __future__ import annotations
-
+# --- Standard library ---
 import json
-import logging
-import re
-from pathlib import Path
-from typing import Any
+import os
 
-import pdfplumber
+# --- Third-party ---
+import pdfplumber   # PDF text extraction
 
-from src.config import get_llm
-
-logger = logging.getLogger("pdf_processor")
-
-# Maximum characters of PDF text to send to the LLM.
-# GPT-4o-mini has a 128K context window — plenty for full documents.
-_MAX_TEXT_CHARS = 100_000
+# --- Local ---
+from src.config import get_openai_client, OPENAI_MODEL, DATA_DIR
 
 
-# ---------------------------------------------------------------------------
-# PDF text extraction
-# ---------------------------------------------------------------------------
+# =============================================================================
+# STEP 1: EXTRACT RAW TEXT FROM PDF
+# =============================================================================
 
-def extract_text_from_pdf(pdf_bytes: bytes) -> str:
-    """Extract all text from a PDF file given as bytes.
+def extract_text_from_pdf(pdf_path: str) -> str:
+    """
+    Open a PDF and extract all its text as one big string.
 
-    Uses pdfplumber which handles multi-column layouts, tables, and
-    embedded fonts better than simpler libraries.
+    Each page's text is joined with a newline. pdfplumber handles complex
+    PDF layouts better than simple tools like PyPDF2.
 
     Args:
-        pdf_bytes: Raw PDF file content.
+        pdf_path (str): Path to the PDF file (absolute or relative to project root).
 
     Returns:
-        Concatenated text from all pages.
+        str: All text from every page, joined with newlines.
+
+    Raises:
+        FileNotFoundError: If the file does not exist (with a helpful message).
+        RuntimeError: If pdfplumber cannot read the file.
     """
-    import io
-    text_parts: list[str] = []
-    with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
-        for page in pdf.pages:
-            page_text = page.extract_text()
-            if page_text:
-                text_parts.append(page_text)
-    full_text = "\n\n".join(text_parts)
-    logger.info("Extracted %d characters from PDF (%d pages).",
-                len(full_text), len(text_parts))
+    print(f"📌 Step 1: Extracting text from PDF: {pdf_path}")
+
+    # Check the file actually exists before trying to open it
+    if not os.path.exists(pdf_path):
+        raise FileNotFoundError(
+            f"PDF not found: {pdf_path}\n"
+            "Please check the file path and try again."
+        )
+
+    page_texts = []  # We'll collect text from each page here
+
+    try:
+        with pdfplumber.open(pdf_path) as pdf:
+            total_pages = len(pdf.pages)
+            print(f"   Found {total_pages} pages.")
+
+            for i, page in enumerate(pdf.pages, start=1):
+                # extract_text() returns a string or None if the page is empty
+                text = page.extract_text()
+                if text:
+                    page_texts.append(text)
+                print(f"   Processed page {i}/{total_pages}...", end="\r")
+
+    except Exception as e:
+        raise RuntimeError(
+            f"Could not read the PDF file: {e}\n"
+            "Make sure the file is not password-protected and is a valid PDF."
+        )
+
+    # Join all pages into one string, separated by newlines
+    full_text = "\n".join(page_texts)
+    print(f"\n✅ Step 1 complete. Extracted {len(full_text):,} characters.")
     return full_text
 
 
-# ---------------------------------------------------------------------------
-# LLM helper (provider-agnostic)
-# ---------------------------------------------------------------------------
+# =============================================================================
+# STEP 2: PARSE TEXT INTO STRUCTURED JSON USING LLM
+# =============================================================================
 
-def _query_llm(prompt: str) -> str:
-    """Send a prompt to the configured LLM and return the response."""
-    llm = get_llm(temperature=0.1)
-    logger.info("Calling LLM ...")
-    response = llm.invoke(prompt)
-    return response
+def parse_strategic_plan(raw_text: str) -> dict:
+    """
+    Send strategic-plan text to GPT-4o-mini and parse it into a structured dict.
 
+    The LLM identifies each strategic objective and returns JSON with fields:
+      objectives: list of {id, title, description}
 
-def _clean_json_string(raw: str) -> str:
-    """Fix common LLM JSON mistakes: trailing commas, unescaped chars."""
-    # Remove trailing commas before } or ]
-    raw = re.sub(r",\s*([}\]])", r"\1", raw)
-    return raw
+    Args:
+        raw_text (str): Full text from the strategic plan PDF.
 
+    Returns:
+        dict: {"objectives": [{"id": "O1", "title": "...", "description": "..."}, ...]}
 
-def _extract_json_from_response(text: str) -> dict | list:
-    """Find and parse the first JSON object or array in LLM output."""
-    logger.debug("LLM response length: %d chars", len(text))
+    Raises:
+        RuntimeError: If the LLM call fails or returns invalid JSON.
+    """
+    print("📌 Step 2a: Parsing strategic plan with GPT-4o-mini...")
 
-    # Try to find JSON block in markdown code fences
-    match = re.search(r"```(?:json)?\s*\n([\s\S]*?)\n```", text)
-    if match:
-        try:
-            return json.loads(_clean_json_string(match.group(1)))
-        except json.JSONDecodeError:
-            pass
+    # We only send the first ~12,000 characters to keep API costs low.
+    # Most plans fit in this limit; adjust if needed.
+    truncated_text = raw_text[:12000]
 
-    # Try to find raw JSON object or array
-    for start_char, end_char in [("{", "}"), ("[", "]")]:
-        start = text.find(start_char)
-        if start == -1:
-            continue
-        # Find matching closing brace/bracket
-        depth = 0
-        last_valid = -1
-        for i in range(start, len(text)):
-            if text[i] == start_char:
-                depth += 1
-            elif text[i] == end_char:
-                depth -= 1
-            if depth == 0:
-                last_valid = i
-                break
+    prompt = f"""You are a healthcare strategy analyst. Extract all strategic objectives
+from this hospital strategic plan document.
 
-        if last_valid > start:
-            candidate = text[start:last_valid + 1]
-            try:
-                return json.loads(_clean_json_string(candidate))
-            except json.JSONDecodeError:
-                pass
-
-    # Last resort: try to repair truncated JSON by closing open brackets
-    for start_char, end_char in [("{", "}"), ("[", "]")]:
-        start = text.find(start_char)
-        if start == -1:
-            continue
-        candidate = text[start:]
-        open_braces = candidate.count("{") - candidate.count("}")
-        open_brackets = candidate.count("[") - candidate.count("]")
-        if open_braces > 0 or open_brackets > 0:
-            # Remove any trailing partial entry (incomplete key-value)
-            candidate = re.sub(r',\s*"[^"]*"?\s*:?\s*[^}\]]*$', "", candidate)
-            candidate += "]" * open_brackets + "}" * open_braces
-            candidate = _clean_json_string(candidate)
-            try:
-                result = json.loads(candidate)
-                logger.warning("Repaired truncated JSON from LLM output.")
-                return result
-            except json.JSONDecodeError:
-                pass
-
-    raise ValueError("No valid JSON found in LLM response")
-
-
-# ---------------------------------------------------------------------------
-# Strategic plan extraction
-# ---------------------------------------------------------------------------
-
-_STRATEGIC_PROMPT = """\
-You are an expert at analyzing strategic plans. Read the following document \
-text and extract the strategic objectives in JSON format.
-
-Return a JSON object with this EXACT structure:
+Return ONLY valid JSON in this exact format (no extra text):
 {{
-  "metadata": {{
-    "title": "<document title>",
-    "period": "<planning period, e.g. 2026-2030>",
-    "version": "1.0"
-  }},
-  "vision": "<vision statement if present, else empty string>",
-  "mission": "<mission statement if present, else empty string>",
   "objectives": [
     {{
-      "code": "<letter A, B, C, etc.>",
-      "name": "<objective name>",
-      "goal_statement": "<main goal description>",
-      "strategic_goals": [
-        {{"id": "<e.g. A1>", "description": "<goal description>"}}
-      ],
-      "kpis": [
-        {{"KPI": "<kpi name>", "Baseline": "<current value>", "Target": "<target value>"}}
-      ],
-      "keywords": ["<keyword1>", "<keyword2>"]
+      "id": "O1",
+      "title": "Short title of the objective",
+      "description": "Full description of what this objective aims to achieve"
     }}
   ]
 }}
 
 Rules:
-- Extract ALL strategic objectives found in the document
-- Assign letter codes (A, B, C, ...) if not explicitly labeled
-- Extract as many strategic goals and KPIs as mentioned
-- Keywords should be 5-10 domain-relevant terms per objective
-- Return ONLY valid JSON, no other text
+- Use sequential IDs: O1, O2, O3, ...
+- Each objective must have a meaningful title (5-10 words) and a description (1-3 sentences)
+- Extract ALL distinct objectives from the document
+- Do not include sub-objectives or KPIs as separate objectives
 
-DOCUMENT TEXT:
-{text}
-"""
+Document text:
+{truncated_text}"""
 
-_ACTION_PROMPT = """\
-You are an expert at analyzing action plans. Read the following document \
-text and extract the action items in JSON format.
+    try:
+        client = get_openai_client()
+        response = client.chat.completions.create(
+            model=OPENAI_MODEL,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.1,   # Low temperature = more consistent, less creative output
+        )
 
-Return a JSON object with this EXACT structure:
+        # The LLM response is a string; we parse it as JSON
+        response_text = response.choices[0].message.content.strip()
+
+        # Sometimes the LLM wraps JSON in markdown code fences — remove them
+        if response_text.startswith("```"):
+            response_text = response_text.split("```")[1]
+            if response_text.startswith("json"):
+                response_text = response_text[4:]
+
+        parsed = json.loads(response_text)
+
+    except json.JSONDecodeError as e:
+        raise RuntimeError(
+            f"LLM returned invalid JSON: {e}\n"
+            "Try running again — LLMs occasionally produce malformed responses."
+        )
+    except Exception as e:
+        raise RuntimeError(
+            f"OpenAI API call failed: {e}\n"
+            "Check your OPENAI_API_KEY in .env and your internet connection."
+        )
+
+    print(f"✅ Step 2a complete. Found {len(parsed.get('objectives', []))} objectives.")
+    return parsed
+
+
+def parse_action_plan(raw_text: str) -> dict:
+    """
+    Send action-plan text to GPT-4o-mini and parse it into a structured dict.
+
+    The LLM identifies each action item and returns JSON with fields:
+      actions: list of {id, title, description}
+
+    Args:
+        raw_text (str): Full text from the action plan PDF.
+
+    Returns:
+        dict: {"actions": [{"id": "A1", "title": "...", "description": "..."}, ...]}
+
+    Raises:
+        RuntimeError: If the LLM call fails or returns invalid JSON.
+    """
+    print("📌 Step 2b: Parsing action plan with GPT-4o-mini...")
+
+    truncated_text = raw_text[:12000]
+
+    prompt = f"""You are a healthcare operations analyst. Extract all action items
+from this hospital annual action plan document.
+
+Return ONLY valid JSON in this exact format (no extra text):
 {{
-  "metadata": {{
-    "title": "<document title>",
-    "period": "<action plan period, e.g. 2025>",
-    "version": "1.0"
-  }},
   "actions": [
     {{
-      "action_number": <integer>,
-      "title": "<action title>",
-      "strategic_objective_code": "<letter matching the strategic objective>",
-      "strategic_objective_name": "<objective name>",
-      "description": "<full description of the action>",
-      "action_owner": "<responsible person/department>",
-      "timeline": "<e.g. Q1-Q4 2025>",
-      "quarters": ["Q1", "Q2"],
-      "budget_lkr_millions": <number or 0>,
-      "budget_raw": "<original budget text>",
-      "expected_outcome": "<expected result>",
-      "kpis": ["<kpi1>", "<kpi2>"],
-      "keywords": ["<keyword1>", "<keyword2>"]
+      "id": "A1",
+      "title": "Short title of the action",
+      "description": "What this action involves and what it aims to achieve"
     }}
   ]
 }}
 
 Rules:
-- Extract ALL action items found in the document
-- Number them sequentially starting from 1 if not explicitly numbered
-- Map each action to its strategic objective using the letter code
-- Extract budget as a number in millions if possible (set 0 if not mentioned)
-- Extract timeline quarters (Q1, Q2, Q3, Q4) when mentioned
-- Keywords should be 5-8 domain-relevant terms per action
-- Return ONLY valid JSON, no other text
+- Use sequential IDs: A1, A2, A3, ...
+- Each action must have a clear title (5-10 words) and a description (1-3 sentences)
+- Extract ALL distinct actions from the document
+- Include operational tasks, projects, and initiatives
 
-DOCUMENT TEXT:
-{text}
-"""
+Document text:
+{truncated_text}"""
+
+    try:
+        client = get_openai_client()
+        response = client.chat.completions.create(
+            model=OPENAI_MODEL,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.1,
+        )
+
+        response_text = response.choices[0].message.content.strip()
+
+        # Strip markdown code fences if present
+        if response_text.startswith("```"):
+            response_text = response_text.split("```")[1]
+            if response_text.startswith("json"):
+                response_text = response_text[4:]
+
+        parsed = json.loads(response_text)
+
+    except json.JSONDecodeError as e:
+        raise RuntimeError(
+            f"LLM returned invalid JSON: {e}\n"
+            "Try running again — LLMs occasionally produce malformed responses."
+        )
+    except Exception as e:
+        raise RuntimeError(
+            f"OpenAI API call failed: {e}\n"
+            "Check your OPENAI_API_KEY in .env and your internet connection."
+        )
+
+    print(f"✅ Step 2b complete. Found {len(parsed.get('actions', []))} actions.")
+    return parsed
 
 
-def extract_strategic_plan_from_pdf(
-    pdf_bytes: bytes,
-) -> dict[str, Any]:
-    """Extract strategic plan structure from a PDF using LLM.
+# =============================================================================
+# STEP 3: SAVE RESULT TO JSON FILE
+# =============================================================================
+
+def save_to_json(data: dict, output_filename: str) -> str:
+    """
+    Save a Python dict as a JSON file inside the data/ folder.
 
     Args:
-        pdf_bytes: Raw PDF file content.
+        data (dict): The data to save.
+        output_filename (str): Filename only (e.g. "strategic_plan.json").
 
     Returns:
-        Structured strategic plan dict.
-
-    Raises:
-        ValueError: If LLM output cannot be parsed as JSON.
+        str: The full path to the saved file.
     """
-    text = extract_text_from_pdf(pdf_bytes)
-    if not text.strip():
-        raise ValueError("PDF appears to be empty or image-only.")
+    # Create the data/ folder if it doesn't exist yet
+    os.makedirs(DATA_DIR, exist_ok=True)
 
-    truncated = text[:_MAX_TEXT_CHARS]
-    prompt = _STRATEGIC_PROMPT.format(text=truncated)
+    output_path = os.path.join(DATA_DIR, output_filename)
 
-    logger.info("Sending strategic plan to LLM for parsing (%d / %d chars)...",
-                len(truncated), len(text))
-    response = _query_llm(prompt)
-    logger.info("LLM strategic plan response length: %d chars", len(response))
-    result = _extract_json_from_response(response)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
 
-    # Flexible key detection - LLM may use different key names
-    objectives_list = None
-    if isinstance(result, dict):
-        for key in ("objectives", "strategic_objectives"):
-            if key in result and isinstance(result[key], list):
-                objectives_list = result[key]
-                break
-        if objectives_list is None:
-            for key, val in result.items():
-                if isinstance(val, list) and len(val) > 0 and isinstance(val[0], dict):
-                    logger.warning("Using unexpected key '%s' as objectives list.", key)
-                    objectives_list = val
-                    break
-
-    if objectives_list is not None:
-        result["objectives"] = objectives_list
-        n_obj = len(objectives_list)
-        logger.info("LLM extracted %d strategic objectives.", n_obj)
-        for obj in objectives_list:
-            obj.setdefault("strategic_goals", [])
-            obj.setdefault("kpis", [])
-            obj.setdefault("keywords", [])
-            obj.setdefault("goal_statement", obj.get("name", ""))
-        return result
-
-    logger.error("LLM response keys: %s",
-                 list(result.keys()) if isinstance(result, dict) else type(result).__name__)
-    raise ValueError(
-        "LLM response does not contain expected 'objectives' key. "
-        f"Got keys: {list(result.keys()) if isinstance(result, dict) else type(result).__name__}"
-    )
+    print(f"💾 Saved to {output_path}")
+    return output_path
 
 
-def extract_action_plan_from_pdf(
-    pdf_bytes: bytes,
-) -> dict[str, Any]:
-    """Extract action plan structure from a PDF using LLM.
+# =============================================================================
+# MAIN ENTRY POINT
+# =============================================================================
+
+def process_pdf(pdf_path: str, doc_type: str, output_filename: str) -> dict:
+    """
+    Full pipeline: extract PDF text → parse with LLM → save JSON → return data.
 
     Args:
-        pdf_bytes: Raw PDF file content.
+        pdf_path (str): Path to the input PDF file.
+        doc_type (str): "strategic_plan" or "action_plan".
+        output_filename (str): Filename to save in data/ (e.g. "strategic_plan.json").
 
     Returns:
-        Structured action plan dict.
+        dict: The parsed structured data.
 
     Raises:
-        ValueError: If LLM output cannot be parsed as JSON.
+        ValueError: If doc_type is not "strategic_plan" or "action_plan".
     """
-    text = extract_text_from_pdf(pdf_bytes)
-    if not text.strip():
-        raise ValueError("PDF appears to be empty or image-only.")
+    print(f"\n{'='*60}")
+    print(f"  Processing: {pdf_path} (type: {doc_type})")
+    print(f"{'='*60}\n")
 
-    truncated = text[:_MAX_TEXT_CHARS]
-    prompt = _ACTION_PROMPT.format(text=truncated)
+    # Step 1: Extract text from PDF
+    raw_text = extract_text_from_pdf(pdf_path)
 
-    logger.info("Sending action plan to LLM for parsing (%d / %d chars)...",
-                len(truncated), len(text))
-    response = _query_llm(prompt)
-    logger.info("LLM action plan response length: %d chars", len(response))
-    result = _extract_json_from_response(response)
+    # Step 2: Parse text into structured JSON using the LLM
+    if doc_type == "strategic_plan":
+        parsed_data = parse_strategic_plan(raw_text)
+    elif doc_type == "action_plan":
+        parsed_data = parse_action_plan(raw_text)
+    else:
+        raise ValueError(
+            f"Unknown doc_type: '{doc_type}'. "
+            "Use 'strategic_plan' or 'action_plan'."
+        )
 
-    # Flexible key detection - LLM may use different key names
-    actions_list = None
-    if isinstance(result, dict):
-        for key in ("actions", "action_items", "action_plan", "items"):
-            if key in result and isinstance(result[key], list):
-                actions_list = result[key]
-                break
-        if actions_list is None:
-            for key, val in result.items():
-                if isinstance(val, list) and len(val) > 0 and isinstance(val[0], dict):
-                    logger.warning("Using unexpected key '%s' as actions list.", key)
-                    actions_list = val
-                    break
-    elif isinstance(result, list) and len(result) > 0:
-        actions_list = result
-        result = {"actions": actions_list}
+    # Step 3: Save to JSON file in data/
+    save_to_json(parsed_data, output_filename)
 
-    if actions_list is not None:
-        result["actions"] = actions_list
-        n_act = len(actions_list)
-        logger.info("LLM extracted %d action items.", n_act)
-        for idx, act in enumerate(actions_list):
-            act.setdefault("action_number", idx + 1)
-            act.setdefault("description", act.get("title", ""))
-            act.setdefault("expected_outcome", "")
-            act.setdefault("kpis", [])
-            act.setdefault("keywords", [])
-            act.setdefault("action_owner", "")
-            act.setdefault("timeline", "")
-            act.setdefault("quarters", [])
-            act.setdefault("budget_lkr_millions", 0.0)
-            act.setdefault("budget_raw", "")
-        return result
-
-    logger.error("LLM response keys: %s",
-                 list(result.keys()) if isinstance(result, dict) else type(result).__name__)
-    raise ValueError(
-        "LLM response does not contain expected 'actions' key. "
-        f"Got keys: {list(result.keys()) if isinstance(result, dict) else type(result).__name__}"
-    )
+    print(f"\n✅ Processing complete for {doc_type}.\n")
+    return parsed_data
 
 
-def check_llm_available() -> bool:
-    """Check if the OpenAI API key is configured."""
-    from src.config import OPENAI_API_KEY
-    return bool(OPENAI_API_KEY)
+# =============================================================================
+# CONVENIENCE: run this file directly to process both PDFs
+# =============================================================================
+if __name__ == "__main__":
+    # Quick test: process sample PDFs if they exist in data/
+    import sys
+
+    sample_strategic = os.path.join(DATA_DIR, "StrategicPlan20262030_test1.pdf")
+    sample_action    = os.path.join(DATA_DIR, "AnnualActionPlan2026_test1.pdf")
+
+    if os.path.exists(sample_strategic):
+        process_pdf(sample_strategic, "strategic_plan", "strategic_plan.json")
+    else:
+        print(f"⚠️  No strategic plan PDF found at {sample_strategic}")
+
+    if os.path.exists(sample_action):
+        process_pdf(sample_action, "action_plan", "action_plan.json")
+    else:
+        print(f"⚠️  No action plan PDF found at {sample_action}")
