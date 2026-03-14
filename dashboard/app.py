@@ -1,22 +1,3 @@
-"""
-app.py
-------
-Streamlit dashboard for ISPS — 5 tabs covering all coursework sections.
-
-How it fits in the pipeline:
-  All src/ modules --> [this module] --> renders in the browser
-
-Run it with:
-  streamlit run dashboard/app.py
-
-Tab map:
-  1. Synchronization  --> alignment scores, heatmap, per-action table
-  2. Recommendations  --> RAG suggestions, new action proposals
-  3. Knowledge Graph  --> interactive pyvis HTML
-  4. Ontology         --> concept mappings per objective/action
-  5. Evaluation       --> Precision, Recall, F1, AUC, confusion matrix
-"""
-
 # --- Standard library ---
 import json
 import os
@@ -51,13 +32,13 @@ from tests import evaluation
 # PAGE CONFIG
 # =============================================================================
 st.set_page_config(
-    page_title="ISPS — Strategic Plan Synchronization",
+    page_title="ISPS",
     page_icon="🏥",
     layout="wide",
 )
 
-st.title("🏥 ISPS — Intelligent Strategic Plan Synchronization")
-st.caption("MSc Information Retrieval Coursework · Hospital Strategy Alignment AI")
+st.title("Healthcare Strategy Aligner")
+st.caption("Intelligent Hospital Strategic & Action Plan Synchronization System")
 
 
 # =============================================================================

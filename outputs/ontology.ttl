@@ -4,9 +4,9 @@
 
 isps:A1 a isps:PatientSafety .
 
-isps:A10 a isps:Technology .
+isps:A10 a isps:OperationalEfficiency .
 
-isps:A11 a isps:General .
+isps:A11 a isps:ClinicalCare .
 
 isps:A12 a isps:ClinicalCare .
 
@@ -16,17 +16,11 @@ isps:A14 a isps:HumanResources .
 
 isps:A15 a isps:ClinicalCare .
 
-isps:A16 a isps:ClinicalCare .
+isps:A16 a isps:HumanResources .
 
 isps:A17 a isps:Finance .
 
-isps:A18 a isps:Finance .
-
-isps:A19 a isps:Finance .
-
 isps:A2 a isps:PatientSafety .
-
-isps:A20 a isps:Finance .
 
 isps:A3 a isps:PatientSafety .
 
@@ -38,9 +32,9 @@ isps:A6 a isps:Technology .
 
 isps:A7 a isps:Technology .
 
-isps:A8 a isps:OperationalEfficiency .
+isps:A8 a isps:ClinicalCare .
 
-isps:A9 a isps:General .
+isps:A9 a isps:Technology .
 
 isps:CommunityEngagement a owl:Class ;
     rdfs:label "CommunityEngagement" ;
@@ -56,10 +50,14 @@ isps:O3 a isps:Technology .
 
 isps:O4 a isps:HumanResources .
 
-isps:O5 a isps:PatientSafety .
+isps:O5 a isps:Finance .
 
 isps:OperationalEfficiency a owl:Class ;
     rdfs:label "OperationalEfficiency" ;
+    rdfs:subClassOf isps:HospitalConcept .
+
+isps:Finance a owl:Class ;
+    rdfs:label "Finance" ;
     rdfs:subClassOf isps:HospitalConcept .
 
 isps:ClinicalCare a owl:Class ;
@@ -68,10 +66,6 @@ isps:ClinicalCare a owl:Class ;
 
 isps:HumanResources a owl:Class ;
     rdfs:label "HumanResources" ;
-    rdfs:subClassOf isps:HospitalConcept .
-
-isps:Finance a owl:Class ;
-    rdfs:label "Finance" ;
     rdfs:subClassOf isps:HospitalConcept .
 
 isps:PatientSafety a owl:Class ;

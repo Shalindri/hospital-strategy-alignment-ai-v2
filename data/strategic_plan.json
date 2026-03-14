@@ -3,27 +3,27 @@
     {
       "id": "O1",
       "title": "Improve Patient Safety",
-      "description": "This objective aims to enhance the safety of patients by reducing hospital-acquired infections and serious clinical incidents. A zero-tolerance approach to preventable harm will be adopted, requiring a cultural shift towards proactive risk management."
+      "description": "This objective aims to enhance the overall safety of patients by reducing hospital-acquired infections (HAIs) and serious clinical incidents. With a current HAI rate of 3.1%, the goal is to achieve a rate below 2.0% through rigorous infection control measures and mandatory staff training. The initiative will also focus on minimizing medication errors and achieving Joint Commission International (JCI) accreditation, which will validate the hospital's commitment to global safety standards."
     },
     {
       "id": "O2",
       "title": "Modernise Hospital Technology",
-      "description": "The goal is to transform the hospital into a digitally mature organization by upgrading IT infrastructure and implementing a cloud-hosted Electronic Health Record system. This modernization will streamline operations, enhance data security, and improve clinical decision-making."
+      "description": "The objective seeks to transform the hospital's IT infrastructure by implementing a cloud-hosted Electronic Health Record (EHR) system, thereby eliminating paper-based records. This modernization will enhance data accuracy and accessibility, reduce administrative burdens, and improve clinical decision-making through AI-powered diagnostic tools. Additionally, strengthening cybersecurity measures will protect sensitive patient information and ensure compliance with data security regulations."
     },
     {
       "id": "O3",
       "title": "Enhance Patient Experience and Satisfaction",
-      "description": "This objective focuses on placing patients at the center of service delivery by improving communication, reducing waiting times, and enhancing overall care experiences. The aim is to significantly increase patient satisfaction and loyalty."
+      "description": "This objective focuses on placing patients at the center of care by improving their overall experience within the hospital. Key initiatives include reducing outpatient waiting times, expanding multilingual communication services, and launching a self-service patient portal. By systematically collecting and acting on patient feedback, the hospital aims to significantly increase patient satisfaction scores and foster loyalty among its diverse patient population."
     },
     {
       "id": "O4",
       "title": "Develop and Retain a Skilled Workforce",
-      "description": "The objective is to ensure that the hospital has a skilled and motivated workforce by investing in training and development programs. This will help address workforce shortages and improve the quality of care provided to patients."
+      "description": "The objective aims to cultivate a highly skilled workforce by implementing comprehensive training and development programs. This includes addressing nursing vacancy rates and enhancing staff retention through career advancement opportunities and supportive work environments. By investing in workforce development, the hospital seeks to ensure that its clinical teams are equipped with the necessary skills and knowledge to deliver high-quality care."
     },
     {
       "id": "O5",
       "title": "Achieve Financial Sustainability",
-      "description": "This objective aims to ensure the long-term financial health of the hospital by implementing strategies to reduce deficits and improve resource allocation. Achieving financial sustainability is crucial for maintaining high-quality healthcare services."
+      "description": "This objective is centered on ensuring the hospital's long-term financial health by addressing the current deficit and optimizing resource allocation. Strategies will include improving operational efficiencies, enhancing revenue cycles, and exploring new service lines. By achieving financial sustainability, the hospital can continue to invest in quality care and technological advancements, ultimately benefiting patients and the community."
     }
   ]
 }

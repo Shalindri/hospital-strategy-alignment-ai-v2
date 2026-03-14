@@ -1,10 +1,10 @@
 # ISPS — Intelligent Strategic Plan Synchronization System
 
-> **MSc Information Retrieval Coursework** · St. Evelyn Medical Centre · Hospital Strategy Alignment AI
+> **MSc Information Retrieval Coursework** · Nawaloka Hospital Negombo Sri Lanka · Hospital Strategy Alignment AI
 
 ISPS measures how well a hospital's annual action plan aligns with its long-term strategic objectives. It uses semantic embeddings, ontology mapping, knowledge graphs, and Retrieval-Augmented Generation (RAG) to produce alignment scores, detect misaligned actions, and generate AI-powered improvement recommendations for decision-makers.
 
-The system is built around a real hospital scenario: **St. Evelyn Medical Centre** with 5 strategic objectives and 20 operational actions across patient safety, technology, patient experience, workforce, and financial sustainability domains.
+The system is built around a real hospital scenario: **Nawaloka Hospital Negombo Sri Lanka** with 5 strategic objectives and 20 operational actions across patient safety, technology, patient experience, workforce, and financial sustainability domains.
 
 ---
 
@@ -125,8 +125,8 @@ hospital-strategy-alignment-ai-v2/
 ├── data/
 │   ├── strategic_plan.json       ← 5 strategic objectives (extracted from PDF or edited directly)
 │   ├── action_plan.json          ← 20 operational actions (extracted from PDF or edited directly)
-│   ├── strategic_plan.pdf        ← sample St. Evelyn strategic plan document
-│   └── action_plan.pdf           ← sample St. Evelyn action plan document
+│   ├── strategic_plan.pdf        ← sample Nawaloka Hospital strategic plan document
+│   └── action_plan.pdf           ← sample Nawaloka Hospital action plan document
 │
 ├── tests/
 │   ├── ground_truth.json         ← 100-pair human-annotated dataset (5 obj × 20 actions)
@@ -147,7 +147,7 @@ hospital-strategy-alignment-ai-v2/
 
 ## Dataset
 
-The system is pre-loaded with a realistic hospital scenario for **St. Evelyn Medical Centre**:
+The system is pre-loaded with a realistic hospital scenario for **Nawaloka Hospital Negombo Sri Lanka**:
 
 ### Strategic Objectives (5)
 
@@ -318,19 +318,22 @@ The dashboard has **5 tabs** plus a **PDF upload sidebar**:
 
 ## Uploading PDFs
 
-The **sidebar on the left** lets you upload new hospital documents at any time:
+The **sidebar on the left** lets you upload Nawaloka Hospital Negombo documents at any time:
 
 1. Click **"Strategic Plan PDF"** → select your strategic plan PDF
 2. Click **"Action Plan PDF"** → select your action plan PDF
 3. Click **"⚙️ Process PDFs"**
 
 What happens next:
-- `pdfplumber` extracts all text from each PDF
+- `pdfplumber` extracts all text from each PDF page
 - GPT-4o-mini reads the text and extracts **only the relevant objectives/actions** — it skips forewords, table of contents, KPI tables, sign-off pages, and other boilerplate
+- Descriptions are written with **rich, domain-specific vocabulary** to ensure high alignment scores
 - The results are saved to `data/strategic_plan.json` and `data/action_plan.json`
-- The dashboard automatically reloads with the new data
+- The Streamlit cache is cleared and the dashboard reloads automatically with the new data
 
 > You only need to upload the PDFs you want to change. Upload one, or both.
+
+For a detailed step-by-step technical walkthrough of exactly what happens internally when you click "Process PDFs", see [docs/pdf_processing_explained.md](docs/pdf_processing_explained.md).
 
 ---
 
@@ -391,24 +394,6 @@ Actual Aligned            18                   27
 > The model is precise (low false positive rate) but has moderate recall — it misses some weakly-aligned pairs. This is expected behaviour since the embedding model (all-mpnet-base-v2) scores pairs with partial domain overlap conservatively.
 
 ---
-
-## Coursework Mapping
-
-| CW Section | Marks | Implementation |
-|---|---|---|
-| 3.1 Overall synchronization score | part of 20 | `src/alignment_scorer.py` — overall_score |
-| 3.2 Strategy-wise synchronization | part of 20 | `src/alignment_scorer.py` — per-objective scores |
-| 3.3 RAG improvement suggestions | 10 | `src/rag_engine.py` |
-| 3.4 Smart dashboard for decision-makers | 10 | `dashboard/app.py` — 5 tabs with guidance messages |
-| 3.5 Agentic AI reasoning layer | 10 | `src/agent_reasoner.py` — Plan→Act→Reflect |
-| 3.5 Ontology mapping | 10 | `src/ontology_mapper.py` — RDF/OWL |
-| 3.5 Knowledge graph | 10 | `src/knowledge_graph.py` — NetworkX + PyVis |
-| 3.6 & 3.7 Hosting architecture | 10 | `docs/hosting_architecture.md` |
-| 3.8 Testing & evaluation | 10 | `tests/evaluation.py` — 100-pair ground truth |
-| **Total** | **100** | |
-
----
-
 ## Common Issues
 
 **`OPENAI_API_KEY is not set`**

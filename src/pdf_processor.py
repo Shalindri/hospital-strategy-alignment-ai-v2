@@ -135,14 +135,15 @@ Return ONLY valid JSON in this exact format (no extra text, no markdown):
     {{
       "id": "O1",
       "title": "Short clear title of the objective (5-10 words)",
-      "description": "What this objective aims to achieve and why it matters (2-4 sentences)"
+      "description": "What this objective aims to achieve and why it matters (4-6 sentences). Include domain-specific clinical, operational, or financial terminology that makes this objective clearly distinct from the others."
     }}
   ]
 }}
 
 Rules:
 - Use sequential IDs: O1, O2, O3, ...
-- Write descriptions in plain English that explain the strategic intent
+- Write rich, detailed descriptions using specific domain vocabulary (e.g. for patient safety: HAI, infection control, adverse events, near-miss; for technology: EHR, cybersecurity, digital infrastructure; for finance: deficit, procurement, EBITDA)
+- Each objective description must use vocabulary UNIQUE to its domain so objectives are clearly distinguishable from each other
 - Do NOT copy-paste KPIs, timelines, or risk text into the description
 - If the same objective appears under multiple headings, include it only once
 
@@ -229,14 +230,15 @@ Return ONLY valid JSON in this exact format (no extra text, no markdown):
     {{
       "id": "A1",
       "title": "Short clear title of the action (5-10 words)",
-      "description": "What this action involves and what it aims to achieve (2-4 sentences)"
+      "description": "What this action involves and what it aims to achieve (4-6 sentences). Use specific domain terminology that clearly links this action to its strategic area."
     }}
   ]
 }}
 
 Rules:
 - Use sequential IDs: A1, A2, A3, ...
-- Write descriptions that explain what will be done and the intended outcome
+- Write rich, detailed descriptions using specific domain vocabulary matching the action's area (e.g. infection control actions: HAI, sterilisation, PPE, near-miss; technology actions: EHR, cybersecurity, digital workflows; workforce actions: turnover, burnout, rostering, mentorship; finance actions: procurement, deficit, expenditure, grants)
+- Each action must use vocabulary specific enough to clearly distinguish it from actions in other domains
 - Do NOT include the owner name or KPI in the description — just the action itself
 - If an action appears in multiple sections, include it only once
 

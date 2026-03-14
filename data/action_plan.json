@@ -3,102 +3,87 @@
     {
       "id": "A1",
       "title": "Monthly Infection Control Audit",
-      "description": "Conduct monthly ward-level infection control audits measuring hand hygiene compliance, sterilisation standards, and PPE adherence. Target a hospital-acquired infection rate below 2% by enforcing clinical safety protocols and rapidly isolating infection sources."
+      "description": "Conduct monthly ward-level infection control audits measuring hand hygiene compliance, sterilisation standards, and PPE adherence across all clinical areas. Track hospital-acquired infection rates, isolate outbreak sources immediately, and enforce zero-tolerance infection control protocols. Target HAI rate below 2% by systematically eliminating preventable clinical safety failures through structured audit findings and corrective action plans."
     },
     {
       "id": "A2",
       "title": "Staff Safety Training Programme",
-      "description": "Deliver quarterly clinical error prevention workshops for all nursing and medical staff, focusing on adverse event recognition, near-miss reporting, medication safety, and safe handover procedures. Build a culture of clinical risk awareness to reduce preventable patient harm."
+      "description": "Deliver quarterly clinical error prevention workshops for all nursing and medical staff, focusing on adverse event recognition, near-miss reporting, medication safety protocols, and safe clinical handover procedures. Build a proactive culture of patient harm prevention and clinical risk awareness. Reduce preventable adverse clinical events by ensuring all staff are trained in root-cause analysis and incident escalation pathways."
     },
     {
       "id": "A3",
       "title": "JCI Accreditation Preparation",
-      "description": "Lead the hospital through Joint Commission International accreditation, certifying clinical risk management frameworks, infection control protocols, and patient safety standards. Achieve full JCI certification within 12 months."
+      "description": "Lead the hospital through Joint Commission International accreditation, certifying clinical risk management frameworks, infection control protocols, sterilisation standards, and patient safety systems. Achieve full JCI certification within 12 months by closing all clinical safety gaps identified during gap analysis. JCI accreditation demonstrates zero-tolerance commitment to preventing hospital-acquired infections and clinical incidents."
     },
     {
       "id": "A4",
       "title": "Clinical Incident Reporting System",
-      "description": "Implement a real-time clinical incident reporting platform enabling staff to log near-misses, adverse events, medication errors, and safety hazards instantly. Analyse patterns through root-cause investigation to identify systemic clinical risks."
+      "description": "Implement a real-time clinical incident reporting platform enabling all nursing and medical staff to log near-misses, adverse events, medication errors, and patient safety hazards instantly. Analyse reported incidents through structured root-cause investigation to identify systemic clinical risks. Use findings to eliminate recurring safety failures and reduce preventable patient harm across all wards."
     },
     {
       "id": "A5",
       "title": "Deploy Electronic Health Record System",
-      "description": "Deploy a cloud-hosted electronic health record system to replace all paper-based clinical documentation. Migrate patient data to a secure digital database and train all staff on the EHR platform before full go-live."
+      "description": "Deploy a cloud-hosted Electronic Health Record system to replace all paper-based clinical documentation across the hospital. Migrate all patient records to a secure, interoperable digital EHR database and train all clinical staff on the platform prior to full go-live. The EHR system will streamline clinical workflows, eliminate paper documentation errors, and provide clinicians with real-time access to complete patient data."
     },
     {
       "id": "A6",
       "title": "Automate Patient Scheduling and Billing",
-      "description": "Implement automated digital workflows for appointment scheduling and invoice processing, replacing all manual administrative tasks. The online booking platform and automated billing software will create a fully data-driven administrative digital infrastructure."
+      "description": "Implement automated digital workflows for appointment scheduling and invoice processing, replacing all manual administrative tasks with a fully digital infrastructure. The online booking platform and automated billing software will eliminate scheduling errors, reduce administrative overhead, and accelerate invoice processing cycles. This digital automation creates a data-driven administrative backbone for the hospital's IT infrastructure."
     },
     {
       "id": "A7",
       "title": "Upgrade Cybersecurity Infrastructure",
-      "description": "Conduct a full cybersecurity audit of all hospital IT networks, patch software vulnerabilities, and deploy multi-factor authentication on all clinical systems. Establish continuous network monitoring to protect the integrity of all digital health data."
+      "description": "Conduct a full cybersecurity audit of all hospital IT networks, patch all identified software vulnerabilities, and deploy multi-factor authentication across all clinical systems and EHR access points. Establish continuous network monitoring and intrusion detection to protect the integrity of all digital health data. Harden the hospital's cybersecurity posture to prevent data breaches and ensure regulatory compliance with data protection standards."
     },
     {
       "id": "A8",
       "title": "Implement AI-Powered Diagnostic Support Tools",
-      "description": "Integrate machine-learning diagnostic algorithms into radiology and pathology IT workflows to assist clinicians with image analysis and anomaly detection. The AI-powered software platform will accelerate diagnostic throughput."
+      "description": "Integrate machine-learning diagnostic algorithms into radiology and pathology IT workflows to assist clinicians with medical image analysis and anomaly detection. The AI-powered diagnostic software platform will accelerate radiology throughput, improve diagnostic accuracy, and reduce reporting turnaround times. Deploy AI decision-support tools that augment clinical judgement and improve outcomes through faster, data-driven diagnosis."
     },
     {
       "id": "A9",
       "title": "Launch Patient Satisfaction Survey Programme",
-      "description": "Launch a post-discharge satisfaction survey programme collecting patient feedback on various aspects of care. Analyse survey responses monthly to identify service gaps and drive targeted improvements."
+      "description": "Launch a structured post-discharge satisfaction survey programme collecting patient feedback on communication quality, waiting times, ward comfort, and overall care experience. Analyse survey responses monthly using CAHPS-style metrics to identify service gaps and track satisfaction score trends. Use patient feedback data to drive targeted service improvements and measure progress towards patient experience and satisfaction goals."
     },
     {
       "id": "A10",
       "title": "Reduce Outpatient Waiting Times Initiative",
-      "description": "Redesign outpatient triage flows to cut average waiting times by 40% and improve communication about expected wait durations. Deliver a smoother, more satisfying patient journey."
+      "description": "Redesign outpatient triage and appointment scheduling flows to cut average patient waiting times by 40%. Improve communication with patients about expected wait durations and appointment availability. Deliver a measurably smoother, faster outpatient journey that increases patient satisfaction scores and reduces complaints about waiting. Use lean process redesign to eliminate unnecessary delays at every stage of the patient pathway."
     },
     {
       "id": "A11",
       "title": "Introduce Multilingual Patient Communication Services",
-      "description": "Deploy professional interpreter services and translated discharge leaflets in 12 languages. Ensure patients from all language backgrounds receive clear communication about their care plan."
+      "description": "Deploy professional interpreter services and produce translated discharge leaflets, consent forms, and care plan documents in 12 languages to serve all patient language communities. Ensure patients from non-English-speaking backgrounds receive clear, culturally appropriate communication about their diagnosis, treatment, and discharge instructions. Multilingual communication services improve patient understanding and satisfaction across all cultural groups."
     },
     {
       "id": "A12",
       "title": "Deploy Patient Self-Service Portal",
-      "description": "Launch a self-service patient portal enabling patients to review test results, book appointments, and message their clinical team. Empower patients to actively manage their own care journey."
+      "description": "Launch a patient self-service portal enabling patients to review test results, book and reschedule appointments, view discharge summaries, and send secure messages directly to their clinical care team. Empower patients to actively manage their own care journey and access their health information at any time. The portal improves patient satisfaction, reduces administrative phone calls, and strengthens the overall patient experience."
     },
     {
       "id": "A13",
       "title": "Launch Clinical Leadership Development Programme",
-      "description": "Deliver a 12-month clinical leadership mentorship programme for senior nurses and junior doctors. Create an internal pipeline of skilled clinical managers to improve long-term workforce retention."
+      "description": "Deliver a 12-month clinical leadership mentorship programme for senior nurses and junior doctors, providing structured coaching, management skills training, and continuous professional development. Create an internal pipeline of skilled clinical managers capable of leading wards and departments effectively. Strong clinical leadership directly reduces nursing turnover and improves long-term workforce retention by giving talented staff career progression pathways."
     },
     {
       "id": "A14",
       "title": "Staff Wellbeing and Mental Health Support Initiative",
-      "description": "Establish a comprehensive staff wellbeing programme offering counselling services and burnout prevention workshops. Monitor employee engagement to reduce nursing turnover."
+      "description": "Establish a comprehensive staff wellbeing programme offering confidential counselling services, burnout prevention workshops, and peer support networks for nursing and medical staff. Monitor employee engagement scores and wellbeing indicators quarterly to identify at-risk departments early. Reducing staff burnout and improving psychological safety directly lowers nursing turnover rates and supports long-term workforce retention."
     },
     {
       "id": "A15",
       "title": "Nurse Retention and Incentive Scheme",
-      "description": "Introduce a nurse retention incentive package featuring flexible shift scheduling and performance-based pay increments. Target a 25% reduction in nursing turnover."
+      "description": "Introduce a nurse retention incentive package featuring flexible shift rostering, performance-based pay increments, and recognition awards. Target a 25% reduction in nursing turnover within 18 months by making shift patterns more compatible with work-life balance and rewarding high-performing clinical staff. Reducing nursing turnover cuts agency spend, preserves institutional knowledge, and improves continuity of patient care."
     },
     {
       "id": "A16",
       "title": "University Medical Internship Partnership Programme",
-      "description": "Formalise clinical internship and rotation partnerships with three regional universities. Establish the hospital as an employer of choice to improve recruitment outcomes."
+      "description": "Formalise clinical internship and rotation agreements with three regional universities to create a structured pipeline of trained nurses and junior doctors entering the hospital workforce. Establish the hospital as an employer of choice through competitive placement terms and mentored development programmes. University partnerships strengthen long-term workforce recruitment and reduce dependency on costly agency staff to fill clinical vacancies."
     },
     {
       "id": "A17",
       "title": "Annual Budget Review and Cost Reduction Audit",
-      "description": "Conduct a comprehensive annual departmental expenditure review to identify fiscal inefficiencies and eliminate non-essential operational costs. Deliver a 10% reduction in non-clinical overheads."
-    },
-    {
-      "id": "A18",
-      "title": "Expand Private Patient and Revenue Services",
-      "description": "Develop a dedicated private patient revenue unit offering premium elective procedures and specialist outpatient packages. Grow private income streams to achieve long-term financial sustainability."
-    },
-    {
-      "id": "A19",
-      "title": "Apply for Healthcare Grants and Government Subsidies",
-      "description": "Identify, prepare, and submit applications for all eligible government healthcare grants and funding schemes. Secure external revenue to finance infrastructure investment."
-    },
-    {
-      "id": "A20",
-      "title": "Medical Supply Chain Optimisation Programme",
-      "description": "Centralise medical supply procurement, renegotiate supplier contracts, and implement just-in-time inventory management. Cut supply chain expenditure by 15%."
+      "description": "Conduct a comprehensive annual departmental expenditure review to identify fiscal inefficiencies and eliminate non-essential non-clinical overhead costs. Deliver a 10% reduction in non-clinical overhead expenditure by scrutinising every budget line, renegotiating service contracts, and implementing cost controls. Rigorous budget review ensures financial resources are allocated to clinical priorities."
     }
   ]
 }

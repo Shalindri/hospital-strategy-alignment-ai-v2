@@ -2,8 +2,8 @@
 generate_pdfs.py
 ----------------
 Generates two professional hospital PDF documents:
-  1. data/strategic_plan.pdf  — St. Evelyn Medical Centre Strategic Plan 2025-2028
-  2. data/action_plan.pdf     — St. Evelyn Medical Centre Action Plan 2025
+  1. data/strategic_plan.pdf  — Nawaloka Hospital Negombo Sri Lanka Strategic Plan 2025-2028
+  2. data/action_plan.pdf     — Nawaloka Hospital Negombo Sri Lanka Action Plan 2025
 """
 
 import json
@@ -29,12 +29,12 @@ SP_PDF     = os.path.join(DATA_DIR, "strategic_plan.pdf")
 AP_PDF     = os.path.join(DATA_DIR, "action_plan.pdf")
 
 # ── Hospital identity ──────────────────────────────────────────────────────────
-HOSPITAL_NAME   = "St. Evelyn Medical Centre"
+HOSPITAL_NAME   = "Nawaloka Hospital Negombo"
 HOSPITAL_TAG    = "Committed to Excellence in Healthcare"
-ADDRESS_LINE    = "14 Harrow Road, London NW1 4BT  |  www.stevelynmc.nhs.uk  |  +44 (0)20 7946 0000"
+ADDRESS_LINE    = "Negombo, Sri Lanka  |  www.nawaloka.lk  |  +94 31 222 4444"
 STRATEGIC_TITLE = "Strategic Plan 2025 – 2028"
 ACTION_TITLE    = "Operational Action Plan 2025"
-APPROVED_BY     = "Board of Directors — St. Evelyn Medical Centre"
+APPROVED_BY     = "Board of Directors — Nawaloka Hospital Negombo"
 VERSION_SP      = "Version 3.1  |  Approved January 2025"
 VERSION_AP      = "Version 2.4  |  Approved February 2025"
 
@@ -308,7 +308,7 @@ OBJ_DETAIL = {
     "O1": {
         "owner":   "Dr. Marcus Osei, Director of Quality & Patient Safety",
         "rationale": (
-            "Patient safety is the cornerstone of clinical excellence. St. Evelyn Medical Centre "
+            "Patient safety is the cornerstone of clinical excellence. Nawaloka Hospital Negombo "
             "currently records a hospital-acquired infection (HAI) rate of 3.1% — above the NHS "
             "England benchmark of 2.0%. In 2024, 47 serious clinical incidents were reported, of "
             "which 12 were classified as Never Events. Medication errors accounted for 31% of all "
@@ -356,7 +356,7 @@ OBJ_DETAIL = {
     "O2": {
         "owner":   "Ms. Leila Moussaoui, Chief Information Officer",
         "rationale": (
-            "St. Evelyn Medical Centre's current IT infrastructure was last comprehensively "
+            "Nawaloka Hospital Negombo's current IT infrastructure was last comprehensively "
             "upgraded in 2016. Paper-based clinical records remain in use across 8 of 14 wards. "
             "A 2024 infrastructure audit identified 23 critical cybersecurity vulnerabilities, "
             "and the Trust experienced one ransomware incident in 2023 that disrupted outpatient "
@@ -405,7 +405,7 @@ OBJ_DETAIL = {
     "O3": {
         "owner":   "Ms. Priya Chandran, Director of Patient Experience",
         "rationale": (
-            "The Friends and Family Test (FFT) score for St. Evelyn Medical Centre stood at 71% "
+            "The Friends and Family Test (FFT) score for Nawaloka Hospital Negombo stood at 71% "
             "in Q4 2024, below the London average of 78%. Outpatient waiting times average 47 "
             "minutes beyond appointment time. Only 38% of patients rated their overall care "
             "experience as 'Excellent'. The Trust serves a catchment area with significant "
@@ -456,13 +456,13 @@ OBJ_DETAIL = {
             "The Trust's nursing vacancy rate stands at 14.2% — equivalent to 187 unfilled posts. "
             "Annual nursing turnover is 22%, well above the NHS England average of 15.8%. Exit "
             "interview data shows that 44% of departing nurses cite limited career development "
-            "opportunities as a primary reason for leaving. Staff engagement scores rank St. Evelyn "
+            "opportunities as a primary reason for leaving. Staff engagement scores rank Nawaloka Hospital "
             "in the bottom quartile of London trusts for the second consecutive year."
             "<br/><br/>"
             "A high-performing, motivated workforce is the single most important determinant of "
             "clinical quality. This objective will invest in our people through structured "
             "leadership development, evidence-based wellbeing interventions, competitive retention "
-            "incentives, and formal university partnerships. The goal is to make St. Evelyn Medical "
+            "incentives, and formal university partnerships. The goal is to make Nawaloka Hospital "
             "Centre an employer of choice — attracting the best talent and keeping it."
         ),
         "targets": [
@@ -500,7 +500,7 @@ OBJ_DETAIL = {
     "O5": {
         "owner":   "Mr. David Reeves, Chief Financial Officer",
         "rationale": (
-            "St. Evelyn Medical Centre carried a £3.2 million deficit at the close of the "
+            "Nawaloka Hospital Negombo carried a LKR 320 million deficit at the close of the "
             "2023/24 financial year, against a planned break-even position. Non-clinical "
             "overhead costs grew by 11% in real terms over the past three years. Medical "
             "supply expenditure is 18% above the NHS national procurement benchmark due to "
@@ -747,7 +747,7 @@ def build_strategic_plan_pdf():
 
     # ── Cover ──────────────────────────────────────────────────────────────
     intro = [
-        "This Strategic Plan sets out the Board-approved direction for St. Evelyn Medical "
+        "This Strategic Plan sets out the Board-approved direction for Nawaloka Hospital "
         "Centre over the three-year period 2025 to 2028. It defines five strategic "
         "objectives that will guide investment decisions, operational priorities, and "
         "performance accountability across all clinical and corporate directorates.",
@@ -808,7 +808,7 @@ def build_strategic_plan_pdf():
     story.append(Paragraph("1.  Foreword from the Chief Executive", s["section_heading"]))
     story.append(HRFlowable(width="100%", thickness=1, color=TEAL, spaceAfter=8))
     foreword = (
-        "St. Evelyn Medical Centre has served the communities of North and Central London "
+        "Nawaloka Hospital Negombo has served the communities of Negombo and the Western Province of Sri Lanka "
         "for over 80 years. Our dedicated teams deliver more than 320,000 patient episodes "
         "each year — and every one of those encounters is an opportunity to demonstrate our "
         "values of safety, compassion, innovation, and integrity."
@@ -819,13 +819,13 @@ def build_strategic_plan_pdf():
         "sustainability because we know that excellence in healthcare depends on all five "
         "dimensions working in harmony."
         "<br/><br/>"
-        "I am proud to present this plan and confident that the entire St. Evelyn team — "
+        "I am proud to present this plan and confident that the entire Nawaloka team — "
         "clinical and non-clinical alike — will rise to the challenge it sets. The pages "
         "that follow set out not just what we want to achieve, but precisely how we will "
         "get there, who is accountable, and how we will know when we have succeeded."
         "<br/><br/>"
         "<i>Dr. Patricia Okonkwo, Chief Executive Officer<br/>"
-        "St. Evelyn Medical Centre, January 2025</i>"
+        "Nawaloka Hospital Negombo, January 2025</i>"
     )
     story.append(Paragraph(foreword, s["body"]))
     story.append(Spacer(1, 0.8*cm))
@@ -859,7 +859,7 @@ def build_strategic_plan_pdf():
     context = (
         "The NHS faces an unprecedented combination of pressures: rising patient demand, "
         "workforce shortages, accelerating technological change, and the need to restore "
-        "financial balance. St. Evelyn Medical Centre is not immune to these challenges — "
+        "financial balance. Nawaloka Hospital Negombo is not immune to these challenges — "
         "but it is well positioned to address them."
         "<br/><br/>"
         "Our clinical outcomes are above national average in seven of twelve key metrics. "
@@ -934,7 +934,7 @@ def build_strategic_plan_pdf():
     story.append(HRFlowable(width="100%", thickness=0.5, color=MID_GREY))
     story.append(Spacer(1, 0.2*cm))
     story.append(Paragraph(
-        f"Approved by the Board of Directors, St. Evelyn Medical Centre · January 2025 · {VERSION_SP}",
+        f"Approved by the Board of Directors, Nawaloka Hospital Negombo · January 2025 · {VERSION_SP}",
         s["small_italic"]
     ))
 
@@ -1008,7 +1008,7 @@ def build_action_plan_pdf():
     # ── Cover ──────────────────────────────────────────────────────────────
     intro = [
         "This Operational Action Plan translates the five strategic objectives of the "
-        "St. Evelyn Medical Centre Strategic Plan 2025–2028 into twenty concrete, "
+        "Nawaloka Hospital Negombo Strategic Plan 2025–2028 into twenty concrete, "
         "time-bound actions. Each action is assigned a named owner, a delivery timeline, "
         "and a measurable key performance indicator.",
 
@@ -1196,7 +1196,7 @@ def build_action_plan_pdf():
     story.append(HRFlowable(width="100%", thickness=0.5, color=MID_GREY))
     story.append(Spacer(1, 0.2*cm))
     story.append(Paragraph(
-        f"Approved by the Board of Directors, St. Evelyn Medical Centre · February 2025 · {VERSION_AP}",
+        f"Approved by the Board of Directors, Nawaloka Hospital Negombo · February 2025 · {VERSION_AP}",
         s["small_italic"]
     ))
 
