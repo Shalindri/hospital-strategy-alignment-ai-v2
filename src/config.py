@@ -26,8 +26,8 @@ load_dotenv()
 # =============================================================================
 THRESHOLD_EXCELLENT = 0.70   # ≥ 0.70 → action directly operationalises strategy
 THRESHOLD_GOOD      = 0.60   # ≥ 0.60 → clear strategic support
-THRESHOLD_FAIR      = 0.51   # ≥ 0.51 → partial / indirect alignment (tuned via threshold sweep, F1: 0.667 → 0.833)
-ORPHAN_THRESHOLD    = 0.51   # action scores < 0.51 against EVERY objective → orphan (kept equal to THRESHOLD_FAIR)
+THRESHOLD_FAIR      = 0.47   # ≥ 0.51 → partial / indirect alignment (tuned via threshold sweep, F1: 0.667 → 0.833)
+ORPHAN_THRESHOLD    = 0.47   # action scores < 0.51 against EVERY objective → orphan (kept equal to THRESHOLD_FAIR)
 
 # =============================================================================
 # MODEL NAMES

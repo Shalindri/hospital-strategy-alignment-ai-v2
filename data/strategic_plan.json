@@ -3,12 +3,27 @@
     {
       "id": "O1",
       "title": "Improve Patient Safety",
-      "description": "Reduce hospital infections and clinical errors. Train nurses, implement safety protocols, and achieve accreditation to ensure every patient receives safe, high-quality care."
+      "description": "Eliminate preventable patient harm by targeting hospital-acquired infections, medication errors, and adverse clinical events. Enforce rigorous hand hygiene protocols, sterilisation standards, PPE compliance, and near-miss incident reporting across all wards. Achieve JCI accreditation to certify clinical risk management and reduce morbidity from avoidable clinical errors."
     },
     {
       "id": "O2",
       "title": "Modernise Hospital Technology",
-      "description": "Replace paper records with a digital health system, automate admin tasks, and upgrade cybersecurity to make the hospital more efficient and data-driven."
+      "description": "Deploy a fully integrated digital health infrastructure by replacing legacy paper-based systems with cloud-hosted electronic health records, automated clinical workflows, and AI-powered diagnostic algorithms. Harden all IT networks against cybersecurity threats through multi-factor authentication, encrypted data backups, and continuous vulnerability monitoring."
+    },
+    {
+      "id": "O3",
+      "title": "Enhance Patient Experience and Satisfaction",
+      "description": "Elevate patient satisfaction scores by redesigning every touchpoint of the patient journey — from outpatient waiting comfort, food quality, and environmental amenities to multilingual interpreter services and post-discharge feedback surveys. Empower patients through self-service communication tools and compassionate, accessible care delivery."
+    },
+    {
+      "id": "O4",
+      "title": "Develop and Retain a Skilled Workforce",
+      "description": "Build a high-performing, resilient workforce by investing in staff recruitment, retention incentives, leadership mentorship, and career progression pathways. Reduce burnout and nursing turnover through wellbeing programmes, competitive pay structures, and structured clinical internships in partnership with universities."
+    },
+    {
+      "id": "O5",
+      "title": "Achieve Financial Sustainability",
+      "description": "Secure long-term fiscal sustainability by growing private patient revenue streams, securing government grants and healthcare subsidies, reducing departmental expenditure through procurement optimisation, and conducting rigorous annual budget audits to eliminate waste and maximise return on capital investment."
     }
   ]
 }

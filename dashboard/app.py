@@ -548,13 +548,13 @@ def tab_evaluation(objectives: list):
                 saved = json.load(f)
             # Build a metrics dict compatible with our display code
             st.session_state["eval_metrics"] = {
-                "precision":          saved.get("precision", 0),
-                "recall":             saved.get("recall", 0),
-                "f1":                 saved.get("f1", 0),
-                "auc":                saved.get("auc", 0),
-                "pearson_r":          saved.get("pearson_r", 0),
-                "pearson_p":          saved.get("pearson_p", 0),
-                "confusion_matrix":   saved.get("confusion_matrix", [[0,0],[0,0]]),
+                "precision":          saved.get("precision") or 0,
+                "recall":             saved.get("recall") or 0,
+                "f1":                 saved.get("f1") or 0,
+                "auc":                saved.get("auc") or 0,
+                "pearson_r":          saved.get("pearson_r") or 0,
+                "pearson_p":          saved.get("pearson_p") or 0,
+                "confusion_matrix":   saved.get("confusion_matrix") or [[0,0],[0,0]],
                 "y_true_binary":      [],
                 "y_pred_binary":      [],
                 "optimal_threshold":  saved.get("optimal_threshold"),
